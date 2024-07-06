@@ -5,6 +5,7 @@
 #include<QThread>
 #include<QTcpSocket>
 #include<QDebug>
+#include<QString>
 #include"BankDataBase.h"
 class ServerHandler : public QThread
 {
@@ -22,6 +23,7 @@ public:
     void getClientTransactionHistory(const QStringList& RequestParts);
     void getBankDataBase(const QStringList& RequestParts);
     void updateClientAccount(const QStringList& RequestParts);
+    void makeTransaction(const QStringList& RequestParts);
 signals:
 
 private:

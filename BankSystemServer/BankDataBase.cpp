@@ -406,25 +406,86 @@ bool BankDataBase::setUserLoginState(const QString& username, const QString& sta
 }
 
 
-bool BankDataBase::updateTransaction(const QString accountNumber, const QString transaction, QString state)
-{
-
-}
 
 bool BankDataBase::transferMoney(const QString accountNumberFrom, const QString accountNumberTo, const QString amountInFrom, const QString amountInTo, const QString amount)
 {
 
 }
 
-bool BankDataBase::withdrawMoney(const QString accountNumber, const QString amount, const QString transaction)
+bool BankDataBase::withdrawMoney(const QString accountNumber, const QString amount)
 {
 
 }
 
-bool BankDataBase::depositMoney(const QString accountNumber, const QString amount, const QString transaction)
-{
 
+
+bool BankDataBase::depositMoney(const QString accountNumber, const QString amount)
+{
+    // Validate the amount
+    bool isNumber;
+    int depositAmount = amount.toInt(&isNumber);
+    if (!isNumber || depositAmount <= 0)
+    {
+        qDebug() << "Invalid deposit amount.";
+        return false;
+    }
+
+
+    // Find the account and update the balance
+    bool accountFound = false;
+    for (auto& record : mainDatabaseRecords)
+    {
+        if (record["AccountNumber"].toString() == accountNumber)
+        {
+            QString str = record["Balance"].toString();
+            int currentBalance = str.toInt();
+            int newBalance = currentBalance + depositAmount;
+            record["Balance"] = QString::number(newBalance);
+            accountFound = true;
+            break;
+        }
+    }
+
+    if (!accountFound)
+    {
+        qDebug() << "Account not found.";
+        return false;
+    }
+
+    // Save the updated main database records
+    if (!saveMainDatabaseToFile())
+    {
+        qDebug() << "Failed to save main database after deposit.";
+        return false;
+    }
+
+    // Update the transaction record
+    QJsonObject transaction;
+    transaction["amount"] = "+" + QString::number(depositAmount);
+    transaction["date"] = QDate::currentDate().toString("dd.MM.yyyy");
+
+    for (auto& record : transactionDatabaseRecords)
+    {
+        if (record["AccountNumber"].toString() == accountNumber)
+        {
+            QJsonArray transactionsArray = record["Transactions"].toArray();
+            transactionsArray.append(transaction);
+            record["Transactions"] = transactionsArray;
+            break;
+        }
+    }
+
+    if (!saveTransactionDatabaseToFile())
+    {
+        qDebug() << "Failed to save transaction database after deposit.";
+        return false;
+    }
+
+    return true;
 }
+
+
+
 
 QString BankDataBase::generateAccountNumber()
 {

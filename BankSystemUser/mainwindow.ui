@@ -550,7 +550,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>260</y>
+        <y>250</y>
         <width>281</width>
         <height>81</height>
        </rect>
@@ -577,8 +577,8 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pB_ClientViewAccountBalance">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>380</y>
+        <x>380</x>
+        <y>360</y>
         <width>311</width>
         <height>81</height>
        </rect>
@@ -602,11 +602,11 @@ font: 700 20pt &quot;Segoe UI&quot;;
        <string>View My Account Balance</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pB_ClientGetAccountBalance_2">
+     <widget class="QPushButton" name="pB_ViewMyHistory">
       <property name="geometry">
        <rect>
         <x>380</x>
-        <y>260</y>
+        <y>250</y>
         <width>331</width>
         <height>81</height>
        </rect>
@@ -628,6 +628,34 @@ font: 700 20pt &quot;Segoe UI&quot;;
       </property>
       <property name="text">
        <string>View My Transaction History</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pB_MakeTransaction">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>360</y>
+        <width>271</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #4CAF50; 
+font: 700 20pt &quot;Segoe UI&quot;;
+        border: none;
+                   color: white;
+                   padding: 15px 20px;
+                   text-align: center;
+                   text-decoration: none;
+                   display: inline-block;
+                   font-size: 20px;
+                   margin: 4px 2px;
+                   border-radius: 20px; 
+
+</string>
+      </property>
+      <property name="text">
+       <string>Make Transaction</string>
       </property>
      </widget>
     </widget>
@@ -1348,6 +1376,145 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       </layout>
      </widget>
     </widget>
+    <widget class="QWidget" name="ViewMyHistory">
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>471</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 700 35pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;View My Transaction&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;History&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>10</y>
+        <width>201</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="pixmap">
+       <pixmap resource="resources.qrc">:/images/logo.png</pixmap>
+      </property>
+      <property name="scaledContents">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_ViewMyHistoryBack">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>490</y>
+        <width>131</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #4CAF50; 
+font: 700 20pt &quot;Segoe UI&quot;;
+        border: none;
+                   color: white;
+                   padding: 15px 20px;
+                   text-align: center;
+                   text-decoration: none;
+                   display: inline-block;
+                   font-size: 20px;
+                   margin: 4px 2px;
+                   border-radius: 20px; 
+
+</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pb_ViewMyHistoryView">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>490</y>
+        <width>141</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #4CAF50; 
+font: 700 20pt &quot;Segoe UI&quot;;
+        border: none;
+                   color: white;
+                   padding: 15px 20px;
+                   text-align: center;
+                   text-decoration: none;
+                   display: inline-block;
+                   font-size: 20px;
+                   margin: 4px 2px;
+                   border-radius: 20px; 
+
+</string>
+      </property>
+      <property name="text">
+       <string>View</string>
+      </property>
+     </widget>
+     <widget class="QListWidget" name="ClientTransactionHistoryListWidget">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>170</y>
+        <width>381</width>
+        <height>401</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 14pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>361</width>
+        <height>78</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_13">
+       <item>
+        <widget class="QLabel" name="ClientViewHistoryCountErrorLabel">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lE_ClientViewHistoryCount">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 700 20pt &quot;Segoe UI&quot;;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -1538,7 +1705,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
     </hint>
     <hint type="destinationlabel">
      <x>67</x>
-     <y>237</y>
+     <y>234</y>
     </hint>
    </hints>
   </connection>
@@ -1570,7 +1737,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
     </hint>
     <hint type="destinationlabel">
      <x>107</x>
-     <y>362</y>
+     <y>354</y>
     </hint>
    </hints>
   </connection>
@@ -1603,6 +1770,38 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
     <hint type="destinationlabel">
      <x>143</x>
      <y>494</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_ViewMyHistoryBack</sender>
+   <signal>clicked()</signal>
+   <receiver>lE_ClientViewHistoryCount</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>114</x>
+     <y>516</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>61</x>
+     <y>324</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_ViewMyHistoryBack</sender>
+   <signal>clicked()</signal>
+   <receiver>ClientTransactionHistoryListWidget</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>122</x>
+     <y>515</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>405</x>
+     <y>379</y>
     </hint>
    </hints>
   </connection>

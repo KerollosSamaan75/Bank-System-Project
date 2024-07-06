@@ -66,6 +66,10 @@ void ServerHandler::Operation(QString Request)
     {
         updateClientAccount(List);
     }
+    if(List[0]=="MakeTransaction")
+    {
+        makeTransaction(List);
+    }
 }
 
 void ServerHandler::loginToServer(const QStringList& RequestParts)
@@ -327,7 +331,7 @@ void ServerHandler::getClientTransactionHistory(const QStringList& RequestParts)
     response["RecentTransactions"] = recentTransactions;
 
     QJsonDocument doc(response);
-    QString responseMessage = "AdTransactionHistory:" + QString(doc.toJson(QJsonDocument::Compact));
+    QString responseMessage = "TransactionHistory:" + QString(doc.toJson(QJsonDocument::Compact));
     sendMessage(responseMessage);
 }
 
@@ -384,6 +388,74 @@ void ServerHandler::updateClientAccount(const QStringList &RequestParts)
         sendMessage("Account update failed. Please check the account number and try again.");
     }
 }
+
+void ServerHandler::makeTransaction(const QStringList &RequestParts)
+{
+    // Ensure RequestParts has the necessary elements
+    if (RequestParts.size() < 3)
+    {
+        sendMessage("Invalid request. Please provide account number and transaction amount.");
+        return;
+    }
+
+    QString accountNumber = RequestParts[1];
+    QString transactionAmount = RequestParts[2];
+
+    // Validate the transaction amount
+    bool isNumber;
+    int amount = transactionAmount.toInt(&isNumber);
+    if (!isNumber || amount == 0)
+    {
+        sendMessage("Invalid transaction amount. Please provide a valid number.");
+        return;
+    }
+
+    // Check if the account number exists in the database
+    QVector<QJsonObject> mainDatabase = dataBase.getMainDatabase();
+    bool accountFound = false;
+    for (const auto& record : mainDatabase)
+    {
+        if (record["AccountNumber"].toString() == accountNumber)
+        {
+            accountFound = true;
+            break;
+        }
+    }
+
+    if (!accountFound)
+    {
+        sendMessage("Account not found. Please provide a valid account number.");
+        return;
+    }
+
+    bool success = false;
+    if (transactionAmount.startsWith("+"))
+    {
+        // Deposit money
+        success = dataBase.depositMoney(accountNumber, transactionAmount.mid(1)); // Remove the '+' sign
+    }
+    else if (transactionAmount.startsWith("-"))
+    {
+        // Withdraw money
+        success = dataBase.withdrawMoney(accountNumber, transactionAmount.mid(1)); // Remove the '-' sign
+    }
+    else
+    {
+        sendMessage("Invalid transaction format. Please use + for deposit and - for withdrawal.");
+        return;
+    }
+
+    // Send response based on the success of the transaction
+    if (success)
+    {
+        sendMessage("Transaction successful.");
+    }
+    else
+    {
+        sendMessage("Transaction failed. Please try again.");
+    }
+}
+
 
 
 

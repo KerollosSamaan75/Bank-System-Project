@@ -67,7 +67,8 @@ public:
     QLabel *label_9;
     QPushButton *pB_ClientGetAccountNumber;
     QPushButton *pB_ClientViewAccountBalance;
-    QPushButton *pB_ClientGetAccountBalance_2;
+    QPushButton *pB_ViewMyHistory;
+    QPushButton *pB_MakeTransaction;
     QWidget *AddAccount;
     QLabel *AddAccountlabel;
     QPushButton *pBCreateAccount;
@@ -129,6 +130,16 @@ public:
     QVBoxLayout *verticalLayout_37;
     QLabel *UpdateEmailErrorLabel;
     QLineEdit *UpdateAccountEmail;
+    QWidget *ViewMyHistory;
+    QLabel *label_10;
+    QLabel *label_11;
+    QPushButton *pb_ViewMyHistoryBack;
+    QPushButton *pb_ViewMyHistoryView;
+    QListWidget *ClientTransactionHistoryListWidget;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_13;
+    QLabel *ClientViewHistoryCountErrorLabel;
+    QLineEdit *lE_ClientViewHistoryCount;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -432,7 +443,7 @@ public:
         label_9->setScaledContents(true);
         pB_ClientGetAccountNumber = new QPushButton(Client);
         pB_ClientGetAccountNumber->setObjectName("pB_ClientGetAccountNumber");
-        pB_ClientGetAccountNumber->setGeometry(QRect(70, 260, 281, 81));
+        pB_ClientGetAccountNumber->setGeometry(QRect(70, 250, 281, 81));
         pB_ClientGetAccountNumber->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -448,7 +459,7 @@ public:
 ""));
         pB_ClientViewAccountBalance = new QPushButton(Client);
         pB_ClientViewAccountBalance->setObjectName("pB_ClientViewAccountBalance");
-        pB_ClientViewAccountBalance->setGeometry(QRect(70, 380, 311, 81));
+        pB_ClientViewAccountBalance->setGeometry(QRect(380, 360, 311, 81));
         pB_ClientViewAccountBalance->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -462,10 +473,26 @@ public:
 "                   border-radius: 20px; \n"
 "\n"
 ""));
-        pB_ClientGetAccountBalance_2 = new QPushButton(Client);
-        pB_ClientGetAccountBalance_2->setObjectName("pB_ClientGetAccountBalance_2");
-        pB_ClientGetAccountBalance_2->setGeometry(QRect(380, 260, 331, 81));
-        pB_ClientGetAccountBalance_2->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
+        pB_ViewMyHistory = new QPushButton(Client);
+        pB_ViewMyHistory->setObjectName("pB_ViewMyHistory");
+        pB_ViewMyHistory->setGeometry(QRect(380, 250, 331, 81));
+        pB_ViewMyHistory->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
+"font: 700 20pt \"Segoe UI\";\n"
+"        border: none;\n"
+"                   color: white;\n"
+"                   padding: 15px 20px;\n"
+"                   text-align: center;\n"
+"                   text-decoration: none;\n"
+"                   display: inline-block;\n"
+"                   font-size: 20px;\n"
+"                   margin: 4px 2px;\n"
+"                   border-radius: 20px; \n"
+"\n"
+""));
+        pB_MakeTransaction = new QPushButton(Client);
+        pB_MakeTransaction->setObjectName("pB_MakeTransaction");
+        pB_MakeTransaction->setGeometry(QRect(70, 360, 271, 81));
+        pB_MakeTransaction->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
 "                   color: white;\n"
@@ -855,6 +882,76 @@ public:
         verticalLayout_37->addWidget(UpdateAccountEmail);
 
         stackedWidget->addWidget(UpdateClientAccount);
+        ViewMyHistory = new QWidget();
+        ViewMyHistory->setObjectName("ViewMyHistory");
+        label_10 = new QLabel(ViewMyHistory);
+        label_10->setObjectName("label_10");
+        label_10->setGeometry(QRect(20, 20, 471, 151));
+        label_10->setStyleSheet(QString::fromUtf8("font: 700 35pt \"Segoe UI\";\n"
+"color: rgb(255, 255, 255);"));
+        label_11 = new QLabel(ViewMyHistory);
+        label_11->setObjectName("label_11");
+        label_11->setGeometry(QRect(540, 10, 201, 161));
+        label_11->setPixmap(QPixmap(QString::fromUtf8(":/images/logo.png")));
+        label_11->setScaledContents(true);
+        pb_ViewMyHistoryBack = new QPushButton(ViewMyHistory);
+        pb_ViewMyHistoryBack->setObjectName("pb_ViewMyHistoryBack");
+        pb_ViewMyHistoryBack->setGeometry(QRect(20, 490, 131, 71));
+        pb_ViewMyHistoryBack->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
+"font: 700 20pt \"Segoe UI\";\n"
+"        border: none;\n"
+"                   color: white;\n"
+"                   padding: 15px 20px;\n"
+"                   text-align: center;\n"
+"                   text-decoration: none;\n"
+"                   display: inline-block;\n"
+"                   font-size: 20px;\n"
+"                   margin: 4px 2px;\n"
+"                   border-radius: 20px; \n"
+"\n"
+""));
+        pb_ViewMyHistoryView = new QPushButton(ViewMyHistory);
+        pb_ViewMyHistoryView->setObjectName("pb_ViewMyHistoryView");
+        pb_ViewMyHistoryView->setGeometry(QRect(200, 490, 141, 71));
+        pb_ViewMyHistoryView->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
+"font: 700 20pt \"Segoe UI\";\n"
+"        border: none;\n"
+"                   color: white;\n"
+"                   padding: 15px 20px;\n"
+"                   text-align: center;\n"
+"                   text-decoration: none;\n"
+"                   display: inline-block;\n"
+"                   font-size: 20px;\n"
+"                   margin: 4px 2px;\n"
+"                   border-radius: 20px; \n"
+"\n"
+""));
+        ClientTransactionHistoryListWidget = new QListWidget(ViewMyHistory);
+        ClientTransactionHistoryListWidget->setObjectName("ClientTransactionHistoryListWidget");
+        ClientTransactionHistoryListWidget->setGeometry(QRect(390, 170, 381, 401));
+        ClientTransactionHistoryListWidget->setStyleSheet(QString::fromUtf8("font: 14pt \"Segoe UI\";\n"
+"color: rgb(255, 255, 255);"));
+        widget = new QWidget(ViewMyHistory);
+        widget->setObjectName("widget");
+        widget->setGeometry(QRect(10, 240, 361, 78));
+        verticalLayout_13 = new QVBoxLayout(widget);
+        verticalLayout_13->setObjectName("verticalLayout_13");
+        verticalLayout_13->setContentsMargins(0, 0, 0, 0);
+        ClientViewHistoryCountErrorLabel = new QLabel(widget);
+        ClientViewHistoryCountErrorLabel->setObjectName("ClientViewHistoryCountErrorLabel");
+        ClientViewHistoryCountErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"font: 14pt \"Segoe UI\";"));
+
+        verticalLayout_13->addWidget(ClientViewHistoryCountErrorLabel);
+
+        lE_ClientViewHistoryCount = new QLineEdit(widget);
+        lE_ClientViewHistoryCount->setObjectName("lE_ClientViewHistoryCount");
+        lE_ClientViewHistoryCount->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"font: 700 20pt \"Segoe UI\";"));
+
+        verticalLayout_13->addWidget(lE_ClientViewHistoryCount);
+
+        stackedWidget->addWidget(ViewMyHistory);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -880,6 +977,8 @@ public:
         QObject::connect(pB_ClientUpdateAccountBack, &QPushButton::clicked, UpdateAccountAge, qOverload<>(&QLineEdit::clear));
         QObject::connect(pB_ClientUpdateAccountBack, &QPushButton::clicked, UpdateAccountEmail, qOverload<>(&QLineEdit::clear));
         QObject::connect(pB_ClientUpdateAccountBack, &QPushButton::clicked, UpdateAccountPassword, qOverload<>(&QLineEdit::clear));
+        QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, lE_ClientViewHistoryCount, qOverload<>(&QLineEdit::clear));
+        QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, ClientTransactionHistoryListWidget, qOverload<>(&QListWidget::clear));
 
         stackedWidget->setCurrentIndex(2);
 
@@ -911,7 +1010,8 @@ public:
         label_9->setText(QString());
         pB_ClientGetAccountNumber->setText(QCoreApplication::translate("MainWindow", "Get My Account Number", nullptr));
         pB_ClientViewAccountBalance->setText(QCoreApplication::translate("MainWindow", "View My Account Balance", nullptr));
-        pB_ClientGetAccountBalance_2->setText(QCoreApplication::translate("MainWindow", "View My Transaction History", nullptr));
+        pB_ViewMyHistory->setText(QCoreApplication::translate("MainWindow", "View My Transaction History", nullptr));
+        pB_MakeTransaction->setText(QCoreApplication::translate("MainWindow", "Make Transaction", nullptr));
         AddAccountlabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">ADD ACCOUNT</p></body></html>", nullptr));
         pBCreateAccount->setText(QCoreApplication::translate("MainWindow", "Create Client Accout", nullptr));
         pBAddAccoutBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
@@ -936,6 +1036,11 @@ public:
         pB_ClientUpdateAccountBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         pB_Update->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
         UpdateEmailErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">View My Transaction</p><p align=\"center\">History</p></body></html>", nullptr));
+        label_11->setText(QString());
+        pb_ViewMyHistoryBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        pb_ViewMyHistoryView->setText(QCoreApplication::translate("MainWindow", "View", nullptr));
+        ClientViewHistoryCountErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
     } // retranslateUi
 
 };

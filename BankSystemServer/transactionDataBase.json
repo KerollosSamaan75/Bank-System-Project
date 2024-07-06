@@ -1,29 +1,23 @@
 [
     {
-        "AccountNumber": "419283668",
-        "Transactions": 
-        [
+        "AccountNumber": "885965026",
+        "Transactions": [
             {
-                "amount": "+20",
-                "date": "22.12.2023"
-            },
-            {
-                "amount": "-50",
-                "date": "22.12.2023"
-            },
-            {
-                "amount": "-35",
-                "date": "22.12.2023"
+                "amount": "+200",
+                "date": "06.07.2024"
             },
             {
                 "amount": "+100",
-                "date": "27.12.2023"
+                "date": "06.07.2024"
+            },
+            {
+                "amount": "+100000",
+                "date": "06.07.2024"
+            },
+            {
+                "amount": "+200",
+                "date": "07.07.2024"
             }
-        ]
-    },
-    {
-        "AccountNumber": "885965026",
-        "Transactions": [
         ]
     },
     {

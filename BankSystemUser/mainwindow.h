@@ -38,40 +38,30 @@ private slots:
 
     void on_pBConnect_clicked();
     void on_pBLogin_clicked();
-
     void on_pB_AddAccount_clicked();
-
     void on_pBCreateAccount_clicked();
-
     void on_pBAddAccoutBack_clicked();
-
     void on_pB_AdminGetAccountNumber_clicked();
-
     void on_pB_DeleteAccount_clicked();
-
     void on_pBAdminBack_clicked();
-
     void on_pB_AdminGetAccountBalance_clicked();
-
     void on_pB_AdminViewTransactionHistory_clicked();
-
     void on_pBAdminViewTransactionBack_clicked();
-
     void on_pBAdminViewTransactionView_clicked();
-
     void on_pB_ViewBankDatabase_clicked();
-
-    void on_pB_ViewBankDatabase_2_clicked();
-
     void on_pB_ViewBankDatabaseBack_clicked();
-
     void on_pB_UpdateClientAccount_clicked();
-
     void on_pB_ClientUpdateAccountBack_clicked();
-
     void on_pB_Update_clicked();
-
     void on_pB_ClientGetAccountNumber_clicked();
+    void on_pB_ClientViewAccountBalance_clicked();
+    void on_pb_ViewMyHistoryBack_clicked();
+    void on_pB_ViewMyHistory_clicked();
+    void on_pb_ViewMyHistoryView_clicked();
+
+
+
+    void on_pB_MakeTransaction_clicked();
 
 private:
     Ui::MainWindow *ui;

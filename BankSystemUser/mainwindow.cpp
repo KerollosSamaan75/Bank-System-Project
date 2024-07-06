@@ -49,6 +49,9 @@ MainWindow::MainWindow(QWidget *parent)
     ui->UpdateAccountPassword->setPlaceholderText("Enter your password");
     ui->UpdateAccountAge->setValidator(new QIntValidator(0, 150, this)); // Age between 0 and 150
     ui->UpdateEmailErrorLabel->setVisible(false);
+
+    ui->lE_ClientViewHistoryCount->setPlaceholderText("Enter your history count");
+    ui->ClientViewHistoryCountErrorLabel->setVisible(false);
 }
 
 MainWindow::~MainWindow()
@@ -100,10 +103,10 @@ void MainWindow::requestResponse(QString message)
     }
 
 
-    else if(List[0] =="AdTransactionHistory")
+    else if(List[0] =="TransactionHistory")
     {
         // Extract the JSON part from the response
-        QString jsonString = message.mid(QString("AdTransactionHistory:").length());
+        QString jsonString = message.mid(QString("TransactionHistory:").length());
 
         // Parse the JSON
         QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonString.toUtf8());
@@ -131,6 +134,7 @@ void MainWindow::requestResponse(QString message)
             QString date = transaction["date"].toString();
             QString formattedTransaction = QString("Date: %1, Amount: %2").arg(date).arg(amount);
             ui->AdTransactionHistorylistWidget->addItem(formattedTransaction);
+            ui->ClientTransactionHistoryListWidget->addItem(formattedTransaction);
         }
     }
     else
@@ -407,6 +411,7 @@ void MainWindow::on_pB_AdminGetAccountBalance_clicked()
 
 void MainWindow::on_pB_AdminViewTransactionHistory_clicked()
 {
+    ui->AdTransactionHistorylistWidget->clear();
     ui->stackedWidget->setCurrentIndex(4);
 }
 
@@ -530,4 +535,92 @@ void MainWindow::on_pB_ClientGetAccountNumber_clicked()
 {
     QMessageBox::information(this, "Request response", "Account number: "+clientAccountNumber);
 }
+
+
+void MainWindow::on_pB_ClientViewAccountBalance_clicked()
+{
+    QString message = QString("GetAccountBalance:%1").arg(clientAccountNumber);
+    SystemUser.WriteData(message);
+}
+
+
+
+
+
+void MainWindow::on_pb_ViewMyHistoryBack_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+
+void MainWindow::on_pB_ViewMyHistory_clicked()
+{
+    ui->ClientTransactionHistoryListWidget->clear();
+    ui->stackedWidget->setCurrentIndex(7);
+}
+
+
+void MainWindow::on_pb_ViewMyHistoryView_clicked()
+{
+    bool valid = true;
+
+    QRegularExpression digitRegex("^[0-9]+$");
+    // Check if history count is empty or not a valid number
+    QString historyCountStr = ui->lE_ClientViewHistoryCount->text();
+    bool isNumber;
+    int historyCount = historyCountStr.toInt(&isNumber);
+    if (historyCountStr.isEmpty() || !digitRegex.match(historyCountStr).hasMatch() || !isNumber || historyCount <= 0 || historyCount > 20)
+    {
+        ui->ClientViewHistoryCountErrorLabel->setText("Valid history count (1-20) is required.");
+        ui->ClientViewHistoryCountErrorLabel->setVisible(true);
+        valid = false;
+    }
+    else
+    {
+        ui->ClientViewHistoryCountErrorLabel->setVisible(false);
+    }
+
+    if (valid)
+    {
+        QString message = QString("ViewTransactions:%1:%2").arg(clientAccountNumber).arg(historyCountStr);
+        SystemUser.WriteData(message);
+    }
+}
+
+
+
+
+void MainWindow::on_pB_MakeTransaction_clicked()
+{
+    // Create a regular expression that matches the required format
+    QRegularExpression regExp("[+-]\\d+"); // Matches a + or - followed by one or more digits
+    QRegularExpressionValidator validator(regExp, this);
+
+    // Prompt the user for the transaction amount
+    bool ok;
+    QString transactionAmount = QInputDialog::getText(this,
+                                                      tr("Make Transaction"),
+                                                      tr("Enter transaction amount (e.g., +100 for deposit, -50 for withdrawal):"),
+                                                      QLineEdit::Normal, "", &ok);
+
+    // Check if the input was valid and accepted
+    if (ok && !transactionAmount.isEmpty())
+    {
+        // Validate the input
+        int pos = 0;
+        if (validator.validate(transactionAmount, pos) == QValidator::Acceptable)
+        {
+            // Process the transaction amount
+            QString message = QString("MakeTransaction:%1:%2").arg(clientAccountNumber).arg(transactionAmount);
+            SystemUser.WriteData(message);
+        }
+        else
+        {
+            // Show an error message if the input is invalid
+            QMessageBox::warning(this, tr("Invalid Input"),
+                                 tr("Please enter a valid transaction amount (e.g., +100 for deposit, -50 for withdrawal)."));
+        }
+    }
+}
+
 

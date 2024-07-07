@@ -65,6 +65,8 @@ private slots:
 
     void on_pB_ClientBack_clicked();
 
+    void on_pB_ClientTransferMoney_clicked();
+
 private:
     Ui::MainWindow *ui;
     User SystemUser;

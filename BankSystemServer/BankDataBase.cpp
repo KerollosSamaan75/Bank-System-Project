@@ -446,12 +446,132 @@ bool BankDataBase::setUserLoginState(const QString& username, const QString& sta
     return true;
 }
 
+// Update transaction data
+bool BankDataBase::transferMoney(const QString sourceAccountNumber, const QString targetAccountNumber, const QString sourceAmountStr, const QString targetAmountStr, QString &statusMessage)
+{
+    // Validate the amounts
+    bool isSourceAmountValid, isTargetAmountValid;
+    int sourceAmount = sourceAmountStr.toInt(&isSourceAmountValid);
+    int targetAmount = targetAmountStr.toInt(&isTargetAmountValid);
+
+    if (!isSourceAmountValid || sourceAmount <= 0)
+    {
+        statusMessage = "Invalid transfer amount from the source account.";
+        qDebug() << statusMessage;
+        return false;
+    }
+
+    if (!isTargetAmountValid || targetAmount <= 0)
+    {
+        statusMessage = "Invalid transfer amount to the target account.";
+        qDebug() << statusMessage;
+        return false;
+    }
+
+    // Check if source and target account numbers are different
+    if (sourceAccountNumber == targetAccountNumber)
+    {
+        statusMessage = "Source and target account numbers must be different.";
+        qDebug() << statusMessage;
+        return false;
+    }
+
+    // Find the source and target accounts and update the balances
+    bool sourceAccountFound = false;
+    bool targetAccountFound = false;
+    for (auto& record : mainDatabaseRecords)
+    {
+        if (record["AccountNumber"].toString() == sourceAccountNumber)
+        {
+            QString  currentSourceBalanceStr = record["Balance"].toString();
+            int currentSourceBalance = currentSourceBalanceStr.toInt();
+            if (currentSourceBalance < sourceAmount)
+            {
+                statusMessage = "Insufficient balance in the source account.";
+                qDebug() << statusMessage;
+                return false;
+            }
+            int newSourceBalance = currentSourceBalance - sourceAmount;
+            record["Balance"] = QString::number(newSourceBalance);
+            sourceAccountFound = true;
+        }
+
+        if (record["AccountNumber"].toString() == targetAccountNumber)
+        {
+            QString currentTargetBalanceStr = record["Balance"].toString();
+            int currentTargetBalance = currentTargetBalanceStr.toInt();
+            int newTargetBalance = currentTargetBalance + targetAmount;
+            record["Balance"] = QString::number(newTargetBalance);
+            targetAccountFound = true;
+        }
+    }
+
+    if (!sourceAccountFound)
+    {
+        statusMessage = "Source account not found.";
+        qDebug() << statusMessage;
+        return false;
+    }
+
+    if (!targetAccountFound)
+    {
+        statusMessage = "Target account not found.";
+        qDebug() << statusMessage;
+        return false;
+    }
+
+    // Save the updated main database records
+    if (!saveMainDatabaseToFile())
+    {
+        statusMessage = "Failed to save main database after transfer.";
+        qDebug() << statusMessage;
+        return false;
+    }
+
+    // Update the transaction record for the source account
+    QJsonObject sourceTransaction;
+    sourceTransaction["amount"] = "-" + QString::number(sourceAmount);
+    sourceTransaction["date"] = QDate::currentDate().toString("dd.MM.yyyy");
+
+    for (auto& record : transactionDatabaseRecords)
+    {
+        if (record["AccountNumber"].toString() == sourceAccountNumber)
+        {
+            QJsonArray transactionsArray = record["Transactions"].toArray();
+            transactionsArray.append(sourceTransaction);
+            record["Transactions"] = transactionsArray;
+            break;
+        }
+    }
+
+    // Update the transaction record for the target account
+    QJsonObject targetTransaction;
+    targetTransaction["amount"] = "+" + QString::number(targetAmount);
+    targetTransaction["date"] = QDate::currentDate().toString("dd.MM.yyyy");
+
+    for (auto& record : transactionDatabaseRecords)
+    {
+        if (record["AccountNumber"].toString() == targetAccountNumber)
+        {
+            QJsonArray transactionsArray = record["Transactions"].toArray();
+            transactionsArray.append(targetTransaction);
+            record["Transactions"] = transactionsArray;
+            break;
+        }
+    }
+
+    if (!saveTransactionDatabaseToFile())
+    {
+        statusMessage = "Failed to save transaction database after transfer.";
+        qDebug() << statusMessage;
+        return false;
+    }
+
+    statusMessage = "Transfer successful.";
+    return true;
+}
 
 
-// bool BankDataBase::transferMoney(const QString accountNumberFrom, const QString accountNumberTo, const QString amountInFrom, const QString amountInTo, const QString amount)
-// {
-
-// }
 
 bool BankDataBase::withdrawMoney(const QString accountNumber, const QString amount, QString& statusMessage)
 {

@@ -70,6 +70,7 @@ public:
     QPushButton *pB_ViewMyHistory;
     QPushButton *pB_MakeTransaction;
     QPushButton *pB_ClientBack;
+    QPushButton *pB_ClientTransferMoney;
     QWidget *AddAccount;
     QLabel *AddAccountlabel;
     QPushButton *pBCreateAccount;
@@ -298,7 +299,7 @@ public:
 "color: rgb(255, 255, 255);"));
         pB_AddAccount = new QPushButton(Admin);
         pB_AddAccount->setObjectName("pB_AddAccount");
-        pB_AddAccount->setGeometry(QRect(20, 200, 351, 81));
+        pB_AddAccount->setGeometry(QRect(20, 190, 351, 81));
         pB_AddAccount->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -314,7 +315,7 @@ public:
 ""));
         pB_AdminGetAccountNumber = new QPushButton(Admin);
         pB_AdminGetAccountNumber->setObjectName("pB_AdminGetAccountNumber");
-        pB_AdminGetAccountNumber->setGeometry(QRect(400, 400, 341, 81));
+        pB_AdminGetAccountNumber->setGeometry(QRect(400, 370, 341, 81));
         pB_AdminGetAccountNumber->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -335,7 +336,7 @@ public:
         label_4->setScaledContents(true);
         pB_DeleteAccount = new QPushButton(Admin);
         pB_DeleteAccount->setObjectName("pB_DeleteAccount");
-        pB_DeleteAccount->setGeometry(QRect(20, 300, 351, 81));
+        pB_DeleteAccount->setGeometry(QRect(20, 280, 351, 81));
         pB_DeleteAccount->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -351,7 +352,7 @@ public:
 ""));
         pBAdminBack = new QPushButton(Admin);
         pBAdminBack->setObjectName("pBAdminBack");
-        pBAdminBack->setGeometry(QRect(10, 520, 151, 61));
+        pBAdminBack->setGeometry(QRect(20, 520, 151, 61));
         pBAdminBack->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -367,7 +368,7 @@ public:
 ""));
         pB_AdminGetAccountBalance = new QPushButton(Admin);
         pB_AdminGetAccountBalance->setObjectName("pB_AdminGetAccountBalance");
-        pB_AdminGetAccountBalance->setGeometry(QRect(400, 200, 341, 81));
+        pB_AdminGetAccountBalance->setGeometry(QRect(400, 190, 341, 81));
         pB_AdminGetAccountBalance->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -383,7 +384,7 @@ public:
 ""));
         pB_AdminViewTransactionHistory = new QPushButton(Admin);
         pB_AdminViewTransactionHistory->setObjectName("pB_AdminViewTransactionHistory");
-        pB_AdminViewTransactionHistory->setGeometry(QRect(400, 300, 341, 81));
+        pB_AdminViewTransactionHistory->setGeometry(QRect(400, 280, 341, 81));
         pB_AdminViewTransactionHistory->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -399,7 +400,7 @@ public:
 ""));
         pB_ViewBankDatabase = new QPushButton(Admin);
         pB_ViewBankDatabase->setObjectName("pB_ViewBankDatabase");
-        pB_ViewBankDatabase->setGeometry(QRect(20, 400, 351, 81));
+        pB_ViewBankDatabase->setGeometry(QRect(20, 370, 351, 81));
         pB_ViewBankDatabase->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -415,7 +416,7 @@ public:
 ""));
         pB_UpdateClientAccount = new QPushButton(Admin);
         pB_UpdateClientAccount->setObjectName("pB_UpdateClientAccount");
-        pB_UpdateClientAccount->setGeometry(QRect(390, 500, 351, 81));
+        pB_UpdateClientAccount->setGeometry(QRect(220, 460, 341, 81));
         pB_UpdateClientAccount->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -444,7 +445,7 @@ public:
         label_9->setScaledContents(true);
         pB_ClientGetAccountNumber = new QPushButton(Client);
         pB_ClientGetAccountNumber->setObjectName("pB_ClientGetAccountNumber");
-        pB_ClientGetAccountNumber->setGeometry(QRect(70, 250, 281, 81));
+        pB_ClientGetAccountNumber->setGeometry(QRect(40, 230, 331, 81));
         pB_ClientGetAccountNumber->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -460,7 +461,7 @@ public:
 ""));
         pB_ClientViewAccountBalance = new QPushButton(Client);
         pB_ClientViewAccountBalance->setObjectName("pB_ClientViewAccountBalance");
-        pB_ClientViewAccountBalance->setGeometry(QRect(380, 360, 331, 81));
+        pB_ClientViewAccountBalance->setGeometry(QRect(220, 410, 331, 81));
         pB_ClientViewAccountBalance->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -476,7 +477,7 @@ public:
 ""));
         pB_ViewMyHistory = new QPushButton(Client);
         pB_ViewMyHistory->setObjectName("pB_ViewMyHistory");
-        pB_ViewMyHistory->setGeometry(QRect(380, 250, 331, 81));
+        pB_ViewMyHistory->setGeometry(QRect(410, 230, 331, 81));
         pB_ViewMyHistory->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -492,7 +493,7 @@ public:
 ""));
         pB_MakeTransaction = new QPushButton(Client);
         pB_MakeTransaction->setObjectName("pB_MakeTransaction");
-        pB_MakeTransaction->setGeometry(QRect(70, 360, 281, 81));
+        pB_MakeTransaction->setGeometry(QRect(40, 320, 331, 81));
         pB_MakeTransaction->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -510,6 +511,34 @@ public:
         pB_ClientBack->setObjectName("pB_ClientBack");
         pB_ClientBack->setGeometry(QRect(50, 510, 121, 61));
         pB_ClientBack->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
+"font: 700 20pt \"Segoe UI\";\n"
+"        border: none;\n"
+"                   color: white;\n"
+"                   padding: 15px 20px;\n"
+"                   text-align: center;\n"
+"                   text-decoration: none;\n"
+"                   display: inline-block;\n"
+"                   font-size: 20px;\n"
+"                   margin: 4px 2px;\n"
+"                   border-radius: 20px; \n"
+"\n"
+""));
+        pB_ClientTransferMoney = new QPushButton(Client);
+        pB_ClientTransferMoney->setObjectName("pB_ClientTransferMoney");
+        pB_ClientTransferMoney->setGeometry(QRect(410, 320, 341, 81));
+        pB_ClientTransferMoney->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
+"font: 700 20pt \"Segoe UI\";\n"
+"        border: none;\n"
+"                   color: white;\n"
+"                   padding: 15px 20px;\n"
+"                   text-align: center;\n"
+"                   text-decoration: none;\n"
+"                   display: inline-block;\n"
+"                   font-size: 20px;\n"
+"                   margin: 4px 2px;\n"
+"                   border-radius: 20px; \n"
+"\n"
+"background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
 "                   color: white;\n"
@@ -997,7 +1026,7 @@ public:
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, lE_ClientViewHistoryCount, qOverload<>(&QLineEdit::clear));
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, ClientTransactionHistoryListWidget, qOverload<>(&QListWidget::clear));
 
-        stackedWidget->setCurrentIndex(7);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1030,6 +1059,7 @@ public:
         pB_ViewMyHistory->setText(QCoreApplication::translate("MainWindow", "View My Transaction History", nullptr));
         pB_MakeTransaction->setText(QCoreApplication::translate("MainWindow", "Make Transaction", nullptr));
         pB_ClientBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        pB_ClientTransferMoney->setText(QCoreApplication::translate("MainWindow", "Transfer Money", nullptr));
         AddAccountlabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">ADD ACCOUNT</p></body></html>", nullptr));
         pBCreateAccount->setText(QCoreApplication::translate("MainWindow", "Create Client Accout", nullptr));
         pBAddAccoutBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));

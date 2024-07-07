@@ -32,6 +32,15 @@ void ServerHandler::onReadyRead()
     Operation(QString(ByteArr));
 }
 
+void ServerHandler::onDisconnected()
+{
+    if(Socket->isOpen())
+    {
+        Socket->close();
+        qDebug()<<"Client => "<<ID<<"has disconnected"<<Qt::endl;
+    }
+}
+
 void ServerHandler::Operation(QString Request)
 {
     QStringList List = Request.split(":");
@@ -70,6 +79,10 @@ void ServerHandler::Operation(QString Request)
     if (List[0] == "MakeTransaction")
     {
         makeTransaction(List);
+    }
+    if(List[0]=="TransferMoney")
+    {
+        makeTransfer(List);
     }
 }
 
@@ -427,16 +440,60 @@ void ServerHandler::makeTransaction(const QStringList& RequestParts)
     }
 }
 
-void ServerHandler::onDisconnected()
+void ServerHandler::makeTransfer(const QStringList &RequestParts)
 {
-    if (Socket->isOpen())
+    if (RequestParts.size() != 4)
     {
-        Socket->close();
-        QString logMessage = QString("Client => %1 has disconnected").arg(ID);
-        Logger::instance().logMessage(logMessage);
-        qDebug() << logMessage;
+        qDebug() << "Invalid number of arguments for makeTransfer.";
+        return;
     }
+
+    QString sourceAccountNumber = RequestParts[1];
+    QString targetAccountNumber = RequestParts[2];
+    QString amountStr = RequestParts[3];
+
+    // Validate that the account numbers are digits only
+    QRegularExpression accountNumberRegex("^\\d+$");
+    if (!accountNumberRegex.match(sourceAccountNumber).hasMatch() || !accountNumberRegex.match(targetAccountNumber).hasMatch())
+    {
+        sendMessage("Invalid account number format.");
+        return;
+    }
+
+    // Validate the amount
+    bool isNumber;
+    int amount = amountStr.toInt(&isNumber);
+    if (!isNumber || amount <= 0)
+    {
+        sendMessage("Invalid transfer amount.");
+        return;
+    }
+
+    // Ensure source and target account numbers are not the same
+    if (sourceAccountNumber == targetAccountNumber)
+    {
+        sendMessage("Source and target account numbers cannot be the same.");
+        return;
+    }
+
+    QString statusMessage;
+    bool success = dataBase.transferMoney(sourceAccountNumber, targetAccountNumber,amountStr,amountStr, statusMessage);
+
+    if (success)
+    {
+        qDebug() << "Transfer successful: " << statusMessage;
+    }
+    else
+    {
+        qDebug() << "Transfer failed: " << statusMessage;
+    }
+
+    // Send a response back to the client
+    QString responseMessage = QString("TransferResult:%1").arg(statusMessage);
+    sendMessage(responseMessage);
 }
+
+
 
 void ServerHandler::sendMessage(QString Message)
 {

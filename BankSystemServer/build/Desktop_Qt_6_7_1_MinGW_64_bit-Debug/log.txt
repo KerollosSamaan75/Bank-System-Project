@@ -1,61 +1,36 @@
-
-2024-07-07 14:40:11 - Server is up and listening to port => 1234
-2024-07-07 14:41:01 - User connected with handle: 756
-2024-07-07 14:41:01 - Main database initialized with 1 records
-2024-07-07 14:41:01 - Error: Failed to parse JSON from transaction database file
-2024-07-07 14:41:27 - My Server Received Data From User: 756 Data => Login:Kero75:7579
-2024-07-07 14:41:27 - Main database initialized with 1 records
-2024-07-07 14:41:27 - My server Send Data to User: 756 Data => Admin:Kero75:
-2024-07-07 14:42:47 - My Server Received Data From User: 756 Data => AddAccount:Sharple Samaan:Sharple2011:2011:27:sharple@gmail.com:1000
-2024-07-07 14:42:47 - Main database initialized with 1 records
-2024-07-07 14:42:48 - Main database initialized with 1 records
-2024-07-07 14:42:48 - Main database file saved successfully.
-2024-07-07 14:42:48 - Transaction database file saved successfully.
-2024-07-07 14:42:48 - Client added successfully.
-2024-07-07 14:42:48 - My server Send Data to User: 756 Data => Congratulations! New user 'Sharple2011' has been added. Welcome aboard
-2024-07-07 14:43:44 - My Server Received Data From User: 756 Data => ViewBankDatabase:
-2024-07-07 14:43:44 - Main database initialized with 2 records
-2024-07-07 14:43:44 - My server Send Data to User: 756 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"525684766","Age":"27","Authority":"Client","Balance":"1000","Email":"sharple@gmail.com","FullName":"Sharple Samaan","Password":"2011","Username":"Sharple2011"}]
-2024-07-07 14:44:35 - My Server Received Data From User: 756 Data => GetAccountBalance:525684766
-2024-07-07 14:44:35 - Main database initialized with 2 records
-2024-07-07 14:44:35 - My server Send Data to User: 756 Data => The account balance for Sharple2011 is 1000.
-2024-07-07 14:45:48 - My Server Received Data From User: 756 Data => ViewTransactions:525684766:4
-2024-07-07 14:45:48 - Transaction database initialized with 1 records
-2024-07-07 14:45:48 - My server Send Data to User: 756 Data => TransactionHistory:{"AccountNumber":"525684766","RecentTransactions":[]}
-2024-07-07 14:46:37 - My Server Received Data From User: 756 Data => GetAccountNumber:Sharple2011
-2024-07-07 14:46:37 - Main database initialized with 2 records
-2024-07-07 14:46:37 - My server Send Data to User: 756 Data => Account number for Sharple2011 is: 525684766
-2024-07-07 14:47:27 - User connected with handle: 788
-2024-07-07 14:47:27 - Main database initialized with 2 records
-2024-07-07 14:47:27 - Transaction database initialized with 1 records
-2024-07-07 14:48:10 - My Server Received Data From User: 788 Data => Login:Sharple2011:2011
-2024-07-07 14:48:10 - Main database initialized with 2 records
-2024-07-07 14:48:10 - My server Send Data to User: 788 Data => Client:Sharple2011:525684766
-2024-07-07 14:49:39 - My Server Received Data From User: 788 Data => GetAccountBalance:525684766
-2024-07-07 14:49:39 - Main database initialized with 2 records
-2024-07-07 14:49:39 - My server Send Data to User: 788 Data => The account balance for Sharple2011 is 1000.
-2024-07-07 14:50:27 - My Server Received Data From User: 788 Data => MakeTransaction:525684766:-10000
-2024-07-07 14:50:29 - Insufficient balance for account number: 525684766
-2024-07-07 14:50:29 - My server Send Data to User: 788 Data => Transaction failed: Insufficient balance.
-2024-07-07 14:51:22 - My Server Received Data From User: 788 Data => MakeTransaction:525684766:-1000
-2024-07-07 14:51:22 - Withdrawal amount of 1000 for account number: 525684766
-2024-07-07 14:51:22 - Main database file saved successfully.
-2024-07-07 14:51:22 - Updated transaction record for withdrawal for account number: 525684766
-2024-07-07 14:51:22 - Transaction database file saved successfully.
-2024-07-07 14:51:22 - Withdrawal successful for account number: 525684766
-2024-07-07 14:51:22 - My server Send Data to User: 788 Data => Transaction successful: Withdrawal successful.
-2024-07-07 14:52:20 - My Server Received Data From User: 788 Data => MakeTransaction:525684766:+1000
-2024-07-07 14:52:20 - Deposited amount of 1000 for account number: 525684766
-2024-07-07 14:52:20 - Main database file saved successfully.
-2024-07-07 14:52:20 - Updated transaction record for deposit for account number: 525684766
-2024-07-07 14:52:20 - Transaction database file saved successfully.
-2024-07-07 14:52:20 - Deposit successful for account number: 525684766
-2024-07-07 14:52:20 - My server Send Data to User: 788 Data => Transaction successful: Deposit successful.
-2024-07-07 14:53:13 - My Server Received Data From User: 788 Data => GetAccountBalance:525684766
-2024-07-07 14:53:13 - Main database initialized with 2 records
-2024-07-07 14:53:13 - My server Send Data to User: 788 Data => The account balance for Sharple2011 is 1000.
-2024-07-07 14:53:22 - My Server Received Data From User: 788 Data => ViewTransactions:525684766:4
-2024-07-07 14:53:22 - Transaction database initialized with 1 records
-2024-07-07 14:53:22 - My server Send Data to User: 788 Data => TransactionHistory:{"AccountNumber":"525684766","RecentTransactions":[{"amount":"-1000","date":"07.07.2024"},{"amount":"+1000","date":"07.07.2024"}]}
-2024-07-07 14:53:54 - Client => 756 has disconnected
-2024-07-07 14:53:56 - Client => 788 has disconnected
+2024-07-07 18:33:23 - Server is up and listening to port => 1234
+2024-07-07 18:34:10 - User connected with handle: 784
+2024-07-07 18:34:11 - Main database initialized with 1 records
+2024-07-07 18:34:11 - Error: Failed to parse JSON from transaction database file
+2024-07-07 18:35:06 - My Server Received Data From User: 784 Data => Login:Kero75:7579
+2024-07-07 18:35:06 - Main database initialized with 1 records
+2024-07-07 18:35:06 - My server Send Data to User: 784 Data => Admin:Kero75:
+2024-07-07 18:36:15 - My Server Received Data From User: 784 Data => AddAccount:Sharple Samaan:Sharple2011:2011:26:sharple@gmail.com:1000
+2024-07-07 18:36:15 - Main database initialized with 1 records
+2024-07-07 18:36:15 - Main database initialized with 1 records
+2024-07-07 18:36:15 - Main database file saved successfully.
+2024-07-07 18:36:15 - Transaction database file saved successfully.
+2024-07-07 18:36:15 - Client added successfully.
+2024-07-07 18:36:15 - My server Send Data to User: 784 Data => Congratulations! New user 'Sharple2011' has been added. Welcome aboard
+2024-07-07 18:39:39 - My Server Received Data From User: 784 Data => AddAccount:Nada :Nada2023:2023:26:nada@gmail.com:1000
+2024-07-07 18:39:39 - Main database initialized with 2 records
+2024-07-07 18:39:39 - Main database initialized with 2 records
+2024-07-07 18:39:39 - Main database file saved successfully.
+2024-07-07 18:39:39 - Transaction database file saved successfully.
+2024-07-07 18:39:39 - Client added successfully.
+2024-07-07 18:39:39 - My server Send Data to User: 784 Data => Congratulations! New user 'Nada2023' has been added. Welcome aboard
+2024-07-07 18:40:48 - My Server Received Data From User: 784 Data => UpdateAccount::::24::667791347
+2024-07-07 18:40:48 - Main database initialized with 3 records
+2024-07-07 18:40:48 - Updating age for account number: 667791347
+2024-07-07 18:40:48 - Main database file saved successfully.
+2024-07-07 18:40:48 - Account information updated successfully for account number: 667791347
+2024-07-07 18:40:48 - My server Send Data to User: 784 Data => Account update successful.
+2024-07-07 18:41:11 - My Server Received Data From User: 784 Data => Login:Sharple2011:2011
+2024-07-07 18:41:11 - Main database initialized with 3 records
+2024-07-07 18:41:11 - My server Send Data to User: 784 Data => Client:Sharple2011:665758470
+2024-07-07 18:41:31 - My Server Received Data From User: 784 Data => TransferMoney:665758470:667791347:1000
+2024-07-07 18:41:31 - Main database file saved successfully.
+2024-07-07 18:41:31 - Transaction database file saved successfully.
+2024-07-07 18:41:31 - My server Send Data to User: 784 Data => TransferResult:Transfer successful.
+2024-07-07 18:42:08 - My Server Received Data From User: 784 Data => TransferMoney:665758470:665758470:1000
+2024-07-07 18:42:08 - My server Send Data to User: 784 Data => Source and target account numbers cannot be the same.

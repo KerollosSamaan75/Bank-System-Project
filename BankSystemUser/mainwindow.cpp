@@ -633,3 +633,72 @@ void MainWindow::on_pB_ClientBack_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
+
+void MainWindow::on_pB_ClientTransferMoney_clicked()
+{
+    // Prompt the user for the target account number
+    bool ok;
+    QString targetAccountNumber = QInputDialog::getText(this,
+                                                        tr("Transfer Money"),
+                                                        tr("Enter the account number to transfer money to:"),
+                                                        QLineEdit::Normal, "", &ok);
+
+    // Validate the account number
+    QRegularExpression accountNumberRegex("\\d+"); // Matches one or more digits
+    QRegularExpressionMatch match = accountNumberRegex.match(targetAccountNumber);
+
+    // Check if the input was valid and accepted
+    if (ok && !targetAccountNumber.isEmpty() && match.hasMatch())
+    {
+        // Prompt the user for the transfer amount
+        QString transferAmount = QInputDialog::getText(this,
+                                                       tr("Transfer Money"),
+                                                       tr("Enter the transfer amount:"),
+                                                       QLineEdit::Normal, "", &ok);
+
+        // Check if the input was valid and accepted
+        if (ok && !transferAmount.isEmpty())
+        {
+            // Validate the amount
+            bool isNumber;
+            int amount = transferAmount.toInt(&isNumber);
+            if (isNumber && amount > 0)
+            {
+                // Construct the message and send it to the server
+                QString message = QString("TransferMoney:%1:%2:%3").arg(clientAccountNumber).arg(targetAccountNumber).arg(amount);
+                SystemUser.WriteData(message);
+            }
+            else
+            {
+                // Show an error message if the input is invalid
+                QMessageBox::warning(this, tr("Invalid Input"),
+                                     tr("Please enter a valid transfer amount."));
+            }
+        }
+        else if (!ok)
+        {
+            // User cancelled the input
+            return;
+        }
+        else
+        {
+            // Show an error message if the input is empty
+            QMessageBox::warning(this, tr("Invalid Input"),
+                                 tr("Transfer amount cannot be empty."));
+        }
+    }
+    else if (!ok)
+    {
+        // User cancelled the input
+        return;
+    }
+    else
+    {
+        // Show an error message if the input is empty or invalid
+        QMessageBox::warning(this, tr("Invalid Input"),
+                             tr("Target account number must be digits and cannot be empty."));
+    }
+}
+
+
+

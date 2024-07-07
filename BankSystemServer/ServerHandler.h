@@ -25,6 +25,7 @@ public:
     void getBankDataBase(const QStringList& RequestParts);
     void updateClientAccount(const QStringList& RequestParts);
     void makeTransaction(const QStringList& RequestParts);
+    void makeTransfer(const QStringList& RequestParts);
 signals:
 
 private:

@@ -31,7 +31,7 @@
      <string notr="true">background-color: rgb(50, 50, 50);</string>
     </property>
     <property name="currentIndex">
-     <number>7</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QLabel" name="label">
@@ -269,7 +269,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>200</y>
+        <y>190</y>
         <width>351</width>
         <height>81</height>
        </rect>
@@ -297,7 +297,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
       <property name="geometry">
        <rect>
         <x>400</x>
-        <y>400</y>
+        <y>370</y>
         <width>341</width>
         <height>81</height>
        </rect>
@@ -344,7 +344,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>300</y>
+        <y>280</y>
         <width>351</width>
         <height>81</height>
        </rect>
@@ -371,7 +371,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pBAdminBack">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>20</x>
         <y>520</y>
         <width>151</width>
         <height>61</height>
@@ -400,7 +400,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
       <property name="geometry">
        <rect>
         <x>400</x>
-        <y>200</y>
+        <y>190</y>
         <width>341</width>
         <height>81</height>
        </rect>
@@ -428,7 +428,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
       <property name="geometry">
        <rect>
         <x>400</x>
-        <y>300</y>
+        <y>280</y>
         <width>341</width>
         <height>81</height>
        </rect>
@@ -456,7 +456,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>400</y>
+        <y>370</y>
         <width>351</width>
         <height>81</height>
        </rect>
@@ -483,9 +483,9 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pB_UpdateClientAccount">
       <property name="geometry">
        <rect>
-        <x>390</x>
-        <y>500</y>
-        <width>351</width>
+        <x>220</x>
+        <y>460</y>
+        <width>341</width>
         <height>81</height>
        </rect>
       </property>
@@ -549,9 +549,9 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="pB_ClientGetAccountNumber">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>250</y>
-        <width>281</width>
+        <x>40</x>
+        <y>230</y>
+        <width>331</width>
         <height>81</height>
        </rect>
       </property>
@@ -577,8 +577,8 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pB_ClientViewAccountBalance">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>360</y>
+        <x>220</x>
+        <y>410</y>
         <width>331</width>
         <height>81</height>
        </rect>
@@ -605,8 +605,8 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pB_ViewMyHistory">
       <property name="geometry">
        <rect>
-        <x>380</x>
-        <y>250</y>
+        <x>410</x>
+        <y>230</y>
         <width>331</width>
         <height>81</height>
        </rect>
@@ -633,9 +633,9 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pB_MakeTransaction">
       <property name="geometry">
        <rect>
-        <x>70</x>
-        <y>360</y>
-        <width>281</width>
+        <x>40</x>
+        <y>320</y>
+        <width>331</width>
         <height>81</height>
        </rect>
       </property>
@@ -684,6 +684,46 @@ font: 700 20pt &quot;Segoe UI&quot;;
       </property>
       <property name="text">
        <string>Back</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pB_ClientTransferMoney">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>320</y>
+        <width>341</width>
+        <height>81</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #4CAF50; 
+font: 700 20pt &quot;Segoe UI&quot;;
+        border: none;
+                   color: white;
+                   padding: 15px 20px;
+                   text-align: center;
+                   text-decoration: none;
+                   display: inline-block;
+                   font-size: 20px;
+                   margin: 4px 2px;
+                   border-radius: 20px; 
+
+background-color: #4CAF50; 
+font: 700 20pt &quot;Segoe UI&quot;;
+        border: none;
+                   color: white;
+                   padding: 15px 20px;
+                   text-align: center;
+                   text-decoration: none;
+                   display: inline-block;
+                   font-size: 20px;
+                   margin: 4px 2px;
+                   border-radius: 20px; 
+
+</string>
+      </property>
+      <property name="text">
+       <string>Transfer Money</string>
       </property>
      </widget>
     </widget>

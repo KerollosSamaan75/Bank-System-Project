@@ -47,8 +47,8 @@ public:
     // Transaction operations
     bool setUserLoginState(const QString& username, const QString& state);
     bool updateTransaction(const QString accountNumber, const QString transaction, QString state); // Update transaction data
-    bool transferMoney(const QString accountNumberFrom, const QString accountNumberTo,
-                       const QString amountInFrom, const QString amountInTo, const QString amount); // Transfer money
+    bool transferMoney(const QString sourceAccountNumber, const QString targetAccountNumber,
+                       const QString sourceAmountStr, const QString targetAmountStr, QString &statusMessage);
     bool withdrawMoney(const QString accountNumber, const QString amount, QString& statusMessage); // Withdraw money
     bool depositMoney(const QString accountNumber, const QString amount, QString& statusMessage); // Deposit money
 

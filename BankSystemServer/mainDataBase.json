@@ -10,13 +10,23 @@
         "Username": "Kero75"
     },
     {
-        "AccountNumber": "525684766",
-        "Age": "27",
+        "AccountNumber": "665758470",
+        "Age": "26",
         "Authority": "Client",
-        "Balance": "1000",
+        "Balance": "0",
         "Email": "sharple@gmail.com",
         "FullName": "Sharple Samaan",
         "Password": "2011",
         "Username": "Sharple2011"
+    },
+    {
+        "AccountNumber": "667791347",
+        "Age": "24",
+        "Authority": "Client",
+        "Balance": "2000",
+        "Email": "nada@gmail.com",
+        "FullName": "Nada ",
+        "Password": "2023",
+        "Username": "Nada2023"
     }
 ]

@@ -1,18 +1,21 @@
 #include "ServerHandler.h"
 
-ServerHandler::ServerHandler(qint32 ID,QObject *parent)
-    : QThread{parent}
+
+ServerHandler::ServerHandler(qint32 ID, QObject *parent)
+    : QThread(parent)
 {
     this->ID = ID;
 }
 
 void ServerHandler::run()
 {
+
     qDebug()<<"User with ID: "<<ID<<" is running on thread "<<QThread::currentThreadId()<<Qt::endl;
+
     Socket = new QTcpSocket();
     Socket->setSocketDescriptor(ID);
-    connect(Socket,&QTcpSocket::readyRead,this,&ServerHandler::onReadyRead,Qt::DirectConnection);
-    connect(Socket,&QTcpSocket::disconnected,this,&ServerHandler::onDisconnected,Qt::DirectConnection);
+    connect(Socket, &QTcpSocket::readyRead, this, &ServerHandler::onReadyRead, Qt::DirectConnection);
+    connect(Socket, &QTcpSocket::disconnected, this, &ServerHandler::onDisconnected, Qt::DirectConnection);
 
     dataBase.initializeMainDatabase();
     dataBase.initializeTransactionDatabase();
@@ -22,46 +25,49 @@ void ServerHandler::run()
 void ServerHandler::onReadyRead()
 {
     QByteArray ByteArr = Socket->readAll();
-    qDebug()<<"My Server Received Data From User:"<<ID<<" Data => "<<ByteArr<<Qt::endl;
+    QString logMessage = QString("My Server Received Data From User: %1 Data => %2").arg(ID).arg(QString(ByteArr));
+    Logger::instance().logMessage(logMessage);
+    qDebug() << logMessage;
+
     Operation(QString(ByteArr));
 }
 
 void ServerHandler::Operation(QString Request)
 {
-    QStringList List= Request.split(":");
-    if(List[0] == "Login")
+    QStringList List = Request.split(":");
+    if (List[0] == "Login")
     {
         loginToServer(List);
     }
-    if(List[0]=="AddAccount")
+    if (List[0] == "AddAccount")
     {
         addNewClient(List);
     }
-    if(List[0]=="GetAccountNumber")
+    if (List[0] == "GetAccountNumber")
     {
         getClientAccountNumber(List);
     }
-    if(List[0]=="DeleteAccount")
+    if (List[0] == "DeleteAccount")
     {
         deleteClientAccount(List);
     }
-    if(List[0]=="GetAccountBalance")
+    if (List[0] == "GetAccountBalance")
     {
         getClientAccountBalance(List);
     }
-    if(List[0]=="ViewTransactions")
+    if (List[0] == "ViewTransactions")
     {
         getClientTransactionHistory(List);
     }
-    if(List[0]=="ViewBankDatabase")
+    if (List[0] == "ViewBankDatabase")
     {
         getBankDataBase(List);
     }
-    if(List[0]=="UpdateAccount")
+    if (List[0] == "UpdateAccount")
     {
         updateClientAccount(List);
     }
-    if(List[0]=="MakeTransaction")
+    if (List[0] == "MakeTransaction")
     {
         makeTransaction(List);
     }
@@ -75,14 +81,14 @@ void ServerHandler::loginToServer(const QStringList& RequestParts)
         sendMessage("Invalid request. Please provide username and password.");
         return;
     }
-    
+
     const QString tempName = RequestParts[1];
     const QString tempPass = RequestParts[2];
     bool isUserValid = false;
     QString userAuthority;
     QString userAccountNumber;
     QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(); // Get the main database records
-    
+
     // Loop through each record in the database
     for (const auto& record : databaseRecords)
     {
@@ -92,17 +98,16 @@ void ServerHandler::loginToServer(const QStringList& RequestParts)
             userAuthority = record["Authority"].toString(); // Capture user authority
             userAccountNumber = record["AccountNumber"].toString();
             break;
-
         }
     }
-    
+
     if (isUserValid)
     {
         // Change the 'log' state in the database
         userName = tempName;
         password = tempPass;
 
-        QString successMessage = QString("%1:%2:%3").arg(userAuthority,userName,userAccountNumber);
+        QString successMessage = QString("%1:%2:%3").arg(userAuthority, userName, userAccountNumber);
         sendMessage(successMessage);
     }
     else
@@ -111,7 +116,7 @@ void ServerHandler::loginToServer(const QStringList& RequestParts)
     }
 }
 
-void ServerHandler::addNewClient(const QStringList &RequestParts)
+void ServerHandler::addNewClient(const QStringList& RequestParts)
 {
     // Ensure RequestParts has at least 7 elements
     if (RequestParts.size() < 7)
@@ -119,12 +124,14 @@ void ServerHandler::addNewClient(const QStringList &RequestParts)
         sendMessage("Invalid request. Please provide all required fields: full name, username, password, age, email, and balance.");
         return;
     }
+
     const QString fullName = RequestParts[1];
     const QString userName = RequestParts[2];
     const QString password = RequestParts[3];
     const QString ageStr = RequestParts[4];
     const QString email = RequestParts[5];
     const QString balanceStr = RequestParts[6];
+
     // Check if username already exists in the database
     QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(); // Get the main database records
     for (const auto& record : databaseRecords)
@@ -135,8 +142,9 @@ void ServerHandler::addNewClient(const QStringList &RequestParts)
             return;
         }
     }
+
     // Add new user to the database
-    if (dataBase.addClient(userName,password,fullName,ageStr,email,balanceStr))
+    if (dataBase.addClient(userName, password, fullName, ageStr, email, balanceStr))
     {
         QString successMessage = QString("Congratulations! New user '%1' has been added. Welcome aboard").arg(userName);
         sendMessage(successMessage);
@@ -148,7 +156,7 @@ void ServerHandler::addNewClient(const QStringList &RequestParts)
     }
 }
 
-void ServerHandler::getClientAccountNumber(const QStringList &RequestParts)
+void ServerHandler::getClientAccountNumber(const QStringList& RequestParts)
 {
     // Ensure RequestParts has the necessary elements
     if (RequestParts.size() < 2)
@@ -187,7 +195,7 @@ void ServerHandler::getClientAccountNumber(const QStringList &RequestParts)
     }
 }
 
-void ServerHandler::deleteClientAccount(const QStringList &RequestParts)
+void ServerHandler::deleteClientAccount(const QStringList& RequestParts)
 {
     // Ensure RequestParts has the necessary elements
     if (RequestParts.size() < 2)
@@ -211,7 +219,7 @@ void ServerHandler::deleteClientAccount(const QStringList &RequestParts)
     }
 }
 
-void ServerHandler::getClientAccountBalance(const QStringList &RequestParts)
+void ServerHandler::getClientAccountBalance(const QStringList& RequestParts)
 {
     // Ensure RequestParts has the necessary elements
     if (RequestParts.size() < 2)
@@ -220,7 +228,7 @@ void ServerHandler::getClientAccountBalance(const QStringList &RequestParts)
         return;
     }
 
-    QString accountNumber = RequestParts[1]; // Assuming the identifier ( account number) is in RequestParts[1]
+    QString accountNumber = RequestParts[1]; // Assuming the identifier (account number) is in RequestParts[1]
     QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(); // Get the main database records
 
     // Flag to check if client is found
@@ -317,7 +325,7 @@ void ServerHandler::getClientTransactionHistory(const QStringList& RequestParts)
     sendMessage(responseMessage);
 }
 
-void ServerHandler::getBankDataBase(const QStringList &RequestParts)
+void ServerHandler::getBankDataBase(const QStringList& RequestParts)
 {
     // Ensure the request is valid
     if (RequestParts.isEmpty() || RequestParts[0] != "ViewBankDatabase")
@@ -340,7 +348,8 @@ void ServerHandler::getBankDataBase(const QStringList &RequestParts)
     QString responseMessage = "ViewBankDataBase:" + QString(doc.toJson(QJsonDocument::Compact));
     sendMessage(responseMessage);
 }
-void ServerHandler::updateClientAccount(const QStringList &RequestParts)
+
+void ServerHandler::updateClientAccount(const QStringList& RequestParts)
 {
     // Ensure RequestParts has the necessary elements
     if (RequestParts.size() < 7)
@@ -356,7 +365,6 @@ void ServerHandler::updateClientAccount(const QStringList &RequestParts)
     QString email = RequestParts[5];
     QString accountNumber = RequestParts[6];
 
-
     // Update the client account in the database
     bool success = dataBase.updateClient(accountNumber, userName, passWord, fullName, age, email);
 
@@ -371,7 +379,7 @@ void ServerHandler::updateClientAccount(const QStringList &RequestParts)
     }
 }
 
-void ServerHandler::makeTransaction(const QStringList &RequestParts)
+void ServerHandler::makeTransaction(const QStringList& RequestParts)
 {
     if (RequestParts.size() < 3)
     {
@@ -419,28 +427,30 @@ void ServerHandler::makeTransaction(const QStringList &RequestParts)
     }
 }
 
-
-
 void ServerHandler::onDisconnected()
 {
-    if(Socket->isOpen())
+    if (Socket->isOpen())
     {
         Socket->close();
-        qDebug()<<"Client => "<<ID<<"has disconnected"<<Qt::endl;
+        QString logMessage = QString("Client => %1 has disconnected").arg(ID);
+        Logger::instance().logMessage(logMessage);
+        qDebug() << logMessage;
     }
 }
 
 void ServerHandler::sendMessage(QString Message)
 {
-    if(Socket->isOpen())
+    if (Socket->isOpen())
     {
         Socket->write(Message.toUtf8());
-        qDebug()<<"My server Send Data to User:"<<ID<<" Data => "<<Message<<Qt::endl;
+        QString logMessage = QString("My server Send Data to User: %1 Data => %2").arg(ID).arg(Message);
+        Logger::instance().logMessage(logMessage);
+        qDebug() << logMessage;
     }
     else
     {
-        qDebug()<<"Myserver Can't Send Data to User:"<<ID<<"Because The Socket is Closed"<<Qt::endl;
+        QString logMessage = QString("Myserver Can't Send Data to User: %1 Because The Socket is Closed").arg(ID);
+        Logger::instance().logMessage(logMessage);
+        qDebug() << logMessage;
     }
 }
-
-

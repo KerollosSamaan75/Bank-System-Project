@@ -7,6 +7,7 @@
 #include<QDebug>
 #include<QString>
 #include"BankDataBase.h"
+#include "Logger.h"
 class ServerHandler : public QThread
 {
     Q_OBJECT

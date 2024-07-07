@@ -579,7 +579,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
        <rect>
         <x>380</x>
         <y>360</y>
-        <width>311</width>
+        <width>331</width>
         <height>81</height>
        </rect>
       </property>
@@ -635,7 +635,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
        <rect>
         <x>70</x>
         <y>360</y>
-        <width>271</width>
+        <width>281</width>
         <height>81</height>
        </rect>
       </property>
@@ -656,6 +656,34 @@ font: 700 20pt &quot;Segoe UI&quot;;
       </property>
       <property name="text">
        <string>Make Transaction</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pB_ClientBack">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>510</y>
+        <width>121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #4CAF50; 
+font: 700 20pt &quot;Segoe UI&quot;;
+        border: none;
+                   color: white;
+                   padding: 15px 20px;
+                   text-align: center;
+                   text-decoration: none;
+                   display: inline-block;
+                   font-size: 20px;
+                   margin: 4px 2px;
+                   border-radius: 20px; 
+
+</string>
+      </property>
+      <property name="text">
+       <string>Back</string>
       </property>
      </widget>
     </widget>

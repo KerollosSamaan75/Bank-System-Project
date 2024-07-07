@@ -63,6 +63,8 @@ private slots:
 
     void on_pB_MakeTransaction_clicked();
 
+    void on_pB_ClientBack_clicked();
+
 private:
     Ui::MainWindow *ui;
     User SystemUser;

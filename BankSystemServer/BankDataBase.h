@@ -11,6 +11,7 @@
 #include <QDateTime>
 #include<QString>
 #include <QRandomGenerator>
+#include "Logger.h"
 
 class BankDataBase : public QObject
 {

@@ -6,6 +6,7 @@
 #include<QTextStream>
 #include<QDebug>
 #include<ServerHandler.h>
+#include "Logger.h"
 
 class Server : public QTcpServer
 {
@@ -22,6 +23,5 @@ private:
     QTextStream qin;
     QTextStream qout;
     qint32 Port;
-    //DataBase _dataBase;
 };
 #endif // SERVER_H

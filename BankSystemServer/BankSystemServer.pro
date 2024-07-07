@@ -8,6 +8,7 @@ CONFIG += c++17 cmdline
 
 SOURCES += \
         BankDataBase.cpp \
+        Logger.cpp \
         Server.cpp \
         ServerHandler.cpp \
         main.cpp
@@ -19,5 +20,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     BankDataBase.h \
+    Logger.h \
     Server.h \
     ServerHandler.h

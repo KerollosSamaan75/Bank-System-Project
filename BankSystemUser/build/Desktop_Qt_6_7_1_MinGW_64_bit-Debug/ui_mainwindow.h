@@ -69,6 +69,7 @@ public:
     QPushButton *pB_ClientViewAccountBalance;
     QPushButton *pB_ViewMyHistory;
     QPushButton *pB_MakeTransaction;
+    QPushButton *pB_ClientBack;
     QWidget *AddAccount;
     QLabel *AddAccountlabel;
     QPushButton *pBCreateAccount;
@@ -459,7 +460,7 @@ public:
 ""));
         pB_ClientViewAccountBalance = new QPushButton(Client);
         pB_ClientViewAccountBalance->setObjectName("pB_ClientViewAccountBalance");
-        pB_ClientViewAccountBalance->setGeometry(QRect(380, 360, 311, 81));
+        pB_ClientViewAccountBalance->setGeometry(QRect(380, 360, 331, 81));
         pB_ClientViewAccountBalance->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
@@ -491,8 +492,24 @@ public:
 ""));
         pB_MakeTransaction = new QPushButton(Client);
         pB_MakeTransaction->setObjectName("pB_MakeTransaction");
-        pB_MakeTransaction->setGeometry(QRect(70, 360, 271, 81));
+        pB_MakeTransaction->setGeometry(QRect(70, 360, 281, 81));
         pB_MakeTransaction->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
+"font: 700 20pt \"Segoe UI\";\n"
+"        border: none;\n"
+"                   color: white;\n"
+"                   padding: 15px 20px;\n"
+"                   text-align: center;\n"
+"                   text-decoration: none;\n"
+"                   display: inline-block;\n"
+"                   font-size: 20px;\n"
+"                   margin: 4px 2px;\n"
+"                   border-radius: 20px; \n"
+"\n"
+""));
+        pB_ClientBack = new QPushButton(Client);
+        pB_ClientBack->setObjectName("pB_ClientBack");
+        pB_ClientBack->setGeometry(QRect(50, 510, 121, 61));
+        pB_ClientBack->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
 "font: 700 20pt \"Segoe UI\";\n"
 "        border: none;\n"
 "                   color: white;\n"
@@ -1012,6 +1029,7 @@ public:
         pB_ClientViewAccountBalance->setText(QCoreApplication::translate("MainWindow", "View My Account Balance", nullptr));
         pB_ViewMyHistory->setText(QCoreApplication::translate("MainWindow", "View My Transaction History", nullptr));
         pB_MakeTransaction->setText(QCoreApplication::translate("MainWindow", "Make Transaction", nullptr));
+        pB_ClientBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         AddAccountlabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">ADD ACCOUNT</p></body></html>", nullptr));
         pBCreateAccount->setText(QCoreApplication::translate("MainWindow", "Create Client Accout", nullptr));
         pBAddAccoutBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));

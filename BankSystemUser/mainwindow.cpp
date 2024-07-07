@@ -133,8 +133,7 @@ void MainWindow::requestResponse(QString message)
             QString amount = transaction["amount"].toString();
             QString date = transaction["date"].toString();
             QString formattedTransaction = QString("Date: %1, Amount: %2").arg(date).arg(amount);
-            ui->AdTransactionHistorylistWidget->clear();
-            ui->ClientTransactionHistoryListWidget->clear();
+
             ui->AdTransactionHistorylistWidget->addItem(formattedTransaction);
             ui->ClientTransactionHistoryListWidget->addItem(formattedTransaction);
         }
@@ -459,6 +458,7 @@ void MainWindow::on_pBAdminViewTransactionView_clicked()
 
     if (valid)
     {
+        ui->AdTransactionHistorylistWidget->clear();
         QString message = QString("ViewTransactions:%1:%2").arg(accountNumber).arg(historyCountStr);
         SystemUser.WriteData(message);
     }
@@ -584,6 +584,7 @@ void MainWindow::on_pb_ViewMyHistoryView_clicked()
 
     if (valid)
     {
+        ui->ClientTransactionHistoryListWidget->clear();
         QString message = QString("ViewTransactions:%1:%2").arg(clientAccountNumber).arg(historyCountStr);
         SystemUser.WriteData(message);
     }
@@ -625,4 +626,10 @@ void MainWindow::on_pB_MakeTransaction_clicked()
     }
 }
 
+
+
+void MainWindow::on_pB_ClientBack_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
 

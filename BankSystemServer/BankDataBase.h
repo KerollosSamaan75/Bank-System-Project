@@ -48,8 +48,8 @@ public:
     bool updateTransaction(const QString accountNumber, const QString transaction, QString state); // Update transaction data
     bool transferMoney(const QString accountNumberFrom, const QString accountNumberTo,
                        const QString amountInFrom, const QString amountInTo, const QString amount); // Transfer money
-    bool withdrawMoney(const QString accountNumber, const QString amount); // Withdraw money
-    bool depositMoney(const QString accountNumber, const QString amount); // Deposit money
+    bool withdrawMoney(const QString accountNumber, const QString amount, QString& statusMessage); // Withdraw money
+    bool depositMoney(const QString accountNumber, const QString amount, QString& statusMessage); // Deposit money
 
     // Utility
     QString generateAccountNumber();                // Generate a unique account number

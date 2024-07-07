@@ -6,11 +6,6 @@ ServerHandler::ServerHandler(qint32 ID,QObject *parent)
     this->ID = ID;
 }
 
-// ServerHandler::~ServerHandler()
-// {
-//     dataBase.setUserLoginState(userName, "0");
-// }
-
 void ServerHandler::run()
 {
     qDebug()<<"User with ID: "<<ID<<" is running on thread "<<QThread::currentThreadId()<<Qt::endl;
@@ -93,18 +88,11 @@ void ServerHandler::loginToServer(const QStringList& RequestParts)
     {
         if (record["Username"].toString() == tempName && record["Password"].toString() == tempPass)
         {
-            if (record["Login"].toString() == "0")
-            {
-                isUserValid = true;
-                userAuthority = record["Authority"].toString(); // Capture user authority
-                userAccountNumber = record["AccountNumber"].toString();
-                break;
-            }
-            else
-            {
-                sendMessage("Login failed. This account is already logged in.");
-                return;
-            }
+            isUserValid = true;
+            userAuthority = record["Authority"].toString(); // Capture user authority
+            userAccountNumber = record["AccountNumber"].toString();
+            break;
+
         }
     }
     
@@ -113,15 +101,9 @@ void ServerHandler::loginToServer(const QStringList& RequestParts)
         // Change the 'log' state in the database
         userName = tempName;
         password = tempPass;
-        if (dataBase.setUserLoginState(userName, "1"))
-        {
-            QString successMessage = QString("%1:%2:%3").arg(userAuthority,userName,userAccountNumber);
-            sendMessage(successMessage);
-        }
-        else
-        {
-            sendMessage("Login failed. Could not update the login state.");
-        }
+
+        QString successMessage = QString("%1:%2:%3").arg(userAuthority,userName,userAccountNumber);
+        sendMessage(successMessage);
     }
     else
     {
@@ -391,7 +373,6 @@ void ServerHandler::updateClientAccount(const QStringList &RequestParts)
 
 void ServerHandler::makeTransaction(const QStringList &RequestParts)
 {
-    // Ensure RequestParts has the necessary elements
     if (RequestParts.size() < 3)
     {
         sendMessage("Invalid request. Please provide account number and transaction amount.");
@@ -399,63 +380,44 @@ void ServerHandler::makeTransaction(const QStringList &RequestParts)
     }
 
     QString accountNumber = RequestParts[1];
-    QString transactionAmount = RequestParts[2];
+    QString amount = RequestParts[2];
 
-    // Validate the transaction amount
+    // Validate the amount
     bool isNumber;
-    int amount = transactionAmount.toInt(&isNumber);
-    if (!isNumber || amount == 0)
+    int transactionAmount = amount.toInt(&isNumber);
+    if (!isNumber)
     {
-        sendMessage("Invalid transaction amount. Please provide a valid number.");
+        sendMessage("Invalid transaction amount.");
         return;
     }
 
-    // Check if the account number exists in the database
-    QVector<QJsonObject> mainDatabase = dataBase.getMainDatabase();
-    bool accountFound = false;
-    for (const auto& record : mainDatabase)
-    {
-        if (record["AccountNumber"].toString() == accountNumber)
-        {
-            accountFound = true;
-            break;
-        }
-    }
+    QString statusMessage;
+    bool success;
 
-    if (!accountFound)
+    if (transactionAmount < 0)
     {
-        sendMessage("Account not found. Please provide a valid account number.");
-        return;
+        QString withdrawAmount = amount.mid(1);
+        success = dataBase.withdrawMoney(accountNumber, withdrawAmount, statusMessage);
     }
-
-    bool success = false;
-    if (transactionAmount.startsWith("+"))
+    else if (transactionAmount > 0)
     {
-        // Deposit money
-        success = dataBase.depositMoney(accountNumber, transactionAmount.mid(1)); // Remove the '+' sign
-    }
-    else if (transactionAmount.startsWith("-"))
-    {
-        // Withdraw money
-        success = dataBase.withdrawMoney(accountNumber, transactionAmount.mid(1)); // Remove the '-' sign
+        success = dataBase.depositMoney(accountNumber, amount, statusMessage);
     }
     else
     {
-        sendMessage("Invalid transaction format. Please use + for deposit and - for withdrawal.");
+        sendMessage("Transaction amount cannot be zero.");
         return;
     }
 
-    // Send response based on the success of the transaction
     if (success)
     {
-        sendMessage("Transaction successful.");
+        sendMessage("Transaction successful: " + statusMessage);
     }
     else
     {
-        sendMessage("Transaction failed. Please try again.");
+        sendMessage("Transaction failed: " + statusMessage);
     }
 }
-
 
 
 
@@ -463,7 +425,6 @@ void ServerHandler::onDisconnected()
 {
     if(Socket->isOpen())
     {
-        dataBase.setUserLoginState(userName, "0");
         Socket->close();
         qDebug()<<"Client => "<<ID<<"has disconnected"<<Qt::endl;
     }

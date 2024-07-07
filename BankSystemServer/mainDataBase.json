@@ -6,30 +6,17 @@
         "Balance": null,
         "Email": "kerosamaan07@gmail.com",
         "FullName": "Kirollos Samaan",
-        "Login": "0",
         "Password": "7579",
         "Username": "Kero75"
     },
     {
-        "AccountNumber": "885965026",
-        "Age": "23",
+        "AccountNumber": "423067059",
+        "Age": "35",
         "Authority": "Client",
-        "Balance": "1200",
-        "Email": "nada@gmail.com",
-        "FullName": "Nada",
-        "Login": "0",
-        "Password": "12345",
-        "Username": "Nada23"
-    },
-    {
-        "AccountNumber": "900487148",
-        "Age": "24",
-        "Authority": "Client",
-        "Balance": "1000",
-        "Email": "essam@gmail.com",
-        "FullName": "Essam",
-        "Login": "0",
-        "Password": "8888",
-        "Username": "Essam55"
+        "Balance": "100",
+        "Email": "Sharple@gmail.com",
+        "FullName": "Sharple Samaan",
+        "Password": "2011",
+        "Username": "Sharple2011"
     }
 ]

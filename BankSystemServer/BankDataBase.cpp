@@ -141,7 +141,6 @@ bool BankDataBase::addClient(const QString username, const QString password,cons
     newClient["Age"] = age;
     newClient["Email"] = email;
     newClient["Authority"] = "Client"; // Assuming new clients are added as regular users
-    newClient["Login"] = "0"; // Assuming initial login status is 0 (logged out)
     newClient["AccountNumber"] = AccountNumber;
     newClient["Balance"] = balance; // Initial balance is set to 0
 
@@ -407,29 +406,97 @@ bool BankDataBase::setUserLoginState(const QString& username, const QString& sta
 
 
 
-bool BankDataBase::transferMoney(const QString accountNumberFrom, const QString accountNumberTo, const QString amountInFrom, const QString amountInTo, const QString amount)
-{
+// bool BankDataBase::transferMoney(const QString accountNumberFrom, const QString accountNumberTo, const QString amountInFrom, const QString amountInTo, const QString amount)
+// {
 
+// }
+
+bool BankDataBase::withdrawMoney(const QString accountNumber, const QString amount, QString& statusMessage)
+{
+    // Validate the amount
+    bool isNumber;
+    int withdrawAmount = amount.toInt(&isNumber);
+    if (!isNumber || withdrawAmount <= 0)
+    {
+        statusMessage = "Invalid withdraw amount.";
+        return false;
+    }
+
+    // Find the account and update the balance
+    bool accountFound = false;
+    for (auto& record : mainDatabaseRecords)
+    {
+        if (record["AccountNumber"].toString() == accountNumber)
+        {
+            QString str = record["Balance"].toString();
+            int currentBalance = str.toInt();
+            if (withdrawAmount > currentBalance)
+            {
+                statusMessage = "Insufficient balance.";
+                return false;
+            }
+            int newBalance = currentBalance - withdrawAmount;
+            record["Balance"] = QString::number(newBalance);
+            accountFound = true;
+            break;
+        }
+    }
+
+    if (!accountFound)
+    {
+        statusMessage = "Account not found.";
+        return false;
+    }
+
+    // Save the updated main database records
+    if (!saveMainDatabaseToFile())
+    {
+        statusMessage = "Failed to save main database after withdrawal.";
+        return false;
+    }
+
+    // Update the transaction record
+    QJsonObject transaction;
+    transaction["amount"] = "-" + QString::number(withdrawAmount);
+    transaction["date"] = QDate::currentDate().toString("dd.MM.yyyy");
+
+    for (auto& record : transactionDatabaseRecords)
+    {
+        if (record["AccountNumber"].toString() == accountNumber)
+        {
+            QJsonArray transactionsArray = record["Transactions"].toArray();
+            transactionsArray.append(transaction);
+            record["Transactions"] = transactionsArray;
+            break;
+        }
+    }
+
+    if (!saveTransactionDatabaseToFile())
+    {
+        statusMessage = "Failed to save transaction database after withdrawal.";
+        return false;
+    }
+
+    statusMessage = "Withdrawal successful.";
+    return true;
 }
 
-bool BankDataBase::withdrawMoney(const QString accountNumber, const QString amount)
-{
-
-}
 
 
 
-bool BankDataBase::depositMoney(const QString accountNumber, const QString amount)
+
+
+
+bool BankDataBase::depositMoney(const QString accountNumber, const QString amount, QString& statusMessage)
 {
     // Validate the amount
     bool isNumber;
     int depositAmount = amount.toInt(&isNumber);
     if (!isNumber || depositAmount <= 0)
     {
-        qDebug() << "Invalid deposit amount.";
+        statusMessage = "Invalid deposit amount.";
         return false;
     }
-
 
     // Find the account and update the balance
     bool accountFound = false;
@@ -448,14 +515,14 @@ bool BankDataBase::depositMoney(const QString accountNumber, const QString amoun
 
     if (!accountFound)
     {
-        qDebug() << "Account not found.";
+        statusMessage = "Account not found.";
         return false;
     }
 
     // Save the updated main database records
     if (!saveMainDatabaseToFile())
     {
-        qDebug() << "Failed to save main database after deposit.";
+        statusMessage = "Failed to save main database after deposit.";
         return false;
     }
 
@@ -477,12 +544,14 @@ bool BankDataBase::depositMoney(const QString accountNumber, const QString amoun
 
     if (!saveTransactionDatabaseToFile())
     {
-        qDebug() << "Failed to save transaction database after deposit.";
+        statusMessage = "Failed to save transaction database after deposit.";
         return false;
     }
 
+    statusMessage = "Deposit successful.";
     return true;
 }
+
 
 
 

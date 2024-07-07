@@ -395,6 +395,7 @@ debug/moc_Server.cpp: ../../Server.h \
 		C:/Qt/6.7.1/mingw_64/include/QtNetwork/qtcpsocket.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvariant.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/q23utility.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
 		../../BankDataBase.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QFile \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qfile.h \
@@ -417,7 +418,6 @@ debug/moc_Server.cpp: ../../Server.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsonobject.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QDateTime \
-		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QRandomGenerator \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qrandom.h \
 		debug/moc_predefs.h \
@@ -551,6 +551,7 @@ debug/moc_ServerHandler.cpp: ../../ServerHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvariant.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/q23utility.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QDebug \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
 		../../BankDataBase.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QFile \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qfile.h \
@@ -574,7 +575,6 @@ debug/moc_ServerHandler.cpp: ../../ServerHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsonobject.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QDateTime \
-		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QRandomGenerator \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qrandom.h \
 		debug/moc_predefs.h \
@@ -870,6 +870,7 @@ debug/Server.o: ../../Server.cpp ../../Server.h \
 		C:/Qt/6.7.1/mingw_64/include/QtNetwork/qtcpsocket.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvariant.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/q23utility.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
 		../../BankDataBase.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QFile \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qfile.h \
@@ -892,7 +893,6 @@ debug/Server.o: ../../Server.cpp ../../Server.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsonobject.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QDateTime \
-		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QRandomGenerator \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qrandom.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Server.o ..\..\Server.cpp
@@ -1024,6 +1024,7 @@ debug/ServerHandler.o: ../../ServerHandler.cpp ../../ServerHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvariant.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/q23utility.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QDebug \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
 		../../BankDataBase.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QFile \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qfile.h \
@@ -1047,7 +1048,6 @@ debug/ServerHandler.o: ../../ServerHandler.cpp ../../ServerHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsonobject.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QDateTime \
-		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QRandomGenerator \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qrandom.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ServerHandler.o ..\..\ServerHandler.cpp
@@ -1198,6 +1198,7 @@ debug/main.o: ../../main.cpp C:/Qt/6.7.1/mingw_64/include/QtCore/QCoreApplicatio
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QThread \
 		C:/Qt/6.7.1/mingw_64/include/QtNetwork/QTcpSocket \
 		C:/Qt/6.7.1/mingw_64/include/QtNetwork/qtcpsocket.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
 		../../BankDataBase.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QFile \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qfile.h \
@@ -1220,7 +1221,6 @@ debug/main.o: ../../main.cpp C:/Qt/6.7.1/mingw_64/include/QtCore/QCoreApplicatio
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsonobject.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QDateTime \
-		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QRandomGenerator \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qrandom.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\..\main.cpp

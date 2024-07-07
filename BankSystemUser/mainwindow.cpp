@@ -133,6 +133,8 @@ void MainWindow::requestResponse(QString message)
             QString amount = transaction["amount"].toString();
             QString date = transaction["date"].toString();
             QString formattedTransaction = QString("Date: %1, Amount: %2").arg(date).arg(amount);
+            ui->AdTransactionHistorylistWidget->clear();
+            ui->ClientTransactionHistoryListWidget->clear();
             ui->AdTransactionHistorylistWidget->addItem(formattedTransaction);
             ui->ClientTransactionHistoryListWidget->addItem(formattedTransaction);
         }

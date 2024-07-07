@@ -136,7 +136,7 @@ public:
     QPushButton *pb_ViewMyHistoryBack;
     QPushButton *pb_ViewMyHistoryView;
     QListWidget *ClientTransactionHistoryListWidget;
-    QWidget *widget;
+    QWidget *layoutWidget11;
     QVBoxLayout *verticalLayout_13;
     QLabel *ClientViewHistoryCountErrorLabel;
     QLineEdit *lE_ClientViewHistoryCount;
@@ -931,20 +931,20 @@ public:
         ClientTransactionHistoryListWidget->setGeometry(QRect(390, 170, 381, 401));
         ClientTransactionHistoryListWidget->setStyleSheet(QString::fromUtf8("font: 14pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);"));
-        widget = new QWidget(ViewMyHistory);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(10, 240, 361, 78));
-        verticalLayout_13 = new QVBoxLayout(widget);
+        layoutWidget11 = new QWidget(ViewMyHistory);
+        layoutWidget11->setObjectName("layoutWidget11");
+        layoutWidget11->setGeometry(QRect(10, 240, 361, 78));
+        verticalLayout_13 = new QVBoxLayout(layoutWidget11);
         verticalLayout_13->setObjectName("verticalLayout_13");
         verticalLayout_13->setContentsMargins(0, 0, 0, 0);
-        ClientViewHistoryCountErrorLabel = new QLabel(widget);
+        ClientViewHistoryCountErrorLabel = new QLabel(layoutWidget11);
         ClientViewHistoryCountErrorLabel->setObjectName("ClientViewHistoryCountErrorLabel");
         ClientViewHistoryCountErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 14pt \"Segoe UI\";"));
 
         verticalLayout_13->addWidget(ClientViewHistoryCountErrorLabel);
 
-        lE_ClientViewHistoryCount = new QLineEdit(widget);
+        lE_ClientViewHistoryCount = new QLineEdit(layoutWidget11);
         lE_ClientViewHistoryCount->setObjectName("lE_ClientViewHistoryCount");
         lE_ClientViewHistoryCount->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
@@ -980,7 +980,7 @@ public:
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, lE_ClientViewHistoryCount, qOverload<>(&QLineEdit::clear));
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, ClientTransactionHistoryListWidget, qOverload<>(&QListWidget::clear));
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(7);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

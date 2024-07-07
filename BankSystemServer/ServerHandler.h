@@ -34,6 +34,7 @@ private:
     BankDataBase dataBase;
     QString userName;
     QString password;
+    QString statusMessage;
     // QThread interface
 protected:
     void run() override;

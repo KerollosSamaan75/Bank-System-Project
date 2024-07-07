@@ -1,7 +1,15 @@
 [
     {
-        "AccountNumber": "665758470",
+        "AccountNumber": "786377636",
         "Transactions": [
+            {
+                "amount": "+1000",
+                "date": "07.07.2024"
+            },
+            {
+                "amount": "-1000",
+                "date": "07.07.2024"
+            },
             {
                 "amount": "-1000",
                 "date": "07.07.2024"
@@ -9,7 +17,7 @@
         ]
     },
     {
-        "AccountNumber": "667791347",
+        "AccountNumber": "788872662",
         "Transactions": [
             {
                 "amount": "+1000",

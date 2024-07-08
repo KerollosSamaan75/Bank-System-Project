@@ -1,27 +1,39 @@
 [
     {
-        "AccountNumber": "786377636",
+        "AccountNumber": "456466057",
         "Transactions": [
             {
                 "amount": "+1000",
-                "date": "07.07.2024"
+                "date": "08.07.2024"
+            },
+            {
+                "amount": "+1000",
+                "date": "08.07.2024"
             },
             {
                 "amount": "-1000",
-                "date": "07.07.2024"
+                "date": "08.07.2024"
             },
             {
-                "amount": "-1000",
-                "date": "07.07.2024"
+                "amount": "-200",
+                "date": "08.07.2024"
             }
         ]
     },
     {
-        "AccountNumber": "788872662",
+        "AccountNumber": "459692688",
         "Transactions": [
             {
-                "amount": "+1000",
-                "date": "07.07.2024"
+                "amount": "-1000",
+                "date": "08.07.2024"
+            },
+            {
+                "amount": "-1000",
+                "date": "08.07.2024"
+            },
+            {
+                "amount": "+200",
+                "date": "08.07.2024"
             }
         ]
     }

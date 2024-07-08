@@ -459,7 +459,7 @@ void MainWindow::on_pBAdminViewTransactionView_clicked()
     if (valid)
     {
         ui->AdTransactionHistorylistWidget->clear();
-        QString message = QString("ViewTransactions:%1:%2").arg(accountNumber).arg(historyCountStr);
+        QString message = QString("GetTransactionHistory:%1:%2").arg(accountNumber).arg(historyCountStr);
         SystemUser.WriteData(message);
     }
 }
@@ -467,7 +467,7 @@ void MainWindow::on_pBAdminViewTransactionView_clicked()
 
 void MainWindow::on_pB_ViewBankDatabase_clicked()
 {
-    SystemUser.WriteData("ViewBankDatabase:");
+    SystemUser.WriteData("GetBankDataBase:");
     ui->stackedWidget->setCurrentIndex(5);
 }
 
@@ -585,7 +585,7 @@ void MainWindow::on_pb_ViewMyHistoryView_clicked()
     if (valid)
     {
         ui->ClientTransactionHistoryListWidget->clear();
-        QString message = QString("ViewTransactions:%1:%2").arg(clientAccountNumber).arg(historyCountStr);
+        QString message = QString("GetTransactionHistory:%1:%2").arg(clientAccountNumber).arg(historyCountStr);
         SystemUser.WriteData(message);
     }
 }
@@ -665,7 +665,7 @@ void MainWindow::on_pB_ClientTransferMoney_clicked()
             if (isNumber && amount > 0)
             {
                 // Construct the message and send it to the server
-                QString message = QString("TransferMoney:%1:%2:%3").arg(clientAccountNumber).arg(targetAccountNumber).arg(amount);
+                QString message = QString("MakeTransfer:%1:%2:%3").arg(clientAccountNumber).arg(targetAccountNumber).arg(amount);
                 SystemUser.WriteData(message);
             }
             else

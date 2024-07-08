@@ -1026,7 +1026,7 @@ public:
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, lE_ClientViewHistoryCount, qOverload<>(&QLineEdit::clear));
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, ClientTransactionHistoryListWidget, qOverload<>(&QListWidget::clear));
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(7);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

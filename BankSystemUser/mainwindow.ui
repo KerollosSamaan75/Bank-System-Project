@@ -1873,5 +1873,21 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pBAdminViewTransactionBack</sender>
+   <signal>clicked()</signal>
+   <receiver>AdTransactionHistorylistWidget</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>178</x>
+     <y>543</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>449</x>
+     <y>363</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
 </ui>

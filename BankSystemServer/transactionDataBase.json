@@ -1,40 +1,7 @@
 [
     {
-        "AccountNumber": "456466057",
+        "AccountNumber": "681536848",
         "Transactions": [
-            {
-                "amount": "+1000",
-                "date": "08.07.2024"
-            },
-            {
-                "amount": "+1000",
-                "date": "08.07.2024"
-            },
-            {
-                "amount": "-1000",
-                "date": "08.07.2024"
-            },
-            {
-                "amount": "-200",
-                "date": "08.07.2024"
-            }
-        ]
-    },
-    {
-        "AccountNumber": "459692688",
-        "Transactions": [
-            {
-                "amount": "-1000",
-                "date": "08.07.2024"
-            },
-            {
-                "amount": "-1000",
-                "date": "08.07.2024"
-            },
-            {
-                "amount": "+200",
-                "date": "08.07.2024"
-            }
         ]
     }
 ]

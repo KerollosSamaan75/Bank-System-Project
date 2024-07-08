@@ -28,12 +28,12 @@ public:
     ~MainWindow();
     void requestResponse(QString message);
 public slots:
-    void onConnectedDevice();
-    void onDisconnectedDevice();
-    void onErrorOccurredDevice(QAbstractSocket::SocketError socketError);
-    void onStateChangedDevice(QAbstractSocket::SocketState socketState);
-    void onReadyReadDevice(QString Data);
-    void onUserWriteData(QString Data);
+    void onConnectedServer();
+    void onDisconnectedServer();
+    void onErrorOccurredServer(QAbstractSocket::SocketError socketError);
+    void onStateChangedServer(QAbstractSocket::SocketState socketState);
+    void onReadyReadServer(QString Data);
+    void onUserSendRequest(QString Data);
 private slots:
 
     void on_pBConnect_clicked();
@@ -58,19 +58,13 @@ private slots:
     void on_pb_ViewMyHistoryBack_clicked();
     void on_pB_ViewMyHistory_clicked();
     void on_pb_ViewMyHistoryView_clicked();
-
-
-
     void on_pB_MakeTransaction_clicked();
-
     void on_pB_ClientBack_clicked();
-
     void on_pB_ClientTransferMoney_clicked();
 
 private:
     Ui::MainWindow *ui;
     User SystemUser;
-    QString Ad_accountNumber;
     QString clientAccountNumber;
     QString clientUserName;
 };

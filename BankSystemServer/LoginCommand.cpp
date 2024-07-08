@@ -19,7 +19,6 @@ void LoginCommand::execute(const QStringList &RequestParts, QString &statusMessa
     QString userAuthority;
     QString userAccountNumber;
     QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(statusMessage); // Get the main database records
-    Logger::instance().logMessage(statusMessage);
 
     // Loop through each record in the database
     for (const auto& record : databaseRecords)

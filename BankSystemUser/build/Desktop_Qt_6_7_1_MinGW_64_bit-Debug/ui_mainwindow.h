@@ -1025,6 +1025,7 @@ public:
         QObject::connect(pB_ClientUpdateAccountBack, &QPushButton::clicked, UpdateAccountPassword, qOverload<>(&QLineEdit::clear));
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, lE_ClientViewHistoryCount, qOverload<>(&QLineEdit::clear));
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, ClientTransactionHistoryListWidget, qOverload<>(&QListWidget::clear));
+        QObject::connect(pBAdminViewTransactionBack, &QPushButton::clicked, AdTransactionHistorylistWidget, qOverload<>(&QListWidget::clear));
 
         stackedWidget->setCurrentIndex(7);
 

@@ -1,7 +1,7 @@
 #include "ServerHandler.h"
 
 ServerHandler::ServerHandler(qint32 ID, QObject *parent)
-    : QThread(parent), ID(ID)
+    : QThread(parent), userID(ID)
 {
     setupCommands();
 }
@@ -22,10 +22,10 @@ void ServerHandler::setupCommands()
 
 void ServerHandler::run()
 {
-    statusMessage = "User with ID: "+QString::number(ID)+" is running on thread";
+    statusMessage = "User:"+QString::number(userID)+" is running on thread\n";
     Logger::instance().logMessage(statusMessage);
     Socket = new QTcpSocket();
-    Socket->setSocketDescriptor(ID);
+    Socket->setSocketDescriptor(userID);
     connect(Socket, &QTcpSocket::readyRead, this, &ServerHandler::onReadyRead, Qt::DirectConnection);
     connect(Socket, &QTcpSocket::disconnected, this, &ServerHandler::onDisconnected, Qt::DirectConnection);
 
@@ -40,7 +40,7 @@ void ServerHandler::run()
 void ServerHandler::onReadyRead()
 {
     QByteArray ByteArr = Socket->readAll();
-    statusMessage = QString("My Server Received Data From User: %1 Data => %2").arg(ID).arg(QString(ByteArr));
+    statusMessage = QString("Server Received Data From User:%1 Data => %2\n").arg(userID).arg(QString(ByteArr));
     Logger::instance().logMessage(statusMessage);
     Operation(QString(ByteArr));
 }
@@ -50,7 +50,7 @@ void ServerHandler::onDisconnected()
     if(Socket->isOpen())
     {
         Socket->close();
-        statusMessage = "User with ID: "+QString::number(ID)+" has disconnected";
+        statusMessage = "User:"+QString::number(userID)+" has disconnected\n";
         Logger::instance().logMessage(statusMessage);
     }
 }
@@ -60,7 +60,7 @@ void ServerHandler::Operation(QString Request)
     QStringList List = Request.split(":");
     if (List.isEmpty())
     {
-        sendMessage("Invalid request.");
+        sendResponse("Invalid request.");
         return;
     }
 
@@ -68,25 +68,25 @@ void ServerHandler::Operation(QString Request)
     if (commandMap.contains(commandKey))
     {
         commandMap[commandKey]->execute(List, statusMessage);
-        sendMessage(statusMessage);
+        sendResponse(statusMessage);
     }
     else
     {
-        sendMessage("Unknown command.");
+        sendResponse("Unknown command.");
     }
 }
 
-void ServerHandler::sendMessage(const QString &Message)
+void ServerHandler::sendResponse(const QString &Message)
 {
     if (Socket->isOpen())
     {
         Socket->write(Message.toUtf8());
-        QString logMessage = QString("My server Send Data to User: %1 Data => %2").arg(ID).arg(Message);
+        QString logMessage = QString("My server Send Data to User: %1 Data => %2\n").arg(userID).arg(Message);
         Logger::instance().logMessage(logMessage);
     }
     else
     {
-        QString logMessage = QString("My server Can't Send Data to User: %1 Because The Socket is Closed").arg(ID);
+        QString logMessage = QString("My server Can't Send Data to User: %1 Because The Socket is Closed\n").arg(userID);
         Logger::instance().logMessage(logMessage);
     }
 }

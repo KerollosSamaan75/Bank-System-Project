@@ -6,12 +6,12 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    connect(&SystemUser,&User::Connected,this,&MainWindow::onConnectedDevice);
-    connect(&SystemUser,&User::Disconnected,this,&MainWindow::onDisconnectedDevice);
-    connect(&SystemUser,&User::ErrorOccurred,this,&MainWindow::onErrorOccurredDevice);
-    connect(&SystemUser,&User::StateChanged,this,&MainWindow::onStateChangedDevice);
-    connect(&SystemUser,&User::ReadyRead,this,&MainWindow::onReadyReadDevice);
-    connect(&SystemUser,&User::UserWriteData,this,&MainWindow::onUserWriteData);
+    connect(&SystemUser,&User::Connected,this,&MainWindow::onConnectedServer);
+    connect(&SystemUser,&User::Disconnected,this,&MainWindow::onDisconnectedServer);
+    connect(&SystemUser,&User::ErrorOccurred,this,&MainWindow::onErrorOccurredServer);
+    connect(&SystemUser,&User::StateChanged,this,&MainWindow::onStateChangedServer);
+    connect(&SystemUser,&User::ReadyRead,this,&MainWindow::onReadyReadServer);
+    connect(&SystemUser,&User::UserSendRequest,this,&MainWindow::onUserSendRequest);
 
 
     ui->stackedWidget->setCurrentIndex(0);
@@ -96,8 +96,7 @@ void MainWindow::requestResponse(QString message)
                                       .arg(obj["Age"].toString("N/A"))
                                       .arg(obj["Email"].toString("N/A"))
                                       .arg(obj["Balance"].toString("N/A"))
-                                      .arg(obj["Authority"].toString("N/A"))
-                                      .arg(obj["Login"].toString("N/A"));
+                                      .arg(obj["Authority"].toString("N/A"));
             ui->BankDataBaselistWidget->addItem(accountInfo);
         }
     }
@@ -122,9 +121,11 @@ void MainWindow::requestResponse(QString message)
 
         // Clear the list widget
         ui->AdTransactionHistorylistWidget->clear();
+        ui->ClientTransactionHistoryListWidget->clear();
 
         // Display account number as a header
         ui->AdTransactionHistorylistWidget->addItem("Account Number: " + accountNumber);
+        ui->ClientTransactionHistoryListWidget->addItem("Account Number: " + accountNumber);
 
         // Iterate through the transactions and add them to the list widget
         for (const QJsonValue& value : transactions)
@@ -146,26 +147,28 @@ void MainWindow::requestResponse(QString message)
 
 
 
-void MainWindow::onConnectedDevice()
+void MainWindow::onConnectedServer()
 {
     ui->Console->addItem("User has connected to Server");
-     QMessageBox::information(this, "Connection Successful", "You have successfully connected to the server\n"
+    qDebug()<<"User has connected to Server";
+    QMessageBox::information(this, "Connection Successful", "You have successfully connected to the server\n"
                                     "now you can Login to the Bank System.");
     ui->Console->hide();
     ui->pBConnect->hide();
     ui->frame->setEnabled(true);
 }
 
-void MainWindow::onDisconnectedDevice()
+void MainWindow::onDisconnectedServer()
 {
     ui->Console->addItem("User has disconnected from Server");
     qDebug()<<"User has disconnected from Server"<<Qt::endl;
 }
 
-void MainWindow::onErrorOccurredDevice(QAbstractSocket::SocketError socketError)
+void MainWindow::onErrorOccurredServer(QAbstractSocket::SocketError socketError)
 {
     QMetaEnum meta = QMetaEnum::fromType<QAbstractSocket::SocketError>();
     ui->Console->addItem(meta.valueToKey(socketError));
+    qDebug()<<meta.valueToKey(socketError);
     if(socketError == 0)
     {
         QString message = "Unable to connect to the server.\n\n"
@@ -185,29 +188,29 @@ void MainWindow::onErrorOccurredDevice(QAbstractSocket::SocketError socketError)
     }
 }
 
-void MainWindow::onStateChangedDevice(QAbstractSocket::SocketState socketState)
+void MainWindow::onStateChangedServer(QAbstractSocket::SocketState socketState)
 {
     QMetaEnum meta = QMetaEnum::fromType<QAbstractSocket::SocketState>();
     ui->Console->addItem(meta.valueToKey(socketState));
     qDebug()<<meta.valueToKey(socketState)<<Qt::endl;
 }
 
-void MainWindow::onReadyReadDevice(QString Data)
+void MainWindow::onReadyReadServer(QString Data)
 {
-    QString data = QString("User Recieved from server is ==> %1").arg(Data);
+    QString data = QString("User Recieved response from server is ==> %1").arg(Data);
     qDebug()<<data<<Qt::endl;
     requestResponse(Data);
 }
 
-void MainWindow::onUserWriteData(QString Data)
+void MainWindow::onUserSendRequest(QString Data)
 {
-    QString data = QString("User Write Data ==> %1").arg(Data);
+    QString data = QString("User send request to server ==> %1").arg(Data);
     qDebug()<<data<<Qt::endl;
 }
 
 void MainWindow::on_pBConnect_clicked()
 {
-    SystemUser.ConnectToDevice("192.168.1.17",1234);
+    SystemUser.ConnectToServer("192.168.1.17",1234);
 }
 
 
@@ -243,7 +246,7 @@ void MainWindow::on_pBLogin_clicked()
         QString userName =ui->lEUserName->text();
         QString passWord=ui->lEPassword->text();
         QString message = QString("Login:%1:%2").arg(userName).arg(passWord);
-        SystemUser.WriteData(message);
+        SystemUser.SendRequest(message);
     }
 }
 
@@ -343,7 +346,7 @@ void MainWindow::on_pBCreateAccount_clicked()
         double balance = ui->NewUserBalance->text().toDouble();
 
         QString message = QString("AddAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(balance);
-        SystemUser.WriteData(message);
+        SystemUser.SendRequest(message);
     }
 }
 
@@ -366,7 +369,7 @@ void MainWindow::on_pB_AdminGetAccountNumber_clicked()
         return;
     }
     QString message = QString("GetAccountNumber:%1").arg(username);
-    SystemUser.WriteData(message);
+    SystemUser.SendRequest(message);
 }
 
 
@@ -382,7 +385,7 @@ void MainWindow::on_pB_DeleteAccount_clicked()
         return;
     }
     QString message = QString("DeleteAccount:%1").arg(accountNumber);
-    SystemUser.WriteData(message);
+    SystemUser.SendRequest(message);
 }
 
 
@@ -406,7 +409,7 @@ void MainWindow::on_pB_AdminGetAccountBalance_clicked()
         return;
     }
     QString message = QString("GetAccountBalance:%1").arg(accountNumber);
-    SystemUser.WriteData(message);
+    SystemUser.SendRequest(message);
 }
 
 
@@ -460,14 +463,14 @@ void MainWindow::on_pBAdminViewTransactionView_clicked()
     {
         ui->AdTransactionHistorylistWidget->clear();
         QString message = QString("GetTransactionHistory:%1:%2").arg(accountNumber).arg(historyCountStr);
-        SystemUser.WriteData(message);
+        SystemUser.SendRequest(message);
     }
 }
 
 
 void MainWindow::on_pB_ViewBankDatabase_clicked()
 {
-    SystemUser.WriteData("GetBankDataBase:");
+    SystemUser.SendRequest("GetBankDataBase:");
     ui->stackedWidget->setCurrentIndex(5);
 }
 
@@ -490,7 +493,7 @@ void MainWindow::on_pB_UpdateClientAccount_clicked()
         QMessageBox::critical(this, "Error", "Account number is required");
         return;
     }
-    Ad_accountNumber = number;
+    clientAccountNumber = number;
     ui->stackedWidget->setCurrentIndex(6);
 }
 
@@ -515,8 +518,8 @@ void MainWindow::on_pB_Update_clicked()
     QRegularExpressionMatch match = emailRegex.match(email);
     if(email.isEmpty())
     {
-        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(Ad_accountNumber);
-        SystemUser.WriteData(message);
+        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(clientAccountNumber);
+        SystemUser.SendRequest(message);
     }
     else if (!match.hasMatch())
     {
@@ -526,8 +529,8 @@ void MainWindow::on_pB_Update_clicked()
     else
     {
         ui->UpdateEmailErrorLabel->setVisible(false);
-        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(Ad_accountNumber);
-        SystemUser.WriteData(message);
+        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(clientAccountNumber);
+        SystemUser.SendRequest(message);
     }
 
 }
@@ -542,7 +545,7 @@ void MainWindow::on_pB_ClientGetAccountNumber_clicked()
 void MainWindow::on_pB_ClientViewAccountBalance_clicked()
 {
     QString message = QString("GetAccountBalance:%1").arg(clientAccountNumber);
-    SystemUser.WriteData(message);
+    SystemUser.SendRequest(message);
 }
 
 
@@ -586,7 +589,7 @@ void MainWindow::on_pb_ViewMyHistoryView_clicked()
     {
         ui->ClientTransactionHistoryListWidget->clear();
         QString message = QString("GetTransactionHistory:%1:%2").arg(clientAccountNumber).arg(historyCountStr);
-        SystemUser.WriteData(message);
+        SystemUser.SendRequest(message);
     }
 }
 
@@ -615,7 +618,7 @@ void MainWindow::on_pB_MakeTransaction_clicked()
         {
             // Process the transaction amount
             QString message = QString("MakeTransaction:%1:%2").arg(clientAccountNumber).arg(transactionAmount);
-            SystemUser.WriteData(message);
+            SystemUser.SendRequest(message);
         }
         else
         {
@@ -666,7 +669,7 @@ void MainWindow::on_pB_ClientTransferMoney_clicked()
             {
                 // Construct the message and send it to the server
                 QString message = QString("MakeTransfer:%1:%2:%3").arg(clientAccountNumber).arg(targetAccountNumber).arg(amount);
-                SystemUser.WriteData(message);
+                SystemUser.SendRequest(message);
             }
             else
             {

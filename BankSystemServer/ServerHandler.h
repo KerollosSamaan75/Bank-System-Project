@@ -26,27 +26,23 @@ class ServerHandler : public QThread
     Q_OBJECT
 public:
     explicit ServerHandler(qint32 ID, QObject *parent = nullptr);
-    void sendMessage(const QString &Message);
-    void Operation(QString Request);
-
-signals:
-
-private:
-    qint32 ID;
-    QTcpSocket *Socket;
-    BankDataBase dataBase;
-    QString statusMessage;
-    QMap<QString, Command*> commandMap;
-
-protected:
-    void run() override;
 
 public slots:
     void onReadyRead();
     void onDisconnected();
 
+protected:
+    void run() override;
+
 private:
+    qint32 userID;
+    QTcpSocket *Socket;
+    BankDataBase dataBase;
+    QString statusMessage;
+    QMap<QString, Command*> commandMap;
     void setupCommands();
+    void Operation(QString Request);
+    void sendResponse(const QString &Message);
 };
 
 #endif // SERVERHANDLER_H

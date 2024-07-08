@@ -37,18 +37,18 @@ namespace {
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::stringData(
     "MainWindow",
-    "onConnectedDevice",
+    "onConnectedServer",
     "",
-    "onDisconnectedDevice",
-    "onErrorOccurredDevice",
+    "onDisconnectedServer",
+    "onErrorOccurredServer",
     "QAbstractSocket::SocketError",
     "socketError",
-    "onStateChangedDevice",
+    "onStateChangedServer",
     "QAbstractSocket::SocketState",
     "socketState",
-    "onReadyReadDevice",
+    "onReadyReadServer",
     "Data",
-    "onUserWriteData",
+    "onUserSendRequest",
     "on_pBConnect_clicked",
     "on_pBLogin_clicked",
     "on_pB_AddAccount_clicked",
@@ -171,20 +171,20 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSMainWindowENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
-        // method 'onConnectedDevice'
+        // method 'onConnectedServer'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'onDisconnectedDevice'
+        // method 'onDisconnectedServer'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'onErrorOccurredDevice'
+        // method 'onErrorOccurredServer'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QAbstractSocket::SocketError, std::false_type>,
-        // method 'onStateChangedDevice'
+        // method 'onStateChangedServer'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QAbstractSocket::SocketState, std::false_type>,
-        // method 'onReadyReadDevice'
+        // method 'onReadyReadServer'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        // method 'onUserWriteData'
+        // method 'onUserSendRequest'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'on_pBConnect_clicked'
@@ -247,12 +247,12 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->onConnectedDevice(); break;
-        case 1: _t->onDisconnectedDevice(); break;
-        case 2: _t->onErrorOccurredDevice((*reinterpret_cast< std::add_pointer_t<QAbstractSocket::SocketError>>(_a[1]))); break;
-        case 3: _t->onStateChangedDevice((*reinterpret_cast< std::add_pointer_t<QAbstractSocket::SocketState>>(_a[1]))); break;
-        case 4: _t->onReadyReadDevice((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 5: _t->onUserWriteData((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 0: _t->onConnectedServer(); break;
+        case 1: _t->onDisconnectedServer(); break;
+        case 2: _t->onErrorOccurredServer((*reinterpret_cast< std::add_pointer_t<QAbstractSocket::SocketError>>(_a[1]))); break;
+        case 3: _t->onStateChangedServer((*reinterpret_cast< std::add_pointer_t<QAbstractSocket::SocketState>>(_a[1]))); break;
+        case 4: _t->onReadyReadServer((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 5: _t->onUserSendRequest((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 6: _t->on_pBConnect_clicked(); break;
         case 7: _t->on_pBLogin_clicked(); break;
         case 8: _t->on_pB_AddAccount_clicked(); break;

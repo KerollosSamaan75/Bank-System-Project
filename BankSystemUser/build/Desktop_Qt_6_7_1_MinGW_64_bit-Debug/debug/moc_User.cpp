@@ -47,7 +47,7 @@ constexpr auto qt_meta_stringdata_CLASSUserENDCLASS = QtMocHelpers::stringData(
     "socketState",
     "ReadyRead",
     "Data",
-    "UserWriteData",
+    "UserSendRequest",
     "onConnected",
     "onDisconnected",
     "onErrorOccurred",
@@ -127,7 +127,7 @@ Q_CONSTINIT const QMetaObject User::staticMetaObject = { {
         // method 'ReadyRead'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
-        // method 'UserWriteData'
+        // method 'UserSendRequest'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'onConnected'
@@ -157,7 +157,7 @@ void User::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         case 2: _t->ErrorOccurred((*reinterpret_cast< std::add_pointer_t<QAbstractSocket::SocketError>>(_a[1]))); break;
         case 3: _t->StateChanged((*reinterpret_cast< std::add_pointer_t<QAbstractSocket::SocketState>>(_a[1]))); break;
         case 4: _t->ReadyRead((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
-        case 5: _t->UserWriteData((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 5: _t->UserSendRequest((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 6: _t->onConnected(); break;
         case 7: _t->onDisconnected(); break;
         case 8: _t->onErrorOccurred((*reinterpret_cast< std::add_pointer_t<QAbstractSocket::SocketError>>(_a[1]))); break;
@@ -236,7 +236,7 @@ void User::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void *
         }
         {
             using _t = void (User::*)(QString );
-            if (_t _q_method = &User::UserWriteData; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+            if (_t _q_method = &User::UserSendRequest; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
                 *result = 5;
                 return;
             }
@@ -308,7 +308,7 @@ void User::ReadyRead(QString _t1)
 }
 
 // SIGNAL 5
-void User::UserWriteData(QString _t1)
+void User::UserSendRequest(QString _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 5, _a);

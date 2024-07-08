@@ -11,16 +11,16 @@ class User : public QObject
     Q_OBJECT
 public:
     explicit User(QObject *parent = nullptr);
-    void ConnectToDevice(QString Ip,qint32 Port);
-    void DisconnectFromDevice();
-    void WriteData(QString Data);
+    void ConnectToServer(QString Ip,qint32 Port);
+    void DisconnectFromServer();
+    void SendRequest(QString Data);
 signals:
     void Connected();
     void Disconnected();
     void ErrorOccurred(QAbstractSocket::SocketError socketError);
     void StateChanged(QAbstractSocket::SocketState socketState);
     void ReadyRead(QString Data);
-    void UserWriteData(QString Data);
+    void UserSendRequest(QString Data);
 
 private slots:
     void onConnected();

@@ -20,8 +20,6 @@ signals:
 protected:
     void incomingConnection(qintptr handle) override;
 private:
-    QTextStream qin;
-    QTextStream qout;
     qint32 Port;
 };
 #endif // SERVER_H

@@ -20,8 +20,6 @@ public:
 private:
     QVector<QJsonObject> mainDatabaseRecords;        // Vector holding data from the main database file
     QVector<QJsonObject> transactionDatabaseRecords;         // Vector holding data from the transaction database file
-    QTextStream inputStream;                        // QTextStream instance for handling user input
-    QTextStream outputStream;                       // QTextStream instance for handling user output
     QString mainDatabaseFilePath;                   // Path to the main database file
     QString transactionFilePath;                    // Path to the transaction database file
 

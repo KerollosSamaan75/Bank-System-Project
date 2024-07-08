@@ -10,7 +10,6 @@ void DeleteAccountCommand::execute(const QStringList &RequestParts, QString &sta
         statusMessage = "Invalid request. Please provide the account number.";
         return;
     }
-
     QString accountNumber = RequestParts[1]; // Assuming account number is in RequestParts[1]
 
     // Attempt to delete the client from the database

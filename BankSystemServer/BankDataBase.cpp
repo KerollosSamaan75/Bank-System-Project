@@ -1,7 +1,7 @@
 #include "BankDataBase.h"
 
 BankDataBase::BankDataBase(QObject *parent)
-    : QObject{parent},inputStream{stdin},outputStream{stdout},
+    : QObject{parent},
     mainDatabaseFilePath{"D:\\ITIDA_WorkSpace\\Qt_Sessions\\Final Project\\BankSystemServer\\mainDataBase.json"},
     transactionFilePath{"D:\\ITIDA_WorkSpace\\Qt_Sessions\\Final Project\\BankSystemServer\\transactionDataBase.json"}
 {}
@@ -11,7 +11,7 @@ void BankDataBase::initializeMainDatabase(QString &statusMessage)
     QFile file(mainDatabaseFilePath); // Open QFile for main database
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) // Check if file opened successfully
     {
-        statusMessage = "Error: Cannot open main database file";
+        statusMessage = "Error: Cannot open main database file\n";
         return;
     }
 
@@ -23,13 +23,13 @@ void BankDataBase::initializeMainDatabase(QString &statusMessage)
 
     if (parseError.error != QJsonParseError::NoError)
     {
-        statusMessage = "Error: Failed to parse JSON from main database file";
+        statusMessage = "Error: Failed to parse JSON from main database file\n";
         return;
     }
 
     if (!jsonDoc.isArray())
     {
-        statusMessage = "Error: Main database file does not contain a JSON array";
+        statusMessage = "Error: Main database file does not contain a JSON array\n";
         return;
     }
 
@@ -47,10 +47,10 @@ void BankDataBase::initializeMainDatabase(QString &statusMessage)
         }
         else
         {
-            statusMessage = "Warning: Found non-object element in main database JSON array";
+            statusMessage = "Warning: Found non-object element in main database JSON array\n";
         }
     }
-    statusMessage = "Main database initialized with " + QString::number(mainDatabaseRecords.size()) + " records";
+    statusMessage = "Main database initialized with " + QString::number(mainDatabaseRecords.size()) + " records\n";
 }
 
 
@@ -61,7 +61,7 @@ void BankDataBase::initializeTransactionDatabase(QString &statusMessage)
     QFile file(transactionFilePath); // Open QFile for transaction database
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) // Check if file opened successfully
     {
-        statusMessage =  "Error: Cannot open transaction database file";
+        statusMessage =  "Error: Cannot open transaction database file\n";
         return;
     }
 
@@ -73,13 +73,13 @@ void BankDataBase::initializeTransactionDatabase(QString &statusMessage)
 
     if (parseError.error != QJsonParseError::NoError)
     {
-        statusMessage =  "Error: Failed to parse JSON from transaction database file";
+        statusMessage =  "Error: Failed to parse JSON from transaction database file\n";
         return;
     }
 
     if (!jsonDoc.isArray())
     {
-        statusMessage = "Error: Transaction database file does not contain a JSON array";;
+        statusMessage = "Error: Transaction database file does not contain a JSON array\n";
         return;
     }
 
@@ -97,10 +97,10 @@ void BankDataBase::initializeTransactionDatabase(QString &statusMessage)
         }
         else
         {
-            statusMessage = "Warning: Found non-object element in transaction database JSON array";;
+            statusMessage = "Warning: Found non-object element in transaction database JSON array\n";
         }
     }
-    statusMessage = "Transaction database initialized with " + QString::number(transactionDatabaseRecords.size()) + " records";
+    statusMessage = "Transaction database initialized with " + QString::number(transactionDatabaseRecords.size()) + " records\n";
 }
 
 
@@ -121,18 +121,6 @@ QVector<QJsonObject> BankDataBase::getTransactionDatabase(QString &statusMessage
 bool BankDataBase::addClient(const QString username, const QString password, const QString fullName,
                              const QString age, const QString email, const QString balance ,QString &statusMessage)
 {
-    initializeMainDatabase(statusMessage);
-
-    // Check if the user already exists
-    for (const auto& record : mainDatabaseRecords)
-    {
-        if (record["Username"].toString() == username)
-        {
-            statusMessage = "User already exists!";
-            return false;
-        }
-    }
-
     QString AccountNumber = generateAccountNumber(); // Generate a unique account number
 
     // Create a new client object
@@ -150,7 +138,7 @@ bool BankDataBase::addClient(const QString username, const QString password, con
     mainDatabaseRecords.push_back(newClient);
     if (!saveMainDatabaseToFile(statusMessage))
     {
-        statusMessage = "Failed to save main database after adding new client.";
+        statusMessage += "Failed to save main database after adding new client.\n";
         return false;
     }
 
@@ -162,10 +150,10 @@ bool BankDataBase::addClient(const QString username, const QString password, con
     // Save the updated transaction database to file
     if (!saveTransactionDatabaseToFile(statusMessage))
     {
-        statusMessage = "Failed to save transaction database after adding new client.";
+        statusMessage += "Failed to save transaction database after adding new client.\n";
         return false;
     }
-    statusMessage = "Client added successfully.";
+    statusMessage += "Client added successfully.\n";
     return true; // Return true indicating client addition succeeded
 }
 
@@ -193,12 +181,12 @@ bool BankDataBase::saveMainDatabaseToFile(QString &statusMessage)
         QTextStream out(&file);
         out << jsonData;
         file.close();
-        statusMessage = "Main database file saved successfully.";
+        statusMessage += "Main database file saved successfully.\n";
         return true; // Return true indicating success
     }
     else
     {
-        statusMessage = "Failed to save main database file.";
+        statusMessage += "Failed to save main database file.\n";
         return false; // Return false indicating failure
     }
 }
@@ -227,12 +215,12 @@ bool BankDataBase::saveTransactionDatabaseToFile(QString &statusMessage)
         QTextStream out(&file);
         out << jsonData;
         file.close();
-        statusMessage = "Transaction database file saved successfully.";
+        statusMessage += "Transaction database file saved successfully.\n";
         return true;
     }
     else
     {
-        statusMessage ="Failed to save transaction database file.";
+        statusMessage +="Failed to save transaction database file.\n";
         return false;
     }
 }
@@ -253,40 +241,54 @@ bool BankDataBase::deleteClient(const QString accountNumber ,QString &statusMess
     {
         if (mainDatabaseRecords[i]["AccountNumber"].toString() == accountNumber)
         {
-            statusMessage = "Deleting client from main database with AccountNumber: " + accountNumber;
+            statusMessage += "Deleting client from main database with AccountNumber: " + accountNumber+"\n";
             mainDatabaseRecords.remove(i);
             mainDatabaseDeleted = true;
             break;
         }
     }
-
-    // Save the updated main database to file
-    if (!saveMainDatabaseToFile(statusMessage))
+    if(mainDatabaseDeleted == false)
     {
-        statusMessage = "Failed to save main database after deleting client.";
+        statusMessage +="This account number not found in main database\n";
         return false;
     }
-    statusMessage ="Main database updated and saved successfully after client deletion.";
+    else
+    {
+        // Save the updated main database to file
+        if (!saveMainDatabaseToFile(statusMessage))
+        {
+            statusMessage += "Failed to save main database after deleting client.\n";
+            return false;
+        }
+    }
+
 
     // Step 2: Remove from Transaction Database
     for (int i = 0; i < transactionDatabaseRecords.size(); ++i)
     {
         if (transactionDatabaseRecords[i]["AccountNumber"].toString() == accountNumber)
         {
-            statusMessage = "Deleting client from transaction database with AccountNumber: " + accountNumber;
+            statusMessage += "Deleting client from transaction database with AccountNumber: " + accountNumber+"\n";
             transactionDatabaseRecords.remove(i);
             transactionDatabaseDeleted = true;
             break;
         }
     }
-
-    // Save the updated transaction database to file
-    if (!saveTransactionDatabaseToFile(statusMessage))
+    if(transactionDatabaseDeleted == false)
     {
-        statusMessage = "Failed to save transaction database after deleting client.";
+        statusMessage +="This account number not found in transaction database \n";
         return false;
     }
-    statusMessage ="Transaction database updated and saved successfully after client deletion.";
+    else
+    {
+        // Save the updated main database to file
+        if (!saveTransactionDatabaseToFile(statusMessage))
+        {
+            statusMessage += "Failed to save transaction database after deleting client.\n";
+            return false;
+        }
+    }
+
     // Return true if both deletions were successful
     return mainDatabaseDeleted && transactionDatabaseDeleted;
 }
@@ -310,29 +312,29 @@ bool BankDataBase::updateClient(const QString accountNumber, const QString usern
             // Update only non-empty fields
             if (!username.isEmpty())
             {
-                statusMessage = "Updating username for account number: " + accountNumber;
+                statusMessage += "Updating username for account number: " + accountNumber+"\n";
                 record["Username"] = username;
             }
             if (!password.isEmpty())
             {
-                statusMessage = "Updating password for account number: " + accountNumber;
+                statusMessage += "Updating password for account number: " + accountNumber+"\n";
                 record["Password"] = password;
             }
             if (!fullName.isEmpty())
             {
-                statusMessage = "Updating full name for account number: " + accountNumber;
+                statusMessage += "Updating full name for account number: " + accountNumber+"\n";
                 record["FullName"] = fullName;
             }
             bool ok;
             int age = ageStr.toInt(&ok);
             if (ok && age != 0)
             {
-                statusMessage = "Updating age for account number: " + accountNumber;
+                statusMessage += "Updating age for account number: " + accountNumber+"\n";
                 record["Age"] = ageStr;
             }
             if (!email.isEmpty())
             {
-                statusMessage = "Updating email for account number: " + accountNumber;
+                statusMessage += "Updating email for account number: " + accountNumber+"\n";
                 record["Email"] = email;
             }
             break;
@@ -345,18 +347,18 @@ bool BankDataBase::updateClient(const QString accountNumber, const QString usern
         // Save the updated database to file
         if (saveMainDatabaseToFile(statusMessage))
         {
-            statusMessage = "Account information updated successfully for account number: " + accountNumber;
+            statusMessage += "Account information updated successfully for account number: " + accountNumber+"\n";
             return true; // Update successful
         }
         else
         {
-            statusMessage = "Failed to save updated account information for account number: " + accountNumber;
+            statusMessage += "Failed to save updated account information for account number: " + accountNumber+"\n";
             return false; // Failed to save updated information
         }
     }
     else
     {
-        statusMessage = "Account not found. Update failed for account number: " + accountNumber;
+        statusMessage += "Account not found. Update failed for account number: " + accountNumber+"\n";
         return false; // Account not found
     }
 }
@@ -374,20 +376,20 @@ bool BankDataBase::transferMoney(const QString sourceAccountNumber, const QStrin
 
     if (!isSourceAmountValid || sourceAmount <= 0)
     {
-        statusMessage = "Invalid transfer amount from the source account.";
+        statusMessage += "Invalid transfer amount from the source account.\n";
         return false;
     }
 
     if (!isTargetAmountValid || targetAmount <= 0)
     {
-        statusMessage = "Invalid transfer amount to the target account.";
+        statusMessage += "Invalid transfer amount to the target account.\n";
         return false;
     }
 
     // Check if source and target account numbers are different
     if (sourceAccountNumber == targetAccountNumber)
     {
-        statusMessage = "Source and target account numbers must be different.";
+        statusMessage += "Source and target account numbers must be different.\n";
         return false;
     }
 
@@ -402,7 +404,7 @@ bool BankDataBase::transferMoney(const QString sourceAccountNumber, const QStrin
             int currentSourceBalance = currentSourceBalanceStr.toInt();
             if (currentSourceBalance < sourceAmount)
             {
-                statusMessage = "Insufficient balance in the source account.";
+                statusMessage += "Insufficient balance in the source account.\n";
                 return false;
             }
             int newSourceBalance = currentSourceBalance - sourceAmount;
@@ -422,20 +424,20 @@ bool BankDataBase::transferMoney(const QString sourceAccountNumber, const QStrin
 
     if (!sourceAccountFound)
     {
-        statusMessage = "Source account not found.";
+        statusMessage += "Source account not found.\n";
         return false;
     }
 
     if (!targetAccountFound)
     {
-        statusMessage = "Target account not found.";
+        statusMessage += "Target account not found.\n";
         return false;
     }
 
     // Save the updated main database records
     if (!saveMainDatabaseToFile(statusMessage))
     {
-        statusMessage = "Failed to save main database after transfer.";
+        statusMessage += "Failed to save main database after transfer.\n";
         return false;
     }
 
@@ -473,11 +475,11 @@ bool BankDataBase::transferMoney(const QString sourceAccountNumber, const QStrin
 
     if (!saveTransactionDatabaseToFile(statusMessage))
     {
-        statusMessage = "Failed to save transaction database after transfer.";
+        statusMessage += "Failed to save transaction database after transfer.\n";
         return false;
     }
 
-    statusMessage = "Transfer successful.";
+    statusMessage += "Transfer successful.\n";
     return true;
 }
 
@@ -490,7 +492,7 @@ bool BankDataBase::withdrawMoney(const QString accountNumber, const QString amou
     int withdrawAmount = amount.toInt(&isNumber);
     if (!isNumber || withdrawAmount <= 0)
     {
-        statusMessage = "Invalid withdraw amount.";
+        statusMessage += "Invalid withdraw amount.\n";
         return false;
     }
 
@@ -504,27 +506,27 @@ bool BankDataBase::withdrawMoney(const QString accountNumber, const QString amou
             int currentBalance = str.toInt();
             if (withdrawAmount > currentBalance)
             {
-                statusMessage = "Insufficient balance.";
+                statusMessage += "Insufficient balance.\n";
                 return false;
             }
             int newBalance = currentBalance - withdrawAmount;
             record["Balance"] = QString::number(newBalance);
             accountFound = true;
-            statusMessage = "Withdrawal amount of " + QString::number(withdrawAmount) + " for account number: " + accountNumber;
+            statusMessage += "Withdrawal amount of " + QString::number(withdrawAmount) + " for account number: " + accountNumber+"\n";
             break;
         }
     }
 
     if (!accountFound)
     {
-        statusMessage = "Account not found for withdrawal: " + accountNumber;
+        statusMessage += "Account not found for withdrawal: " + accountNumber+"\n";
         return false;
     }
 
     // Save the updated main database records
     if (!saveMainDatabaseToFile(statusMessage))
     {
-        statusMessage = "Failed to save main database after withdrawal for account number: " + accountNumber;
+        statusMessage += "Failed to save main database after withdrawal for account number: " + accountNumber+"\n";
         return false;
     }
 
@@ -540,7 +542,7 @@ bool BankDataBase::withdrawMoney(const QString accountNumber, const QString amou
             QJsonArray transactionsArray = record["Transactions"].toArray();
             transactionsArray.append(transaction);
             record["Transactions"] = transactionsArray;
-            statusMessage = "Updated transaction record for withdrawal for account number: " + accountNumber;
+            statusMessage += "Updated transaction record for withdrawal for account number: " + accountNumber+"\n";
             break;
         }
     }
@@ -548,11 +550,11 @@ bool BankDataBase::withdrawMoney(const QString accountNumber, const QString amou
     // Save the updated transaction database records
     if (!saveTransactionDatabaseToFile(statusMessage))
     {
-        statusMessage = "Failed to save transaction database after withdrawal for account number: " + accountNumber;
+        statusMessage += "Failed to save transaction database after withdrawal for account number: " + accountNumber+"\n";
         return false;
     }
 
-    statusMessage = "Withdrawal successful for account number: " + accountNumber;
+    statusMessage += "Withdrawal successful for account number: " + accountNumber+"\n";
     return true;
 }
 
@@ -564,7 +566,7 @@ bool BankDataBase::depositMoney(const QString accountNumber, const QString amoun
     int depositAmount = amount.toInt(&isNumber);
     if (!isNumber || depositAmount <= 0)
     {
-        statusMessage = "Invalid deposit amount for account number: " + accountNumber;
+        statusMessage += "Invalid deposit amount for account number: " + accountNumber+"\n";
         return false;
     }
 
@@ -579,21 +581,21 @@ bool BankDataBase::depositMoney(const QString accountNumber, const QString amoun
             int newBalance = currentBalance + depositAmount;
             record["Balance"] = QString::number(newBalance);
             accountFound = true;
-            statusMessage = "Deposited amount of " + QString::number(depositAmount) + " for account number: " + accountNumber;
+            statusMessage += "Deposited amount of " + QString::number(depositAmount) + " for account number: " + accountNumber+"\n";
             break;
         }
     }
 
     if (!accountFound)
     {
-        statusMessage = "Account not found for deposit: " + accountNumber;
+        statusMessage += "Account not found for deposit: " + accountNumber+"\n";
         return false;
     }
 
     // Save the updated main database records
     if (!saveMainDatabaseToFile(statusMessage))
     {
-        statusMessage ="Failed to save main database after deposit for account number: " + accountNumber;
+        statusMessage +="Failed to save main database after deposit for account number: " + accountNumber+"\n";
         return false;
     }
 
@@ -609,7 +611,7 @@ bool BankDataBase::depositMoney(const QString accountNumber, const QString amoun
             QJsonArray transactionsArray = record["Transactions"].toArray();
             transactionsArray.append(transaction);
             record["Transactions"] = transactionsArray;
-            statusMessage = "Updated transaction record for deposit for account number: " + accountNumber;
+            statusMessage += "Updated transaction record for deposit for account number: " + accountNumber+"\n";
             break;
         }
     }
@@ -617,11 +619,11 @@ bool BankDataBase::depositMoney(const QString accountNumber, const QString amoun
     // Save the updated transaction database records
     if (!saveTransactionDatabaseToFile(statusMessage))
     {
-        statusMessage ="Failed to save transaction database after deposit for account number: " + accountNumber;
+        statusMessage +="Failed to save transaction database after deposit for account number: " + accountNumber+"\n";
         return false;
     }
 
-    statusMessage = "Deposit successful for account number: " + accountNumber;
+    statusMessage = "Deposit successful for account number: " + accountNumber+"\n";
     return true;
 }
 

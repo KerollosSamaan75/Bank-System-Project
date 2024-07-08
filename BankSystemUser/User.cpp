@@ -10,7 +10,7 @@ User::User(QObject *parent)
     connect(&Socket,&QTcpSocket::readyRead,this,&User::onReadyRead);
 }
 
-void User::ConnectToDevice(QString Ip, qint32 Port)
+void User::ConnectToServer(QString Ip, qint32 Port)
 {
     if(Socket.isOpen())
     {
@@ -34,7 +34,7 @@ void User::ConnectToDevice(QString Ip, qint32 Port)
     }
 }
 
-void User::DisconnectFromDevice()
+void User::DisconnectFromServer()
 {
     if(Socket.isOpen())
     {
@@ -42,12 +42,12 @@ void User::DisconnectFromDevice()
     }
 }
 
-void User::WriteData(QString Data)
+void User::SendRequest(QString Data)
 {
     if(Socket.isOpen())
     {
         Socket.write(Data.toUtf8());
-        emit UserWriteData(Data);
+        emit UserSendRequest(Data);
     }
 }
 

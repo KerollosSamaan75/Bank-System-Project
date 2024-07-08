@@ -1,162 +1,90 @@
+2024-07-08 23:09:11 - Server is up and listening to port => 1234
 
-2024-07-08 16:22:37 - Server is up and listening to port => 1234
-2024-07-08 16:23:00 - User connected with handle: 780
-2024-07-08 16:23:00 - User with ID: 780 is running on thread
-2024-07-08 16:23:00 - Main database initialized with 1 records
-2024-07-08 16:23:00 - Error: Failed to parse JSON from transaction database file
-2024-07-08 16:23:26 - My Server Received Data From User: 780 Data => Login:Kero75:7579
-2024-07-08 16:23:26 - Main database initialized with 1 records
-2024-07-08 16:23:26 - My server Send Data to User: 780 Data => Admin:Kero75:
-2024-07-08 16:25:31 - My Server Received Data From User: 780 Data => AddAccount:Sharple Samaan:Sharple2011:2011:26:sharple@gmail.com:1000
-2024-07-08 16:25:31 - Main database initialized with 1 records
-2024-07-08 16:25:33 - Client added successfully.
-2024-07-08 16:25:33 - My server Send Data to User: 780 Data => Congratulations! New user 'Sharple2011' has been added. Welcome aboard
-2024-07-08 16:26:54 - My Server Received Data From User: 780 Data => DeleteAccount:451338734
-2024-07-08 16:26:54 - Transaction database updated and saved successfully after client deletion.
-2024-07-08 16:26:56 - My server Send Data to User: 780 Data => Client account with account number 451338734 has been successfully deleted.
-2024-07-08 16:27:53 - My Server Received Data From User: 780 Data => GetBankDataBase:
-2024-07-08 16:27:53 - My server Send Data to User: 780 Data => Invalid request. Expected 'ViewBankDatabase'.
-2024-07-08 16:31:50 - User with ID: 780 has disconnected
-2024-07-08 16:32:07 - Server is up and listening to port => 1234
-2024-07-08 16:32:16 - User connected with handle: 780
-2024-07-08 16:32:16 - User with ID: 780 is running on thread
-2024-07-08 16:32:17 - Main database initialized with 1 records
-2024-07-08 16:32:17 - Transaction database initialized with 0 records
-2024-07-08 16:32:28 - My Server Received Data From User: 780 Data => Login:Kero75:7579
-2024-07-08 16:32:28 - Main database initialized with 1 records
-2024-07-08 16:32:28 - My server Send Data to User: 780 Data => Admin:Kero75:
-2024-07-08 16:32:31 - My Server Received Data From User: 780 Data => GetBankDataBase:
-2024-07-08 16:32:31 - Main database initialized with 1 records
-2024-07-08 16:32:31 - My server Send Data to User: 780 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"}]
-2024-07-08 16:34:06 - My Server Received Data From User: 780 Data => AddAccount:Sharple Samaan:Sharple2011:2011:26:Sharple@gmail.com:1000
-2024-07-08 16:34:06 - Main database initialized with 1 records
-2024-07-08 16:34:06 - Client added successfully.
-2024-07-08 16:34:06 - My server Send Data to User: 780 Data => Congratulations! New user 'Sharple2011' has been added. Welcome aboard
-2024-07-08 16:35:13 - My Server Received Data From User: 780 Data => GetBankDataBase:
-2024-07-08 16:35:13 - Main database initialized with 2 records
-2024-07-08 16:35:13 - My server Send Data to User: 780 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"456466057","Age":"26","Authority":"Client","Balance":"1000","Email":"Sharple@gmail.com","FullName":"Sharple Samaan","Password":"2011","Username":"Sharple2011"}]
-2024-07-08 16:35:32 - My Server Received Data From User: 780 Data => GetAccountBalance:456466057
-2024-07-08 16:35:32 - Main database initialized with 2 records
-2024-07-08 16:35:32 - My server Send Data to User: 780 Data => The account balance for Sharple2011 is 1000.
-2024-07-08 16:35:46 - My Server Received Data From User: 780 Data => GetTransactionHistory:456466057:1
-2024-07-08 16:35:46 - Transaction database initialized with 1 records
-2024-07-08 16:35:46 - My server Send Data to User: 780 Data => TransactionHistory:{"AccountNumber":"456466057","RecentTransactions":[]}
-2024-07-08 16:36:06 - My Server Received Data From User: 780 Data => GetAccountNumber:Sharple2011
-2024-07-08 16:36:06 - Main database initialized with 2 records
-2024-07-08 16:36:06 - My server Send Data to User: 780 Data => Account number for Sharple2011 is: 456466057
-2024-07-08 16:37:03 - My Server Received Data From User: 780 Data => AddAccount:Nada:Nada23:2023:26:nada@gmail.com:1000
-2024-07-08 16:37:03 - Main database initialized with 2 records
-2024-07-08 16:37:03 - Client added successfully.
-2024-07-08 16:37:03 - My server Send Data to User: 780 Data => Congratulations! New user 'Nada23' has been added. Welcome aboard
-2024-07-08 16:37:55 - My Server Received Data From User: 780 Data => DeleteAccount:458237494
-2024-07-08 16:37:55 - Transaction database updated and saved successfully after client deletion.
-2024-07-08 16:37:55 - My server Send Data to User: 780 Data => Client account with account number 458237494 has been successfully deleted.
-2024-07-08 16:38:46 - My Server Received Data From User: 780 Data => GetBankDataBase:
-2024-07-08 16:38:46 - Main database initialized with 2 records
-2024-07-08 16:38:46 - My server Send Data to User: 780 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"456466057","Age":"26","Authority":"Client","Balance":"1000","Email":"Sharple@gmail.com","FullName":"Sharple Samaan","Password":"2011","Username":"Sharple2011"}]
-2024-07-08 16:39:29 - My Server Received Data From User: 780 Data => AddAccount:Nada:Nada23:2023:26:nada@gmail.com:2000
-2024-07-08 16:39:29 - Main database initialized with 2 records
-2024-07-08 16:39:29 - Client added successfully.
-2024-07-08 16:39:29 - My server Send Data to User: 780 Data => Congratulations! New user 'Nada23' has been added. Welcome aboard
-2024-07-08 16:39:49 - My Server Received Data From User: 780 Data => GetBankDataBase:
-2024-07-08 16:39:49 - Main database initialized with 3 records
-2024-07-08 16:39:49 - My server Send Data to User: 780 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"456466057","Age":"26","Authority":"Client","Balance":"1000","Email":"Sharple@gmail.com","FullName":"Sharple Samaan","Password":"2011","Username":"Sharple2011"},{"AccountNumber":"459692688","Age":"26","Authority":"Client","Balance":"2000","Email":"nada@gmail.com","FullName":"Nada","Password":"2023","Username":"Nada23"}]
-2024-07-08 16:40:05 - My Server Received Data From User: 780 Data => GetAccountBalance:456466057
-2024-07-08 16:40:05 - Main database initialized with 3 records
-2024-07-08 16:40:05 - My server Send Data to User: 780 Data => The account balance for Sharple2011 is 1000.
-2024-07-08 16:40:15 - My Server Received Data From User: 780 Data => GetAccountBalance:459692688
-2024-07-08 16:40:15 - Main database initialized with 3 records
-2024-07-08 16:40:15 - My server Send Data to User: 780 Data => The account balance for Nada23 is 2000.
-2024-07-08 16:40:25 - My Server Received Data From User: 780 Data => GetTransactionHistory:459692688:3
-2024-07-08 16:40:25 - Transaction database initialized with 2 records
-2024-07-08 16:40:25 - My server Send Data to User: 780 Data => TransactionHistory:{"AccountNumber":"459692688","RecentTransactions":[]}
-2024-07-08 16:40:40 - My Server Received Data From User: 780 Data => GetAccountNumber:Nada23
-2024-07-08 16:40:40 - Main database initialized with 3 records
-2024-07-08 16:40:40 - My server Send Data to User: 780 Data => Account number for Nada23 is: 459692688
-2024-07-08 16:40:49 - My Server Received Data From User: 780 Data => GetAccountNumber:Nada21
-2024-07-08 16:40:49 - Main database initialized with 3 records
-2024-07-08 16:40:49 - My server Send Data to User: 780 Data => Account number for Nada21 not found.
-2024-07-08 16:41:12 - My Server Received Data From User: 780 Data => UpdateAccount::::35::459692688
-2024-07-08 16:41:12 - Account information updated successfully for account number: 459692688
-2024-07-08 16:41:12 - My server Send Data to User: 780 Data => Account update successful.
-2024-07-08 16:42:08 - My Server Received Data From User: 780 Data => Login:Nada23:2023
-2024-07-08 16:42:08 - Main database initialized with 3 records
-2024-07-08 16:42:08 - My server Send Data to User: 780 Data => Client:Nada23:459692688
-2024-07-08 16:42:34 - My Server Received Data From User: 780 Data => GetAccountBalance:459692688
-2024-07-08 16:42:34 - Main database initialized with 3 records
-2024-07-08 16:42:34 - My server Send Data to User: 780 Data => The account balance for Nada23 is 2000.
-2024-07-08 16:42:49 - My Server Received Data From User: 780 Data => MakeTransaction:459692688:-1000
-2024-07-08 16:42:49 - Withdrawal successful for account number: 459692688
-2024-07-08 16:42:49 - My server Send Data to User: 780 Data => Transaction successful: Withdrawal successful for account number: 459692688
-2024-07-08 16:43:09 - My Server Received Data From User: 780 Data => GetAccountBalance:459692688
-2024-07-08 16:43:09 - Main database initialized with 3 records
-2024-07-08 16:43:09 - My server Send Data to User: 780 Data => The account balance for Nada23 is 1000.
-2024-07-08 16:43:15 - My Server Received Data From User: 780 Data => ViewTransactions:459692688:3
-2024-07-08 16:43:15 - My server Send Data to User: 780 Data => Unknown command.
-2024-07-08 16:45:01 - User with ID: 780 has disconnected
-2024-07-08 16:45:24 - User connected with handle: 820
-2024-07-08 16:45:24 - User with ID: 820 is running on thread
-2024-07-08 16:45:25 - Main database initialized with 3 records
-2024-07-08 16:45:25 - Transaction database initialized with 2 records
-2024-07-08 16:45:37 - My Server Received Data From User: 820 Data => Login:Nada23:2023
-2024-07-08 16:45:37 - Main database initialized with 3 records
-2024-07-08 16:45:37 - My server Send Data to User: 820 Data => Client:Nada23:459692688
-2024-07-08 16:45:45 - My Server Received Data From User: 820 Data => GetTransactionHistory:459692688:3
-2024-07-08 16:45:45 - Transaction database initialized with 2 records
-2024-07-08 16:45:45 - My server Send Data to User: 820 Data => TransactionHistory:{"AccountNumber":"459692688","RecentTransactions":[{"amount":"-1000","date":"08.07.2024"}]}
-2024-07-08 16:46:45 - My Server Received Data From User: 820 Data => MakeTransfer:459692688:456466057:1000
-2024-07-08 16:46:45 - Transfer successful.
-2024-07-08 16:46:45 - Transfer successful: Transfer successful.
-2024-07-08 16:46:45 - My server Send Data to User: 820 Data => TransferResult:Transfer successful.
-2024-07-08 16:50:20 - My Server Received Data From User: 820 Data => GetAccountBalance:459692688
-2024-07-08 16:50:20 - Main database initialized with 3 records
-2024-07-08 16:50:20 - My server Send Data to User: 820 Data => The account balance for Nada23 is 0.
-2024-07-08 16:50:27 - My Server Received Data From User: 820 Data => GetTransactionHistory:459692688:4
-2024-07-08 16:50:27 - Transaction database initialized with 2 records
-2024-07-08 16:50:27 - My server Send Data to User: 820 Data => TransactionHistory:{"AccountNumber":"459692688","RecentTransactions":[{"amount":"-1000","date":"08.07.2024"},{"amount":"-1000","date":"08.07.2024"}]}
-2024-07-08 16:50:49 - My Server Received Data From User: 820 Data => Login:Sharple2011:2011
-2024-07-08 16:50:49 - Main database initialized with 3 records
-2024-07-08 16:50:49 - My server Send Data to User: 820 Data => Client:Sharple2011:456466057
-2024-07-08 16:51:02 - My Server Received Data From User: 820 Data => GetTransactionHistory:456466057:4
-2024-07-08 16:51:02 - Transaction database initialized with 2 records
-2024-07-08 16:51:02 - My server Send Data to User: 820 Data => TransactionHistory:{"AccountNumber":"456466057","RecentTransactions":[{"amount":"+1000","date":"08.07.2024"}]}
-2024-07-08 16:51:08 - My Server Received Data From User: 820 Data => GetAccountBalance:456466057
-2024-07-08 16:51:08 - Main database initialized with 3 records
-2024-07-08 16:51:08 - My server Send Data to User: 820 Data => The account balance for Sharple2011 is 2000.
-2024-07-08 16:51:26 - My Server Received Data From User: 820 Data => MakeTransaction:456466057:+1000
-2024-07-08 16:51:26 - Deposit successful for account number: 456466057
-2024-07-08 16:51:26 - My server Send Data to User: 820 Data => Transaction successful: Deposit successful for account number: 456466057
-2024-07-08 16:51:36 - My Server Received Data From User: 820 Data => GetAccountBalance:456466057
-2024-07-08 16:51:36 - Main database initialized with 3 records
-2024-07-08 16:51:36 - My server Send Data to User: 820 Data => The account balance for Sharple2011 is 3000.
-2024-07-08 16:51:48 - My Server Received Data From User: 820 Data => GetTransactionHistory:456466057:3
-2024-07-08 16:51:48 - Transaction database initialized with 2 records
-2024-07-08 16:51:48 - My server Send Data to User: 820 Data => TransactionHistory:{"AccountNumber":"456466057","RecentTransactions":[{"amount":"+1000","date":"08.07.2024"},{"amount":"+1000","date":"08.07.2024"}]}
-2024-07-08 16:52:12 - My Server Received Data From User: 820 Data => MakeTransaction:456466057:-1000
-2024-07-08 16:52:12 - Withdrawal successful for account number: 456466057
-2024-07-08 16:52:12 - My server Send Data to User: 820 Data => Transaction successful: Withdrawal successful for account number: 456466057
-2024-07-08 16:52:14 - My Server Received Data From User: 820 Data => GetAccountBalance:456466057
-2024-07-08 16:52:14 - Main database initialized with 3 records
-2024-07-08 16:52:14 - My server Send Data to User: 820 Data => The account balance for Sharple2011 is 2000.
-2024-07-08 16:52:21 - My Server Received Data From User: 820 Data => GetTransactionHistory:456466057:5
-2024-07-08 16:52:21 - Transaction database initialized with 2 records
-2024-07-08 16:52:21 - My server Send Data to User: 820 Data => TransactionHistory:{"AccountNumber":"456466057","RecentTransactions":[{"amount":"+1000","date":"08.07.2024"},{"amount":"+1000","date":"08.07.2024"},{"amount":"-1000","date":"08.07.2024"}]}
-2024-07-08 16:52:33 - My Server Received Data From User: 820 Data => GetTransactionHistory:456466057:1
-2024-07-08 16:52:33 - Transaction database initialized with 2 records
-2024-07-08 16:52:33 - My server Send Data to User: 820 Data => TransactionHistory:{"AccountNumber":"456466057","RecentTransactions":[{"amount":"-1000","date":"08.07.2024"}]}
-2024-07-08 16:53:04 - My Server Received Data From User: 820 Data => MakeTransfer:456466057:456466057:150
-2024-07-08 16:53:04 - My server Send Data to User: 820 Data => Source and target account numbers cannot be the same.
-2024-07-08 16:53:30 - My Server Received Data From User: 820 Data => MakeTransfer:456466057:459692688:200
-2024-07-08 16:53:30 - Transfer successful.
-2024-07-08 16:53:30 - Transfer successful: Transfer successful.
-2024-07-08 16:53:30 - My server Send Data to User: 820 Data => TransferResult:Transfer successful.
-2024-07-08 16:54:20 - My Server Received Data From User: 820 Data => GetTransactionHistory:456466057:1
-2024-07-08 16:54:20 - Transaction database initialized with 2 records
-2024-07-08 16:54:20 - My server Send Data to User: 820 Data => TransactionHistory:{"AccountNumber":"456466057","RecentTransactions":[{"amount":"-200","date":"08.07.2024"}]}
-2024-07-08 16:54:25 - My Server Received Data From User: 820 Data => GetTransactionHistory:456466057:2
-2024-07-08 16:54:26 - Transaction database initialized with 2 records
-2024-07-08 16:54:26 - My server Send Data to User: 820 Data => TransactionHistory:{"AccountNumber":"456466057","RecentTransactions":[{"amount":"-1000","date":"08.07.2024"},{"amount":"-200","date":"08.07.2024"}]}
-2024-07-08 16:54:41 - My Server Received Data From User: 820 Data => GetAccountBalance:456466057
-2024-07-08 16:54:41 - Main database initialized with 3 records
-2024-07-08 16:54:41 - My server Send Data to User: 820 Data => The account balance for Sharple2011 is 1800.
-2024-07-08 16:54:53 - User with ID: 820 has disconnected
+2024-07-08 23:09:32 - User:776 connent to server
+
+2024-07-08 23:09:32 - User:776 is running on thread
+
+2024-07-08 23:09:32 - Main database initialized with 2 records
+
+2024-07-08 23:09:32 - Transaction database initialized with 1 records
+
+2024-07-08 23:09:55 - Server Received Data From User:776 Data => Login:Kero75:7579
+
+2024-07-08 23:09:55 - My server Send Data to User: 776 Data => Admin:Kero75:
+
+2024-07-08 23:10:24 - Server Received Data From User:776 Data => GetAccountBalance:68153684
+
+2024-07-08 23:10:24 - Main database initialized with 2 records
+
+2024-07-08 23:10:24 - My server Send Data to User: 776 Data => Client with account number 68153684 not found.
+
+2024-07-08 23:10:45 - Server Received Data From User:776 Data => GetAccountBalance:681536848
+
+2024-07-08 23:10:45 - Main database initialized with 2 records
+
+2024-07-08 23:10:45 - My server Send Data to User: 776 Data => The account balance for nada2023 is 1000.
+
+2024-07-08 23:13:50 - User:776 has disconnected
+
+2024-07-08 23:24:14 - Server is up and listening to port => 1234
+
+2024-07-08 23:24:31 - User:700 connent to server
+
+2024-07-08 23:24:31 - User:700 is running on thread
+
+2024-07-08 23:24:31 - Main database initialized with 2 records
+
+2024-07-08 23:24:31 - Transaction database initialized with 1 records
+
+2024-07-08 23:24:53 - Server Received Data From User:700 Data => Login:Kero75:7579
+
+2024-07-08 23:24:53 - My server Send Data to User: 700 Data => Admin:Kero75:
+
+2024-07-08 23:25:30 - Server Received Data From User:700 Data => GetTransactionHistory:68153684:5
+
+2024-07-08 23:25:30 - Transaction database initialized with 1 records
+
+2024-07-08 23:25:30 - My server Send Data to User: 700 Data => Account not found.
+
+2024-07-08 23:25:43 - Server Received Data From User:700 Data => GetTransactionHistory:681536848:5
+
+2024-07-08 23:25:43 - Transaction database initialized with 1 records
+
+2024-07-08 23:25:43 - My server Send Data to User: 700 Data => TransactionHistory:{"AccountNumber":"681536848","RecentTransactions":[]}
+
+2024-07-08 23:28:31 - Server Received Data From User:700 Data => Login:nada2023:2023
+
+2024-07-08 23:28:31 - My server Send Data to User: 700 Data => Client:nada2023:681536848
+
+2024-07-08 23:29:12 - Server Received Data From User:700 Data => GetTransactionHistory:681536848:3
+
+2024-07-08 23:29:12 - Transaction database initialized with 1 records
+
+2024-07-08 23:29:12 - My server Send Data to User: 700 Data => TransactionHistory:{"AccountNumber":"681536848","RecentTransactions":[]}
+
+2024-07-08 23:34:26 - User:700 has disconnected
+
+2024-07-08 23:35:20 - User:816 connent to server
+
+2024-07-08 23:35:20 - User:816 is running on thread
+
+2024-07-08 23:35:20 - Main database initialized with 2 records
+
+2024-07-08 23:35:20 - Transaction database initialized with 1 records
+
+2024-07-08 23:35:33 - Server Received Data From User:816 Data => Login:Nada2023:2023
+
+2024-07-08 23:35:33 - My server Send Data to User: 816 Data => Login failed. Incorrect username or password.
+
+2024-07-08 23:35:53 - Server Received Data From User:816 Data => Login:nada2023:2023
+
+2024-07-08 23:35:53 - My server Send Data to User: 816 Data => Client:nada2023:681536848
+
+2024-07-08 23:36:04 - Server Received Data From User:816 Data => GetTransactionHistory:681536848:5
+
+2024-07-08 23:36:04 - Transaction database initialized with 1 records
+
+2024-07-08 23:36:04 - My server Send Data to User: 816 Data => TransactionHistory:{"AccountNumber":"681536848","RecentTransactions":[]}
+
+2024-07-08 23:40:44 - User:816 has disconnected
+

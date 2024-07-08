@@ -1,8 +1,6 @@
 #include "Server.h"
 
-Server::Server(QObject *parent)
-    : QTcpServer{parent}, qin{stdin}, qout{stdout}
-{}
+Server::Server(QObject *parent): QTcpServer{parent}{}
 
 void Server::StartServer()
 {
@@ -10,19 +8,19 @@ void Server::StartServer()
     this->listen(QHostAddress::Any, Port);
     if (isListening())
     {
-        QString logMessage = QString("Server is up and listening to port => %1").arg(Port);
+        QString logMessage = QString("Server is up and listening to port => %1\n").arg(Port);
         Logger::instance().logMessage(logMessage);
     }
     else
     {
-        QString logMessage = QString("Server can't listen to port => %1").arg(Port);
+        QString logMessage = QString("Server can't listen to port => %1\n").arg(Port);
         Logger::instance().logMessage(logMessage);
     }
 }
 
 void Server::incomingConnection(qintptr handle)
 {
-    QString logMessage = QString("User connected with handle: %1").arg(handle);
+    QString logMessage = QString("User:%1 connent to server\n").arg(handle);
     Logger::instance().logMessage(logMessage);
 
     ServerHandler* serverhandler = new ServerHandler(handle);

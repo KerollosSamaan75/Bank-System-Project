@@ -12,7 +12,9 @@ release/MakeTransferCommand.o
 release/Server.o
 release/ServerHandler.o
 release/UpdateAccountCommand.o
+release/qaesencryption.o
 release/main.o
 release/moc_BankDataBase.o
 release/moc_Server.o
 release/moc_ServerHandler.o
+release/moc_qaesencryption.o

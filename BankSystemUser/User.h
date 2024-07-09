@@ -5,6 +5,7 @@
 #include<QTcpSocket>
 #include<QDebug>
 #include<QMetaEnum>
+#include "qaesencryption.h"
 
 class User : public QObject
 {
@@ -14,6 +15,7 @@ public:
     void ConnectToServer(QString Ip,qint32 Port);
     void DisconnectFromServer();
     void SendRequest(QString Data);
+    QByteArray encryptRequest(const QByteArray &request);
 signals:
     void Connected();
     void Disconnected();

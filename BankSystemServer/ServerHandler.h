@@ -20,6 +20,7 @@
 #include "MakeTransferCommand.h"
 #include "UpdateAccountCommand.h"
 #include "GetBankDataBaseCommand.h"
+#include "qaesencryption.h"
 
 class ServerHandler : public QThread
 {
@@ -43,6 +44,7 @@ private:
     void setupCommands();
     void Operation(QString Request);
     void sendResponse(const QString &Message);
+    QByteArray decryptRequest(const QByteArray &encryptedData);
 };
 
 #endif // SERVERHANDLER_H

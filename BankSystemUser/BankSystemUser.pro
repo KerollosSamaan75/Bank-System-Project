@@ -11,11 +11,19 @@ CONFIG += c++17
 SOURCES += \
     User.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    qaesencryption.cpp
+
+
 
 HEADERS += \
     User.h \
-    mainwindow.h
+    mainwindow.h \
+    qaesencryption.h \
+    aesni/aesni-key-exp.h \
+    aesni/aesni-enc-ecb.h \
+    aesni/aesni-enc-cbc.h
+
 
 FORMS += \
     mainwindow.ui
@@ -27,3 +35,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     resources.qrc
+
+# Add the flag here
+QMAKE_CXXFLAGS += -fno-inline-functions

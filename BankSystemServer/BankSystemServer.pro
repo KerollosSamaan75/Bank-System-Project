@@ -21,6 +21,7 @@ SOURCES += \
         Server.cpp \
         ServerHandler.cpp \
         UpdateAccountCommand.cpp \
+        qaesencryption.cpp \
         main.cpp
 
 # Default rules for deployment.
@@ -43,4 +44,8 @@ HEADERS += \
     MakeTransferCommand.h \
     Server.h \
     ServerHandler.h \
-    UpdateAccountCommand.h
+    UpdateAccountCommand.h \
+    qaesencryption.h \
+    aesni/aesni-key-exp.h \
+    aesni/aesni-enc-ecb.h \
+    aesni/aesni-enc-cbc.h

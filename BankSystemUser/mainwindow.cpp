@@ -68,6 +68,8 @@ void MainWindow::requestResponse(QString message)
         ui->Userlabel->setText(List[0]+":"+List[1]);
         clientUserName =List[1];
         clientAccountNumber = List[2];
+        ui->lEUserName->clear();
+        ui->lEPassword->clear();
     }
     else if(List[0] =="Admin")
     {
@@ -153,16 +155,23 @@ void MainWindow::onConnectedServer()
     qDebug()<<"User has connected to Server";
     QMessageBox::information(this, "Connection Successful", "You have successfully connected to the server\n"
                                     "now you can Login to the Bank System.");
-    ui->Console->hide();
-    ui->pBConnect->hide();
     ui->frame->setEnabled(true);
+    ui->pBConnect->setText("Try to Connent again");
 }
 
 void MainWindow::onDisconnectedServer()
 {
-    ui->Console->addItem("User has disconnected from Server");
-    qDebug()<<"User has disconnected from Server"<<Qt::endl;
+    qDebug() << "User has disconnected from Server" << Qt::endl;
+
+    // Show a QMessageBox
+    QMessageBox::information(this, "Disconnected", "You have been disconnected from the server.");
+
+    // Return to the login page
+    ui->stackedWidget->setCurrentIndex(0);
+    ui->frame->setEnabled(false);
+    ui->pBConnect->setText("Try to Connent again");
 }
+
 
 void MainWindow::onErrorOccurredServer(QAbstractSocket::SocketError socketError)
 {

@@ -1,90 +1,185 @@
-2024-07-08 23:09:11 - Server is up and listening to port => 1234
+2024-07-09 19:44:58 - Server is up and listening to port => 1234
+2024-07-09 19:45:21 - User:880 connent to server
+2024-07-09 19:45:21 - User:880 is running on thread
+2024-07-09 19:45:21 - Main database initialized with 2 records
 
-2024-07-08 23:09:32 - User:776 connent to server
+2024-07-09 19:45:21 - Transaction database initialized with 1 records
 
-2024-07-08 23:09:32 - User:776 is running on thread
+2024-07-09 19:47:11 - User:880 has disconnected
+2024-07-09 19:47:22 - Server is up and listening to port => 1234
+2024-07-09 19:48:10 - User:644 connent to server
+2024-07-09 19:48:10 - User:644 is running on thread
+2024-07-09 19:48:11 - Main database initialized with 2 records
 
-2024-07-08 23:09:32 - Main database initialized with 2 records
+2024-07-09 19:48:11 - Transaction database initialized with 1 records
 
-2024-07-08 23:09:32 - Transaction database initialized with 1 records
+2024-07-09 19:48:49 - Server is up and listening to port => 1234
+2024-07-09 19:48:53 - User:868 connent to server
+2024-07-09 19:48:53 - User:868 is running on thread
+2024-07-09 19:48:53 - Main database initialized with 2 records
 
-2024-07-08 23:09:55 - Server Received Data From User:776 Data => Login:Kero75:7579
+2024-07-09 19:48:53 - Transaction database initialized with 1 records
 
-2024-07-08 23:09:55 - My server Send Data to User: 776 Data => Admin:Kero75:
+2024-07-09 19:49:33 - Server is up and listening to port => 1234
+2024-07-09 19:49:46 - User:900 connent to server
+2024-07-09 19:49:46 - User:900 is running on thread
+2024-07-09 19:49:46 - Main database initialized with 2 records
 
-2024-07-08 23:10:24 - Server Received Data From User:776 Data => GetAccountBalance:68153684
+2024-07-09 19:49:46 - Transaction database initialized with 1 records
 
-2024-07-08 23:10:24 - Main database initialized with 2 records
+2024-07-09 19:50:01 - Server received encrypted request:2677775162cc30fabee567c8a9a8558e569e5c3ca712b037d73f6b78a89e27d6
+2024-07-09 19:50:01 - Server Received Data From User:900 Data => Login:Kero75:7579
+2024-07-09 19:50:01 - My server Send Data to User: 900 Data => Admin:Kero75:
+2024-07-09 19:50:18 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
+2024-07-09 19:50:18 - Server Received Data From User:900 Data => GetBankDataBase:
+2024-07-09 19:50:18 - Main database initialized with 2 records
 
-2024-07-08 23:10:24 - My server Send Data to User: 776 Data => Client with account number 68153684 not found.
+2024-07-09 19:50:18 - My server Send Data to User: 900 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"424584313","Age":"25","Authority":"Client","Balance":"1000","Email":"Sharpl@gmail.com","FullName":"Sharple Samaan","Password":"2011","Username":"Sharple2011"}]
+2024-07-09 19:53:57 - Server received encrypted request:c76f06bb146a46d188959cd5df14f73c2e7a4657872f284d790e7bf9986b5638183f63d954cae6e846bbb412ff5056aad8ccd3aa505f990e4b36c26bd02df158
+2024-07-09 19:53:57 - Server Received Data From User:900 Data => AddAccount:Nada:Nada2023:2023:24:nada@gmail.com:1000
+2024-07-09 19:53:57 - Main database initialized with 2 records
 
-2024-07-08 23:10:45 - Server Received Data From User:776 Data => GetAccountBalance:681536848
+2024-07-09 19:53:57 - Main database initialized with 2 records
+Main database file saved successfully.
+Transaction database file saved successfully.
+Client added successfully.
 
-2024-07-08 23:10:45 - Main database initialized with 2 records
+2024-07-09 19:53:57 - My server Send Data to User: 900 Data => Congratulations! New user 'Nada2023' has been added. Welcome aboard
+2024-07-09 19:54:20 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
+2024-07-09 19:54:20 - Server Received Data From User:900 Data => GetBankDataBase:
+2024-07-09 19:54:20 - Main database initialized with 3 records
 
-2024-07-08 23:10:45 - My server Send Data to User: 776 Data => The account balance for nada2023 is 1000.
+2024-07-09 19:54:20 - My server Send Data to User: 900 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"424584313","Age":"25","Authority":"Client","Balance":"1000","Email":"Sharpl@gmail.com","FullName":"Sharple Samaan","Password":"2011","Username":"Sharple2011"},{"AccountNumber":"440377710","Age":"24","Authority":"Client","Balance":"1000","Email":"nada@gmail.com","FullName":"Nada","Password":"2023","Username":"Nada2023"}]
+2024-07-09 19:54:53 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f4b575c40f2b7107bd1df543b5979d514
+2024-07-09 19:54:53 - Server Received Data From User:900 Data => GetAccountBalance:42458431
+2024-07-09 19:54:53 - Main database initialized with 3 records
 
-2024-07-08 23:13:50 - User:776 has disconnected
+2024-07-09 19:54:53 - My server Send Data to User: 900 Data => Client with account number 42458431 not found.
+2024-07-09 19:54:59 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f60bb79df1172c30d934a1fb56938f254
+2024-07-09 19:54:59 - Server Received Data From User:900 Data => GetAccountBalance:424584313
+2024-07-09 19:54:59 - Main database initialized with 3 records
 
-2024-07-08 23:24:14 - Server is up and listening to port => 1234
+2024-07-09 19:54:59 - My server Send Data to User: 900 Data => The account balance for Sharple2011 is 1000.
+2024-07-09 19:55:13 - Server received encrypted request:9293b880681325510c24fb4c0f60909a4a9013031d2a2f16e898040f697232db7eec8084db6cadf4d9d680830b85929b
+2024-07-09 19:55:13 - Server Received Data From User:900 Data => GetTransactionHistory:42458431:5
+2024-07-09 19:55:13 - Transaction database initialized with 2 records
 
-2024-07-08 23:24:31 - User:700 connent to server
+2024-07-09 19:55:13 - My server Send Data to User: 900 Data => Account not found.
+2024-07-09 19:55:19 - Server received encrypted request:9293b880681325510c24fb4c0f60909a98c833845ddfc379503a4c0f7a6b24e8dfff6fb44386fb6ad7f596babb3072fd
+2024-07-09 19:55:19 - Server Received Data From User:900 Data => GetTransactionHistory:424584313:5
+2024-07-09 19:55:19 - Transaction database initialized with 2 records
 
-2024-07-08 23:24:31 - User:700 is running on thread
+2024-07-09 19:55:19 - My server Send Data to User: 900 Data => TransactionHistory:{"AccountNumber":"424584313","RecentTransactions":[]}
+2024-07-09 19:55:32 - Server received encrypted request:38c0377bc181b7ffb552bd5c9b1fb2f5f800ab5be0a0e409def12f3e05c1bcc9
+2024-07-09 19:55:32 - Server Received Data From User:900 Data => GetAccountNumber:Nada2023
+2024-07-09 19:55:32 - Main database initialized with 3 records
 
-2024-07-08 23:24:31 - Main database initialized with 2 records
+2024-07-09 19:55:32 - My server Send Data to User: 900 Data => Account number for Nada2023 is: 440377710
+2024-07-09 19:55:50 - Server received encrypted request:fa9a02b1316211e910a2d682b575f4f3059a00e50ba39b9624eba2d8ff43636fbda1011c3eb329ca6cd97a7873341920
+2024-07-09 19:55:50 - Server Received Data From User:900 Data => UpdateAccount:::hhhh:0::42458431
+2024-07-09 19:55:50 - Main database initialized with 3 records
+Account not found. Update failed for account number: 42458431
 
-2024-07-08 23:24:31 - Transaction database initialized with 1 records
+2024-07-09 19:55:50 - My server Send Data to User: 900 Data => Account update failed. Please check the account number and try again.
+2024-07-09 19:56:20 - Server received encrypted request:fa9a02b1316211e910a2d682b575f4f3ff6c82f4a0f04f0ca955773053c1784b
+2024-07-09 19:56:20 - Server Received Data From User:900 Data => UpdateAccount::::67::424584313
+2024-07-09 19:56:20 - Main database initialized with 3 records
+Updating age for account number: 424584313
+Main database file saved successfully.
+Account information updated successfully for account number: 424584313
 
-2024-07-08 23:24:53 - Server Received Data From User:700 Data => Login:Kero75:7579
+2024-07-09 19:56:20 - My server Send Data to User: 900 Data => Account update successful.
+2024-07-09 19:57:24 - Server is up and listening to port => 1234
+2024-07-09 19:57:27 - User:888 connent to server
+2024-07-09 19:57:27 - User:888 is running on thread
+2024-07-09 19:57:27 - Main database initialized with 3 records
 
-2024-07-08 23:24:53 - My server Send Data to User: 700 Data => Admin:Kero75:
+2024-07-09 19:57:27 - Transaction database initialized with 2 records
 
-2024-07-08 23:25:30 - Server Received Data From User:700 Data => GetTransactionHistory:68153684:5
+2024-07-09 19:57:38 - Server received encrypted request:cae22a18714bd9e4bb5b6589de10edc83f56545142a15cc5a95d3f8e31c7ece2
+2024-07-09 19:57:38 - Server Received Data From User:888 Data => Login:Sharple2011:2011
+2024-07-09 19:57:38 - My server Send Data to User: 888 Data => Client:Sharple2011:424584313
+2024-07-09 19:58:13 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f60bb79df1172c30d934a1fb56938f254
+2024-07-09 19:58:13 - Server Received Data From User:888 Data => GetAccountBalance:424584313
+2024-07-09 19:58:13 - Main database initialized with 3 records
 
-2024-07-08 23:25:30 - Transaction database initialized with 1 records
+2024-07-09 19:58:13 - My server Send Data to User: 888 Data => The account balance for Sharple2011 is 1000.
+2024-07-09 19:58:36 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f60bb79df1172c30d934a1fb56938f254
+2024-07-09 19:58:36 - Server Received Data From User:888 Data => GetAccountBalance:424584313
+2024-07-09 19:58:36 - Main database initialized with 3 records
 
-2024-07-08 23:25:30 - My server Send Data to User: 700 Data => Account not found.
+2024-07-09 19:58:36 - My server Send Data to User: 888 Data => The account balance for Sharple2011 is 1000.
+2024-07-09 19:58:59 - Server received encrypted request:9293b880681325510c24fb4c0f60909a98c833845ddfc379503a4c0f7a6b24e8dfff6fb44386fb6ad7f596babb3072fd
+2024-07-09 19:58:59 - Server Received Data From User:888 Data => GetTransactionHistory:424584313:5
+2024-07-09 19:58:59 - Transaction database initialized with 2 records
 
-2024-07-08 23:25:43 - Server Received Data From User:700 Data => GetTransactionHistory:681536848:5
+2024-07-09 19:58:59 - My server Send Data to User: 888 Data => TransactionHistory:{"AccountNumber":"424584313","RecentTransactions":[]}
+2024-07-09 19:59:33 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5bfb7182e24958fe44b39852b28be1522d55f6cf7df957373fab67ac4250e01df
+2024-07-09 19:59:33 - Server Received Data From User:888 Data => MakeTransaction:424584313:-10000
+2024-07-09 19:59:33 - Server Received Data From User:888 Data => MakeTransaction:424584313:-10000Insufficient balance.
 
-2024-07-08 23:25:43 - Transaction database initialized with 1 records
+2024-07-09 19:59:33 - My server Send Data to User: 888 Data => Transaction failed: Server Received Data From User:888 Data => MakeTransaction:424584313:-10000Insufficient balance.
 
-2024-07-08 23:25:43 - My server Send Data to User: 700 Data => TransactionHistory:{"AccountNumber":"681536848","RecentTransactions":[]}
+2024-07-09 20:05:36 - Server is up and listening to port => 1234
+2024-07-09 20:05:39 - User:908 connent to server
+2024-07-09 20:05:39 - User:908 is running on thread
+2024-07-09 20:05:40 - Main database initialized with 3 records
 
-2024-07-08 23:28:31 - Server Received Data From User:700 Data => Login:nada2023:2023
+2024-07-09 20:05:40 - Transaction database initialized with 2 records
 
-2024-07-08 23:28:31 - My server Send Data to User: 700 Data => Client:nada2023:681536848
+2024-07-09 20:05:42 - Server received encrypted request:cae22a18714bd9e4bb5b6589de10edc83f56545142a15cc5a95d3f8e31c7ece2
+2024-07-09 20:05:42 - Server Received Data From User:908 Data => Login:Sharple2011:2011
+2024-07-09 20:05:42 - My server Send Data to User: 908 Data => Client:Sharple2011:424584313
+2024-07-09 20:05:48 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5bfb7182e24958fe44b39852b28be1522d55f6cf7df957373fab67ac4250e01df
+2024-07-09 20:05:48 - Server Received Data From User:908 Data => MakeTransaction:424584313:-10000
+2024-07-09 20:05:48 - Insufficient balance.
 
-2024-07-08 23:29:12 - Server Received Data From User:700 Data => GetTransactionHistory:681536848:3
+2024-07-09 20:05:48 - My server Send Data to User: 908 Data => Transaction failed: Insufficient balance.
 
-2024-07-08 23:29:12 - Transaction database initialized with 1 records
+2024-07-09 20:05:55 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5bc0f3b00e0c85a1615092d64cec4a076
+2024-07-09 20:05:55 - Server Received Data From User:908 Data => MakeTransaction:424584313:-1000
+2024-07-09 20:05:55 - Withdrawal amount of 1000 for account number: 424584313
+Main database file saved successfully.
+Updated transaction record for withdrawal for account number: 424584313
+Transaction database file saved successfully.
+Withdrawal successful for account number: 424584313
 
-2024-07-08 23:29:12 - My server Send Data to User: 700 Data => TransactionHistory:{"AccountNumber":"681536848","RecentTransactions":[]}
+2024-07-09 20:05:55 - My server Send Data to User: 908 Data => Transaction successful: Withdrawal amount of 1000 for account number: 424584313
+Main database file saved successfully.
+Updated transaction record for withdrawal for account number: 424584313
+Transaction database file saved successfully.
+Withdrawal successful for account number: 424584313
 
-2024-07-08 23:34:26 - User:700 has disconnected
-
-2024-07-08 23:35:20 - User:816 connent to server
-
-2024-07-08 23:35:20 - User:816 is running on thread
-
-2024-07-08 23:35:20 - Main database initialized with 2 records
-
-2024-07-08 23:35:20 - Transaction database initialized with 1 records
-
-2024-07-08 23:35:33 - Server Received Data From User:816 Data => Login:Nada2023:2023
-
-2024-07-08 23:35:33 - My server Send Data to User: 816 Data => Login failed. Incorrect username or password.
-
-2024-07-08 23:35:53 - Server Received Data From User:816 Data => Login:nada2023:2023
-
-2024-07-08 23:35:53 - My server Send Data to User: 816 Data => Client:nada2023:681536848
-
-2024-07-08 23:36:04 - Server Received Data From User:816 Data => GetTransactionHistory:681536848:5
-
-2024-07-08 23:36:04 - Transaction database initialized with 1 records
-
-2024-07-08 23:36:04 - My server Send Data to User: 816 Data => TransactionHistory:{"AccountNumber":"681536848","RecentTransactions":[]}
-
-2024-07-08 23:40:44 - User:816 has disconnected
-
+2024-07-09 20:14:13 - Server is up and listening to port => 1234
+2024-07-09 20:14:23 - User:880 connent to server
+2024-07-09 20:14:23 - User:880 is running on thread
+2024-07-09 20:14:23 - Main database initialized with 3 records
+2024-07-09 20:14:23 - Transaction database initialized with 2 records
+2024-07-09 20:14:26 - Server received encrypted request:cae22a18714bd9e4bb5b6589de10edc83f56545142a15cc5a95d3f8e31c7ece2
+2024-07-09 20:14:26 - Server Received Data From User:880 Data => Login:Sharple2011:2011
+2024-07-09 20:14:26 - My server Send Data to User: 880 Data => Client:Sharple2011:424584313
+2024-07-09 20:14:32 - Server received encrypted request:9293b880681325510c24fb4c0f60909a98c833845ddfc379503a4c0f7a6b24e86962e22c6231faf78727519f0ffb3387
+2024-07-09 20:14:32 - Server Received Data From User:880 Data => GetTransactionHistory:424584313:2
+2024-07-09 20:14:32 - Transaction database initialized with 2 records
+2024-07-09 20:14:32 - My server Send Data to User: 880 Data => TransactionHistory:{"AccountNumber":"424584313","RecentTransactions":[{"amount":"-1000","date":"09.07.2024"}]}
+2024-07-09 20:14:36 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f60bb79df1172c30d934a1fb56938f254
+2024-07-09 20:14:36 - Server Received Data From User:880 Data => GetAccountBalance:424584313
+2024-07-09 20:14:36 - Main database initialized with 3 records
+2024-07-09 20:14:36 - My server Send Data to User: 880 Data => The account balance for Sharple2011 is 0.
+2024-07-09 20:15:12 - Server received encrypted request:6a0f49c93a48374573a8e7a878de89796133084f9d08919759e8e963d6ae926408c679b50c6d7b434429227fd41b74c2
+2024-07-09 20:15:12 - Server Received Data From User:880 Data => MakeTransfer:424584313:424584313:100
+2024-07-09 20:15:12 - My server Send Data to User: 880 Data => Source and target account numbers cannot be the same.
+2024-07-09 20:15:43 - Server received encrypted request:6a0f49c93a48374573a8e7a878de8979e78325f4313bcae5e6d44a16eeae3f721268b13c7c6167a30047600c7b8404c4
+2024-07-09 20:15:43 - Server Received Data From User:880 Data => MakeTransfer:424584313:1000:440377710
+2024-07-09 20:15:43 - My server Send Data to User: 880 Data => TransferResult:Insufficient balance in the source account.
+2024-07-09 20:15:53 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a53b2872d634758cc2b3870165f508c98a
+2024-07-09 20:15:53 - Server Received Data From User:880 Data => MakeTransaction:424584313:+1000
+2024-07-09 20:15:53 - Deposit successful for account number: 424584313
+2024-07-09 20:15:53 - My server Send Data to User: 880 Data => Transaction successful: Deposit successful for account number: 424584313
+2024-07-09 20:15:57 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f60bb79df1172c30d934a1fb56938f254
+2024-07-09 20:15:57 - Server Received Data From User:880 Data => GetAccountBalance:424584313
+2024-07-09 20:15:57 - Main database initialized with 3 records
+2024-07-09 20:15:57 - My server Send Data to User: 880 Data => The account balance for Sharple2011 is 1000.
+2024-07-09 20:16:19 - Server received encrypted request:6a0f49c93a48374573a8e7a878de8979719a9ecc551d582a0e2d818e6e83b2783447ed2a29c1418371126fcd96bfdd4c
+2024-07-09 20:16:19 - Server Received Data From User:880 Data => MakeTransfer:424584313:440377710:1000
+2024-07-09 20:16:19 - My server Send Data to User: 880 Data => TransferResult:Transfer successful.

@@ -44,12 +44,30 @@ void User::DisconnectFromServer()
 
 void User::SendRequest(QString Data)
 {
-    if(Socket.isOpen())
+    if (Socket.isOpen())
     {
-        Socket.write(Data.toUtf8());
-        emit UserSendRequest(Data);
+        QByteArray rawData = Data.toUtf8();
+        qDebug() << "User request:" << rawData;
+
+        // Encrypt the data
+        QByteArray encryptedData = encryptRequest(rawData);
+        // Send the encrypted data
+        Socket.write(encryptedData);
+        // Emit the signal with the encrypted data for consistency
+        emit UserSendRequest(encryptedData);
     }
 }
+
+
+QByteArray User::encryptRequest(const QByteArray &request)
+{
+    QByteArray key = "1234567890123456"; // 128-bit key (16 bytes)
+    QByteArray iv = "1234567890123456";  // 128-bit IV (16 bytes)
+    // Encrypt the request
+    QByteArray encryptedRequest = QAESEncryption::Crypt(QAESEncryption::AES_128, QAESEncryption::CBC, request, key, iv, QAESEncryption::PKCS7);
+    return encryptedRequest;
+}
+
 
 void User::onConnected()
 {

@@ -12,7 +12,9 @@ debug/MakeTransferCommand.o
 debug/Server.o
 debug/ServerHandler.o
 debug/UpdateAccountCommand.o
+debug/qaesencryption.o
 debug/main.o
 debug/moc_BankDataBase.o
 debug/moc_Server.o
 debug/moc_ServerHandler.o
+debug/moc_qaesencryption.o

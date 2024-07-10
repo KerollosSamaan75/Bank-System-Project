@@ -18,6 +18,7 @@ SOURCES += \
         LoginCommand.cpp \
         MakeTransactionCommand.cpp \
         MakeTransferCommand.cpp \
+        SendEmail.cpp \
         Server.cpp \
         ServerHandler.cpp \
         UpdateAccountCommand.cpp \
@@ -42,6 +43,7 @@ HEADERS += \
     LoginCommand.h \
     MakeTransactionCommand.h \
     MakeTransferCommand.h \
+    SendEmail.h \
     Server.h \
     ServerHandler.h \
     UpdateAccountCommand.h \

@@ -4,7 +4,6 @@
 
 #include "Command.h"
 #include "BankDataBase.h"
-#include "Logger.h"
 
 
 class LoginCommand : public Command

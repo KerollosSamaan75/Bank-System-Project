@@ -12,8 +12,7 @@ void GetAccountBalanceCommand::execute(const QStringList &RequestParts, QString 
     }
 
     QString accountNumber = RequestParts[1]; // Assuming the identifier (account number) is in RequestParts[1]
-    QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(statusMessage); // Get the main database records
-    Logger::instance().logMessage(statusMessage);
+    QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(); // Get the main database records
 
     // Flag to check if client is found
     bool clientFound = false;

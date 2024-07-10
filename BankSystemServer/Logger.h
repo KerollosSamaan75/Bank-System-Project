@@ -7,14 +7,9 @@
 class Logger
 {
 public:
-    static Logger& instance();
-    void logMessage(const QString &message);
-
-private:
-    Logger(); // Private constructor for singleton pattern
+    Logger();
     ~Logger();
-    Logger(const Logger&) = delete;
-    Logger& operator=(const Logger&) = delete;
+    void logMessage(const QString &message);
 };
 
 #endif // LOGGER_H

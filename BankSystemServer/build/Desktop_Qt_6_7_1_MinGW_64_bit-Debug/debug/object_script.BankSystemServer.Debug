@@ -9,6 +9,7 @@ debug/Logger.o
 debug/LoginCommand.o
 debug/MakeTransactionCommand.o
 debug/MakeTransferCommand.o
+debug/SendEmail.o
 debug/Server.o
 debug/ServerHandler.o
 debug/UpdateAccountCommand.o

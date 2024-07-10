@@ -13,9 +13,7 @@ void DeleteAccountCommand::execute(const QStringList &RequestParts, QString &sta
     QString accountNumber = RequestParts[1]; // Assuming account number is in RequestParts[1]
 
     // Attempt to delete the client from the database
-    bool success = dataBase.deleteClient(accountNumber,statusMessage);
-    Logger::instance().logMessage(statusMessage);
-
+    bool success = dataBase.deleteClient(accountNumber);
     if (success)
     {
         statusMessage = QString("Client account with account number %1 has been successfully deleted.").arg(accountNumber);

@@ -26,13 +26,12 @@ void MakeTransactionCommand::execute(const QStringList &RequestParts, QString &s
     if (transactionAmount < 0)
     {
         QString withdrawAmount = amount.mid(1);
-        success = dataBase.withdrawMoney(accountNumber, withdrawAmount, statusMessage);
-        Logger::instance().logMessage(statusMessage);
+        success = dataBase.withdrawMoney(accountNumber, withdrawAmount);
+
     }
     else if (transactionAmount > 0)
     {
-        success = dataBase.depositMoney(accountNumber, amount, statusMessage);
-        Logger::instance().logMessage(statusMessage);
+        success = dataBase.depositMoney(accountNumber, amount);
     }
     else
     {
@@ -42,10 +41,10 @@ void MakeTransactionCommand::execute(const QStringList &RequestParts, QString &s
 
     if (success)
     {
-        statusMessage = ("Transaction successful: " + statusMessage);
+        statusMessage = ("Transaction successful");
     }
     else
     {
-        statusMessage = ("Transaction failed: " + statusMessage);
+        statusMessage = ("Transaction failed");
     }
 }

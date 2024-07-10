@@ -22,6 +22,7 @@
 #include "GetBankDataBaseCommand.h"
 #include "qaesencryption.h"
 
+
 class ServerHandler : public QThread
 {
     Q_OBJECT
@@ -40,6 +41,7 @@ private:
     QTcpSocket *Socket;
     BankDataBase dataBase;
     QString statusMessage;
+    Logger logger;
     QMap<QString, Command*> commandMap;
     void setupCommands();
     void Operation(QString Request);

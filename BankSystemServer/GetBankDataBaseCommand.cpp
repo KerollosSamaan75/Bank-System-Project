@@ -12,8 +12,7 @@ void GetBankDataBaseCommand::execute(const QStringList &RequestParts, QString &s
     }
 
     // Get the bank database records
-    QVector<QJsonObject> bankRecords = dataBase.getMainDatabase(statusMessage);
-    Logger::instance().logMessage(statusMessage);
+    QVector<QJsonObject> bankRecords = dataBase.getMainDatabase();
 
     // Prepare the response
     QJsonArray bankRecordsArray;

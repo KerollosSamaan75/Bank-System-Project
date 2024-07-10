@@ -3,7 +3,6 @@
 
 #include "Command.h"
 #include "BankDataBase.h"
-#include "Logger.h"
 
 class GetTransactionHistoryCommand : public Command
 {

@@ -23,31 +23,27 @@ void ServerHandler::setupCommands()
 void ServerHandler::run()
 {
     statusMessage = "User:"+QString::number(userID)+" is running on thread";
-    Logger::instance().logMessage(statusMessage);
+    logger.logMessage(statusMessage);
     Socket = new QTcpSocket();
     Socket->setSocketDescriptor(userID);
     connect(Socket, &QTcpSocket::readyRead, this, &ServerHandler::onReadyRead, Qt::DirectConnection);
     connect(Socket, &QTcpSocket::disconnected, this, &ServerHandler::onDisconnected, Qt::DirectConnection);
-
-    dataBase.initializeMainDatabase(statusMessage);
-    Logger::instance().logMessage(statusMessage);
-
-    dataBase.initializeTransactionDatabase(statusMessage);
-    Logger::instance().logMessage(statusMessage);
+    dataBase.initializeMainDatabase();
+    dataBase.initializeTransactionDatabase();
     exec();
 }
 
 void ServerHandler::onReadyRead()
 {
     QByteArray ByteArr = Socket->readAll();
-    Logger::instance().logMessage("Server received encrypted request:" + ByteArr.toHex());
+    logger.logMessage("Server received encrypted request:" + ByteArr.toHex());
     // Decrypt the received data
     QByteArray decryptedData = decryptRequest(ByteArr);
     int padLength = decryptedData.at(decryptedData.length() - 1);
     decryptedData = decryptedData.left(decryptedData.length() - padLength);
 
     statusMessage = QString("Server Received Data From User:%1 Data => %2").arg(userID).arg(QString(decryptedData));
-    Logger::instance().logMessage(statusMessage);
+    logger.logMessage(statusMessage);
     qDebug()<<statusMessage;
     // Process the operation with the decrypted data
     Operation(QString(decryptedData));
@@ -69,7 +65,7 @@ void ServerHandler::onDisconnected()
     {
         Socket->close();
         statusMessage = "User:"+QString::number(userID)+" has disconnected";
-        Logger::instance().logMessage(statusMessage);
+        logger.logMessage(statusMessage);
     }
 }
 
@@ -100,13 +96,13 @@ void ServerHandler::sendResponse(const QString &Message)
     {
         Socket->write(Message.toUtf8());
         QString logMessage = QString("My server Send Data to User: %1 Data => %2").arg(userID).arg(Message);
-        Logger::instance().logMessage(logMessage);
+        logger.logMessage(logMessage);
         qDebug()<<logMessage;
     }
     else
     {
         QString logMessage = QString("My server Can't Send Data to User: %1 Because The Socket is Closed").arg(userID);
-        Logger::instance().logMessage(logMessage);
+        logger.logMessage(logMessage);
         qDebug()<<logMessage;
     }
 }

@@ -12,24 +12,23 @@ void GetAccountNumberCommand::execute(const QStringList &RequestParts, QString &
     }
 
     QString username = RequestParts[1]; // Assuming username is in RequestParts[1]
-    QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(statusMessage);
-    Logger::instance().logMessage(statusMessage);
+    QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase();
 
     // Search for the username in databaseRecords
     QString accountNumber;
-    bool found = false;
+    bool userFound = false;
     for (const auto& record : databaseRecords)
     {
         if (record["Username"].toString() == username)
         {
             accountNumber = record["AccountNumber"].toString(); // Adjust this based on your actual JSON structure
-            found = true;
+            userFound = true;
             break;
         }
     }
 
     // Check if the username was found
-    if (found)
+    if(userFound)
     {
         // Send the account number as a response
         statusMessage = QString("Account number for %1 is: %2").arg(username).arg(accountNumber);

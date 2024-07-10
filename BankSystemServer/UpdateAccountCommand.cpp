@@ -19,8 +19,7 @@ void UpdateAccountCommand::execute(const QStringList &RequestParts, QString &sta
     QString accountNumber = RequestParts[6];
 
     // Update the client account in the database
-    bool success = dataBase.updateClient(accountNumber, userName, passWord, fullName, age, email,statusMessage);
-    Logger::instance().logMessage(statusMessage);
+    bool success = dataBase.updateClient(accountNumber, userName, passWord, fullName, age, email);
     // Send appropriate response based on update result
     if (success)
     {

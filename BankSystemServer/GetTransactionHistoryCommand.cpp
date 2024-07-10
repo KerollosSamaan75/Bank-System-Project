@@ -23,9 +23,7 @@ void GetTransactionHistoryCommand::execute(const QStringList &RequestParts, QStr
     }
 
     // Get the transaction database records
-    QVector<QJsonObject> transactionRecords = dataBase.getTransactionDatabase(statusMessage);
-    Logger::instance().logMessage(statusMessage);
-
+    QVector<QJsonObject> transactionRecords = dataBase.getTransactionDatabase();
     // Find the account transactions
     QJsonObject accountTransactions;
     bool accountFound = false;

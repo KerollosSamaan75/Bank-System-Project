@@ -3,13 +3,12 @@
 
 #include "Command.h"
 #include "BankDataBase.h"
-#include "Logger.h"
 
 class AddClientCommand : public Command
 {
 public:
     AddClientCommand(BankDataBase &db);
-    void execute(const QStringList &RequestParts, QString &statusMessage) override;
+    void execute(const QStringList &RequestParts, QString &status) override;
 
 private:
     BankDataBase &dataBase;

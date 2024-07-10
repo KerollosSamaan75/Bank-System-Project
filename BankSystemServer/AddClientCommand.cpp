@@ -19,8 +19,7 @@ void AddClientCommand::execute(const QStringList &RequestParts, QString &statusM
     const QString balanceStr = RequestParts[6];
 
     // Check if username already exists in the database
-    QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(statusMessage); // Get the main database records
-    Logger::instance().logMessage(statusMessage);
+    QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(); // Get the main database records
     for (const auto& record : databaseRecords)
     {
         if (record["Username"].toString() == userName)
@@ -31,14 +30,12 @@ void AddClientCommand::execute(const QStringList &RequestParts, QString &statusM
     }
 
     // Add new user to the database
-    if (dataBase.addClient(userName, password, fullName, ageStr, email, balanceStr ,statusMessage))
+    if (dataBase.addClient(userName, password, fullName, ageStr, email, balanceStr))
     {
-        Logger::instance().logMessage(statusMessage);
         statusMessage = QString("Congratulations! New user '%1' has been added. Welcome aboard").arg(userName);
     }
     else
     {
-        Logger::instance().logMessage(statusMessage);
         statusMessage = QString("Sadly, new user '%1' couldn't be added to the database. Please try again.").arg(userName);
     }
 }

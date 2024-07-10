@@ -9,13 +9,13 @@ void Server::StartServer()
     if (isListening())
     {
         QString logMessage = QString("Server is up and listening to port => %1").arg(Port);
-        Logger::instance().logMessage(logMessage);
+        logger.logMessage(logMessage);
         qDebug()<<logMessage;
     }
     else
     {
         QString logMessage = QString("Server can't listen to port => %1").arg(Port);
-        Logger::instance().logMessage(logMessage);
+        logger.logMessage(logMessage);
         qDebug()<<logMessage;
     }
 }
@@ -23,7 +23,7 @@ void Server::StartServer()
 void Server::incomingConnection(qintptr handle)
 {
     QString logMessage = QString("User:%1 connent to server").arg(handle);
-    Logger::instance().logMessage(logMessage);
+    logger.logMessage(logMessage);
     qDebug()<<logMessage;
 
     ServerHandler* serverhandler = new ServerHandler(handle);

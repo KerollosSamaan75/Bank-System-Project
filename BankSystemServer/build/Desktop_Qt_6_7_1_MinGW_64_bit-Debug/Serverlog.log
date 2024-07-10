@@ -1,0 +1,455 @@
+2024-07-10 20:25:01 - Server is up and listening to port => 1234
+2024-07-10 20:26:08 - User:704 connent to server
+2024-07-10 20:26:08 - User:704 is running on thread
+2024-07-10 20:26:08 - Main database initialized with 1 records
+2024-07-10 20:26:08 - Error: Failed to parse JSON from transaction database file
+2024-07-10 20:26:46 - Server received encrypted request:2677775162cc30fabee567c8a9a8558e93ef221fec872d589f85a4147bcb2a3c
+2024-07-10 20:26:46 - Server Received Data From User:704 Data => Login:Kero75:757
+2024-07-10 20:26:46 - Main database initialized with 1 records
+2024-07-10 20:26:46 - My server Send Data to User: 704 Data => Login failed. Incorrect username or password.
+2024-07-10 20:27:17 - Server received encrypted request:2677775162cc30fabee567c8a9a8558e569e5c3ca712b037d73f6b78a89e27d6
+2024-07-10 20:27:17 - Server Received Data From User:704 Data => Login:Kero75:7579
+2024-07-10 20:27:17 - Main database initialized with 1 records
+2024-07-10 20:27:17 - My server Send Data to User: 704 Data => Admin:Kero75:
+2024-07-10 20:27:48 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
+2024-07-10 20:27:48 - Server Received Data From User:704 Data => GetBankDataBase:
+2024-07-10 20:27:48 - Main database initialized with 1 records
+2024-07-10 20:27:48 - My server Send Data to User: 704 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"}]
+2024-07-10 20:36:19 - Server received encrypted request:383dd960b30acbef5ade4359d3ff74535bd06e060b2a7974ab36dd521062fb89fe304a0454f7ad19f95e95953d973f6a58c7216ba4b865d8bbabe94bb7ee94574c2d2e5a8b6fa54acd191c368fe329797ad5c91062933aa18b35aead805b0ead
+2024-07-10 20:36:19 - Server Received Data From User:704 Data => AddAccount:sharple samaan:sharple2011:12345:25:kiro.samaan.kodoos@gmail.com:1000
+2024-07-10 20:36:19 - Main database initialized with 1 records
+2024-07-10 20:36:19 - Generated account number: 329796379
+2024-07-10 20:36:19 - Main database file saved successfully.
+2024-07-10 20:36:19 - Transaction database file saved successfully.
+2024-07-10 20:36:19 - Client added successfully.
+2024-07-10 20:36:19 - My server Send Data to User: 704 Data => Congratulations! New user 'sharple2011' has been added. Welcome aboard
+2024-07-10 20:37:17 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
+2024-07-10 20:37:17 - Server Received Data From User:704 Data => GetBankDataBase:
+2024-07-10 20:37:17 - Main database initialized with 2 records
+2024-07-10 20:37:17 - My server Send Data to User: 704 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"329796379","Age":"25","Authority":"Client","Balance":"1000","Email":"kiro.samaan.kodoos@gmail.com","FullName":"sharple samaan","Password":"12345","Username":"sharple2011"}]
+2024-07-10 20:39:10 - Server received encrypted request:20120c1ce7489995016f31eecc1b657016b8ef9d37c4a793841f50c99deedf4525535ca00cb7456dd97b2f9d0934612388c5646874124c40190a667487256ef4791515cc4eba57c3fcc4d614c98410a4
+2024-07-10 20:39:10 - Server Received Data From User:704 Data => AddAccount:nada ahmed:nada2023:2023:23:kerollos.sam3an.75@gmail.com:1000
+2024-07-10 20:39:10 - Main database initialized with 2 records
+2024-07-10 20:39:10 - Generated account number: 331505192
+2024-07-10 20:39:10 - Main database file saved successfully.
+2024-07-10 20:39:10 - Transaction database file saved successfully.
+2024-07-10 20:39:10 - Client added successfully.
+2024-07-10 20:39:10 - My server Send Data to User: 704 Data => Congratulations! New user 'nada2023' has been added. Welcome aboard
+2024-07-10 20:39:31 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
+2024-07-10 20:39:31 - Server Received Data From User:704 Data => GetBankDataBase:
+2024-07-10 20:39:31 - Main database initialized with 3 records
+2024-07-10 20:39:31 - My server Send Data to User: 704 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"329796379","Age":"25","Authority":"Client","Balance":"1000","Email":"kiro.samaan.kodoos@gmail.com","FullName":"sharple samaan","Password":"12345","Username":"sharple2011"},{"AccountNumber":"331505192","Age":"23","Authority":"Client","Balance":"1000","Email":"kerollos.sam3an.75@gmail.com","FullName":"nada ahmed","Password":"2023","Username":"nada2023"}]
+2024-07-10 20:40:31 - Server received encrypted request:fa9a02b1316211e910a2d682b575f4f3bb61c1528cfcfc9dbcad6a601c55a2e2c4c9b0124d5dbab03890e864d60a95a1
+2024-07-10 20:40:31 - Server Received Data From User:704 Data => UpdateAccount:::7777:25::331505192
+2024-07-10 20:40:31 - Main database initialized with 3 records
+2024-07-10 20:40:31 - Updating password for account number: 331505192
+2024-07-10 20:40:31 - Updating age for account number: 331505192
+2024-07-10 20:40:31 - Main database file saved successfully.
+2024-07-10 20:40:31 - Account information updated successfully for account number: 331505192
+2024-07-10 20:40:31 - My server Send Data to User: 704 Data => Account update successful.
+2024-07-10 20:41:27 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f6c08a99ebc43225c2b84418babe46fb7
+2024-07-10 20:41:27 - Server Received Data From User:704 Data => GetAccountBalance:331505192
+2024-07-10 20:41:27 - Main database initialized with 3 records
+2024-07-10 20:41:27 - My server Send Data to User: 704 Data => The account balance for nada2023 is 1000.
+2024-07-10 20:41:34 - Server received encrypted request:9293b880681325510c24fb4c0f60909a4636ffd8ebd982fedd73d3cef3288d8ee6f38faf688c29cc909f9f7ea8939dbb
+2024-07-10 20:41:34 - Server Received Data From User:704 Data => GetTransactionHistory:331505192:6
+2024-07-10 20:41:34 - Transaction database initialized with 2 records
+2024-07-10 20:41:34 - My server Send Data to User: 704 Data => TransactionHistory:{"AccountNumber":"331505192","RecentTransactions":[]}
+2024-07-10 20:41:46 - Server received encrypted request:38c0377bc181b7ffb552bd5c9b1fb2f580d3268401350615f049fcf7d9b32657
+2024-07-10 20:41:46 - Server Received Data From User:704 Data => GetAccountNumber:nada2013
+2024-07-10 20:41:46 - Main database initialized with 3 records
+2024-07-10 20:41:46 - My server Send Data to User: 704 Data => Account number for nada2013 not found.
+2024-07-10 20:41:56 - Server received encrypted request:38c0377bc181b7ffb552bd5c9b1fb2f5a9419e23bbc2cc8c3de67d898e13971d
+2024-07-10 20:41:56 - Server Received Data From User:704 Data => GetAccountNumber:nada2023
+2024-07-10 20:41:56 - Main database initialized with 3 records
+2024-07-10 20:41:56 - My server Send Data to User: 704 Data => Account number for nada2023 is: 331505192
+2024-07-10 20:42:57 - Server received encrypted request:2506bc3e6910c8a317ffc18f7cad86971647096978904dcd17c6e1a200f88d1e
+2024-07-10 20:42:57 - Server Received Data From User:704 Data => Login:nada2023:1111
+2024-07-10 20:42:57 - Main database initialized with 3 records
+2024-07-10 20:42:57 - My server Send Data to User: 704 Data => Login failed. Incorrect username or password.
+2024-07-10 20:43:24 - Server received encrypted request:4c0bf78443ce2d844dbc1542a4e2b01ad408f65f423c9ce7160cc956f22b8d63
+2024-07-10 20:43:24 - Server Received Data From User:704 Data => Login:nada2023:7777
+2024-07-10 20:43:24 - Main database initialized with 3 records
+2024-07-10 20:43:24 - My server Send Data to User: 704 Data => Client:nada2023:331505192
+2024-07-10 20:43:46 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f6c08a99ebc43225c2b84418babe46fb7
+2024-07-10 20:43:46 - Server Received Data From User:704 Data => GetAccountBalance:331505192
+2024-07-10 20:43:46 - Main database initialized with 3 records
+2024-07-10 20:43:46 - My server Send Data to User: 704 Data => The account balance for nada2023 is 1000.
+2024-07-10 20:44:18 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 20:44:18 - Server Received Data From User:704 Data => MakeTransaction:331505192:+1000
+2024-07-10 20:44:18 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 20:44:18 - Main database file saved successfully.
+2024-07-10 20:44:18 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 20:44:18 - Transaction database file saved successfully.
+2024-07-10 20:44:18 - Deposit successful for account number: 331505192
+2024-07-10 20:44:18 - My server Send Data to User: 704 Data => Transaction successful
+2024-07-10 20:45:24 - Server received encrypted request:9293b880681325510c24fb4c0f60909a4636ffd8ebd982fedd73d3cef3288d8e24acbe3763bbb838a5fea0a4f6154b2f
+2024-07-10 20:45:24 - Server Received Data From User:704 Data => GetTransactionHistory:331505192:4
+2024-07-10 20:45:24 - Transaction database initialized with 2 records
+2024-07-10 20:45:24 - My server Send Data to User: 704 Data => TransactionHistory:{"AccountNumber":"331505192","RecentTransactions":[{"amount":"+1000","date":"10.07.2024"}]}
+2024-07-10 20:45:39 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f6c08a99ebc43225c2b84418babe46fb7
+2024-07-10 20:45:39 - Server Received Data From User:704 Data => GetAccountBalance:331505192
+2024-07-10 20:45:39 - Main database initialized with 3 records
+2024-07-10 20:45:39 - My server Send Data to User: 704 Data => The account balance for nada2023 is 2000.
+2024-07-10 20:45:58 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79562b52b68887880493cfeacd033e156f3e1a5090e99f17dc260a726224ad4f4def
+2024-07-10 20:45:58 - Server Received Data From User:704 Data => MakeTransfer:331505192:331505192:1000
+2024-07-10 20:45:58 - My server Send Data to User: 704 Data => Source and target account numbers cannot be the same.
+2024-07-10 20:46:50 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 20:46:50 - Server Received Data From User:704 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 20:46:50 - Main database file saved successfully.
+2024-07-10 20:46:50 - Transaction database file saved successfully.
+2024-07-10 20:46:50 - Transfer successful.
+2024-07-10 20:46:50 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 20:46:50 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 20:46:50 - Starting batch script with arguments: kerollos.sam3an.75@gmail.com Transaction Notification Dear User,
+
+You have transferred 1000 L.E to account 329796379.
+
+Best regards,
+Your Bank
+2024-07-10 20:46:56 - Output: 
+2024-07-10 20:46:56 - Starting batch script with arguments: kiro.samaan.kodoos@gmail.com Transaction Notification Dear User,
+
+You have received 1000 L.E from account 331505192.
+
+Best regards,
+Your Bank
+2024-07-10 20:46:59 - Output: 
+2024-07-10 20:46:59 - My server Send Data to User: 704 Data => TransferResult:Server Received Data From User:704 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 20:52:40 - User:704 has disconnected
+2024-07-10 21:07:56 - Server is up and listening to port => 1234
+2024-07-10 21:08:07 - User:880 connent to server
+2024-07-10 21:08:07 - User:880 is running on thread
+2024-07-10 21:08:07 - Main database initialized with 3 records
+2024-07-10 21:08:07 - Transaction database initialized with 2 records
+2024-07-10 21:08:43 - Server received encrypted request:4c0bf78443ce2d844dbc1542a4e2b01ad408f65f423c9ce7160cc956f22b8d63
+2024-07-10 21:08:43 - Server Received Data From User:880 Data => Login:nada2023:7777
+2024-07-10 21:08:43 - Main database initialized with 3 records
+2024-07-10 21:08:44 - My server Send Data to User: 880 Data => Client:nada2023:331505192
+2024-07-10 21:09:13 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 21:09:13 - Server Received Data From User:880 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 21:09:13 - Main database file saved successfully.
+2024-07-10 21:09:13 - Transaction database file saved successfully.
+2024-07-10 21:09:13 - Transfer successful.
+2024-07-10 21:09:13 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 21:09:13 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 21:09:25 - My server Send Data to User: 880 Data => TransferResult:Transfer successful.
+2024-07-10 21:16:27 - Server is up and listening to port => 1234
+2024-07-10 21:16:28 - User:876 connent to server
+2024-07-10 21:16:28 - User:876 is running on thread
+2024-07-10 21:16:28 - Main database initialized with 3 records
+2024-07-10 21:16:28 - Transaction database initialized with 2 records
+2024-07-10 21:16:32 - Server received encrypted request:4c0bf78443ce2d844dbc1542a4e2b01ad408f65f423c9ce7160cc956f22b8d63
+2024-07-10 21:16:32 - Server Received Data From User:876 Data => Login:nada2023:7777
+2024-07-10 21:16:32 - Main database initialized with 3 records
+2024-07-10 21:16:32 - My server Send Data to User: 876 Data => Client:nada2023:331505192
+2024-07-10 21:16:34 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f6c08a99ebc43225c2b84418babe46fb7
+2024-07-10 21:16:34 - Server Received Data From User:876 Data => GetAccountBalance:331505192
+2024-07-10 21:16:34 - Main database initialized with 3 records
+2024-07-10 21:16:34 - My server Send Data to User: 876 Data => The account balance for nada2023 is 0.
+2024-07-10 21:16:48 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 21:16:48 - Server Received Data From User:876 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 21:16:48 - Insufficient balance in the source account.
+2024-07-10 21:16:48 - My server Send Data to User: 876 Data => TransferResult:Transfer failure.
+2024-07-10 21:18:08 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 21:18:08 - Server Received Data From User:876 Data => MakeTransaction:331505192:+1000
+2024-07-10 21:18:08 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 21:18:08 - Main database file saved successfully.
+2024-07-10 21:18:08 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 21:18:08 - Transaction database file saved successfully.
+2024-07-10 21:18:08 - Deposit successful for account number: 331505192
+2024-07-10 21:18:08 - My server Send Data to User: 876 Data => Transaction successful
+2024-07-10 21:18:28 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 21:18:28 - Server Received Data From User:876 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 21:18:28 - Main database file saved successfully.
+2024-07-10 21:18:28 - Transaction database file saved successfully.
+2024-07-10 21:18:28 - Transfer successful.
+2024-07-10 21:18:28 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 21:18:28 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 21:18:33 - My server Send Data to User: 876 Data => TransferResult:Transfer successful.
+2024-07-10 21:32:48 - Server is up and listening to port => 1234
+2024-07-10 21:33:34 - Server is up and listening to port => 1234
+2024-07-10 21:38:50 - User:644 connent to server
+2024-07-10 21:38:52 - User:644 is running on thread
+2024-07-10 21:38:52 - Main database initialized with 3 records
+2024-07-10 21:38:52 - Transaction database initialized with 2 records
+2024-07-10 21:38:53 - Server received encrypted request:4c0bf78443ce2d844dbc1542a4e2b01ad408f65f423c9ce7160cc956f22b8d63
+2024-07-10 21:38:53 - Server Received Data From User:644 Data => Login:nada2023:7777
+2024-07-10 21:38:53 - Main database initialized with 3 records
+2024-07-10 21:38:53 - My server Send Data to User: 644 Data => Client:nada2023:331505192
+2024-07-10 21:38:57 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f6c08a99ebc43225c2b84418babe46fb7
+2024-07-10 21:38:57 - Server Received Data From User:644 Data => GetAccountBalance:331505192
+2024-07-10 21:38:57 - Main database initialized with 3 records
+2024-07-10 21:38:57 - My server Send Data to User: 644 Data => The account balance for nada2023 is 0.
+2024-07-10 21:39:03 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 21:39:03 - Server Received Data From User:644 Data => MakeTransaction:331505192:+1000
+2024-07-10 21:39:03 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 21:39:03 - Main database file saved successfully.
+2024-07-10 21:39:03 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 21:39:04 - Transaction database file saved successfully.
+2024-07-10 21:39:04 - Deposit successful for account number: 331505192
+2024-07-10 21:39:04 - My server Send Data to User: 644 Data => Transaction successful
+2024-07-10 21:39:25 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 21:39:25 - Server Received Data From User:644 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 21:39:25 - Main database file saved successfully.
+2024-07-10 21:39:25 - Transaction database file saved successfully.
+2024-07-10 21:39:25 - Transfer successful.
+2024-07-10 21:39:25 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 21:39:25 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 21:39:26 - Email sent successfully. Output: No recipient email address provided.
+
+2024-07-10 21:39:26 - Email sent successfully. Output: No recipient email address provided.
+
+2024-07-10 21:39:26 - My server Send Data to User: 644 Data => TransferResult:Transfer successful.
+2024-07-10 21:42:47 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5f79cd76f7159df0739dfb7a61c7d1a1e
+2024-07-10 21:42:47 - Server Received Data From User:644 Data => MakeTransaction:331505192:-1000
+2024-07-10 21:42:47 - Insufficient balance.
+2024-07-10 21:42:47 - My server Send Data to User: 644 Data => Transaction failed
+2024-07-10 21:42:56 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 21:42:56 - Server Received Data From User:644 Data => MakeTransaction:331505192:+1000
+2024-07-10 21:42:56 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 21:42:56 - Main database file saved successfully.
+2024-07-10 21:42:56 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 21:42:56 - Transaction database file saved successfully.
+2024-07-10 21:42:56 - Deposit successful for account number: 331505192
+2024-07-10 21:42:56 - My server Send Data to User: 644 Data => Transaction successful
+2024-07-10 21:43:05 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 21:43:05 - Server Received Data From User:644 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 21:43:05 - Main database file saved successfully.
+2024-07-10 21:43:05 - Transaction database file saved successfully.
+2024-07-10 21:43:05 - Transfer successful.
+2024-07-10 21:43:05 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 21:43:05 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 21:43:05 - Email sent successfully. Output: No recipient email address provided.
+
+2024-07-10 21:43:05 - Email sent successfully. Output: No recipient email address provided.
+
+2024-07-10 21:43:05 - My server Send Data to User: 644 Data => TransferResult:Transfer successful.
+2024-07-10 21:44:46 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 21:44:46 - Server Received Data From User:644 Data => MakeTransaction:331505192:+1000
+2024-07-10 21:44:46 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 21:44:46 - Main database file saved successfully.
+2024-07-10 21:44:46 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 21:44:46 - Transaction database file saved successfully.
+2024-07-10 21:44:46 - Deposit successful for account number: 331505192
+2024-07-10 21:44:46 - My server Send Data to User: 644 Data => Transaction successful
+2024-07-10 21:44:53 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 21:44:53 - Server Received Data From User:644 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 21:44:53 - Main database file saved successfully.
+2024-07-10 21:44:53 - Transaction database file saved successfully.
+2024-07-10 21:44:53 - Transfer successful.
+2024-07-10 21:44:53 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 21:44:53 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 21:44:53 - Email sent successfully. Output: No recipient email address provided.
+
+2024-07-10 21:44:54 - Email sent successfully. Output: No recipient email address provided.
+
+2024-07-10 21:44:54 - My server Send Data to User: 644 Data => TransferResult:Transfer successful.
+2024-07-10 21:51:43 - Server is up and listening to port => 1234
+2024-07-10 21:52:10 - User:880 connent to server
+2024-07-10 21:52:10 - User:880 is running on thread
+2024-07-10 21:52:11 - Main database initialized with 3 records
+2024-07-10 21:52:11 - Transaction database initialized with 2 records
+2024-07-10 21:52:13 - Server received encrypted request:4c0bf78443ce2d844dbc1542a4e2b01ad408f65f423c9ce7160cc956f22b8d63
+2024-07-10 21:52:13 - Server Received Data From User:880 Data => Login:nada2023:7777
+2024-07-10 21:52:13 - Main database initialized with 3 records
+2024-07-10 21:52:13 - My server Send Data to User: 880 Data => Client:nada2023:331505192
+2024-07-10 21:52:15 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f6c08a99ebc43225c2b84418babe46fb7
+2024-07-10 21:52:15 - Server Received Data From User:880 Data => GetAccountBalance:331505192
+2024-07-10 21:52:15 - Main database initialized with 3 records
+2024-07-10 21:52:15 - My server Send Data to User: 880 Data => The account balance for nada2023 is 0.
+2024-07-10 21:52:23 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 21:52:23 - Server Received Data From User:880 Data => MakeTransaction:331505192:+1000
+2024-07-10 21:52:23 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 21:52:23 - Main database file saved successfully.
+2024-07-10 21:52:23 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 21:52:23 - Transaction database file saved successfully.
+2024-07-10 21:52:23 - Deposit successful for account number: 331505192
+2024-07-10 21:52:23 - My server Send Data to User: 880 Data => Transaction successful
+2024-07-10 21:52:44 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 21:52:44 - Server Received Data From User:880 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 21:52:44 - Main database file saved successfully.
+2024-07-10 21:52:44 - Transaction database file saved successfully.
+2024-07-10 21:52:44 - Transfer successful.
+2024-07-10 21:52:44 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 21:52:44 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 21:52:48 - Error sending email: '"' is not recognized as an internal or external command,
+operable program or batch file.
+
+2024-07-10 21:52:50 - Error sending email: '"' is not recognized as an internal or external command,
+operable program or batch file.
+
+2024-07-10 21:52:50 - My server Send Data to User: 880 Data => TransferResult:Transfer successful.
+2024-07-10 21:54:24 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 21:54:24 - Server Received Data From User:880 Data => MakeTransaction:331505192:+1000
+2024-07-10 21:54:24 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 21:54:24 - Main database file saved successfully.
+2024-07-10 21:54:24 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 21:54:24 - Transaction database file saved successfully.
+2024-07-10 21:54:24 - Deposit successful for account number: 331505192
+2024-07-10 21:54:24 - My server Send Data to User: 880 Data => Transaction successful
+2024-07-10 21:54:31 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 21:54:31 - Server Received Data From User:880 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 21:54:31 - Main database file saved successfully.
+2024-07-10 21:54:31 - Transaction database file saved successfully.
+2024-07-10 21:54:31 - Transfer successful.
+2024-07-10 21:54:31 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 21:54:31 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 21:54:34 - Email sent successfully. Output: 
+2024-07-10 21:54:36 - Email sent successfully. Output: 
+2024-07-10 21:54:36 - My server Send Data to User: 880 Data => TransferResult:Transfer successful.
+2024-07-10 21:58:48 - Server is up and listening to port => 1234
+2024-07-10 22:00:03 - Server is up and listening to port => 1234
+2024-07-10 22:00:06 - User:780 connent to server
+2024-07-10 22:00:06 - User:780 is running on thread
+2024-07-10 22:00:06 - Main database initialized with 3 records
+2024-07-10 22:00:06 - Transaction database initialized with 2 records
+2024-07-10 22:00:08 - Server received encrypted request:4c0bf78443ce2d844dbc1542a4e2b01ad408f65f423c9ce7160cc956f22b8d63
+2024-07-10 22:00:08 - Server Received Data From User:780 Data => Login:nada2023:7777
+2024-07-10 22:00:08 - Main database initialized with 3 records
+2024-07-10 22:00:08 - My server Send Data to User: 780 Data => Client:nada2023:331505192
+2024-07-10 22:00:10 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718f6c08a99ebc43225c2b84418babe46fb7
+2024-07-10 22:00:10 - Server Received Data From User:780 Data => GetAccountBalance:331505192
+2024-07-10 22:00:10 - Main database initialized with 3 records
+2024-07-10 22:00:10 - My server Send Data to User: 780 Data => The account balance for nada2023 is 0.
+2024-07-10 22:00:16 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 22:00:16 - Server Received Data From User:780 Data => MakeTransaction:331505192:+1000
+2024-07-10 22:00:16 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 22:00:16 - Main database file saved successfully.
+2024-07-10 22:00:16 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 22:00:16 - Transaction database file saved successfully.
+2024-07-10 22:00:16 - Deposit successful for account number: 331505192
+2024-07-10 22:00:16 - My server Send Data to User: 780 Data => Transaction successful
+2024-07-10 22:00:49 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 22:00:49 - Server Received Data From User:780 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 22:00:49 - Main database file saved successfully.
+2024-07-10 22:00:49 - Transaction database file saved successfully.
+2024-07-10 22:00:49 - Transfer successful.
+2024-07-10 22:00:49 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 22:00:49 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 22:00:53 - Error sending email: '"' is not recognized as an internal or external command,
+operable program or batch file.
+
+2024-07-10 22:00:56 - Error sending email: '"' is not recognized as an internal or external command,
+operable program or batch file.
+
+2024-07-10 22:00:56 - My server Send Data to User: 780 Data => TransferResult:Transfer successful.
+2024-07-10 22:03:48 - Server is up and listening to port => 1234
+2024-07-10 22:03:53 - User:868 connent to server
+2024-07-10 22:03:54 - User:868 is running on thread
+2024-07-10 22:03:54 - Main database initialized with 3 records
+2024-07-10 22:03:54 - Transaction database initialized with 2 records
+2024-07-10 22:03:57 - Server received encrypted request:4c0bf78443ce2d844dbc1542a4e2b01ad408f65f423c9ce7160cc956f22b8d63
+2024-07-10 22:03:57 - Server Received Data From User:868 Data => Login:nada2023:7777
+2024-07-10 22:03:57 - Main database initialized with 3 records
+2024-07-10 22:03:57 - My server Send Data to User: 868 Data => Client:nada2023:331505192
+2024-07-10 22:04:02 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 22:04:02 - Server Received Data From User:868 Data => MakeTransaction:331505192:+1000
+2024-07-10 22:04:02 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 22:04:02 - Main database file saved successfully.
+2024-07-10 22:04:02 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 22:04:02 - Transaction database file saved successfully.
+2024-07-10 22:04:02 - Deposit successful for account number: 331505192
+2024-07-10 22:04:02 - My server Send Data to User: 868 Data => Transaction successful
+2024-07-10 22:04:21 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 22:04:21 - Server Received Data From User:868 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 22:04:21 - Main database file saved successfully.
+2024-07-10 22:04:21 - Transaction database file saved successfully.
+2024-07-10 22:04:21 - Transfer successful.
+2024-07-10 22:04:21 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 22:04:21 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 22:04:21 - Executing command: D:/ITIDA_WorkSpace/Qt_Sessions/Final Project/BankSystemServer/sendEmail.bat "kerollos.sam3an.75@gmail.com" "Transaction Notification" "Dear User,\n\nYou have transferred 1000 L.E to account 329796379.\n\nBest regards,\nIMT Bank"
+2024-07-10 22:04:23 - Error sending email: '"' is not recognized as an internal or external command,
+operable program or batch file.
+Send-MailMessage : An invalid character was found in the mail header: '"'.
+At line:1 char:1
++ Send-MailMessage -From 'kerosamaan07@gmail.com' -To '"kerollos.sam3an ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [Send-MailMessage], FormatException
+    + FullyQualifiedErrorId : FormatException,Microsoft.PowerShell.Commands.SendMailMessage
+ 
+Send-MailMessage : A recipient must be specified.
+At line:1 char:1
++ Send-MailMessage -From 'kerosamaan07@gmail.com' -To '"kerollos.sam3an ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.Mail.SmtpClient:SmtpClient) [Send-MailMessage], InvalidOpe 
+   rationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.SendMailMessage
+ 
+
+2024-07-10 22:04:23 - Executing command: D:/ITIDA_WorkSpace/Qt_Sessions/Final Project/BankSystemServer/sendEmail.bat "kiro.samaan.kodoos@gmail.com" "Transaction Notification" "Dear User,\n\nYou have received 1000 L.E from account 331505192.\n\nBest regards,\nIMT Bank"
+2024-07-10 22:04:23 - Error sending email: '"' is not recognized as an internal or external command,
+operable program or batch file.
+Send-MailMessage : An invalid character was found in the mail header: '"'.
+At line:1 char:1
++ Send-MailMessage -From 'kerosamaan07@gmail.com' -To '"kiro.samaan.kod ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidType: (:) [Send-MailMessage], FormatException
+    + FullyQualifiedErrorId : FormatException,Microsoft.PowerShell.Commands.SendMailMessage
+ 
+Send-MailMessage : A recipient must be specified.
+At line:1 char:1
++ Send-MailMessage -From 'kerosamaan07@gmail.com' -To '"kiro.samaan.kod ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidOperation: (System.Net.Mail.SmtpClient:SmtpClient) [Send-MailMessage], InvalidOpe 
+   rationException
+    + FullyQualifiedErrorId : InvalidOperationException,Microsoft.PowerShell.Commands.SendMailMessage
+ 
+
+2024-07-10 22:04:23 - My server Send Data to User: 868 Data => TransferResult:Transfer successful.
+2024-07-10 22:08:35 - Server is up and listening to port => 1234
+2024-07-10 22:08:37 - User:892 connent to server
+2024-07-10 22:08:37 - User:892 is running on thread
+2024-07-10 22:08:37 - Main database initialized with 3 records
+2024-07-10 22:08:37 - Transaction database initialized with 2 records
+2024-07-10 22:08:40 - Server received encrypted request:4c0bf78443ce2d844dbc1542a4e2b01ad408f65f423c9ce7160cc956f22b8d63
+2024-07-10 22:08:40 - Server Received Data From User:892 Data => Login:nada2023:7777
+2024-07-10 22:08:40 - Main database initialized with 3 records
+2024-07-10 22:08:40 - My server Send Data to User: 892 Data => Client:nada2023:331505192
+2024-07-10 22:08:46 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 22:08:46 - Server Received Data From User:892 Data => MakeTransaction:331505192:+1000
+2024-07-10 22:08:46 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 22:08:46 - Main database file saved successfully.
+2024-07-10 22:08:46 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 22:08:46 - Transaction database file saved successfully.
+2024-07-10 22:08:46 - Deposit successful for account number: 331505192
+2024-07-10 22:08:46 - My server Send Data to User: 892 Data => Transaction successful
+2024-07-10 22:09:50 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 22:09:50 - Server Received Data From User:892 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 22:09:50 - Main database file saved successfully.
+2024-07-10 22:09:50 - Transaction database file saved successfully.
+2024-07-10 22:09:50 - Transfer successful.
+2024-07-10 22:09:50 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 22:09:50 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 22:09:56 - Error sending email: '"' is not recognized as an internal or external command,
+operable program or batch file.
+
+2024-07-10 22:09:59 - Error sending email: '"' is not recognized as an internal or external command,
+operable program or batch file.
+
+2024-07-10 22:09:59 - My server Send Data to User: 892 Data => TransferResult:Transfer successful.
+2024-07-10 22:20:45 - Server is up and listening to port => 1234
+2024-07-10 22:20:52 - User:852 connent to server
+2024-07-10 22:20:52 - User:852 is running on thread
+2024-07-10 22:20:52 - Main database initialized with 3 records
+2024-07-10 22:20:52 - Transaction database initialized with 2 records
+2024-07-10 22:20:54 - Server received encrypted request:4c0bf78443ce2d844dbc1542a4e2b01ad408f65f423c9ce7160cc956f22b8d63
+2024-07-10 22:20:54 - Server Received Data From User:852 Data => Login:nada2023:7777
+2024-07-10 22:20:54 - Main database initialized with 3 records
+2024-07-10 22:20:54 - My server Send Data to User: 852 Data => Client:nada2023:331505192
+2024-07-10 22:21:01 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a5d9876ff17ffdce311e6a9c4ef0b552e5
+2024-07-10 22:21:01 - Server Received Data From User:852 Data => MakeTransaction:331505192:+1000
+2024-07-10 22:21:01 - Deposited amount of 1000 for account number: 331505192
+2024-07-10 22:21:01 - Main database file saved successfully.
+2024-07-10 22:21:01 - Updated transaction record for deposit for account number: 331505192
+2024-07-10 22:21:01 - Transaction database file saved successfully.
+2024-07-10 22:21:01 - Deposit successful for account number: 331505192
+2024-07-10 22:21:01 - My server Send Data to User: 852 Data => Transaction successful
+2024-07-10 22:21:42 - Server received encrypted request:7591c9abb68b39ba843ca6ce48fe79560cf6bbdcfb0a7e47daefe70ad5b005fdb63292b752dbd224e066cb2aaafde5a8
+2024-07-10 22:21:42 - Server Received Data From User:852 Data => MakeTransfer:331505192:329796379:1000
+2024-07-10 22:21:42 - Main database file saved successfully.
+2024-07-10 22:21:42 - Transaction database file saved successfully.
+2024-07-10 22:21:42 - Transfer successful.
+2024-07-10 22:21:42 - Email found for account 331505192: kerollos.sam3an.75@gmail.com
+2024-07-10 22:21:42 - Email found for account 329796379: kiro.samaan.kodoos@gmail.com
+2024-07-10 22:21:48 - My server Send Data to User: 852 Data => TransferResult:Transfer successful.

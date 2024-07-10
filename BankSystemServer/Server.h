@@ -21,5 +21,6 @@ protected:
     void incomingConnection(qintptr handle) override;
 private:
     qint32 Port;
+    Logger logger;
 };
 #endif // SERVER_H

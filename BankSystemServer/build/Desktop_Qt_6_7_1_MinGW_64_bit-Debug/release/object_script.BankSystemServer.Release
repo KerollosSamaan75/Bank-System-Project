@@ -9,6 +9,7 @@ release/Logger.o
 release/LoginCommand.o
 release/MakeTransactionCommand.o
 release/MakeTransferCommand.o
+release/SendEmail.o
 release/Server.o
 release/ServerHandler.o
 release/UpdateAccountCommand.o

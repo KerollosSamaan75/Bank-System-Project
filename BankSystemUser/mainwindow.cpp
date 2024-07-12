@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->passwordErrorLabel->setVisible(false);
     ui->lEUserName->setPlaceholderText("Enter your username");
     ui->lEPassword->setPlaceholderText("Enter your password");
+    ui->lEPassword->setEchoMode(QLineEdit::Password);
 
     ui->NewUserPassWordErrorLabel->setVisible(false);
     ui->NewUserAgeErrorLabel->setVisible(false);
@@ -726,4 +727,17 @@ void MainWindow::on_pB_ClientTransferMoney_clicked()
 }
 
 
+
+
+void MainWindow::on_showPasswordCheckBox_stateChanged(int arg1)
+{
+    if (arg1 == Qt::Checked)
+    {
+        ui->lEPassword->setEchoMode(QLineEdit::Normal);
+    }
+    else
+    {
+        ui->lEPassword->setEchoMode(QLineEdit::Password);
+    }
+}
 

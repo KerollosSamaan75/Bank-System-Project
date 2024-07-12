@@ -14,7 +14,7 @@ void SendEmail::send(const QString &to, const QString &subject, const QString &b
     QProcess process;
 
     // Path to your batch script
-    QString batchFilePath = "D:/ITIDA_WorkSpace/Qt_Sessions/Final Project/BankSystemServer/sendEmail.bat";
+    QString batchFilePath = "sendEmail.bat";
 
     // Prepare arguments
     QStringList arguments;

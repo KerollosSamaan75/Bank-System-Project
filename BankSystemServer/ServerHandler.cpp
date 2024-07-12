@@ -3,21 +3,21 @@
 ServerHandler::ServerHandler(qint32 ID, QObject *parent)
     : QThread(parent), userID(ID)
 {
-    setupRequests();
+    setupRequestHandles();
 }
 
-void ServerHandler::setupRequests()
+void ServerHandler::setupRequestHandles()
 {
-    requestMap["Login"] = new LoginHandler(dataBase);
-    requestMap["AddAccount"] = new AddClientHandler(dataBase);
-    requestMap["DeleteAccount"] = new DeleteAccountHandler(dataBase);
-    requestMap["GetAccountBalance"] = new GetAccountBalanceHandler(dataBase);
-    requestMap["GetAccountNumber"] = new GetAccountNumberHandler(dataBase);
-    requestMap["GetTransactionHistory"] = new GetTransactionHistoryHandler(dataBase);
-    requestMap["MakeTransaction"] = new MakeTransactionHandler(dataBase);
-    requestMap["MakeTransfer"] = new MakeTransferHandler(dataBase);
-    requestMap["UpdateAccount"] = new UpdateAccountHandler(dataBase);
-    requestMap["GetBankDataBase"] = new GetBankDataBaseHandler(dataBase);
+    requestHandlerMap["Login"] = new LoginHandler(dataBase);
+    requestHandlerMap["AddAccount"] = new AddClientHandler(dataBase);
+    requestHandlerMap["DeleteAccount"] = new DeleteAccountHandler(dataBase);
+    requestHandlerMap["GetAccountBalance"] = new GetAccountBalanceHandler(dataBase);
+    requestHandlerMap["GetAccountNumber"] = new GetAccountNumberHandler(dataBase);
+    requestHandlerMap["GetTransactionHistory"] = new GetTransactionHistoryHandler(dataBase);
+    requestHandlerMap["MakeTransaction"] = new MakeTransactionHandler(dataBase);
+    requestHandlerMap["MakeTransfer"] = new MakeTransferHandler(dataBase);
+    requestHandlerMap["UpdateAccount"] = new UpdateAccountHandler(dataBase);
+    requestHandlerMap["GetBankDataBase"] = new GetBankDataBaseHandler(dataBase);
 }
 
 void ServerHandler::run()
@@ -36,14 +36,14 @@ void ServerHandler::run()
 void ServerHandler::onReadyRead()
 {
     QByteArray ByteArr = Socket->readAll();
-    logger.logMessage(QString("Server Received encrypted request From User:%1 Data => %2").arg(userID).arg(ByteArr.toHex()));
+    logger.logMessage(QString("Server Received encrypted request From User:%1 Request => %2").arg(userID).arg(ByteArr.toHex()));
 
     // Decrypt the received data
     QByteArray decryptedData = decryptRequest(ByteArr);
     int padLength = decryptedData.at(decryptedData.length() - 1);
     decryptedData = decryptedData.left(decryptedData.length() - padLength);
 
-    statusMessage = QString("Server Received request From User:%1 Data => %2").arg(userID).arg(QString(decryptedData));
+    statusMessage = QString("Server Received request From User:%1 Request => %2").arg(userID).arg(QString(decryptedData));
     logger.logMessage(statusMessage);
 
     // Extract the frame size and validate it
@@ -97,7 +97,7 @@ void ServerHandler::onReadyRead()
     }
 
     // Log the valid request
-    statusMessage = QString("Server processing request from User:%1 Data => %2").arg(userID).arg(requestData);
+    statusMessage = QString("Server processing request from User:%1 Request => %2").arg(userID).arg(requestData);
     logger.logMessage(statusMessage);
 
     // Process the operation with the valid request data
@@ -135,9 +135,9 @@ void ServerHandler::Operation(QString Request)
     }
 
     QString HandlerKey = List[0];
-    if (requestMap.contains(HandlerKey))
+    if (requestHandlerMap.contains(HandlerKey))
     {
-        requestMap[HandlerKey]->execute(List, statusMessage);
+        requestHandlerMap[HandlerKey]->execute(List, statusMessage);
         sendResponse(statusMessage);
     }
     else
@@ -168,13 +168,13 @@ void ServerHandler::sendResponse(const QString &Message)
         // Construct the frame by concatenating header and jsonData
         QByteArray frame = header + jsonData;
         Socket->write(frame);
-        QString logMessage = QString("My server Send Data to User: %1 Data => %2").arg(userID).arg(frame);
+        QString logMessage = QString("My server Send Response to User: %1 Response => %2").arg(userID).arg(frame);
         logger.logMessage(logMessage);
 
     }
     else
     {
-        QString logMessage = QString("My server Can't Send Data to User: %1 Because The Socket is Closed").arg(userID);
+        QString logMessage = QString("My server Can't Send Response to User: %1 Because The Socket is Closed").arg(userID);
         logger.logMessage(logMessage);
         qDebug()<<logMessage;
     }

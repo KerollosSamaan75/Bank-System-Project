@@ -42,8 +42,8 @@ private:
     BankDataBase dataBase;
     QString statusMessage;
     Logger logger;
-    QMap<QString, RequestHandler*> requestMap;
-    void setupRequests();
+    QMap<QString, RequestHandler*> requestHandlerMap;
+    void setupRequestHandles();
     void Operation(QString Request);
     void sendResponse(const QString &Message);
     QByteArray decryptRequest(const QByteArray &encryptedData);

@@ -62,6 +62,8 @@ private slots:
     void on_pB_ClientBack_clicked();
     void on_pB_ClientTransferMoney_clicked();
 
+    void on_showPasswordCheckBox_stateChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
     User SystemUser;

@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -49,6 +50,7 @@ public:
     QVBoxLayout *verticalLayout_4;
     QPushButton *pBLogin;
     QPushButton *pBClear;
+    QCheckBox *showPasswordCheckBox;
     QWidget *layoutWidget3;
     QVBoxLayout *verticalLayout;
     QListWidget *Console;
@@ -200,7 +202,7 @@ public:
 
         layoutWidget1 = new QWidget(frame);
         layoutWidget1->setObjectName("layoutWidget1");
-        layoutWidget1->setGeometry(QRect(10, 117, 301, 78));
+        layoutWidget1->setGeometry(QRect(10, 117, 311, 78));
         verticalLayout_3 = new QVBoxLayout(layoutWidget1);
         verticalLayout_3->setObjectName("verticalLayout_3");
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
@@ -260,6 +262,11 @@ public:
 
         verticalLayout_4->addWidget(pBClear);
 
+        showPasswordCheckBox = new QCheckBox(frame);
+        showPasswordCheckBox->setObjectName("showPasswordCheckBox");
+        showPasswordCheckBox->setGeometry(QRect(10, 190, 111, 22));
+        showPasswordCheckBox->setStyleSheet(QString::fromUtf8("font: 700 9pt \"Segoe UI\";\n"
+"color: rgb(255, 255, 255);"));
         layoutWidget3 = new QWidget(Login);
         layoutWidget3->setObjectName("layoutWidget3");
         layoutWidget3->setGeometry(QRect(40, 440, 351, 143));
@@ -674,7 +681,7 @@ public:
         NewUserEmail = new QLineEdit(layoutWidget7);
         NewUserEmail->setObjectName("NewUserEmail");
         NewUserEmail->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 700 20pt \"Segoe UI\";"));
+"font: 700 15pt \"Segoe UI\";"));
 
         verticalLayout_8->addWidget(NewUserEmail);
 
@@ -1045,6 +1052,7 @@ public:
         passwordErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         pBLogin->setText(QCoreApplication::translate("MainWindow", "Login", nullptr));
         pBClear->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
+        showPasswordCheckBox->setText(QCoreApplication::translate("MainWindow", "Show Password", nullptr));
         pBConnect->setText(QCoreApplication::translate("MainWindow", "Connect to Bank Server", nullptr));
         Adminlabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>ADMIN</p></body></html>", nullptr));
         pB_AddAccount->setText(QCoreApplication::translate("MainWindow", "Create Client Account", nullptr));

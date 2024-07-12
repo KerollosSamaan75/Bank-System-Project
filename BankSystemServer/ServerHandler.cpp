@@ -4,6 +4,7 @@ ServerHandler::ServerHandler(qint32 ID, QObject *parent)
     : QThread(parent), userID(ID)
 {
     setupRequestHandles();
+    loginStatus = false;
 }
 
 void ServerHandler::setupRequestHandles()
@@ -119,6 +120,16 @@ void ServerHandler::onDisconnected()
 {
     if(Socket->isOpen())
     {
+        // ckeck if the used already login change his Login status before terminate app.
+        if(loginStatus)
+        {
+            if(dataBase.setUserLoginState(loginUser,"0"))
+            {
+                statusMessage = "User: "+QString::number(userID)+" logout form bank system";
+                logger.logMessage(statusMessage);
+                loginStatus = false;
+            }
+        }
         Socket->close();
         statusMessage = "User:"+QString::number(userID)+" has disconnected";
         logger.logMessage(statusMessage);
@@ -135,8 +146,14 @@ void ServerHandler::Operation(QString Request)
     }
 
     QString HandlerKey = List[0];
+
     if (requestHandlerMap.contains(HandlerKey))
     {
+        if(HandlerKey == "Login")
+        {
+            // save username for the user try to login used it to change login status if login is valid
+            loginUser = List[1];
+        }
         requestHandlerMap[HandlerKey]->execute(List, statusMessage);
         sendResponse(statusMessage);
     }
@@ -154,6 +171,12 @@ void ServerHandler::sendResponse(const QString &Message)
         QJsonObject requestObj;
         requestObj["ResponseSize"] =QString::number(Message.size());
         requestObj["ResponseData"] = Message;
+        //check if login is valid or not so no user with same username and password can login at the same time
+        QStringList list = Message.split(":");
+        if(list[0] == "Client" || list[0] == "Admin")
+        {
+            loginStatus = true;
+        }
 
         // Convert the QJsonObject to a QByteArray
         QJsonDocument doc(requestObj);
@@ -168,13 +191,13 @@ void ServerHandler::sendResponse(const QString &Message)
         // Construct the frame by concatenating header and jsonData
         QByteArray frame = header + jsonData;
         Socket->write(frame);
-        QString logMessage = QString("My server Send Response to User: %1 Response => %2").arg(userID).arg(frame);
+        QString logMessage = QString("My server Send Response to User:%1 Response => %2").arg(userID).arg(frame);
         logger.logMessage(logMessage);
 
     }
     else
     {
-        QString logMessage = QString("My server Can't Send Response to User: %1 Because The Socket is Closed").arg(userID);
+        QString logMessage = QString("My server Can't Send Response to User:%1 Because The Socket is Closed").arg(userID);
         logger.logMessage(logMessage);
         qDebug()<<logMessage;
     }

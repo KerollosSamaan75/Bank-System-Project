@@ -37,7 +37,8 @@ private slots:
 private:
     QString Ip;
     qint32 Port;
-    QTcpSocket Socket;QByteArray encryptRequest(const QByteArray &request);
+    QTcpSocket Socket;
+    QByteArray encryptRequest(const QByteArray &request);
 };
 
 #endif // USER_H

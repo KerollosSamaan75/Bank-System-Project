@@ -133,6 +133,7 @@ bool BankDataBase::addClient(const QString &username, const QString &password, c
     newClient["Authority"] = "Client"; // Assuming new clients are added as regular users
     newClient["AccountNumber"] = AccountNumber;
     newClient["Balance"] = balance; // Initial balance is set to 0
+    newClient["Login"] = "0";
 
     // Append the new client to the main database records
     mainDatabaseRecords.push_back(newClient);
@@ -225,6 +226,30 @@ bool BankDataBase::saveTransactionDatabaseToFile()
     }
 }
 
+bool BankDataBase::setUserLoginState(const QString& username, const QString& state)
+{
+    // Find the user in the main database records
+    for (auto& record : mainDatabaseRecords)
+    {
+        if (record["Username"].toString() == username)
+        {
+            record["Login"] = state; // Update the login state
+
+            // Save the updated main database records
+            if (!saveMainDatabaseToFile())
+            {
+                logger.logMessage("Failed to save main database after updating login state for user: " + username);
+                return false;
+            }
+
+            logger.logMessage("Login state updated successfully for user: " + username);
+            return true;
+        }
+    }
+    // Log and return false if the user was not found
+    logger.logMessage("User not found for updating login state: " + username);
+    return false;
+}
 
 
 

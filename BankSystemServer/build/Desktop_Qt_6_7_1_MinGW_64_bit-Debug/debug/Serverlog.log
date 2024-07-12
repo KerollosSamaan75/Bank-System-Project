@@ -1,0 +1,24 @@
+2024-07-13 00:30:04 - Server is up and listening to port => 1234
+2024-07-13 00:30:40 - User:684 connent to server
+2024-07-13 00:30:40 - User:684 is running on thread
+2024-07-13 00:30:40 - Error: Cannot open main database file
+2024-07-13 00:30:40 - Error: Cannot open transaction database file
+2024-07-13 00:30:54 - Error: Cannot open main database file
+2024-07-13 00:30:54 - User:684 has disconnected
+2024-07-13 00:32:11 - Server is up and listening to port => 1234
+2024-07-13 00:32:38 - User:884 connent to server
+2024-07-13 00:32:38 - User:884 is running on thread
+2024-07-13 00:32:38 - Error: Cannot open main database file
+2024-07-13 00:32:38 - Error: Cannot open transaction database file
+2024-07-13 00:32:52 - Server Received encrypted request From User:884 Request => 521b4b95e3285a96c2a1e3be584bdc628216fd2d0faed8a92762da9abbb173b8bd79363f2a7a96195456051c97a903c8b6a63b8cbd0995ddb124661605af3914
+2024-07-13 00:32:52 - Server Received request From User:884 Request => 54:{"RequestData":"Login:Kero75:7579","RequestSize":"17"}
+2024-07-13 00:32:52 - Server processing request from User:884 Request => Login:Kero75:7579
+2024-07-13 00:32:52 - Error: Cannot open main database file
+2024-07-13 00:32:52 - My server Send Response to User: 884 Response => 84:{"ResponseData":"Login failed. Incorrect username or password.","ResponseSize":"45"}
+2024-07-13 00:33:05 - Server Received encrypted request From User:884 Request => 521b4b95e3285a96c2a1e3be584bdc628216fd2d0faed8a92762da9abbb173b8bd79363f2a7a96195456051c97a903c8b6a63b8cbd0995ddb124661605af3914
+2024-07-13 00:33:05 - Server Received request From User:884 Request => 54:{"RequestData":"Login:Kero75:7579","RequestSize":"17"}
+2024-07-13 00:33:05 - Server processing request from User:884 Request => Login:Kero75:7579
+2024-07-13 00:33:05 - Error: Cannot open main database file
+2024-07-13 00:33:05 - My server Send Response to User: 884 Response => 84:{"ResponseData":"Login failed. Incorrect username or password.","ResponseSize":"45"}
+2024-07-13 00:33:17 - Error: Cannot open main database file
+2024-07-13 00:33:17 - User:884 has disconnected

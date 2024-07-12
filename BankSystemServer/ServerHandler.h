@@ -41,6 +41,8 @@ private:
     QTcpSocket *Socket;
     BankDataBase dataBase;
     QString statusMessage;
+    QString loginUser;
+    bool loginStatus;
     Logger logger;
     QMap<QString, RequestHandler*> requestHandlerMap;
     void setupRequestHandles();

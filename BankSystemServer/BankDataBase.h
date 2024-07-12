@@ -44,6 +44,7 @@ public:
                       const QString &fullName, const QString &age, const QString &email); // Update client information
     bool saveMainDatabaseToFile();
     bool saveTransactionDatabaseToFile();
+    bool setUserLoginState(const QString& username, const QString& state);
 
     // Transaction operations
     bool transferMoney(const QString &sourceAccountNumber, const QString &targetAccountNumber,

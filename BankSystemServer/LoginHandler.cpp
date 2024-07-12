@@ -25,17 +25,33 @@ void LoginHandler::execute(const QStringList &RequestParts, QString &statusMessa
     {
         if (record["Username"].toString() == userName && record["Password"].toString() == passWord)
         {
-            isUserValid = true;
-            userAuthority = record["Authority"].toString(); // Capture user authority
-            userAccountNumber = record["AccountNumber"].toString();
-            break;
+            if (record["Login"].toString() == "0")
+            {
+                isUserValid = true;
+                userAuthority = record["Authority"].toString(); // Capture user authority
+                userAccountNumber = record["AccountNumber"].toString();
+                break;
+            }
+            else
+            {
+                statusMessage="Login failed. This account is already logged in.";
+                return;
+            }
         }
     }
 
     if (isUserValid)
     {
         // Change the 'log' state in the database
-        statusMessage = QString("%1:%2:%3").arg(userAuthority, userName, userAccountNumber);
+        if (dataBase.setUserLoginState(userName, "1"))
+        {
+            QString successMessage = QString("%1:%2:%3").arg(userAuthority,userName,userAccountNumber);
+            statusMessage = successMessage;
+        }
+        else
+        {
+            statusMessage="Login failed. Could not update the login state.";
+        }
     }
     else
     {

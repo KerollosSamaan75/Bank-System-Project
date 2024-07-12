@@ -6,6 +6,7 @@
         "Balance": null,
         "Email": "kerosamaan07@gmail.com",
         "FullName": "Kirollos Samaan",
+        "Login": "0",
         "Password": "7579",
         "Username": "Kero75"
     },
@@ -16,6 +17,7 @@
         "Balance": "0",
         "Email": "sharplesamaan11@gmail.com",
         "FullName": "Sharple Samaan",
+        "Login": "0",
         "Password": "2011",
         "Username": "Sharple2011"
     },
@@ -26,7 +28,19 @@
         "Balance": "0",
         "Email": "kerollos.sam3an.75@gmail.com",
         "FullName": "Kerollos Samaan",
+        "Login": "0",
         "Password": "1234",
         "Username": "Kero55"
+    },
+    {
+        "AccountNumber": "104688657",
+        "Age": "24",
+        "Authority": "Client",
+        "Balance": "100",
+        "Email": "nada@gmail.com",
+        "FullName": "nada mohamad",
+        "Login": "0",
+        "Password": "2023",
+        "Username": "nada23"
     }
 ]

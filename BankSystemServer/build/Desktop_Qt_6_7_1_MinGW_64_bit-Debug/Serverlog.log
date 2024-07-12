@@ -1,0 +1,26 @@
+2024-07-13 01:11:11 - Server is up and listening to port => 1234
+2024-07-13 01:12:05 - User:896 connent to server
+2024-07-13 01:12:05 - User:896 is running on thread
+2024-07-13 01:12:06 - Main database initialized with 4 records
+2024-07-13 01:12:06 - Transaction database initialized with 3 records
+2024-07-13 01:12:19 - User:912 connent to server
+2024-07-13 01:12:19 - User:912 is running on thread
+2024-07-13 01:12:19 - Main database initialized with 4 records
+2024-07-13 01:12:19 - Transaction database initialized with 3 records
+2024-07-13 01:13:08 - Server Received encrypted request From User:896 Request => 521b4b95e3285a96c2a1e3be584bdc628216fd2d0faed8a92762da9abbb173b8bd79363f2a7a96195456051c97a903c8b6a63b8cbd0995ddb124661605af3914
+2024-07-13 01:13:08 - Server Received request From User:896 Request => 54:{"RequestData":"Login:Kero75:7579","RequestSize":"17"}
+2024-07-13 01:13:08 - Server processing request from User: 896 Request => Login:Kero75:7579
+2024-07-13 01:13:08 - Main database initialized with 4 records
+2024-07-13 01:13:08 - Main database file saved successfully.
+2024-07-13 01:13:08 - Login state updated successfully for user: Kero75
+2024-07-13 01:13:08 - My server Send Response to User: Kero75 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-13 01:13:40 - Server Received encrypted request From User:912 Request => 521b4b95e3285a96c2a1e3be584bdc628216fd2d0faed8a92762da9abbb173b8bd79363f2a7a96195456051c97a903c8b6a63b8cbd0995ddb124661605af3914
+2024-07-13 01:13:40 - Server Received request From User:912 Request => 54:{"RequestData":"Login:Kero75:7579","RequestSize":"17"}
+2024-07-13 01:13:40 - Server processing request from User: 912 Request => Login:Kero75:7579
+2024-07-13 01:13:40 - Main database initialized with 4 records
+2024-07-13 01:13:40 - My server Send Response to User: Kero75 Response => 87:{"ResponseData":"Login failed. This account is already logged in.","ResponseSize":"48"}
+2024-07-13 01:14:18 - User:Kero75 has disconnected
+2024-07-13 01:15:21 - Main database file saved successfully.
+2024-07-13 01:15:21 - Login state updated successfully for user: Kero75
+2024-07-13 01:15:21 - User: Kero75 logout form bank system
+2024-07-13 01:15:21 - User:Kero75 has disconnected

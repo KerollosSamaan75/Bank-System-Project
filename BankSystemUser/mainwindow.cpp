@@ -53,6 +53,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->lE_ClientViewHistoryCount->setPlaceholderText("Enter your history count");
     ui->ClientViewHistoryCountErrorLabel->setVisible(false);
+
+   // SystemUser.ConnectToServer("192.168.1.17",1234);
 }
 
 MainWindow::~MainWindow()

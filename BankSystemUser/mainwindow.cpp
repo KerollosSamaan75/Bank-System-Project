@@ -77,31 +77,45 @@ void MainWindow::requestResponse(QString message)
         ui->Adminlabel->setText(List[0]+":"+List[1]);
 
     }
-    else if(List[0] =="ViewBankDataBase")
+    else if(List[0] == "ViewBankDataBase")
     {
         // Remove the prefix and parse the JSON data
         QString jsonData = message.mid(QString("ViewBankDataBase:").length());
         QJsonDocument doc = QJsonDocument::fromJson(jsonData.toUtf8());
         QJsonArray jsonArray = doc.array();
 
-        // Clear the list widget
-        ui->BankDataBaselistWidget->clear();
+        // Clear the table widget
+        ui->BankDataBaseTableWidget->clear();
 
-        // Iterate through the JSON array and add formatted strings to the list widget
+        // Set column headers
+        QStringList headers;
+        headers << "Account Number" << "Username" << "Full Name" << "Age" << "Email" << "Balance" << "Authority" << "Login";
+        ui->BankDataBaseTableWidget->setColumnCount(headers.size());
+        ui->BankDataBaseTableWidget->setHorizontalHeaderLabels(headers);
+
+        // Set the number of rows
+        ui->BankDataBaseTableWidget->setRowCount(jsonArray.size());
+
+        // Iterate through the JSON array and add data to the table widget
+        int row = 0;
         for (const QJsonValue& value : jsonArray)
         {
             QJsonObject obj = value.toObject();
-            QString accountInfo = QString("Account Number: %1\nUsername: %2\nFull Name: %3\nAge: %4\nEmail: %5\nBalance: %6\nAuthority: %7\nLogin: %8\n")
-                                      .arg(obj["AccountNumber"].toString("N/A"))
-                                      .arg(obj["Username"].toString("N/A"))
-                                      .arg(obj["FullName"].toString("N/A"))
-                                      .arg(obj["Age"].toString("N/A"))
-                                      .arg(obj["Email"].toString("N/A"))
-                                      .arg(obj["Balance"].toString("N/A"))
-                                      .arg(obj["Authority"].toString("N/A"));
-            ui->BankDataBaselistWidget->addItem(accountInfo);
+
+            // Populate each cell with data from the JSON object
+            ui->BankDataBaseTableWidget->setItem(row, 0, new QTableWidgetItem(obj["AccountNumber"].toString("N/A")));
+            ui->BankDataBaseTableWidget->setItem(row, 1, new QTableWidgetItem(obj["Username"].toString("N/A")));
+            ui->BankDataBaseTableWidget->setItem(row, 2, new QTableWidgetItem(obj["FullName"].toString("N/A")));
+            ui->BankDataBaseTableWidget->setItem(row, 3, new QTableWidgetItem(obj["Age"].toString("N/A")));
+            ui->BankDataBaseTableWidget->setItem(row, 4, new QTableWidgetItem(obj["Email"].toString("N/A")));
+            ui->BankDataBaseTableWidget->setItem(row, 5, new QTableWidgetItem(obj["Balance"].toString("N/A")));
+            ui->BankDataBaseTableWidget->setItem(row, 6, new QTableWidgetItem(obj["Authority"].toString("N/A")));
+            ui->BankDataBaseTableWidget->setItem(row, 7, new QTableWidgetItem(obj["Login"].toString("N/A")));
+            row++;
         }
     }
+
+
 
 
     else if(List[0] =="TransactionHistory")

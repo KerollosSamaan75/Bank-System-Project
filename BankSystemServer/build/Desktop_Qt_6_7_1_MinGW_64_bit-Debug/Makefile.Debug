@@ -50,41 +50,41 @@ OBJECTS_DIR   = debug
 
 ####### Files
 
-SOURCES       = ..\..\AddClientCommand.cpp \
+SOURCES       = ..\..\AddClientHandler.cpp \
 		..\..\BankDataBase.cpp \
-		..\..\DeleteAccountCommand.cpp \
-		..\..\GetAccountBalanceCommand.cpp \
-		..\..\GetAccountNumberCommand.cpp \
-		..\..\GetBankDataBaseCommand.cpp \
-		..\..\GetTransactionHistoryCommand.cpp \
+		..\..\DeleteAccountHandler.cpp \
+		..\..\GetAccountBalanceHandler.cpp \
+		..\..\GetAccountNumberHandler.cpp \
+		..\..\GetBankDataBaseHandler.cpp \
+		..\..\GetTransactionHistoryHandler.cpp \
 		..\..\Logger.cpp \
-		..\..\LoginCommand.cpp \
-		..\..\MakeTransactionCommand.cpp \
-		..\..\MakeTransferCommand.cpp \
+		..\..\LoginHandler.cpp \
+		..\..\MakeTransactionHandler.cpp \
+		..\..\MakeTransferHandler.cpp \
 		..\..\SendEmail.cpp \
 		..\..\Server.cpp \
 		..\..\ServerHandler.cpp \
-		..\..\UpdateAccountCommand.cpp \
+		..\..\UpdateAccountHandler.cpp \
 		..\..\qaesencryption.cpp \
 		..\..\main.cpp debug\moc_BankDataBase.cpp \
 		debug\moc_Server.cpp \
 		debug\moc_ServerHandler.cpp \
 		debug\moc_qaesencryption.cpp
-OBJECTS       = debug/AddClientCommand.o \
+OBJECTS       = debug/AddClientHandler.o \
 		debug/BankDataBase.o \
-		debug/DeleteAccountCommand.o \
-		debug/GetAccountBalanceCommand.o \
-		debug/GetAccountNumberCommand.o \
-		debug/GetBankDataBaseCommand.o \
-		debug/GetTransactionHistoryCommand.o \
+		debug/DeleteAccountHandler.o \
+		debug/GetAccountBalanceHandler.o \
+		debug/GetAccountNumberHandler.o \
+		debug/GetBankDataBaseHandler.o \
+		debug/GetTransactionHistoryHandler.o \
 		debug/Logger.o \
-		debug/LoginCommand.o \
-		debug/MakeTransactionCommand.o \
-		debug/MakeTransferCommand.o \
+		debug/LoginHandler.o \
+		debug/MakeTransactionHandler.o \
+		debug/MakeTransferHandler.o \
 		debug/SendEmail.o \
 		debug/Server.o \
 		debug/ServerHandler.o \
-		debug/UpdateAccountCommand.o \
+		debug/UpdateAccountHandler.o \
 		debug/qaesencryption.o \
 		debug/main.o \
 		debug/moc_BankDataBase.o \
@@ -92,40 +92,40 @@ OBJECTS       = debug/AddClientCommand.o \
 		debug/moc_ServerHandler.o \
 		debug/moc_qaesencryption.o
 
-DIST          =  ..\..\AddClientCommand.h \
+DIST          =  ..\..\AddClientHandler.h \
 		..\..\BankDataBase.h \
-		..\..\Command.h \
-		..\..\DeleteAccountCommand.h \
-		..\..\GetAccountBalanceCommand.h \
-		..\..\GetAccountNumberCommand.h \
-		..\..\GetBankDataBaseCommand.h \
-		..\..\GetTransactionHistoryCommand.h \
+		..\..\DeleteAccountHandler.h \
+		..\..\GetAccountBalanceHandler.h \
+		..\..\GetAccountNumberHandler.h \
+		..\..\GetBankDataBaseHandler.h \
+		..\..\GetTransactionHistoryHandler.h \
 		..\..\Logger.h \
-		..\..\LoginCommand.h \
-		..\..\MakeTransactionCommand.h \
-		..\..\MakeTransferCommand.h \
+		..\..\LoginHandler.h \
+		..\..\MakeTransactionHandler.h \
+		..\..\MakeTransferHandler.h \
+		..\..\RequestHandler.h \
 		..\..\SendEmail.h \
 		..\..\Server.h \
 		..\..\ServerHandler.h \
-		..\..\UpdateAccountCommand.h \
+		..\..\UpdateAccountHandler.h \
 		..\..\qaesencryption.h \
 		..\..\aesni\aesni-key-exp.h \
 		..\..\aesni\aesni-enc-ecb.h \
-		..\..\aesni\aesni-enc-cbc.h ..\..\AddClientCommand.cpp \
+		..\..\aesni\aesni-enc-cbc.h ..\..\AddClientHandler.cpp \
 		..\..\BankDataBase.cpp \
-		..\..\DeleteAccountCommand.cpp \
-		..\..\GetAccountBalanceCommand.cpp \
-		..\..\GetAccountNumberCommand.cpp \
-		..\..\GetBankDataBaseCommand.cpp \
-		..\..\GetTransactionHistoryCommand.cpp \
+		..\..\DeleteAccountHandler.cpp \
+		..\..\GetAccountBalanceHandler.cpp \
+		..\..\GetAccountNumberHandler.cpp \
+		..\..\GetBankDataBaseHandler.cpp \
+		..\..\GetTransactionHistoryHandler.cpp \
 		..\..\Logger.cpp \
-		..\..\LoginCommand.cpp \
-		..\..\MakeTransactionCommand.cpp \
-		..\..\MakeTransferCommand.cpp \
+		..\..\LoginHandler.cpp \
+		..\..\MakeTransactionHandler.cpp \
+		..\..\MakeTransferHandler.cpp \
 		..\..\SendEmail.cpp \
 		..\..\Server.cpp \
 		..\..\ServerHandler.cpp \
-		..\..\UpdateAccountCommand.cpp \
+		..\..\UpdateAccountHandler.cpp \
 		..\..\qaesencryption.cpp \
 		..\..\main.cpp
 QMAKE_TARGET  = BankSystemServer
@@ -147,10 +147,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) BankSystemServer.zip $(SOURCES) $(DIST) ..\..\..\..\BankSystemServer.pro C:\Qt\6.7.1\mingw_64\mkspecs\features\spec_pre.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\device_config.prf C:\Qt\6.7.1\mingw_64\mkspecs\common\sanitize.conf C:\Qt\6.7.1\mingw_64\mkspecs\common\gcc-base.conf C:\Qt\6.7.1\mingw_64\mkspecs\common\g++-base.conf C:\Qt\6.7.1\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf C:\Qt\6.7.1\mingw_64\mkspecs\common\windows-vulkan.conf C:\Qt\6.7.1\mingw_64\mkspecs\common\g++-win32.conf C:\Qt\6.7.1\mingw_64\mkspecs\common\windows-desktop.conf C:\Qt\6.7.1\mingw_64\mkspecs\qconfig.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_ext_freetype.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_ext_libjpeg.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_ext_libpng.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_chartsqml.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_chartsqml_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_core.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_example_icons_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_freetype_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_harfbuzz_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_help.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_jpeg_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labssettings.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_linguist.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_multimediaquick_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_network.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_png_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qdoccatch_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qdoccatchconversions_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qdoccatchgenerators_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlbuiltins.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlbuiltins_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlcompiler.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlintegration.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlintegration_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlls_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlnetwork.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlnetwork_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmltoolingsettings_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmltyperegistrar_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3d.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3d_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3deffects.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3deffects_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dglslparser_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dparticles.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dparticles_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dspatialaudio_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dutils.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dutils_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickeffects_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktimeline.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktimeline_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_shadertools.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_shadertools_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_spatialaudio.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_spatialaudio_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_tools_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\features\qt_functions.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\qt_config.prf C:\Qt\6.7.1\mingw_64\mkspecs\win32-g++\qmake.conf C:\Qt\6.7.1\mingw_64\mkspecs\features\spec_post.prf .qmake.stash C:\Qt\6.7.1\mingw_64\mkspecs\features\exclusive_builds.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\toolchain.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\default_pre.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\win32\default_pre.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\resolve_config.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\default_post.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\build_pass.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\cmdline.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\win32\console.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\qml_debug.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\precompile_header.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\warn_on.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\permissions.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\qt.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\resources_functions.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\resources.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\moc.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\qmake_use.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\file_copies.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\testcase_targets.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\exceptions.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\yacc.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\lex.prf ..\..\BankSystemServer.pro C:\Qt\6.7.1\mingw_64\lib\Qt6Network.prl C:\Qt\6.7.1\mingw_64\lib\Qt6Core.prl    C:\Qt\6.7.1\mingw_64\mkspecs\features\data\dummy.cpp ..\..\AddClientCommand.h ..\..\BankDataBase.h ..\..\Command.h ..\..\DeleteAccountCommand.h ..\..\GetAccountBalanceCommand.h ..\..\GetAccountNumberCommand.h ..\..\GetBankDataBaseCommand.h ..\..\GetTransactionHistoryCommand.h ..\..\Logger.h ..\..\LoginCommand.h ..\..\MakeTransactionCommand.h ..\..\MakeTransferCommand.h ..\..\SendEmail.h ..\..\Server.h ..\..\ServerHandler.h ..\..\UpdateAccountCommand.h ..\..\qaesencryption.h ..\..\aesni\aesni-key-exp.h ..\..\aesni\aesni-enc-ecb.h ..\..\aesni\aesni-enc-cbc.h  ..\..\AddClientCommand.cpp ..\..\BankDataBase.cpp ..\..\DeleteAccountCommand.cpp ..\..\GetAccountBalanceCommand.cpp ..\..\GetAccountNumberCommand.cpp ..\..\GetBankDataBaseCommand.cpp ..\..\GetTransactionHistoryCommand.cpp ..\..\Logger.cpp ..\..\LoginCommand.cpp ..\..\MakeTransactionCommand.cpp ..\..\MakeTransferCommand.cpp ..\..\SendEmail.cpp ..\..\Server.cpp ..\..\ServerHandler.cpp ..\..\UpdateAccountCommand.cpp ..\..\qaesencryption.cpp ..\..\main.cpp    
+	$(ZIP) BankSystemServer.zip $(SOURCES) $(DIST) ..\..\..\..\BankSystemServer.pro C:\Qt\6.7.1\mingw_64\mkspecs\features\spec_pre.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\device_config.prf C:\Qt\6.7.1\mingw_64\mkspecs\common\sanitize.conf C:\Qt\6.7.1\mingw_64\mkspecs\common\gcc-base.conf C:\Qt\6.7.1\mingw_64\mkspecs\common\g++-base.conf C:\Qt\6.7.1\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf C:\Qt\6.7.1\mingw_64\mkspecs\common\windows-vulkan.conf C:\Qt\6.7.1\mingw_64\mkspecs\common\g++-win32.conf C:\Qt\6.7.1\mingw_64\mkspecs\common\windows-desktop.conf C:\Qt\6.7.1\mingw_64\mkspecs\qconfig.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_ext_freetype.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_ext_libjpeg.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_ext_libpng.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_charts.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_charts_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_chartsqml.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_chartsqml_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_concurrent.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_core.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_core_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_dbus.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_designer.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_designer_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_example_icons_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_freetype_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_gui.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_gui_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_harfbuzz_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_help.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_help_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_jpeg_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labssettings.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_linguist.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_multimedia.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_multimedia_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_multimediaquick_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_multimediawidgets.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_network.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_network_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_opengl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_png_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_printsupport.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qdoccatch_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qdoccatchconversions_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qdoccatchgenerators_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qml.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qml_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlbuiltins.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlbuiltins_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlcompiler.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlintegration.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlintegration_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlls_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlnetwork.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlnetwork_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmltest.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmltoolingsettings_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmltyperegistrar_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3d.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3d_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dassetutils_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3deffects.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3deffects_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dglslparser_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dhelpers_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dhelpersimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3diblbaker_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dparticleeffects_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dparticles.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dparticles_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dspatialaudio_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dutils.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick3dutils_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quick_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basic_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusion_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imagine_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2material_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universal_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickeffects_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktimeline.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktimeline_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quicktimelineblendtrees_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_shadertools.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_shadertools_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_spatialaudio.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_spatialaudio_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_sql.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_sql_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_svg.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_svg_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_testlib.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_tools_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_uitools.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_widgets.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_xml.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_xml_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri C:\Qt\6.7.1\mingw_64\mkspecs\features\qt_functions.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\qt_config.prf C:\Qt\6.7.1\mingw_64\mkspecs\win32-g++\qmake.conf C:\Qt\6.7.1\mingw_64\mkspecs\features\spec_post.prf .qmake.stash C:\Qt\6.7.1\mingw_64\mkspecs\features\exclusive_builds.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\toolchain.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\default_pre.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\win32\default_pre.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\resolve_config.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\exclusive_builds_post.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\default_post.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\build_pass.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\cmdline.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\win32\console.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\qml_debug.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\precompile_header.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\warn_on.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\permissions.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\qt.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\resources_functions.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\resources.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\moc.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\qmake_use.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\file_copies.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\testcase_targets.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\exceptions.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\yacc.prf C:\Qt\6.7.1\mingw_64\mkspecs\features\lex.prf ..\..\BankSystemServer.pro C:\Qt\6.7.1\mingw_64\lib\Qt6Network.prl C:\Qt\6.7.1\mingw_64\lib\Qt6Core.prl    C:\Qt\6.7.1\mingw_64\mkspecs\features\data\dummy.cpp ..\..\AddClientHandler.h ..\..\BankDataBase.h ..\..\DeleteAccountHandler.h ..\..\GetAccountBalanceHandler.h ..\..\GetAccountNumberHandler.h ..\..\GetBankDataBaseHandler.h ..\..\GetTransactionHistoryHandler.h ..\..\Logger.h ..\..\LoginHandler.h ..\..\MakeTransactionHandler.h ..\..\MakeTransferHandler.h ..\..\RequestHandler.h ..\..\SendEmail.h ..\..\Server.h ..\..\ServerHandler.h ..\..\UpdateAccountHandler.h ..\..\qaesencryption.h ..\..\aesni\aesni-key-exp.h ..\..\aesni\aesni-enc-ecb.h ..\..\aesni\aesni-enc-cbc.h  ..\..\AddClientHandler.cpp ..\..\BankDataBase.cpp ..\..\DeleteAccountHandler.cpp ..\..\GetAccountBalanceHandler.cpp ..\..\GetAccountNumberHandler.cpp ..\..\GetBankDataBaseHandler.cpp ..\..\GetTransactionHistoryHandler.cpp ..\..\Logger.cpp ..\..\LoginHandler.cpp ..\..\MakeTransactionHandler.cpp ..\..\MakeTransferHandler.cpp ..\..\SendEmail.cpp ..\..\Server.cpp ..\..\ServerHandler.cpp ..\..\UpdateAccountHandler.cpp ..\..\qaesencryption.cpp ..\..\main.cpp    
 
 clean: compiler_clean 
-	-$(DEL_FILE) debug\AddClientCommand.o debug\BankDataBase.o debug\DeleteAccountCommand.o debug\GetAccountBalanceCommand.o debug\GetAccountNumberCommand.o debug\GetBankDataBaseCommand.o debug\GetTransactionHistoryCommand.o debug\Logger.o debug\LoginCommand.o debug\MakeTransactionCommand.o debug\MakeTransferCommand.o debug\SendEmail.o debug\Server.o debug\ServerHandler.o debug\UpdateAccountCommand.o debug\qaesencryption.o debug\main.o debug\moc_BankDataBase.o debug\moc_Server.o debug\moc_ServerHandler.o debug\moc_qaesencryption.o
+	-$(DEL_FILE) debug\AddClientHandler.o debug\BankDataBase.o debug\DeleteAccountHandler.o debug\GetAccountBalanceHandler.o debug\GetAccountNumberHandler.o debug\GetBankDataBaseHandler.o debug\GetTransactionHistoryHandler.o debug\Logger.o debug\LoginHandler.o debug\MakeTransactionHandler.o debug\MakeTransferHandler.o debug\SendEmail.o debug\Server.o debug\ServerHandler.o debug\UpdateAccountHandler.o debug\qaesencryption.o debug\main.o debug\moc_BankDataBase.o debug\moc_Server.o debug\moc_ServerHandler.o debug\moc_qaesencryption.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -320,6 +320,7 @@ debug/moc_BankDataBase.cpp: ../../BankDataBase.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qrandom.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
+		../../Logger.h \
 		debug/moc_predefs.h \
 		C:/Qt/6.7.1/mingw_64/bin/moc.exe
 	C:\Qt\6.7.1\mingw_64\bin\moc.exe $(DEFINES) --include "D:/ITIDA_WorkSpace/Qt_Sessions/Final Project/BankSystemServer/build/Desktop_Qt_6_7_1_MinGW_64_bit-Debug/debug/moc_predefs.h" -IC:/Qt/6.7.1/mingw_64/mkspecs/win32-g++ -I"D:/ITIDA_WorkSpace/Qt_Sessions/Final Project/BankSystemServer" -IC:/Qt/6.7.1/mingw_64/include -IC:/Qt/6.7.1/mingw_64/include/QtNetwork -IC:/Qt/6.7.1/mingw_64/include/QtCore -I. -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IC:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IC:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\..\BankDataBase.h -o debug\moc_BankDataBase.cpp
@@ -484,21 +485,21 @@ debug/moc_Server.cpp: ../../Server.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h \
-		../../Command.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
-		../../LoginCommand.h \
-		../../AddClientCommand.h \
-		../../DeleteAccountCommand.h \
-		../../GetAccountBalanceCommand.h \
-		../../GetAccountNumberCommand.h \
-		../../GetTransactionHistoryCommand.h \
-		../../MakeTransactionCommand.h \
-		../../MakeTransferCommand.h \
+		../../LoginHandler.h \
+		../../AddClientHandler.h \
+		../../DeleteAccountHandler.h \
+		../../GetAccountBalanceHandler.h \
+		../../GetAccountNumberHandler.h \
+		../../GetTransactionHistoryHandler.h \
+		../../MakeTransactionHandler.h \
+		../../MakeTransferHandler.h \
 		../../SendEmail.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QProcess \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qprocess.h \
-		../../UpdateAccountCommand.h \
-		../../GetBankDataBaseCommand.h \
+		../../UpdateAccountHandler.h \
+		../../GetBankDataBaseHandler.h \
 		../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QByteArray \
 		debug/moc_predefs.h \
@@ -662,21 +663,21 @@ debug/moc_ServerHandler.cpp: ../../ServerHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h \
-		../../Command.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
-		../../LoginCommand.h \
-		../../AddClientCommand.h \
-		../../DeleteAccountCommand.h \
-		../../GetAccountBalanceCommand.h \
-		../../GetAccountNumberCommand.h \
-		../../GetTransactionHistoryCommand.h \
-		../../MakeTransactionCommand.h \
-		../../MakeTransferCommand.h \
+		../../LoginHandler.h \
+		../../AddClientHandler.h \
+		../../DeleteAccountHandler.h \
+		../../GetAccountBalanceHandler.h \
+		../../GetAccountNumberHandler.h \
+		../../GetTransactionHistoryHandler.h \
+		../../MakeTransactionHandler.h \
+		../../MakeTransferHandler.h \
 		../../SendEmail.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QProcess \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qprocess.h \
-		../../UpdateAccountCommand.h \
-		../../GetBankDataBaseCommand.h \
+		../../UpdateAccountHandler.h \
+		../../GetBankDataBaseHandler.h \
 		../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QByteArray \
 		debug/moc_predefs.h \
@@ -805,8 +806,8 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean
 
 ####### Compile
 
-debug/AddClientCommand.o: ../../AddClientCommand.cpp ../../AddClientCommand.h \
-		../../Command.h \
+debug/AddClientHandler.o: ../../AddClientHandler.cpp ../../AddClientHandler.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qlist.h \
@@ -951,7 +952,7 @@ debug/AddClientCommand.o: ../../AddClientCommand.cpp ../../AddClientCommand.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\AddClientCommand.o ..\..\AddClientCommand.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\AddClientHandler.o ..\..\AddClientHandler.cpp
 
 debug/BankDataBase.o: ../../BankDataBase.cpp ../../BankDataBase.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QObject \
@@ -1094,11 +1095,12 @@ debug/BankDataBase.o: ../../BankDataBase.cpp ../../BankDataBase.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QRandomGenerator \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qrandom.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
-		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
+		../../Logger.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\BankDataBase.o ..\..\BankDataBase.cpp
 
-debug/DeleteAccountCommand.o: ../../DeleteAccountCommand.cpp ../../DeleteAccountCommand.h \
-		../../Command.h \
+debug/DeleteAccountHandler.o: ../../DeleteAccountHandler.cpp ../../DeleteAccountHandler.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qlist.h \
@@ -1243,10 +1245,10 @@ debug/DeleteAccountCommand.o: ../../DeleteAccountCommand.cpp ../../DeleteAccount
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\DeleteAccountCommand.o ..\..\DeleteAccountCommand.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\DeleteAccountHandler.o ..\..\DeleteAccountHandler.cpp
 
-debug/GetAccountBalanceCommand.o: ../../GetAccountBalanceCommand.cpp ../../GetAccountBalanceCommand.h \
-		../../Command.h \
+debug/GetAccountBalanceHandler.o: ../../GetAccountBalanceHandler.cpp ../../GetAccountBalanceHandler.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qlist.h \
@@ -1391,10 +1393,10 @@ debug/GetAccountBalanceCommand.o: ../../GetAccountBalanceCommand.cpp ../../GetAc
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\GetAccountBalanceCommand.o ..\..\GetAccountBalanceCommand.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\GetAccountBalanceHandler.o ..\..\GetAccountBalanceHandler.cpp
 
-debug/GetAccountNumberCommand.o: ../../GetAccountNumberCommand.cpp ../../GetAccountNumberCommand.h \
-		../../Command.h \
+debug/GetAccountNumberHandler.o: ../../GetAccountNumberHandler.cpp ../../GetAccountNumberHandler.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qlist.h \
@@ -1539,10 +1541,10 @@ debug/GetAccountNumberCommand.o: ../../GetAccountNumberCommand.cpp ../../GetAcco
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\GetAccountNumberCommand.o ..\..\GetAccountNumberCommand.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\GetAccountNumberHandler.o ..\..\GetAccountNumberHandler.cpp
 
-debug/GetBankDataBaseCommand.o: ../../GetBankDataBaseCommand.cpp ../../GetBankDataBaseCommand.h \
-		../../Command.h \
+debug/GetBankDataBaseHandler.o: ../../GetBankDataBaseHandler.cpp ../../GetBankDataBaseHandler.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qlist.h \
@@ -1687,10 +1689,10 @@ debug/GetBankDataBaseCommand.o: ../../GetBankDataBaseCommand.cpp ../../GetBankDa
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\GetBankDataBaseCommand.o ..\..\GetBankDataBaseCommand.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\GetBankDataBaseHandler.o ..\..\GetBankDataBaseHandler.cpp
 
-debug/GetTransactionHistoryCommand.o: ../../GetTransactionHistoryCommand.cpp ../../GetTransactionHistoryCommand.h \
-		../../Command.h \
+debug/GetTransactionHistoryHandler.o: ../../GetTransactionHistoryHandler.cpp ../../GetTransactionHistoryHandler.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qlist.h \
@@ -1835,7 +1837,7 @@ debug/GetTransactionHistoryCommand.o: ../../GetTransactionHistoryCommand.cpp ../
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\GetTransactionHistoryCommand.o ..\..\GetTransactionHistoryCommand.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\GetTransactionHistoryHandler.o ..\..\GetTransactionHistoryHandler.cpp
 
 debug/Logger.o: ../../Logger.cpp ../../Logger.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
@@ -1959,11 +1961,12 @@ debug/Logger.o: ../../Logger.cpp ../../Logger.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qset.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qhash.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvarlengtharray.h \
-		C:/Qt/6.7.1/mingw_64/include/QtCore/q23utility.h
+		C:/Qt/6.7.1/mingw_64/include/QtCore/q23utility.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Logger.o ..\..\Logger.cpp
 
-debug/LoginCommand.o: ../../LoginCommand.cpp ../../LoginCommand.h \
-		../../Command.h \
+debug/LoginHandler.o: ../../LoginHandler.cpp ../../LoginHandler.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qlist.h \
@@ -2108,10 +2111,10 @@ debug/LoginCommand.o: ../../LoginCommand.cpp ../../LoginCommand.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\LoginCommand.o ..\..\LoginCommand.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\LoginHandler.o ..\..\LoginHandler.cpp
 
-debug/MakeTransactionCommand.o: ../../MakeTransactionCommand.cpp ../../MakeTransactionCommand.h \
-		../../Command.h \
+debug/MakeTransactionHandler.o: ../../MakeTransactionHandler.cpp ../../MakeTransactionHandler.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qlist.h \
@@ -2256,10 +2259,10 @@ debug/MakeTransactionCommand.o: ../../MakeTransactionCommand.cpp ../../MakeTrans
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\MakeTransactionCommand.o ..\..\MakeTransactionCommand.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\MakeTransactionHandler.o ..\..\MakeTransactionHandler.cpp
 
-debug/MakeTransferCommand.o: ../../MakeTransferCommand.cpp ../../MakeTransferCommand.h \
-		../../Command.h \
+debug/MakeTransferHandler.o: ../../MakeTransferHandler.cpp ../../MakeTransferHandler.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qlist.h \
@@ -2377,6 +2380,7 @@ debug/MakeTransferCommand.o: ../../MakeTransferCommand.cpp ../../MakeTransferCom
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qset.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qhash.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvarlengtharray.h \
+		../../Logger.h \
 		../../BankDataBase.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QFile \
@@ -2406,9 +2410,8 @@ debug/MakeTransferCommand.o: ../../MakeTransferCommand.cpp ../../MakeTransferCom
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QRandomGenerator \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qrandom.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
-		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
-		../../Logger.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\MakeTransferCommand.o ..\..\MakeTransferCommand.cpp
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\MakeTransferHandler.o ..\..\MakeTransferHandler.cpp
 
 debug/SendEmail.o: ../../SendEmail.cpp ../../SendEmail.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QString \
@@ -2525,7 +2528,8 @@ debug/SendEmail.o: ../../SendEmail.cpp ../../SendEmail.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qshareddata_impl.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qset.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qhash.h \
-		C:/Qt/6.7.1/mingw_64/include/QtCore/qvarlengtharray.h
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qvarlengtharray.h \
+		../../Logger.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\SendEmail.o ..\..\SendEmail.cpp
 
 debug/Server.o: ../../Server.cpp ../../Server.h \
@@ -2688,21 +2692,21 @@ debug/Server.o: ../../Server.cpp ../../Server.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h \
-		../../Command.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
-		../../LoginCommand.h \
-		../../AddClientCommand.h \
-		../../DeleteAccountCommand.h \
-		../../GetAccountBalanceCommand.h \
-		../../GetAccountNumberCommand.h \
-		../../GetTransactionHistoryCommand.h \
-		../../MakeTransactionCommand.h \
-		../../MakeTransferCommand.h \
+		../../LoginHandler.h \
+		../../AddClientHandler.h \
+		../../DeleteAccountHandler.h \
+		../../GetAccountBalanceHandler.h \
+		../../GetAccountNumberHandler.h \
+		../../GetTransactionHistoryHandler.h \
+		../../MakeTransactionHandler.h \
+		../../MakeTransferHandler.h \
 		../../SendEmail.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QProcess \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qprocess.h \
-		../../UpdateAccountCommand.h \
-		../../GetBankDataBaseCommand.h \
+		../../UpdateAccountHandler.h \
+		../../GetBankDataBaseHandler.h \
 		../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QByteArray
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\Server.o ..\..\Server.cpp
@@ -2864,27 +2868,27 @@ debug/ServerHandler.o: ../../ServerHandler.cpp ../../ServerHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h \
-		../../Command.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
-		../../LoginCommand.h \
-		../../AddClientCommand.h \
-		../../DeleteAccountCommand.h \
-		../../GetAccountBalanceCommand.h \
-		../../GetAccountNumberCommand.h \
-		../../GetTransactionHistoryCommand.h \
-		../../MakeTransactionCommand.h \
-		../../MakeTransferCommand.h \
+		../../LoginHandler.h \
+		../../AddClientHandler.h \
+		../../DeleteAccountHandler.h \
+		../../GetAccountBalanceHandler.h \
+		../../GetAccountNumberHandler.h \
+		../../GetTransactionHistoryHandler.h \
+		../../MakeTransactionHandler.h \
+		../../MakeTransferHandler.h \
 		../../SendEmail.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QProcess \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qprocess.h \
-		../../UpdateAccountCommand.h \
-		../../GetBankDataBaseCommand.h \
+		../../UpdateAccountHandler.h \
+		../../GetBankDataBaseHandler.h \
 		../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QByteArray
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\ServerHandler.o ..\..\ServerHandler.cpp
 
-debug/UpdateAccountCommand.o: ../../UpdateAccountCommand.cpp ../../UpdateAccountCommand.h \
-		../../Command.h \
+debug/UpdateAccountHandler.o: ../../UpdateAccountHandler.cpp ../../UpdateAccountHandler.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qstringlist.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qlist.h \
@@ -3029,7 +3033,7 @@ debug/UpdateAccountCommand.o: ../../UpdateAccountCommand.cpp ../../UpdateAccount
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\UpdateAccountCommand.o ..\..\UpdateAccountCommand.cpp
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\UpdateAccountHandler.o ..\..\UpdateAccountHandler.cpp
 
 debug/qaesencryption.o: ../../qaesencryption.cpp ../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QObject \
@@ -3314,21 +3318,21 @@ debug/main.o: ../../main.cpp C:/Qt/6.7.1/mingw_64/include/QtCore/QCoreApplicatio
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QVector \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qvector.h \
 		../../Logger.h \
-		../../Command.h \
+		../../RequestHandler.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QStringList \
-		../../LoginCommand.h \
-		../../AddClientCommand.h \
-		../../DeleteAccountCommand.h \
-		../../GetAccountBalanceCommand.h \
-		../../GetAccountNumberCommand.h \
-		../../GetTransactionHistoryCommand.h \
-		../../MakeTransactionCommand.h \
-		../../MakeTransferCommand.h \
+		../../LoginHandler.h \
+		../../AddClientHandler.h \
+		../../DeleteAccountHandler.h \
+		../../GetAccountBalanceHandler.h \
+		../../GetAccountNumberHandler.h \
+		../../GetTransactionHistoryHandler.h \
+		../../MakeTransactionHandler.h \
+		../../MakeTransferHandler.h \
 		../../SendEmail.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QProcess \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qprocess.h \
-		../../UpdateAccountCommand.h \
-		../../GetBankDataBaseCommand.h \
+		../../UpdateAccountHandler.h \
+		../../GetBankDataBaseHandler.h \
 		../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QByteArray
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\main.o ..\..\main.cpp

@@ -7,21 +7,21 @@ CONFIG += c++17 cmdline
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        AddClientCommand.cpp \
+        AddClientHandler.cpp \
         BankDataBase.cpp \
-        DeleteAccountCommand.cpp \
-        GetAccountBalanceCommand.cpp \
-        GetAccountNumberCommand.cpp \
-        GetBankDataBaseCommand.cpp \
-        GetTransactionHistoryCommand.cpp \
+        DeleteAccountHandler.cpp \
+        GetAccountBalanceHandler.cpp \
+        GetAccountNumberHandler.cpp \
+        GetBankDataBaseHandler.cpp \
+        GetTransactionHistoryHandler.cpp \
         Logger.cpp \
-        LoginCommand.cpp \
-        MakeTransactionCommand.cpp \
-        MakeTransferCommand.cpp \
+        LoginHandler.cpp \
+        MakeTransactionHandler.cpp \
+        MakeTransferHandler.cpp \
         SendEmail.cpp \
         Server.cpp \
         ServerHandler.cpp \
-        UpdateAccountCommand.cpp \
+        UpdateAccountHandler.cpp \
         qaesencryption.cpp \
         main.cpp
 
@@ -31,22 +31,22 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    AddClientCommand.h \
+    AddClientHandler.h \
     BankDataBase.h \
-    Command.h \
-    DeleteAccountCommand.h \
-    GetAccountBalanceCommand.h \
-    GetAccountNumberCommand.h \
-    GetBankDataBaseCommand.h \
-    GetTransactionHistoryCommand.h \
+    DeleteAccountHandler.h \
+    GetAccountBalanceHandler.h \
+    GetAccountNumberHandler.h \
+    GetBankDataBaseHandler.h \
+    GetTransactionHistoryHandler.h \
     Logger.h \
-    LoginCommand.h \
-    MakeTransactionCommand.h \
-    MakeTransferCommand.h \
+    LoginHandler.h \
+    MakeTransactionHandler.h \
+    MakeTransferHandler.h \
+    RequestHandler.h \
     SendEmail.h \
     Server.h \
     ServerHandler.h \
-    UpdateAccountCommand.h \
+    UpdateAccountHandler.h \
     qaesencryption.h \
     aesni/aesni-key-exp.h \
     aesni/aesni-enc-ecb.h \

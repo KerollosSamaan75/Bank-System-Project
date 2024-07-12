@@ -31,7 +31,7 @@
      <string notr="true">background-color: rgb(50, 50, 50);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QLabel" name="label">
@@ -1242,18 +1242,21 @@ font: 700 20pt &quot;Segoe UI&quot;;
        <string>Back</string>
       </property>
      </widget>
-     <widget class="QListWidget" name="BankDataBaselistWidget">
+     <widget class="QTableWidget" name="BankDataBaseTableWidget">
       <property name="geometry">
        <rect>
-        <x>25</x>
+        <x>15</x>
         <y>170</y>
-        <width>731</width>
+        <width>751</width>
         <height>341</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 20pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+       <string notr="true">background-color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="alternatingRowColors">
+       <bool>false</bool>
       </property>
       <property name="verticalScrollMode">
        <enum>QAbstractItemView::ScrollPerPixel</enum>
@@ -1752,7 +1755,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
    <slot>clear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>167</x>
+     <x>140</x>
      <y>526</y>
     </hint>
     <hint type="destinationlabel">
@@ -1820,8 +1823,8 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
      <y>532</y>
     </hint>
     <hint type="destinationlabel">
-     <x>121</x>
-     <y>425</y>
+     <x>122</x>
+     <y>433</y>
     </hint>
    </hints>
   </connection>
@@ -1852,8 +1855,8 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
      <y>516</y>
     </hint>
     <hint type="destinationlabel">
-     <x>61</x>
-     <y>324</y>
+     <x>62</x>
+     <y>323</y>
     </hint>
    </hints>
   </connection>

@@ -3,21 +3,21 @@
 ServerHandler::ServerHandler(qint32 ID, QObject *parent)
     : QThread(parent), userID(ID)
 {
-    setupCommands();
+    setupRequests();
 }
 
-void ServerHandler::setupCommands()
+void ServerHandler::setupRequests()
 {
-    commandMap["Login"] = new LoginCommand(dataBase);
-    commandMap["AddAccount"] = new AddClientCommand(dataBase);
-    commandMap["DeleteAccount"] = new DeleteAccountCommand(dataBase);
-    commandMap["GetAccountBalance"] = new GetAccountBalanceCommand(dataBase);
-    commandMap["GetAccountNumber"] = new GetAccountNumberCommand(dataBase);
-    commandMap["GetTransactionHistory"] = new GetTransactionHistoryCommand(dataBase);
-    commandMap["MakeTransaction"] = new MakeTransactionCommand(dataBase);
-    commandMap["MakeTransfer"] = new MakeTransferCommand(dataBase);
-    commandMap["UpdateAccount"] = new UpdateAccountCommand(dataBase);
-    commandMap["GetBankDataBase"] = new GetBankDataBaseCommand(dataBase);
+    requestMap["Login"] = new LoginHandler(dataBase);
+    requestMap["AddAccount"] = new AddClientHandler(dataBase);
+    requestMap["DeleteAccount"] = new DeleteAccountHandler(dataBase);
+    requestMap["GetAccountBalance"] = new GetAccountBalanceHandler(dataBase);
+    requestMap["GetAccountNumber"] = new GetAccountNumberHandler(dataBase);
+    requestMap["GetTransactionHistory"] = new GetTransactionHistoryHandler(dataBase);
+    requestMap["MakeTransaction"] = new MakeTransactionHandler(dataBase);
+    requestMap["MakeTransfer"] = new MakeTransferHandler(dataBase);
+    requestMap["UpdateAccount"] = new UpdateAccountHandler(dataBase);
+    requestMap["GetBankDataBase"] = new GetBankDataBaseHandler(dataBase);
 }
 
 void ServerHandler::run()
@@ -78,15 +78,15 @@ void ServerHandler::Operation(QString Request)
         return;
     }
 
-    QString commandKey = List[0];
-    if (commandMap.contains(commandKey))
+    QString HandlerKey = List[0];
+    if (requestMap.contains(HandlerKey))
     {
-        commandMap[commandKey]->execute(List, statusMessage);
+        requestMap[HandlerKey]->execute(List, statusMessage);
         sendResponse(statusMessage);
     }
     else
     {
-        sendResponse("Unknown command.");
+        sendResponse("Unknown Handler.");
     }
 }
 

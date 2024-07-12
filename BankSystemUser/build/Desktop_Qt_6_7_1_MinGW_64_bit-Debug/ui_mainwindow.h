@@ -13,6 +13,7 @@
 #include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
@@ -21,6 +22,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -118,7 +120,7 @@ public:
     QLabel *label_7;
     QLabel *label_8;
     QPushButton *pB_ViewBankDatabaseBack;
-    QListWidget *BankDataBaselistWidget;
+    QTableWidget *BankDataBaseTableWidget;
     QWidget *UpdateClientAccount;
     QLabel *label_28;
     QLabel *label_29;
@@ -835,13 +837,14 @@ public:
 "                   border-radius: 20px; \n"
 "\n"
 ""));
-        BankDataBaselistWidget = new QListWidget(ViewBankDatabase);
-        BankDataBaselistWidget->setObjectName("BankDataBaselistWidget");
-        BankDataBaselistWidget->setGeometry(QRect(25, 170, 731, 341));
-        BankDataBaselistWidget->setStyleSheet(QString::fromUtf8("font: 20pt \"Segoe UI\";\n"
-"color: rgb(255, 255, 255);"));
-        BankDataBaselistWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
-        BankDataBaselistWidget->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
+        BankDataBaseTableWidget = new QTableWidget(ViewBankDatabase);
+        BankDataBaseTableWidget->setObjectName("BankDataBaseTableWidget");
+        BankDataBaseTableWidget->setGeometry(QRect(15, 170, 751, 341));
+        BankDataBaseTableWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"font: 700 10pt \"Segoe UI\";"));
+        BankDataBaseTableWidget->setAlternatingRowColors(false);
+        BankDataBaseTableWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
+        BankDataBaseTableWidget->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
         stackedWidget->addWidget(ViewBankDatabase);
         UpdateClientAccount = new QWidget();
         UpdateClientAccount->setObjectName("UpdateClientAccount");
@@ -1027,7 +1030,7 @@ public:
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, ClientTransactionHistoryListWidget, qOverload<>(&QListWidget::clear));
         QObject::connect(pBAdminViewTransactionBack, &QPushButton::clicked, AdTransactionHistorylistWidget, qOverload<>(&QListWidget::clear));
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

@@ -9,17 +9,17 @@
 #include <QMap>
 #include "BankDataBase.h"
 #include "Logger.h"
-#include "Command.h"
-#include "LoginCommand.h"
-#include "AddClientCommand.h"
-#include "DeleteAccountCommand.h"
-#include "GetAccountBalanceCommand.h"
-#include "GetAccountNumberCommand.h"
-#include "GetTransactionHistoryCommand.h"
-#include "MakeTransactionCommand.h"
-#include "MakeTransferCommand.h"
-#include "UpdateAccountCommand.h"
-#include "GetBankDataBaseCommand.h"
+#include "RequestHandler.h"
+#include "LoginHandler.h"
+#include "AddClientHandler.h"
+#include "DeleteAccountHandler.h"
+#include "GetAccountBalanceHandler.h"
+#include "GetAccountNumberHandler.h"
+#include "GetTransactionHistoryHandler.h"
+#include "MakeTransactionHandler.h"
+#include "MakeTransferHandler.h"
+#include "UpdateAccountHandler.h"
+#include "GetBankDataBaseHandler.h"
 #include "qaesencryption.h"
 
 
@@ -42,8 +42,8 @@ private:
     BankDataBase dataBase;
     QString statusMessage;
     Logger logger;
-    QMap<QString, Command*> commandMap;
-    void setupCommands();
+    QMap<QString, RequestHandler*> requestMap;
+    void setupRequests();
     void Operation(QString Request);
     void sendResponse(const QString &Message);
     QByteArray decryptRequest(const QByteArray &encryptedData);

@@ -1,341 +1,53 @@
-2024-07-11 18:05:35 - Server is up and listening to port => 1234
-2024-07-11 18:08:06 - User:880 connent to server
-2024-07-11 18:08:06 - User:880 is running on thread
-2024-07-11 18:08:06 - Main database initialized with 2 records
-2024-07-11 18:08:06 - Transaction database initialized with 1 records
-2024-07-11 18:08:23 - Server received encrypted request:c534dcfd60a4566a1d65e8adff635b3c3b7c5fa9d9a0306e442a7f8aceebff37
-2024-07-11 18:08:23 - Server Received Data From User:880 Data => Login:sharple2011:2011
-2024-07-11 18:08:23 - Main database initialized with 2 records
-2024-07-11 18:08:23 - My server Send Data to User: 880 Data => Client:sharple2011:098873734
-2024-07-11 18:08:38 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a591ca86bd442a08d57ebbfddc1112aa38
-2024-07-11 18:08:38 - Server Received Data From User:880 Data => MakeTransaction:098873734:-1000
-2024-07-11 18:08:38 - Withdrawal amount of 1000 for account number: 098873734
-2024-07-11 18:08:38 - Main database file saved successfully.
-2024-07-11 18:08:38 - Updated transaction record for withdrawal for account number: 098873734
-2024-07-11 18:08:38 - Transaction database file saved successfully.
-2024-07-11 18:08:38 - Withdrawal successful for account number: 098873734
-2024-07-11 18:08:38 - Email found for account 098873734: kiro.samaan.kodoos@gamil.com
-2024-07-11 18:08:41 - My server Send Data to User: 880 Data => Transaction successful.
-2024-07-11 18:09:43 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a591ca86bd442a08d57ebbfddc1112aa38
-2024-07-11 18:09:43 - Server Received Data From User:880 Data => MakeTransaction:098873734:-1000
-2024-07-11 18:09:43 - Withdrawal amount of 1000 for account number: 098873734
-2024-07-11 18:09:43 - Main database file saved successfully.
-2024-07-11 18:09:43 - Updated transaction record for withdrawal for account number: 098873734
-2024-07-11 18:09:43 - Transaction database file saved successfully.
-2024-07-11 18:09:43 - Withdrawal successful for account number: 098873734
-2024-07-11 18:09:43 - Email found for account 098873734: kiro.samaan.kodoos@gamil.com
-2024-07-11 18:09:45 - My server Send Data to User: 880 Data => Transaction successful.
-2024-07-11 18:10:08 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a182960403f2208bb5d7ea2370482b0f7
-2024-07-11 18:10:08 - Server Received Data From User:880 Data => GetTransactionHistory:098873734:3
-2024-07-11 18:10:09 - Transaction database initialized with 1 records
-2024-07-11 18:10:09 - My server Send Data to User: 880 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:11:50 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a603ffba32b406946a5150518a2f7bc7e
-2024-07-11 18:11:50 - Server Received Data From User:880 Data => GetTransactionHistory:098873734:6
-2024-07-11 18:11:50 - Transaction database initialized with 1 records
-2024-07-11 18:11:50 - My server Send Data to User: 880 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:11:59 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a94d543263ff7d567628a1ac9dc310ac7
-2024-07-11 18:11:59 - Server Received Data From User:880 Data => GetTransactionHistory:098873734:1
-2024-07-11 18:11:59 - Transaction database initialized with 1 records
-2024-07-11 18:11:59 - My server Send Data to User: 880 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:12:06 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a44d04b9b992d190934936582dab03ae9
-2024-07-11 18:12:06 - Server Received Data From User:880 Data => GetTransactionHistory:098873734:2
-2024-07-11 18:12:06 - Transaction database initialized with 1 records
-2024-07-11 18:12:06 - My server Send Data to User: 880 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:19:11 - User:880 has disconnected
-2024-07-11 18:25:21 - Server is up and listening to port => 1234
-2024-07-11 18:25:40 - User:828 connent to server
-2024-07-11 18:25:40 - User:828 is running on thread
-2024-07-11 18:25:40 - Main database initialized with 2 records
-2024-07-11 18:25:40 - Transaction database initialized with 1 records
-2024-07-11 18:25:52 - Server received encrypted request:cae22a18714bd9e4bb5b6589de10edc83f56545142a15cc5a95d3f8e31c7ece2
-2024-07-11 18:25:52 - Server Received Data From User:828 Data => Login:Sharple2011:2011
-2024-07-11 18:25:52 - Main database initialized with 2 records
-2024-07-11 18:25:52 - My server Send Data to User: 828 Data => Login failed. Incorrect username or password.
-2024-07-11 18:26:04 - Server received encrypted request:c534dcfd60a4566a1d65e8adff635b3c3b7c5fa9d9a0306e442a7f8aceebff37
-2024-07-11 18:26:04 - Server Received Data From User:828 Data => Login:sharple2011:2011
-2024-07-11 18:26:04 - Main database initialized with 2 records
-2024-07-11 18:26:04 - My server Send Data to User: 828 Data => Client:sharple2011:098873734
-2024-07-11 18:26:10 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a44d04b9b992d190934936582dab03ae9
-2024-07-11 18:26:10 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:2
-2024-07-11 18:26:10 - Transaction database initialized with 1 records
-2024-07-11 18:26:10 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:35:26 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a182960403f2208bb5d7ea2370482b0f7
-2024-07-11 18:35:26 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:3
-2024-07-11 18:35:27 - Transaction database initialized with 1 records
-2024-07-11 18:35:27 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:35:34 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a55569c0cead5cc94e419594130ff3108
-2024-07-11 18:35:34 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:4
-2024-07-11 18:35:34 - Transaction database initialized with 1 records
-2024-07-11 18:35:34 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:35:38 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a55569c0cead5cc94e419594130ff3108
-2024-07-11 18:35:38 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:4
-2024-07-11 18:35:38 - Transaction database initialized with 1 records
-2024-07-11 18:35:38 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:35:42 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a44d04b9b992d190934936582dab03ae9
-2024-07-11 18:35:42 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:2
-2024-07-11 18:35:42 - Transaction database initialized with 1 records
-2024-07-11 18:35:42 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:35:46 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a182960403f2208bb5d7ea2370482b0f7
-2024-07-11 18:35:46 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:3
-2024-07-11 18:35:46 - Transaction database initialized with 1 records
-2024-07-11 18:35:46 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:35:51 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a44d04b9b992d190934936582dab03ae9
-2024-07-11 18:35:51 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:2
-2024-07-11 18:35:51 - Transaction database initialized with 1 records
-2024-07-11 18:35:51 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:35:55 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a182960403f2208bb5d7ea2370482b0f7
-2024-07-11 18:35:55 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:3
-2024-07-11 18:35:55 - Transaction database initialized with 1 records
-2024-07-11 18:35:55 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:36:15 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a55569c0cead5cc94e419594130ff3108
-2024-07-11 18:36:15 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:4
-2024-07-11 18:36:15 - Transaction database initialized with 1 records
-2024-07-11 18:36:15 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:36:17 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a55569c0cead5cc94e419594130ff3108
-2024-07-11 18:36:17 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:4
-2024-07-11 18:36:17 - Transaction database initialized with 1 records
-2024-07-11 18:36:17 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:36:18 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a55569c0cead5cc94e419594130ff3108
-2024-07-11 18:36:18 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:4
-2024-07-11 18:36:18 - Transaction database initialized with 1 records
-2024-07-11 18:36:18 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:36:20 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a55569c0cead5cc94e419594130ff3108
-2024-07-11 18:36:20 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:4
-2024-07-11 18:36:20 - Transaction database initialized with 1 records
-2024-07-11 18:36:20 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:36:24 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a4362ed6865db9815ec443088c5c322b4
-2024-07-11 18:36:24 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:5
-2024-07-11 18:36:24 - Transaction database initialized with 1 records
-2024-07-11 18:36:24 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:37:00 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a52d5242e2ef5512496b3ce3b8b897254c
-2024-07-11 18:37:00 - Server Received Data From User:828 Data => MakeTransaction:098873734:+1000
-2024-07-11 18:37:01 - Deposited amount of 1000 for account number: 098873734
-2024-07-11 18:37:01 - Main database file saved successfully.
-2024-07-11 18:37:01 - Updated transaction record for deposit for account number: 098873734
-2024-07-11 18:37:01 - Transaction database file saved successfully.
-2024-07-11 18:37:01 - Deposit successful for account number: 098873734
-2024-07-11 18:37:01 - Email found for account 098873734: kiro.samaan.kodoos@gamil.com
-2024-07-11 18:37:04 - My server Send Data to User: 828 Data => Transaction successful.
-2024-07-11 18:37:20 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a55569c0cead5cc94e419594130ff3108
-2024-07-11 18:37:20 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:4
-2024-07-11 18:37:20 - Transaction database initialized with 1 records
-2024-07-11 18:37:20 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"+1000","date":"11.07.2024"}]}
-2024-07-11 18:37:48 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a591ca86bd442a08d57ebbfddc1112aa38
-2024-07-11 18:37:48 - Server Received Data From User:828 Data => MakeTransaction:098873734:-1000
-2024-07-11 18:37:48 - Withdrawal amount of 1000 for account number: 098873734
-2024-07-11 18:37:48 - Main database file saved successfully.
-2024-07-11 18:37:48 - Updated transaction record for withdrawal for account number: 098873734
-2024-07-11 18:37:48 - Transaction database file saved successfully.
-2024-07-11 18:37:48 - Withdrawal successful for account number: 098873734
-2024-07-11 18:37:48 - Email found for account 098873734: kiro.samaan.kodoos@gamil.com
-2024-07-11 18:37:57 - My server Send Data to User: 828 Data => Transaction successful.
-2024-07-11 18:38:12 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a4362ed6865db9815ec443088c5c322b4
-2024-07-11 18:38:12 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:5
-2024-07-11 18:38:12 - Transaction database initialized with 1 records
-2024-07-11 18:38:12 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:38:32 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a55569c0cead5cc94e419594130ff3108
-2024-07-11 18:38:32 - Server Received Data From User:828 Data => GetTransactionHistory:098873734:4
-2024-07-11 18:38:32 - Transaction database initialized with 1 records
-2024-07-11 18:38:32 - My server Send Data to User: 828 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 18:39:32 - User:828 has disconnected
-2024-07-11 19:03:10 - User:984 connent to server
-2024-07-11 19:03:10 - User:984 is running on thread
-2024-07-11 19:03:10 - Main database initialized with 2 records
-2024-07-11 19:03:10 - Transaction database initialized with 1 records
-2024-07-11 19:03:24 - Server received encrypted request:2677775162cc30fabee567c8a9a8558e569e5c3ca712b037d73f6b78a89e27d6
-2024-07-11 19:03:24 - Server Received Data From User:984 Data => Login:Kero75:7579
-2024-07-11 19:03:24 - Main database initialized with 2 records
-2024-07-11 19:03:24 - My server Send Data to User: 984 Data => Admin:Kero75:
-2024-07-11 19:03:26 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
-2024-07-11 19:03:26 - Server Received Data From User:984 Data => GetBankDataBase:
-2024-07-11 19:03:26 - Main database initialized with 2 records
-2024-07-11 19:03:26 - My server Send Data to User: 984 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"098873734","Age":"25","Authority":"Client","Balance":"0","Email":"kiro.samaan.kodoos@gamil.com","FullName":"Sharple Samaan","Password":"2011","Username":"sharple2011"}]
-2024-07-11 19:04:02 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
-2024-07-11 19:04:02 - Server Received Data From User:984 Data => GetBankDataBase:
-2024-07-11 19:04:02 - Main database initialized with 2 records
-2024-07-11 19:04:02 - My server Send Data to User: 984 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"098873734","Age":"25","Authority":"Client","Balance":"0","Email":"kiro.samaan.kodoos@gamil.com","FullName":"Sharple Samaan","Password":"2011","Username":"sharple2011"}]
-2024-07-11 19:04:28 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
-2024-07-11 19:04:28 - Server Received Data From User:984 Data => GetBankDataBase:
-2024-07-11 19:04:28 - Main database initialized with 2 records
-2024-07-11 19:04:28 - My server Send Data to User: 984 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"098873734","Age":"25","Authority":"Client","Balance":"0","Email":"kiro.samaan.kodoos@gamil.com","FullName":"Sharple Samaan","Password":"2011","Username":"sharple2011"}]
-2024-07-11 19:04:41 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a55569c0cead5cc94e419594130ff3108
-2024-07-11 19:04:41 - Server Received Data From User:984 Data => GetTransactionHistory:098873734:4
-2024-07-11 19:04:41 - Transaction database initialized with 1 records
-2024-07-11 19:04:41 - My server Send Data to User: 984 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 19:05:03 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a4362ed6865db9815ec443088c5c322b4
-2024-07-11 19:05:03 - Server Received Data From User:984 Data => GetTransactionHistory:098873734:5
-2024-07-11 19:05:03 - Transaction database initialized with 1 records
-2024-07-11 19:05:03 - My server Send Data to User: 984 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 19:05:20 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a44d04b9b992d190934936582dab03ae9
-2024-07-11 19:05:20 - Server Received Data From User:984 Data => GetTransactionHistory:098873734:2
-2024-07-11 19:05:20 - Transaction database initialized with 1 records
-2024-07-11 19:05:20 - My server Send Data to User: 984 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 19:05:32 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a94d543263ff7d567628a1ac9dc310ac7
-2024-07-11 19:05:32 - Server Received Data From User:984 Data => GetTransactionHistory:098873734:1
-2024-07-11 19:05:32 - Transaction database initialized with 1 records
-2024-07-11 19:05:32 - My server Send Data to User: 984 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 19:05:36 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
-2024-07-11 19:05:36 - Server Received Data From User:984 Data => GetBankDataBase:
-2024-07-11 19:05:36 - Main database initialized with 2 records
-2024-07-11 19:05:36 - My server Send Data to User: 984 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"098873734","Age":"25","Authority":"Client","Balance":"0","Email":"kiro.samaan.kodoos@gamil.com","FullName":"Sharple Samaan","Password":"2011","Username":"sharple2011"}]
-2024-07-11 19:28:18 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a94d543263ff7d567628a1ac9dc310ac7
-2024-07-11 19:28:18 - Server Received Data From User:984 Data => GetTransactionHistory:098873734:1
-2024-07-11 19:28:18 - Transaction database initialized with 1 records
-2024-07-11 19:28:18 - My server Send Data to User: 984 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 19:28:26 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a44d04b9b992d190934936582dab03ae9
-2024-07-11 19:28:26 - Server Received Data From User:984 Data => GetTransactionHistory:098873734:2
-2024-07-11 19:28:26 - Transaction database initialized with 1 records
-2024-07-11 19:28:26 - My server Send Data to User: 984 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 19:28:32 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a4362ed6865db9815ec443088c5c322b4
-2024-07-11 19:28:32 - Server Received Data From User:984 Data => GetTransactionHistory:098873734:5
-2024-07-11 19:28:32 - Transaction database initialized with 1 records
-2024-07-11 19:28:32 - My server Send Data to User: 984 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 19:29:07 - Server received encrypted request:c534dcfd60a4566a1d65e8adff635b3c3b7c5fa9d9a0306e442a7f8aceebff37
-2024-07-11 19:29:07 - Server Received Data From User:984 Data => Login:sharple2011:2011
-2024-07-11 19:29:07 - Main database initialized with 2 records
-2024-07-11 19:29:07 - My server Send Data to User: 984 Data => Client:sharple2011:098873734
-2024-07-11 19:29:13 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a94d543263ff7d567628a1ac9dc310ac7
-2024-07-11 19:29:13 - Server Received Data From User:984 Data => GetTransactionHistory:098873734:1
-2024-07-11 19:29:13 - Transaction database initialized with 1 records
-2024-07-11 19:29:13 - My server Send Data to User: 984 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 19:29:18 - Server received encrypted request:9293b880681325510c24fb4c0f60909a9f9bb75bb0e368d6c29f08a829a4f45a4362ed6865db9815ec443088c5c322b4
-2024-07-11 19:29:18 - Server Received Data From User:984 Data => GetTransactionHistory:098873734:5
-2024-07-11 19:29:18 - Transaction database initialized with 1 records
-2024-07-11 19:29:18 - My server Send Data to User: 984 Data => TransactionHistory:{"AccountNumber":"098873734","RecentTransactions":[{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"},{"amount":"+1000","date":"11.07.2024"},{"amount":"-1000","date":"11.07.2024"}]}
-2024-07-11 19:29:26 - Server received encrypted request:bead59b6ef36b219fcfe0435e967718fca02a544a81454295a14bfdc39cc7481
-2024-07-11 19:29:26 - Server Received Data From User:984 Data => GetAccountBalance:098873734
-2024-07-11 19:29:26 - Main database initialized with 2 records
-2024-07-11 19:29:26 - My server Send Data to User: 984 Data => The account balance for sharple2011 is 0.
-2024-07-11 19:29:44 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a591ca86bd442a08d57ebbfddc1112aa38
-2024-07-11 19:29:44 - Server Received Data From User:984 Data => MakeTransaction:098873734:-1000
-2024-07-11 19:29:44 - Insufficient balance.
-2024-07-11 19:29:44 - My server Send Data to User: 984 Data => Transaction failed.may be Insufficient balance
-2024-07-11 19:29:53 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a52d5242e2ef5512496b3ce3b8b897254c
-2024-07-11 19:29:53 - Server Received Data From User:984 Data => MakeTransaction:098873734:+1000
-2024-07-11 19:29:53 - Deposited amount of 1000 for account number: 098873734
-2024-07-11 19:29:53 - Main database file saved successfully.
-2024-07-11 19:29:53 - Updated transaction record for deposit for account number: 098873734
-2024-07-11 19:29:53 - Transaction database file saved successfully.
-2024-07-11 19:29:53 - Deposit successful for account number: 098873734
-2024-07-11 19:29:53 - Email found for account 098873734: kiro.samaan.kodoos@gamil.com
-2024-07-11 19:29:56 - My server Send Data to User: 984 Data => Transaction successful.
-2024-07-11 19:32:26 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a52d5242e2ef5512496b3ce3b8b897254c
-2024-07-11 19:32:26 - Server Received Data From User:984 Data => MakeTransaction:098873734:+1000
-2024-07-11 19:32:26 - Deposited amount of 1000 for account number: 098873734
-2024-07-11 19:32:26 - Main database file saved successfully.
-2024-07-11 19:32:26 - Updated transaction record for deposit for account number: 098873734
-2024-07-11 19:32:26 - Transaction database file saved successfully.
-2024-07-11 19:32:26 - Deposit successful for account number: 098873734
-2024-07-11 19:32:26 - Email found for account 098873734: kiro.samaan.kodoos@gamil.com
-2024-07-11 19:32:28 - My server Send Data to User: 984 Data => Transaction successful.
-2024-07-11 19:37:05 - Server received encrypted request:2677775162cc30fabee567c8a9a8558e569e5c3ca712b037d73f6b78a89e27d6
-2024-07-11 19:37:05 - Server Received Data From User:984 Data => Login:Kero75:7579
-2024-07-11 19:37:05 - Main database initialized with 2 records
-2024-07-11 19:37:05 - My server Send Data to User: 984 Data => Admin:Kero75:
-2024-07-11 19:37:45 - Server received encrypted request:fa9a02b1316211e910a2d682b575f4f3a3d4b866cb8854abeb2e5abdb4c6375d5e5e86ea7b608565e17faf0db8d7ec94092c99290ffdc512142f2095d9620377
-2024-07-11 19:37:45 - Server Received Data From User:984 Data => UpdateAccount::::0:kerollos.sam3an.75@gmail.com:098873734
-2024-07-11 19:37:45 - Main database initialized with 2 records
-2024-07-11 19:37:46 - Updating email for account number: 098873734
-2024-07-11 19:37:46 - Main database file saved successfully.
-2024-07-11 19:37:46 - Account information updated successfully for account number: 098873734
-2024-07-11 19:37:46 - My server Send Data to User: 984 Data => Account update successful.
-2024-07-11 19:38:13 - Server received encrypted request:c534dcfd60a4566a1d65e8adff635b3c3b7c5fa9d9a0306e442a7f8aceebff37
-2024-07-11 19:38:13 - Server Received Data From User:984 Data => Login:sharple2011:2011
-2024-07-11 19:38:13 - Main database initialized with 2 records
-2024-07-11 19:38:13 - My server Send Data to User: 984 Data => Client:sharple2011:098873734
-2024-07-11 19:38:37 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a58144dc3a44ea985fd1c6728b1cf7750d
-2024-07-11 19:38:37 - Server Received Data From User:984 Data => MakeTransaction:098873734:-2000
-2024-07-11 19:38:37 - Withdrawal amount of 2000 for account number: 098873734
-2024-07-11 19:38:37 - Main database file saved successfully.
-2024-07-11 19:38:37 - Updated transaction record for withdrawal for account number: 098873734
-2024-07-11 19:38:37 - Transaction database file saved successfully.
-2024-07-11 19:38:37 - Withdrawal successful for account number: 098873734
-2024-07-11 19:38:37 - Email found for account 098873734: kerollos.sam3an.75@gmail.com
-2024-07-11 19:38:39 - My server Send Data to User: 984 Data => Transaction successful.
-2024-07-11 19:40:09 - Server received encrypted request:2677775162cc30fabee567c8a9a8558e569e5c3ca712b037d73f6b78a89e27d6
-2024-07-11 19:40:09 - Server Received Data From User:984 Data => Login:Kero75:7579
-2024-07-11 19:40:09 - Main database initialized with 2 records
-2024-07-11 19:40:09 - My server Send Data to User: 984 Data => Admin:Kero75:
-2024-07-11 19:40:13 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
-2024-07-11 19:40:13 - Server Received Data From User:984 Data => GetBankDataBase:
-2024-07-11 19:40:13 - Main database initialized with 2 records
-2024-07-11 19:40:13 - My server Send Data to User: 984 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"098873734","Age":"25","Authority":"Client","Balance":"0","Email":"kerollos.sam3an.75@gmail.com","FullName":"Sharple Samaan","Password":"2011","Username":"sharple2011"}]
-2024-07-11 19:42:08 - Server received encrypted request:20120c1ce7489995016f31eecc1b6570e38a8dbb6e2143c3eea1d98cd0862d3f359fe4c1ac55e8da4c9eddc51fa24bf10c9e44594acbbdaab04ba15b0bab9eb7b150c188da9f9a7890dce4d048ccbf8a
-2024-07-11 19:42:08 - Server Received Data From User:984 Data => AddAccount:nada :nada2023:2023:25:kiro.samaan.kodoos@gmail.com:0
-2024-07-11 19:42:08 - Main database initialized with 2 records
-2024-07-11 19:42:08 - Generated account number: 161288089
-2024-07-11 19:42:08 - Main database file saved successfully.
-2024-07-11 19:42:08 - Transaction database file saved successfully.
-2024-07-11 19:42:08 - Client added successfully.
-2024-07-11 19:42:08 - My server Send Data to User: 984 Data => Congratulations! New user 'nada2023' has been added. Welcome aboard
-2024-07-11 19:43:20 - Server received encrypted request:22c5bcd6755588c6142300c57744434a263e02530c44f398393719f433117aba
-2024-07-11 19:43:20 - Server Received Data From User:984 Data => Login:nada2023:2023
-2024-07-11 19:43:20 - Main database initialized with 3 records
-2024-07-11 19:43:20 - My server Send Data to User: 984 Data => Client:nada2023:161288089
-2024-07-11 19:43:25 - Server received encrypted request:9293b880681325510c24fb4c0f60909a64fd91088a9ea97d2742ce8cf8f1aa34a1b2b83e93c110932d579604baab820c
-2024-07-11 19:43:25 - Server Received Data From User:984 Data => GetTransactionHistory:161288089:4
-2024-07-11 19:43:25 - Transaction database initialized with 2 records
-2024-07-11 19:43:25 - My server Send Data to User: 984 Data => TransactionHistory:{"AccountNumber":"161288089","RecentTransactions":[]}
-2024-07-11 19:43:37 - Server received encrypted request:ec613c22ccf79698d697a60068b4c3a593900099014553857e534f2391f6c3da
-2024-07-11 19:43:37 - Server Received Data From User:984 Data => MakeTransaction:161288089:+190
-2024-07-11 19:43:37 - Deposited amount of 190 for account number: 161288089
-2024-07-11 19:43:37 - Main database file saved successfully.
-2024-07-11 19:43:37 - Updated transaction record for deposit for account number: 161288089
-2024-07-11 19:43:37 - Transaction database file saved successfully.
-2024-07-11 19:43:37 - Deposit successful for account number: 161288089
-2024-07-11 19:43:37 - Email found for account 161288089: kiro.samaan.kodoos@gmail.com
-2024-07-11 19:43:39 - My server Send Data to User: 984 Data => Transaction successful.
-2024-07-11 19:44:18 - Server received encrypted request:a53f988b17b64de64d727dec237e10159964681e22f89d3b350a3087dfba51ae0e1e186b81c055548789b4f14cdada13
-2024-07-11 19:44:18 - Server Received Data From User:984 Data => MakeTransfer:161288089:098873734:1000
-2024-07-11 19:44:18 - Insufficient balance in the source account.
-2024-07-11 19:44:18 - My server Send Data to User: 984 Data => TransferResult:Transfer failure.may be Insufficient balance
-2024-07-11 19:44:37 - Server received encrypted request:a53f988b17b64de64d727dec237e10159964681e22f89d3b350a3087dfba51ae9f7c7bc89495a91ac2f3e5215f96ed74
-2024-07-11 19:44:37 - Server Received Data From User:984 Data => MakeTransfer:161288089:098873734:180
-2024-07-11 19:44:37 - Main database file saved successfully.
-2024-07-11 19:44:37 - Transaction database file saved successfully.
-2024-07-11 19:44:37 - Transfer successful.
-2024-07-11 19:44:37 - Email found for account 161288089: kiro.samaan.kodoos@gmail.com
-2024-07-11 19:44:37 - Email found for account 098873734: kerollos.sam3an.75@gmail.com
-2024-07-11 19:44:41 - My server Send Data to User: 984 Data => TransferResult:Transfer successful.
-2024-07-11 19:47:18 - Server received encrypted request:b901bde7162b4c4ec3012eb6944f625e
-2024-07-11 19:47:18 - Server Received Data From User:984 Data => Login:Kero:7579
-2024-07-11 19:47:18 - Main database initialized with 3 records
-2024-07-11 19:47:18 - My server Send Data to User: 984 Data => Login failed. Incorrect username or password.
-2024-07-11 19:47:28 - Server received encrypted request:2677775162cc30fabee567c8a9a8558e569e5c3ca712b037d73f6b78a89e27d6
-2024-07-11 19:47:28 - Server Received Data From User:984 Data => Login:Kero75:7579
-2024-07-11 19:47:28 - Main database initialized with 3 records
-2024-07-11 19:47:28 - My server Send Data to User: 984 Data => Admin:Kero75:
-2024-07-11 19:48:21 - Server received encrypted request:fa9a02b1316211e910a2d682b575f4f351331033130f6ca2e141fbb8365e3e5d8036000c9a04c0814e167318358a6e91e4911ed0149b8ce250270bf85c19e0a9
-2024-07-11 19:48:21 - Server Received Data From User:984 Data => UpdateAccount::::0:nadamohamedmoharram@gmail.com:161288089
-2024-07-11 19:48:21 - Main database initialized with 3 records
-2024-07-11 19:48:21 - Updating email for account number: 161288089
-2024-07-11 19:48:21 - Main database file saved successfully.
-2024-07-11 19:48:21 - Account information updated successfully for account number: 161288089
-2024-07-11 19:48:21 - My server Send Data to User: 984 Data => Account update successful.
-2024-07-11 19:48:47 - Server received encrypted request:c534dcfd60a4566a1d65e8adff635b3c3b7c5fa9d9a0306e442a7f8aceebff37
-2024-07-11 19:48:47 - Server Received Data From User:984 Data => Login:sharple2011:2011
-2024-07-11 19:48:47 - Main database initialized with 3 records
-2024-07-11 19:48:47 - My server Send Data to User: 984 Data => Client:sharple2011:098873734
-2024-07-11 19:49:02 - Server received encrypted request:5dfe5b36bff013fb32d5afd56a9a6b1371a5f67b057f9721f90e1271b07552f3f78d494e5b1a73f7d205b7cc7daaa2ef
-2024-07-11 19:49:02 - Server Received Data From User:984 Data => MakeTransfer:098873734:161288089:1000
-2024-07-11 19:49:02 - Main database file saved successfully.
-2024-07-11 19:49:02 - Transaction database file saved successfully.
-2024-07-11 19:49:02 - Transfer successful.
-2024-07-11 19:49:02 - Email found for account 098873734: kerollos.sam3an.75@gmail.com
-2024-07-11 19:49:02 - Email found for account 161288089: nadamohamedmoharram@gmail.com
-2024-07-11 19:49:07 - My server Send Data to User: 984 Data => TransferResult:Transfer successful.
-2024-07-11 20:28:24 - User:984 has disconnected
-2024-07-12 10:08:30 - Server is up and listening to port => 1234
-2024-07-12 10:08:38 - User:880 connent to server
-2024-07-12 10:08:38 - User:880 is running on thread
-2024-07-12 10:08:38 - Main database initialized with 3 records
-2024-07-12 10:08:38 - Transaction database initialized with 2 records
-2024-07-12 10:08:47 - Server received encrypted request:2677775162cc30fabee567c8a9a8558e569e5c3ca712b037d73f6b78a89e27d6
-2024-07-12 10:08:47 - Server Received Data From User:880 Data => Login:Kero75:7579
-2024-07-12 10:08:47 - Main database initialized with 3 records
-2024-07-12 10:08:47 - My server Send Data to User: 880 Data => Admin:Kero75:
-2024-07-12 10:08:49 - Server received encrypted request:53bfb9241e8412339422fe566ff8ac9d309bec8704e50d2074d066302f366b33
-2024-07-12 10:08:49 - Server Received Data From User:880 Data => GetBankDataBase:
-2024-07-12 10:08:49 - Main database initialized with 3 records
-2024-07-12 10:08:49 - My server Send Data to User: 880 Data => ViewBankDataBase:[{"AccountNumber":null,"Age":"26","Authority":"Admin","Balance":null,"Email":"kerosamaan07@gmail.com","FullName":"Kirollos Samaan","Password":"7579","Username":"Kero75"},{"AccountNumber":"098873734","Age":"25","Authority":"Client","Balance":"180","Email":"kerollos.sam3an.75@gmail.com","FullName":"Sharple Samaan","Password":"2011","Username":"sharple2011"},{"AccountNumber":"161288089","Age":"25","Authority":"Client","Balance":"1010","Email":"nadamohamedmoharram@gmail.com","FullName":"nada ","Password":"2023","Username":"nada2023"}]
-2024-07-12 10:09:46 - User:880 has disconnected
+2024-07-12 14:21:31 - Server is up and listening to port => 1234
+2024-07-12 14:22:30 - User:660 connent to server
+2024-07-12 14:22:30 - User:660 is running on thread
+2024-07-12 14:22:30 - Main database initialized with 3 records
+2024-07-12 14:22:30 - Transaction database initialized with 2 records
+2024-07-12 14:22:46 - Server Received encrypted request From User:660 Data => 521b4b95e3285a96c2a1e3be584bdc628216fd2d0faed8a92762da9abbb173b8bd79363f2a7a96195456051c97a903c8b6a63b8cbd0995ddb124661605af3914
+2024-07-12 14:22:46 - Server Received request From User:660 Data => 54:{"RequestData":"Login:Kero75:7579","RequestSize":"17"}
+2024-07-12 14:22:46 - Server processing request from User:660 Data => Login:Kero75:7579
+2024-07-12 14:22:46 - Main database initialized with 3 records
+2024-07-12 14:22:46 - My server Send Data to User: 660 Data => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-12 14:23:20 - User:660 has disconnected
+2024-07-12 15:46:42 - Server is up and listening to port => 1234
+2024-07-12 15:46:55 - User:880 connent to server
+2024-07-12 15:46:55 - User:880 is running on thread
+2024-07-12 15:46:55 - Main database initialized with 3 records
+2024-07-12 15:46:55 - Transaction database initialized with 2 records
+2024-07-12 15:47:06 - Server Received encrypted request From User:880 Data => 521b4b95e3285a96c2a1e3be584bdc628216fd2d0faed8a92762da9abbb173b8bd79363f2a7a96195456051c97a903c8b6a63b8cbd0995ddb124661605af3914
+2024-07-12 15:47:06 - Server Received request From User:880 Data => 54:{"RequestData":"Login:Kero75:7579","RequestSize":"17"}
+2024-07-12 15:47:06 - Server processing request from User:880 Data => Login:Kero75:7579
+2024-07-12 15:47:06 - Main database initialized with 3 records
+2024-07-12 15:47:06 - My server Send Data to User: 880 Data => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-12 15:52:54 - Server Received encrypted request From User:880 Data => b4e6aa67d49d85bd65adeffe2785a5893470e3c1de62a0a50301c19767f41982aed58f175f5ac2ff668e89fc9d211f75bda4bc75d162ccbdedb7c94a2cfd03dd
+2024-07-12 15:52:54 - Server Received request From User:880 Data => 53:{"RequestData":"GetBankDataBase:","RequestSize":"16"}
+2024-07-12 15:52:54 - Server processing request from User:880 Data => GetBankDataBase:
+2024-07-12 15:52:54 - Main database initialized with 3 records
+2024-07-12 15:52:54 - My server Send Data to User: 880 Data => 685:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Password\":\"7579\",\"Username\":\"Kero75\"},{\"AccountNumber\":\"098873734\",\"Age\":\"25\",\"Authority\":\"Client\",\"Balance\":\"180\",\"Email\":\"kerollos.sam3an.75@gmail.com\",\"FullName\":\"Sharple Samaan\",\"Password\":\"2011\",\"Username\":\"sharple2011\"},{\"AccountNumber\":\"161288089\",\"Age\":\"25\",\"Authority\":\"Client\",\"Balance\":\"1010\",\"Email\":\"nadamohamedmoharram@gmail.com\",\"FullName\":\"nada \",\"Password\":\"2023\",\"Username\":\"nada2023\"}]","ResponseSize":"553"}
+2024-07-12 15:58:50 - Server Received encrypted request From User:880 Data => 3186c6a09a156a2f491d11047ccde5c5d39a85874bc20d9f0adcd6e18f198f76e7e4b6603b1c0d8d66c04ea79e60a12fda4684fbf430298b2fa363a40ebe3fec432c69a7a8e573e428a6ffb12f239850
+2024-07-12 15:58:50 - Server Received request From User:880 Data => 64:{"RequestData":"GetAccountBalance:098873734","RequestSize":"27"}
+2024-07-12 15:58:50 - Server processing request from User:880 Data => GetAccountBalance:098873734
+2024-07-12 15:58:50 - Main database initialized with 3 records
+2024-07-12 15:58:50 - My server Send Data to User: 880 Data => 82:{"ResponseData":"The account balance for sharple2011 is 180.","ResponseSize":"43"}
+2024-07-12 16:01:28 - User:880 has disconnected
+2024-07-12 16:09:20 - Server is up and listening to port => 1234
+2024-07-12 16:09:35 - User:876 connent to server
+2024-07-12 16:09:35 - User:876 is running on thread
+2024-07-12 16:09:35 - Main database initialized with 3 records
+2024-07-12 16:09:35 - Transaction database initialized with 2 records
+2024-07-12 16:09:46 - Server Received encrypted request From User:876 Data => 267b289d55f56b77cc6fa295a6006d7a3049af6f76d426f6b8dac520d1f4612cd7041234f8b8562275835a92737d66dcd25babdf4067ff08333f4d005e75555d
+2024-07-12 16:09:46 - Server Received request From User:876 Data => 52:{"RequestData":"Login:Kero:7579","RequestSize":"15"}
+2024-07-12 16:09:46 - Server processing request from User:876 Data => Login:Kero:7579
+2024-07-12 16:09:46 - Main database initialized with 3 records
+2024-07-12 16:09:46 - My server Send Data to User: 876 Data => 84:{"ResponseData":"Login failed. Incorrect username or password.","ResponseSize":"45"}
+2024-07-12 16:09:54 - Server Received encrypted request From User:876 Data => 521b4b95e3285a96c2a1e3be584bdc628216fd2d0faed8a92762da9abbb173b8bd79363f2a7a96195456051c97a903c8b6a63b8cbd0995ddb124661605af3914
+2024-07-12 16:09:54 - Server Received request From User:876 Data => 54:{"RequestData":"Login:Kero75:7579","RequestSize":"17"}
+2024-07-12 16:09:54 - Server processing request from User:876 Data => Login:Kero75:7579
+2024-07-12 16:09:54 - Main database initialized with 3 records
+2024-07-12 16:09:54 - My server Send Data to User: 876 Data => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-12 16:10:13 - Server Received encrypted request From User:876 Data => 3af10e22acd4aa56250f03e29819fb8ba9dcce0446df3eef334d952cc2bed4acb184c0850562fe0f752326048d2392a3808a3599138569b8b2b3a91575e508104b5263b22ce5fa811418a4d2759a0a23
+2024-07-12 16:10:13 - Server Received request From User:876 Data => 70:{"RequestData":"GetTransactionHistory:098873734:8","RequestSize":"33"}
+2024-07-12 16:10:13 - Server processing request from User:876 Data => GetTransactionHistory:098873734:8
+2024-07-12 16:10:13 - Transaction database initialized with 2 records
+2024-07-12 16:10:13 - My server Send Data to User: 876 Data => 492:{"ResponseData":"TransactionHistory:{\"AccountNumber\":\"098873734\",\"RecentTransactions\":[{\"amount\":\"-1000\",\"date\":\"11.07.2024\"},{\"amount\":\"+1000\",\"date\":\"11.07.2024\"},{\"amount\":\"-1000\",\"date\":\"11.07.2024\"},{\"amount\":\"+1000\",\"date\":\"11.07.2024\"},{\"amount\":\"+1000\",\"date\":\"11.07.2024\"},{\"amount\":\"-2000\",\"date\":\"11.07.2024\"},{\"amount\":\"+180\",\"date\":\"11.07.2024\"},{\"amount\":\"-1000\",\"date\":\"11.07.2024\"}]}","ResponseSize":"382"}
+2024-07-12 16:10:54 - User:876 has disconnected

@@ -36,18 +36,74 @@ void ServerHandler::run()
 void ServerHandler::onReadyRead()
 {
     QByteArray ByteArr = Socket->readAll();
-    logger.logMessage("Server received encrypted request:" + ByteArr.toHex());
+    logger.logMessage(QString("Server Received encrypted request From User:%1 Data => %2").arg(userID).arg(ByteArr.toHex()));
+
     // Decrypt the received data
     QByteArray decryptedData = decryptRequest(ByteArr);
     int padLength = decryptedData.at(decryptedData.length() - 1);
     decryptedData = decryptedData.left(decryptedData.length() - padLength);
 
-    statusMessage = QString("Server Received Data From User:%1 Data => %2").arg(userID).arg(QString(decryptedData));
+    statusMessage = QString("Server Received request From User:%1 Data => %2").arg(userID).arg(QString(decryptedData));
     logger.logMessage(statusMessage);
-    qDebug()<<statusMessage;
-    // Process the operation with the decrypted data
-    Operation(QString(decryptedData));
+
+    // Extract the frame size and validate it
+    int colonIndex = decryptedData.indexOf(':');
+    if (colonIndex == -1)
+    {
+        logger.logMessage("Invalid frame: No colon found.");
+        return;
+    }
+
+    bool ok;
+    int frameSize = QString(decryptedData.left(colonIndex)).toInt(&ok);
+    if (!ok || frameSize <= 0)
+    {
+        logger.logMessage("Invalid frame: Invalid frame size.");
+        return;
+    }
+
+    // Extract the JSON part of the frame and validate its size
+    QByteArray jsonData = decryptedData.mid(colonIndex + 1);
+    if (jsonData.size() != frameSize)
+    {
+        logger.logMessage("Invalid frame: Frame size does not match JSON data size.");
+        return;
+    }
+
+    // Parse the JSON data
+    QJsonDocument jsonDoc = QJsonDocument::fromJson(jsonData);
+    if (jsonDoc.isNull() || !jsonDoc.isObject())
+    {
+        logger.logMessage("Invalid frame: Failed to parse JSON.");
+        return;
+    }
+
+    QJsonObject jsonObj = jsonDoc.object();
+    QString requestsizeStr = jsonObj["RequestSize"].toString();
+    int requestSize =requestsizeStr.toInt(&ok);
+
+    if (!ok || requestSize <= 0)
+    {
+        logger.logMessage(QString::number(requestSize));
+        logger.logMessage("Invalid frame: Invalid request size.");
+        return;
+    }
+
+    QString requestData = jsonObj["RequestData"].toString();
+    if (requestData.size() != requestSize)
+    {
+        logger.logMessage("Invalid frame: Request size does not match actual data size.");
+        return;
+    }
+
+    // Log the valid request
+    statusMessage = QString("Server processing request from User:%1 Data => %2").arg(userID).arg(requestData);
+    logger.logMessage(statusMessage);
+
+    // Process the operation with the valid request data
+    Operation(requestData);
 }
+
 
 QByteArray ServerHandler::decryptRequest(const QByteArray &encryptedData)
 {
@@ -86,7 +142,7 @@ void ServerHandler::Operation(QString Request)
     }
     else
     {
-        sendResponse("Unknown Handler.");
+        sendResponse("Unknown request.");
     }
 }
 
@@ -94,10 +150,27 @@ void ServerHandler::sendResponse(const QString &Message)
 {
     if (Socket->isOpen())
     {
-        Socket->write(Message.toUtf8());
-        QString logMessage = QString("My server Send Data to User: %1 Data => %2").arg(userID).arg(Message);
+        // Create a QJsonObject with the request size and data
+        QJsonObject requestObj;
+        requestObj["ResponseSize"] =QString::number(Message.size());
+        requestObj["ResponseData"] = Message;
+
+        // Convert the QJsonObject to a QByteArray
+        QJsonDocument doc(requestObj);
+        QByteArray jsonData = doc.toJson(QJsonDocument::Compact);
+
+        // Get the size of the jsonData
+        qint32 jsonSize = jsonData.size();
+
+        // Convert jsonSize to a string and append a colon
+        QByteArray header = QByteArray::number(jsonSize) + ":";
+
+        // Construct the frame by concatenating header and jsonData
+        QByteArray frame = header + jsonData;
+        Socket->write(frame);
+        QString logMessage = QString("My server Send Data to User: %1 Data => %2").arg(userID).arg(frame);
         logger.logMessage(logMessage);
-        qDebug()<<logMessage;
+
     }
     else
     {

@@ -240,7 +240,6 @@ void MainWindow::on_pBConnect_clicked()
 void MainWindow::on_pBLogin_clicked()
 {
     bool valid = true;
-
     // Check if username is empty
     if (ui->lEUserName->text().isEmpty())
     {

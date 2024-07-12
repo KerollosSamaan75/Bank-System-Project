@@ -5,6 +5,9 @@
 #include<QTcpSocket>
 #include<QDebug>
 #include<QMetaEnum>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include "qaesencryption.h"
 
 class User : public QObject
@@ -15,7 +18,7 @@ public:
     void ConnectToServer(QString Ip,qint32 Port);
     void DisconnectFromServer();
     void SendRequest(QString Data);
-    QByteArray encryptRequest(const QByteArray &request);
+
 signals:
     void Connected();
     void Disconnected();
@@ -34,7 +37,7 @@ private slots:
 private:
     QString Ip;
     qint32 Port;
-    QTcpSocket Socket;
+    QTcpSocket Socket;QByteArray encryptRequest(const QByteArray &request);
 };
 
 #endif // USER_H

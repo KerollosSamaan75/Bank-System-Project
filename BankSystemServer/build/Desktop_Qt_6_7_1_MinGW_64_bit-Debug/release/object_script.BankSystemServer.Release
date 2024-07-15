@@ -7,6 +7,7 @@ release/GetBankDataBaseHandler.o
 release/GetTransactionHistoryHandler.o
 release/Logger.o
 release/LoginHandler.o
+release/LogoutHandler.o
 release/MakeTransactionHandler.o
 release/MakeTransferHandler.o
 release/SendEmail.o

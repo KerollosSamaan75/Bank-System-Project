@@ -31,7 +31,7 @@
      <string notr="true">background-color: rgb(50, 50, 50);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QLabel" name="label">
@@ -313,7 +313,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pB_AdminGetAccountNumber">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>410</x>
         <y>370</y>
         <width>341</width>
         <height>81</height>
@@ -385,13 +385,13 @@ font: 700 20pt &quot;Segoe UI&quot;;
        <string>Delete Client Account</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pBAdminBack">
+     <widget class="QPushButton" name="pBAdminLogout">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>520</y>
+        <y>510</y>
         <width>151</width>
-        <height>61</height>
+        <height>71</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -410,13 +410,13 @@ font: 700 20pt &quot;Segoe UI&quot;;
 </string>
       </property>
       <property name="text">
-       <string>Back</string>
+       <string>Logout</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pB_AdminGetAccountBalance">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>410</x>
         <y>190</y>
         <width>341</width>
         <height>81</height>
@@ -444,7 +444,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pB_AdminViewTransactionHistory">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>410</x>
         <y>280</y>
         <width>341</width>
         <height>81</height>
@@ -500,7 +500,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pB_UpdateClientAccount">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>410</x>
         <y>460</y>
         <width>341</width>
         <height>81</height>
@@ -594,7 +594,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pB_ClientViewAccountBalance">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>420</x>
         <y>410</y>
         <width>331</width>
         <height>81</height>
@@ -622,7 +622,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QPushButton" name="pB_ViewMyHistory">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>420</x>
         <y>230</y>
         <width>331</width>
         <height>81</height>
@@ -675,13 +675,13 @@ font: 700 20pt &quot;Segoe UI&quot;;
        <string>Make Transaction</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pB_ClientBack">
+     <widget class="QPushButton" name="pBClientLogout">
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>510</y>
+        <y>500</y>
         <width>121</width>
-        <height>61</height>
+        <height>71</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -700,15 +700,15 @@ font: 700 20pt &quot;Segoe UI&quot;;
 </string>
       </property>
       <property name="text">
-       <string>Back</string>
+       <string>logout</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pB_ClientTransferMoney">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>420</x>
         <y>320</y>
-        <width>341</width>
+        <width>331</width>
         <height>81</height>
        </rect>
       </property>

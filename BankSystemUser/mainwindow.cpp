@@ -69,8 +69,8 @@ void MainWindow::requestResponse(QString message)
     {
         ui->stackedWidget->setCurrentIndex(2);
         ui->Userlabel->setText(List[0]+":"+List[1]);
-        clientUserName =List[1];
-        clientAccountNumber = List[2];
+        loggerUserName =List[1];
+        loggerAccountNumber = List[2];
         ui->lEUserName->clear();
         ui->lEPassword->clear();
     }
@@ -78,6 +78,10 @@ void MainWindow::requestResponse(QString message)
     {
         ui->stackedWidget->setCurrentIndex(1);
         ui->Adminlabel->setText(List[0]+":"+List[1]);
+        loggerUserName =List[1];
+        loggerAccountNumber = List[2];
+        ui->lEUserName->clear();
+        ui->lEPassword->clear();
 
     }
     else if(List[0] == "ViewBankDataBase")
@@ -414,14 +418,6 @@ void MainWindow::on_pB_DeleteAccount_clicked()
 }
 
 
-void MainWindow::on_pBAdminBack_clicked()
-{
-    ui->lEUserName->clear();
-    ui->lEPassword->clear();
-    ui->stackedWidget->setCurrentIndex(0);
-}
-
-
 void MainWindow::on_pB_AdminGetAccountBalance_clicked()
 {
     bool ok;
@@ -518,7 +514,7 @@ void MainWindow::on_pB_UpdateClientAccount_clicked()
         QMessageBox::critical(this, "Error", "Account number is required");
         return;
     }
-    clientAccountNumber = number;
+    loggerAccountNumber = number;
     ui->stackedWidget->setCurrentIndex(6);
 }
 
@@ -543,7 +539,7 @@ void MainWindow::on_pB_Update_clicked()
     QRegularExpressionMatch match = emailRegex.match(email);
     if(email.isEmpty())
     {
-        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(clientAccountNumber);
+        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(loggerAccountNumber);
         SystemUser.SendRequest(message);
     }
     else if (!match.hasMatch())
@@ -554,7 +550,7 @@ void MainWindow::on_pB_Update_clicked()
     else
     {
         ui->UpdateEmailErrorLabel->setVisible(false);
-        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(clientAccountNumber);
+        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(loggerAccountNumber);
         SystemUser.SendRequest(message);
     }
 
@@ -563,13 +559,13 @@ void MainWindow::on_pB_Update_clicked()
 
 void MainWindow::on_pB_ClientGetAccountNumber_clicked()
 {
-    QMessageBox::information(this, "Request response", "Account number: "+clientAccountNumber);
+    QMessageBox::information(this, "Request response", "Account number: "+loggerAccountNumber);
 }
 
 
 void MainWindow::on_pB_ClientViewAccountBalance_clicked()
 {
-    QString message = QString("GetAccountBalance:%1").arg(clientAccountNumber);
+    QString message = QString("GetAccountBalance:%1").arg(loggerAccountNumber);
     SystemUser.SendRequest(message);
 }
 
@@ -613,7 +609,7 @@ void MainWindow::on_pb_ViewMyHistoryView_clicked()
     if (valid)
     {
         ui->ClientTransactionHistoryListWidget->clear();
-        QString message = QString("GetTransactionHistory:%1:%2").arg(clientAccountNumber).arg(historyCountStr);
+        QString message = QString("GetTransactionHistory:%1:%2").arg(loggerAccountNumber).arg(historyCountStr);
         SystemUser.SendRequest(message);
     }
 }
@@ -642,7 +638,7 @@ void MainWindow::on_pB_MakeTransaction_clicked()
         if (validator.validate(transactionAmount, pos) == QValidator::Acceptable)
         {
             // Process the transaction amount
-            QString message = QString("MakeTransaction:%1:%2").arg(clientAccountNumber).arg(transactionAmount);
+            QString message = QString("MakeTransaction:%1:%2").arg(loggerAccountNumber).arg(transactionAmount);
             SystemUser.SendRequest(message);
         }
         else
@@ -654,12 +650,6 @@ void MainWindow::on_pB_MakeTransaction_clicked()
     }
 }
 
-
-
-void MainWindow::on_pB_ClientBack_clicked()
-{
-    ui->stackedWidget->setCurrentIndex(0);
-}
 
 
 void MainWindow::on_pB_ClientTransferMoney_clicked()
@@ -693,7 +683,7 @@ void MainWindow::on_pB_ClientTransferMoney_clicked()
             if (isNumber && amount > 0)
             {
                 // Construct the message and send it to the server
-                QString message = QString("MakeTransfer:%1:%2:%3").arg(clientAccountNumber).arg(targetAccountNumber).arg(amount);
+                QString message = QString("MakeTransfer:%1:%2:%3").arg(loggerAccountNumber).arg(targetAccountNumber).arg(amount);
                 SystemUser.SendRequest(message);
             }
             else
@@ -741,5 +731,24 @@ void MainWindow::on_showPasswordCheckBox_stateChanged(int arg1)
     {
         ui->lEPassword->setEchoMode(QLineEdit::Password);
     }
+}
+
+
+void MainWindow::on_pBAdminLogout_clicked()
+{
+    ui->lEUserName->clear();
+    ui->lEPassword->clear();
+    QString message = QString("Logout:%1").arg(loggerUserName);
+    SystemUser.SendRequest(message);
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void MainWindow::on_pBClientLogout_clicked()
+{
+    ui->lEUserName->clear();
+    ui->lEPassword->clear();
+    QString message = QString("Logout:%1").arg(loggerUserName);
+    SystemUser.SendRequest(message);
+    ui->stackedWidget->setCurrentIndex(0);
 }
 

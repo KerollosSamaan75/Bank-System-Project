@@ -7,6 +7,7 @@ debug/GetBankDataBaseHandler.o
 debug/GetTransactionHistoryHandler.o
 debug/Logger.o
 debug/LoginHandler.o
+debug/LogoutHandler.o
 debug/MakeTransactionHandler.o
 debug/MakeTransferHandler.o
 debug/SendEmail.o

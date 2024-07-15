@@ -56,7 +56,6 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "on_pBAddAccoutBack_clicked",
     "on_pB_AdminGetAccountNumber_clicked",
     "on_pB_DeleteAccount_clicked",
-    "on_pBAdminBack_clicked",
     "on_pB_AdminGetAccountBalance_clicked",
     "on_pB_AdminViewTransactionHistory_clicked",
     "on_pBAdminViewTransactionBack_clicked",
@@ -72,10 +71,11 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "on_pB_ViewMyHistory_clicked",
     "on_pb_ViewMyHistoryView_clicked",
     "on_pB_MakeTransaction_clicked",
-    "on_pB_ClientBack_clicked",
     "on_pB_ClientTransferMoney_clicked",
     "on_showPasswordCheckBox_stateChanged",
-    "arg1"
+    "arg1",
+    "on_pBAdminLogout_clicked",
+    "on_pBClientLogout_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -125,9 +125,9 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       33,    0,  240,    2, 0x08,   31 /* Private */,
       34,    0,  241,    2, 0x08,   32 /* Private */,
       35,    0,  242,    2, 0x08,   33 /* Private */,
-      36,    0,  243,    2, 0x08,   34 /* Private */,
-      37,    0,  244,    2, 0x08,   35 /* Private */,
-      38,    1,  245,    2, 0x08,   36 /* Private */,
+      36,    1,  243,    2, 0x08,   34 /* Private */,
+      38,    0,  246,    2, 0x08,   36 /* Private */,
+      39,    0,  247,    2, 0x08,   37 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -159,9 +159,9 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   37,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   39,
 
        0        // eod
 };
@@ -205,8 +205,6 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pB_DeleteAccount_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pBAdminBack_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pB_AdminGetAccountBalance_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pB_AdminViewTransactionHistory_clicked'
@@ -237,13 +235,15 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pB_MakeTransaction_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_pB_ClientBack_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pB_ClientTransferMoney_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_showPasswordCheckBox_stateChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'on_pBAdminLogout_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pBClientLogout_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -267,25 +267,25 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 10: _t->on_pBAddAccoutBack_clicked(); break;
         case 11: _t->on_pB_AdminGetAccountNumber_clicked(); break;
         case 12: _t->on_pB_DeleteAccount_clicked(); break;
-        case 13: _t->on_pBAdminBack_clicked(); break;
-        case 14: _t->on_pB_AdminGetAccountBalance_clicked(); break;
-        case 15: _t->on_pB_AdminViewTransactionHistory_clicked(); break;
-        case 16: _t->on_pBAdminViewTransactionBack_clicked(); break;
-        case 17: _t->on_pBAdminViewTransactionView_clicked(); break;
-        case 18: _t->on_pB_ViewBankDatabase_clicked(); break;
-        case 19: _t->on_pB_ViewBankDatabaseBack_clicked(); break;
-        case 20: _t->on_pB_UpdateClientAccount_clicked(); break;
-        case 21: _t->on_pB_ClientUpdateAccountBack_clicked(); break;
-        case 22: _t->on_pB_Update_clicked(); break;
-        case 23: _t->on_pB_ClientGetAccountNumber_clicked(); break;
-        case 24: _t->on_pB_ClientViewAccountBalance_clicked(); break;
-        case 25: _t->on_pb_ViewMyHistoryBack_clicked(); break;
-        case 26: _t->on_pB_ViewMyHistory_clicked(); break;
-        case 27: _t->on_pb_ViewMyHistoryView_clicked(); break;
-        case 28: _t->on_pB_MakeTransaction_clicked(); break;
-        case 29: _t->on_pB_ClientBack_clicked(); break;
-        case 30: _t->on_pB_ClientTransferMoney_clicked(); break;
-        case 31: _t->on_showPasswordCheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 13: _t->on_pB_AdminGetAccountBalance_clicked(); break;
+        case 14: _t->on_pB_AdminViewTransactionHistory_clicked(); break;
+        case 15: _t->on_pBAdminViewTransactionBack_clicked(); break;
+        case 16: _t->on_pBAdminViewTransactionView_clicked(); break;
+        case 17: _t->on_pB_ViewBankDatabase_clicked(); break;
+        case 18: _t->on_pB_ViewBankDatabaseBack_clicked(); break;
+        case 19: _t->on_pB_UpdateClientAccount_clicked(); break;
+        case 20: _t->on_pB_ClientUpdateAccountBack_clicked(); break;
+        case 21: _t->on_pB_Update_clicked(); break;
+        case 22: _t->on_pB_ClientGetAccountNumber_clicked(); break;
+        case 23: _t->on_pB_ClientViewAccountBalance_clicked(); break;
+        case 24: _t->on_pb_ViewMyHistoryBack_clicked(); break;
+        case 25: _t->on_pB_ViewMyHistory_clicked(); break;
+        case 26: _t->on_pb_ViewMyHistoryView_clicked(); break;
+        case 27: _t->on_pB_MakeTransaction_clicked(); break;
+        case 28: _t->on_pB_ClientTransferMoney_clicked(); break;
+        case 29: _t->on_showPasswordCheckBox_stateChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 30: _t->on_pBAdminLogout_clicked(); break;
+        case 31: _t->on_pBClientLogout_clicked(); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {

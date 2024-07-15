@@ -1,16 +1,25 @@
 #include "AddClientHandler.h"
 
+// Constructor: Initializes an instance of AddClientHandler.
+// Parameters:
+// - db: Reference to the BankDataBase instance for database operations.
 AddClientHandler::AddClientHandler(BankDataBase &db) : dataBase(db) {}
 
+// Override of execute method from RequestHandler.
+// Processes the request to add a new client to the database.
+// Parameters:
+// - RequestParts: Parts of the request parsed into a QStringList.
+// - statusMessage: Reference to a QString to update with the execution status or response.
 void AddClientHandler::execute(const QStringList &RequestParts, QString &statusMessage)
 {
-    // Ensure RequestParts has at least 7 elements
+    // Ensure RequestParts has at least 7 elements (full name, username, password, age, email, balance)
     if (RequestParts.size() < 7)
     {
         statusMessage = "Invalid request. Please provide all required fields: full name, username, password, age, email, and balance.";
         return;
     }
 
+    // Extract request parameters
     const QString fullName = RequestParts[1];
     const QString userName = RequestParts[2];
     const QString password = RequestParts[3];
@@ -29,7 +38,7 @@ void AddClientHandler::execute(const QStringList &RequestParts, QString &statusM
         }
     }
 
-    // Add new user to the database
+    // Attempt to add the new client to the database
     if (dataBase.addClient(userName, password, fullName, ageStr, email, balanceStr))
     {
         statusMessage = QString("Congratulations! New user '%1' has been added. Welcome aboard").arg(userName);
@@ -39,4 +48,3 @@ void AddClientHandler::execute(const QStringList &RequestParts, QString &statusM
         statusMessage = QString("Sadly, new user '%1' couldn't be added to the database. Please try again.").arg(userName);
     }
 }
-

@@ -16,6 +16,7 @@ SOURCES += \
         GetTransactionHistoryHandler.cpp \
         Logger.cpp \
         LoginHandler.cpp \
+        LogoutHandler.cpp \
         MakeTransactionHandler.cpp \
         MakeTransferHandler.cpp \
         SendEmail.cpp \
@@ -40,6 +41,7 @@ HEADERS += \
     GetTransactionHistoryHandler.h \
     Logger.h \
     LoginHandler.h \
+    LogoutHandler.h \
     MakeTransactionHandler.h \
     MakeTransferHandler.h \
     RequestHandler.h \

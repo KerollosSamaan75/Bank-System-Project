@@ -43,7 +43,6 @@ private slots:
     void on_pBAddAccoutBack_clicked();
     void on_pB_AdminGetAccountNumber_clicked();
     void on_pB_DeleteAccount_clicked();
-    void on_pBAdminBack_clicked();
     void on_pB_AdminGetAccountBalance_clicked();
     void on_pB_AdminViewTransactionHistory_clicked();
     void on_pBAdminViewTransactionBack_clicked();
@@ -59,15 +58,15 @@ private slots:
     void on_pB_ViewMyHistory_clicked();
     void on_pb_ViewMyHistoryView_clicked();
     void on_pB_MakeTransaction_clicked();
-    void on_pB_ClientBack_clicked();
     void on_pB_ClientTransferMoney_clicked();
-
     void on_showPasswordCheckBox_stateChanged(int arg1);
+    void on_pBAdminLogout_clicked();
+    void on_pBClientLogout_clicked();
 
 private:
     Ui::MainWindow *ui;
     User SystemUser;
-    QString clientAccountNumber;
-    QString clientUserName;
+    QString loggerAccountNumber;
+    QString loggerUserName;
 };
 #endif // MAINWINDOW_H

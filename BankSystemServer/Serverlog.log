@@ -1,105 +1,13 @@
-2024-07-15 11:43:59 - Server is up and listening to port => 1234
-2024-07-15 11:44:21 - User:768 connent to server
-2024-07-15 11:44:21 - User:768 is running on thread
-2024-07-15 11:44:21 - Main database initialized with 4 records
-2024-07-15 11:44:21 - Transaction database initialized with 3 records
-2024-07-15 11:44:36 - Server Received encrypted request From User:768 Request => 521b4b95e3285a96c2a1e3be584bdc628216fd2d0faed8a92762da9abbb173b8bd79363f2a7a96195456051c97a903c8b6a63b8cbd0995ddb124661605af3914
-2024-07-15 11:44:36 - Server Received request From User:768 Request => 54:{"RequestData":"Login:Kero75:7579","RequestSize":"17"}
-2024-07-15 11:44:36 - Server processing request from User:768 Request => Login:Kero75:7579
-2024-07-15 11:44:36 - Main database initialized with 4 records
-2024-07-15 11:44:36 - Main database file saved successfully.
-2024-07-15 11:44:36 - Login state updated successfully for user: Kero75
-2024-07-15 11:44:36 - My server Send Response to User:768 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
-2024-07-15 11:44:50 - Server Received encrypted request From User:768 Request => ab635b609346f54c7ed160267e64935f1350ad1a26b0c589b41d7ab2d522f62d8e45976e4f18ea72d9616ae8d8b7d27019b9432da30531f9d4d30b134303b1dc
-2024-07-15 11:44:50 - Server Received request From User:768 Request => 50:{"RequestData":"Logout:Kero75","RequestSize":"13"}
-2024-07-15 11:44:50 - Server processing request from User:768 Request => Logout:Kero75
-2024-07-15 11:44:50 - Main database initialized with 4 records
-2024-07-15 11:44:50 - Main database file saved successfully.
-2024-07-15 11:44:50 - Login state updated successfully for user: Kero75
-2024-07-15 11:44:50 - My server Send Response to User:768 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
-2024-07-15 11:46:07 - Server Received encrypted request From User:768 Request => 521b4b95e3285a96c2a1e3be584bdc628216fd2d0faed8a92762da9abbb173b8bd79363f2a7a96195456051c97a903c8b6a63b8cbd0995ddb124661605af3914
-2024-07-15 11:46:07 - Server Received request From User:768 Request => 54:{"RequestData":"Login:Kero75:7579","RequestSize":"17"}
-2024-07-15 11:46:07 - Server processing request from User:768 Request => Login:Kero75:7579
-2024-07-15 11:46:07 - Main database initialized with 4 records
-2024-07-15 11:46:07 - Main database file saved successfully.
-2024-07-15 11:46:07 - Login state updated successfully for user: Kero75
-2024-07-15 11:46:07 - My server Send Response to User:768 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
-2024-07-15 11:46:09 - Server Received encrypted request From User:768 Request => ab635b609346f54c7ed160267e64935f1350ad1a26b0c589b41d7ab2d522f62d8e45976e4f18ea72d9616ae8d8b7d27019b9432da30531f9d4d30b134303b1dc
-2024-07-15 11:46:09 - Server Received request From User:768 Request => 50:{"RequestData":"Logout:Kero75","RequestSize":"13"}
-2024-07-15 11:46:09 - Server processing request from User:768 Request => Logout:Kero75
-2024-07-15 11:46:09 - Main database initialized with 4 records
-2024-07-15 11:46:09 - Main database file saved successfully.
-2024-07-15 11:46:09 - Login state updated successfully for user: Kero75
-2024-07-15 11:46:09 - My server Send Response to User:768 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
-2024-07-15 11:46:26 - Server Received encrypted request From User:768 Request => fbba248859b459a4e8477356dd921e1af51f73c6abd50efdac81a3f638bfdb5016a318e4bda776a5c3c1d80119f95a60aadcf3f8edd0f32a8c83d0283f7e6a50
-2024-07-15 11:46:26 - Server Received request From User:768 Request => 59:{"RequestData":"Login:Sharple2011:2011","RequestSize":"22"}
-2024-07-15 11:46:26 - Server processing request from User:768 Request => Login:Sharple2011:2011
-2024-07-15 11:46:26 - Main database initialized with 4 records
-2024-07-15 11:46:26 - Main database file saved successfully.
-2024-07-15 11:46:26 - Login state updated successfully for user: Sharple2011
-2024-07-15 11:46:26 - My server Send Response to User:768 Response => 67:{"ResponseData":"Client:Sharple2011:020503582","ResponseSize":"28"}
-2024-07-15 11:46:33 - Server Received encrypted request From User:768 Request => 3186c6a09a156a2f491d11047ccde5c5d39a85874bc20d9f0adcd6e18f198f76eac70fb0dcb6573f8ba5fcc77846c408a9c930584b7fe355274716e6cdb240e1cddfa80d3ef5f264023bf9a2142e4264
-2024-07-15 11:46:33 - Server Received request From User:768 Request => 64:{"RequestData":"GetAccountBalance:020503582","RequestSize":"27"}
-2024-07-15 11:46:33 - Server processing request from User:768 Request => GetAccountBalance:020503582
-2024-07-15 11:46:33 - Main database initialized with 4 records
-2024-07-15 11:46:33 - My server Send Response to User:768 Response => 80:{"ResponseData":"The account balance for Sharple2011 is 0.","ResponseSize":"41"}
-2024-07-15 11:46:45 - Server Received encrypted request From User:768 Request => 09c406ef35e1b10a39eec05d5751262fe2a668b02c3d7d34c13c1caad5fd6d9d2066af07674d9239c34d3c10f074c47ac826029899e8ec14e258d24c7177580b2e3187f04bf2c9f4ca2ac90dcbb9d8f3
-2024-07-15 11:46:45 - Server Received request From User:768 Request => 68:{"RequestData":"MakeTransaction:020503582:+1000","RequestSize":"31"}
-2024-07-15 11:46:45 - Server processing request from User:768 Request => MakeTransaction:020503582:+1000
-2024-07-15 11:46:45 - Deposited amount of 1000 for account number: 020503582
-2024-07-15 11:46:45 - Main database file saved successfully.
-2024-07-15 11:46:45 - Updated transaction record for deposit for account number: 020503582
-2024-07-15 11:46:45 - Transaction database file saved successfully.
-2024-07-15 11:46:45 - Deposit successful for account number: 020503582
-2024-07-15 11:46:45 - Email found for account 020503582: sharplesamaan11@gmail.com
-2024-07-15 11:46:49 - My server Send Response to User:768 Response => 62:{"ResponseData":"Transaction successful.","ResponseSize":"23"}
-2024-07-15 11:47:03 - Server Received encrypted request From User:768 Request => 3186c6a09a156a2f491d11047ccde5c5d39a85874bc20d9f0adcd6e18f198f76eac70fb0dcb6573f8ba5fcc77846c408a9c930584b7fe355274716e6cdb240e1cddfa80d3ef5f264023bf9a2142e4264
-2024-07-15 11:47:03 - Server Received request From User:768 Request => 64:{"RequestData":"GetAccountBalance:020503582","RequestSize":"27"}
-2024-07-15 11:47:03 - Server processing request from User:768 Request => GetAccountBalance:020503582
-2024-07-15 11:47:03 - Main database initialized with 4 records
-2024-07-15 11:47:03 - My server Send Response to User:768 Response => 83:{"ResponseData":"The account balance for Sharple2011 is 1000.","ResponseSize":"44"}
-2024-07-15 11:47:12 - Server Received encrypted request From User:768 Request => 3af10e22acd4aa56250f03e29819fb8ba9dcce0446df3eef334d952cc2bed4ac66b862684b2ad2c1ba90bfdd97007e4bf03df01ba5628f8cf894bb61f58f866cf59277049ad38e8dd52d42590f9709d2
-2024-07-15 11:47:12 - Server Received request From User:768 Request => 70:{"RequestData":"GetTransactionHistory:020503582:6","RequestSize":"33"}
-2024-07-15 11:47:12 - Server processing request from User:768 Request => GetTransactionHistory:020503582:6
-2024-07-15 11:47:12 - Transaction database initialized with 3 records
-2024-07-15 11:47:12 - My server Send Response to User:768 Response => 305:{"ResponseData":"TransactionHistory:{\"AccountNumber\":\"020503582\",\"RecentTransactions\":[{\"amount\":\"+1000\",\"date\":\"12.07.2024\"},{\"amount\":\"+1000\",\"date\":\"12.07.2024\"},{\"amount\":\"-3000\",\"date\":\"12.07.2024\"},{\"amount\":\"+1000\",\"date\":\"15.07.2024\"}]}","ResponseSize":"227"}
-2024-07-15 11:47:45 - Server Received encrypted request From User:768 Request => 3af10e22acd4aa56250f03e29819fb8ba9dcce0446df3eef334d952cc2bed4ac66b862684b2ad2c1ba90bfdd97007e4b8eaf94d817cc186df73ed291fd1a98774d17cf620ad5d074c806fcbc329a9bb2
-2024-07-15 11:47:45 - Server Received request From User:768 Request => 70:{"RequestData":"GetTransactionHistory:020503582:2","RequestSize":"33"}
-2024-07-15 11:47:45 - Server processing request from User:768 Request => GetTransactionHistory:020503582:2
-2024-07-15 11:47:45 - Transaction database initialized with 3 records
-2024-07-15 11:47:45 - My server Send Response to User:768 Response => 211:{"ResponseData":"TransactionHistory:{\"AccountNumber\":\"020503582\",\"RecentTransactions\":[{\"amount\":\"-3000\",\"date\":\"12.07.2024\"},{\"amount\":\"+1000\",\"date\":\"15.07.2024\"}]}","ResponseSize":"149"}
-2024-07-15 11:47:53 - Server Received encrypted request From User:768 Request => 8bbe4ba90809bbc6e0fac658e379018712fb4cb475714d8c9424f77b8cc0900b3f24af072a1c24dcba0441a2d27a577624ef5891ab7b56aa23fd4229c7750592
-2024-07-15 11:47:53 - Server Received request From User:768 Request => 55:{"RequestData":"Logout:Sharple2011","RequestSize":"18"}
-2024-07-15 11:47:53 - Server processing request from User:768 Request => Logout:Sharple2011
-2024-07-15 11:47:53 - Main database initialized with 4 records
-2024-07-15 11:47:53 - Main database file saved successfully.
-2024-07-15 11:47:53 - Login state updated successfully for user: Sharple2011
-2024-07-15 11:47:53 - My server Send Response to User:768 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
-2024-07-15 11:48:07 - Server Received encrypted request From User:768 Request => fbba248859b459a4e8477356dd921e1af51f73c6abd50efdac81a3f638bfdb5016a318e4bda776a5c3c1d80119f95a60aadcf3f8edd0f32a8c83d0283f7e6a50
-2024-07-15 11:48:07 - Server Received request From User:768 Request => 59:{"RequestData":"Login:Sharple2011:2011","RequestSize":"22"}
-2024-07-15 11:48:07 - Server processing request from User:768 Request => Login:Sharple2011:2011
-2024-07-15 11:48:07 - Main database initialized with 4 records
-2024-07-15 11:48:07 - Main database file saved successfully.
-2024-07-15 11:48:07 - Login state updated successfully for user: Sharple2011
-2024-07-15 11:48:07 - My server Send Response to User:768 Response => 67:{"ResponseData":"Client:Sharple2011:020503582","ResponseSize":"28"}
-2024-07-15 11:48:30 - User:988 connent to server
-2024-07-15 11:48:30 - User:988 is running on thread
-2024-07-15 11:48:30 - Main database initialized with 4 records
-2024-07-15 11:48:30 - Transaction database initialized with 3 records
-2024-07-15 11:48:40 - Server Received encrypted request From User:988 Request => fbba248859b459a4e8477356dd921e1af51f73c6abd50efdac81a3f638bfdb5016a318e4bda776a5c3c1d80119f95a60aadcf3f8edd0f32a8c83d0283f7e6a50
-2024-07-15 11:48:40 - Server Received request From User:988 Request => 59:{"RequestData":"Login:Sharple2011:2011","RequestSize":"22"}
-2024-07-15 11:48:40 - Server processing request from User:988 Request => Login:Sharple2011:2011
-2024-07-15 11:48:40 - Main database initialized with 4 records
-2024-07-15 11:48:40 - My server Send Response to User:988 Response => 87:{"ResponseData":"Login failed. This account is already logged in.","ResponseSize":"48"}
-2024-07-15 11:48:48 - User:988 has disconnected
-2024-07-15 11:49:23 - Server Received encrypted request From User:768 Request => 8bbe4ba90809bbc6e0fac658e379018712fb4cb475714d8c9424f77b8cc0900b3f24af072a1c24dcba0441a2d27a577624ef5891ab7b56aa23fd4229c7750592
-2024-07-15 11:49:23 - Server Received request From User:768 Request => 55:{"RequestData":"Logout:Sharple2011","RequestSize":"18"}
-2024-07-15 11:49:23 - Server processing request from User:768 Request => Logout:Sharple2011
-2024-07-15 11:49:23 - Main database initialized with 4 records
-2024-07-15 11:49:23 - Main database file saved successfully.
-2024-07-15 11:49:23 - Login state updated successfully for user: Sharple2011
-2024-07-15 11:49:23 - My server Send Response to User:768 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
-2024-07-15 11:49:26 - Main database file saved successfully.
-2024-07-15 11:49:26 - Login state updated successfully for user: Sharple2011
-2024-07-15 11:49:26 - User: 768 logout form bank system
-2024-07-15 11:49:26 - User:768 has disconnected
+2024-07-16 03:31:26 - Server is up and listening to port => 1234
+2024-07-16 03:31:47 - User:892 connent to server
+2024-07-16 03:31:47 - User:892 is running on thread
+2024-07-16 03:31:47 - Main database initialized with 4 records
+2024-07-16 03:31:47 - Transaction database initialized with 3 records
+2024-07-16 03:31:56 - Server Received encrypted request From User:892 Request => 92ece147a6cfc0e2509c92ce454ad96f06ebdffcfc8c60ab19aa167f538fdb2a93c4cc94aaa1ee374a6e57b34f9f8fcffdc798f36e5802c6948d0409c48ea46e2da639dd26bd90feda98877403d23bc3850b34854cf9f50f652ab8d447ecfba74319c478b20fd72bcefbbb6648403943d0044df97f753d7bfcf099947c4650b33bcc3c82338ea88460ac4d44c260905c
+2024-07-16 03:31:56 - Server Received request From User:892 Request => 133:{"RequestData":"Login:Kero75:7579","RequestSize":"17","Signature":"978d725d6d8c857d1e46db4a43b1ccedc36d427218d1f30bc2354807477e4fc0"}
+2024-07-16 03:31:56 - Server processing request from User:892 Request => Login:Kero75:7579
+2024-07-16 03:31:56 - Main database initialized with 4 records
+2024-07-16 03:31:57 - Main database file saved successfully.
+2024-07-16 03:31:57 - Login state updated successfully for user: Kero75
+2024-07-16 03:31:57 - My server Send Response to User:892 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-16 03:37:55 - Server is up and listening to port => 1234

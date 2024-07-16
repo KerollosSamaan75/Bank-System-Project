@@ -31,7 +31,7 @@
      <string notr="true">background-color: rgb(50, 50, 50);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QLabel" name="label">
@@ -749,9 +749,9 @@ font: 700 20pt &quot;Segoe UI&quot;;
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>40</y>
+        <y>20</y>
         <width>341</width>
-        <height>111</height>
+        <height>141</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -821,10 +821,10 @@ font: 700 20pt &quot;Segoe UI&quot;;
      <widget class="QLabel" name="label_3">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>480</x>
         <y>10</y>
-        <width>351</width>
-        <height>191</height>
+        <width>281</width>
+        <height>171</height>
        </rect>
       </property>
       <property name="text">
@@ -841,7 +841,7 @@ font: 700 20pt &quot;Segoe UI&quot;;
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>210</y>
+        <y>220</y>
         <width>361</width>
         <height>78</height>
        </rect>
@@ -933,37 +933,6 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>412</x>
-        <y>210</y>
-        <width>351</width>
-        <height>78</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_8">
-       <item>
-        <widget class="QLabel" name="NewUserEmailErrorLabel">
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-font: 14pt &quot;Segoe UI&quot;;</string>
-         </property>
-         <property name="text">
-          <string>TextLabel</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="NewUserEmail">
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-font: 700 15pt &quot;Segoe UI&quot;;</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
         <x>410</x>
         <y>310</y>
         <width>351</width>
@@ -1018,6 +987,37 @@ font: 14pt &quot;Segoe UI&quot;;</string>
          <property name="styleSheet">
           <string notr="true">color: rgb(255, 255, 255);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>411</x>
+        <y>221</y>
+        <width>351</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <widget class="QLabel" name="NewUserEmailErrorLabel">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 14pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="NewUserEmail">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 700 15pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
        </item>
@@ -1632,8 +1632,8 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
      <y>533</y>
     </hint>
     <hint type="destinationlabel">
-     <x>82</x>
-     <y>501</y>
+     <x>83</x>
+     <y>407</y>
     </hint>
    </hints>
   </connection>
@@ -1648,8 +1648,8 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
      <y>533</y>
     </hint>
     <hint type="destinationlabel">
-     <x>101</x>
-     <y>402</y>
+     <x>102</x>
+     <y>317</y>
     </hint>
    </hints>
   </connection>
@@ -1664,8 +1664,8 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
      <y>531</y>
     </hint>
     <hint type="destinationlabel">
-     <x>126</x>
-     <y>298</y>
+     <x>127</x>
+     <y>227</y>
     </hint>
    </hints>
   </connection>
@@ -1761,7 +1761,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
     </hint>
     <hint type="destinationlabel">
      <x>75</x>
-     <y>329</y>
+     <y>290</y>
     </hint>
    </hints>
   </connection>
@@ -1776,8 +1776,8 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
      <y>526</y>
     </hint>
     <hint type="destinationlabel">
-     <x>150</x>
-     <y>443</y>
+     <x>129</x>
+     <y>410</y>
     </hint>
    </hints>
   </connection>
@@ -1841,7 +1841,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
     </hint>
     <hint type="destinationlabel">
      <x>122</x>
-     <y>433</y>
+     <y>400</y>
     </hint>
    </hints>
   </connection>
@@ -1873,7 +1873,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
     </hint>
     <hint type="destinationlabel">
      <x>62</x>
-     <y>323</y>
+     <y>290</y>
     </hint>
    </hints>
   </connection>

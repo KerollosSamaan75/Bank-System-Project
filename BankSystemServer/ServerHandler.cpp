@@ -36,6 +36,20 @@ void ServerHandler::run()
     exec(); // Start event loop for this thread
 }
 
+
+
+QString ServerHandler::generateSignature(const QString& message, const QString& secretKey)
+{
+    QByteArray data = message.toUtf8() + secretKey.toUtf8();
+    QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
+    return QString(hash.toHex());
+}
+
+bool ServerHandler::verifySignature(const QString& message, const QString& receivedSignature, const QString& secretKey) {
+    QString generatedSignature = generateSignature(message, secretKey);
+    return generatedSignature == receivedSignature;
+}
+
 void ServerHandler::onReadyRead()
 {
     QByteArray ByteArr = Socket->readAll(); // Read all data from the socket
@@ -98,6 +112,27 @@ void ServerHandler::onReadyRead()
         return;
     }
 
+    QString receivedSignature = jsonObj["Signature"].toString(); // Get the signature from JSON
+
+    // Retrieve the secret key from environment variables
+    QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+    QString secretKey = env.value("SECRET_KEY");
+
+    // Ensure the secret key is retrieved successfully
+    if (secretKey.isEmpty())
+    {
+        logger.logMessage("Secret key is not set in the environment variables.");
+        return;
+    }
+
+    // Verify the signature
+    if (!verifySignature(requestData, receivedSignature, secretKey))
+    {
+        logger.logMessage("Invalid signature: Dropping the request.");
+        return;
+    }
+
+
     // Log the valid request
     statusMessage = QString("Server processing request from User:%1 Request => %2").arg(userID).arg(requestData);
     logger.logMessage(statusMessage); // Log processing of request
@@ -105,6 +140,7 @@ void ServerHandler::onReadyRead()
     // Process the operation with the valid request data
     Operation(requestData); // Call Operation method with request data
 }
+
 
 QByteArray ServerHandler::decryptRequest(const QByteArray &encryptedData)
 {

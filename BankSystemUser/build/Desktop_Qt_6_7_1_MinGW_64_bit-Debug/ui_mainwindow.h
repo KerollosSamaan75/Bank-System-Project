@@ -93,17 +93,17 @@ public:
     QLabel *NewUserPassWordErrorLabel;
     QLineEdit *NewUserPassWord;
     QWidget *layoutWidget7;
-    QVBoxLayout *verticalLayout_8;
-    QLabel *NewUserEmailErrorLabel;
-    QLineEdit *NewUserEmail;
-    QWidget *layoutWidget8;
     QVBoxLayout *verticalLayout_9;
     QLabel *NewUserAgeErrorLabel;
     QLineEdit *NewUserAge;
-    QWidget *layoutWidget9;
+    QWidget *layoutWidget8;
     QVBoxLayout *verticalLayout_10;
     QLabel *NewUserBalanceErrorLabel;
     QLineEdit *NewUserBalance;
+    QWidget *layoutWidget9;
+    QVBoxLayout *verticalLayout_8;
+    QLabel *NewUserEmailErrorLabel;
+    QLineEdit *NewUserEmail;
     QWidget *AdminViewTransactionHistory;
     QLabel *label_5;
     QLabel *label_6;
@@ -565,7 +565,7 @@ public:
         AddAccount->setObjectName("AddAccount");
         AddAccountlabel = new QLabel(AddAccount);
         AddAccountlabel->setObjectName("AddAccountlabel");
-        AddAccountlabel->setGeometry(QRect(40, 40, 341, 111));
+        AddAccountlabel->setGeometry(QRect(40, 20, 341, 141));
         AddAccountlabel->setStyleSheet(QString::fromUtf8("font: 700 35pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);"));
         pBCreateAccount = new QPushButton(AddAccount);
@@ -602,12 +602,12 @@ public:
 ""));
         label_3 = new QLabel(AddAccount);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(410, 10, 351, 191));
+        label_3->setGeometry(QRect(480, 10, 281, 171));
         label_3->setPixmap(QPixmap(QString::fromUtf8(":/images/logo.png")));
         label_3->setScaledContents(true);
         layoutWidget4 = new QWidget(AddAccount);
         layoutWidget4->setObjectName("layoutWidget4");
-        layoutWidget4->setGeometry(QRect(20, 210, 361, 78));
+        layoutWidget4->setGeometry(QRect(20, 220, 361, 78));
         verticalLayout_5 = new QVBoxLayout(layoutWidget4);
         verticalLayout_5->setObjectName("verticalLayout_5");
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
@@ -667,63 +667,63 @@ public:
 
         layoutWidget7 = new QWidget(AddAccount);
         layoutWidget7->setObjectName("layoutWidget7");
-        layoutWidget7->setGeometry(QRect(412, 210, 351, 78));
-        verticalLayout_8 = new QVBoxLayout(layoutWidget7);
-        verticalLayout_8->setObjectName("verticalLayout_8");
-        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
-        NewUserEmailErrorLabel = new QLabel(layoutWidget7);
-        NewUserEmailErrorLabel->setObjectName("NewUserEmailErrorLabel");
-        NewUserEmailErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 14pt \"Segoe UI\";"));
-
-        verticalLayout_8->addWidget(NewUserEmailErrorLabel);
-
-        NewUserEmail = new QLineEdit(layoutWidget7);
-        NewUserEmail->setObjectName("NewUserEmail");
-        NewUserEmail->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 700 15pt \"Segoe UI\";"));
-
-        verticalLayout_8->addWidget(NewUserEmail);
-
-        layoutWidget8 = new QWidget(AddAccount);
-        layoutWidget8->setObjectName("layoutWidget8");
-        layoutWidget8->setGeometry(QRect(410, 310, 351, 78));
-        verticalLayout_9 = new QVBoxLayout(layoutWidget8);
+        layoutWidget7->setGeometry(QRect(410, 310, 351, 78));
+        verticalLayout_9 = new QVBoxLayout(layoutWidget7);
         verticalLayout_9->setObjectName("verticalLayout_9");
         verticalLayout_9->setContentsMargins(0, 0, 0, 0);
-        NewUserAgeErrorLabel = new QLabel(layoutWidget8);
+        NewUserAgeErrorLabel = new QLabel(layoutWidget7);
         NewUserAgeErrorLabel->setObjectName("NewUserAgeErrorLabel");
         NewUserAgeErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 14pt \"Segoe UI\";"));
 
         verticalLayout_9->addWidget(NewUserAgeErrorLabel);
 
-        NewUserAge = new QLineEdit(layoutWidget8);
+        NewUserAge = new QLineEdit(layoutWidget7);
         NewUserAge->setObjectName("NewUserAge");
         NewUserAge->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_9->addWidget(NewUserAge);
 
-        layoutWidget9 = new QWidget(AddAccount);
-        layoutWidget9->setObjectName("layoutWidget9");
-        layoutWidget9->setGeometry(QRect(412, 410, 351, 78));
-        verticalLayout_10 = new QVBoxLayout(layoutWidget9);
+        layoutWidget8 = new QWidget(AddAccount);
+        layoutWidget8->setObjectName("layoutWidget8");
+        layoutWidget8->setGeometry(QRect(412, 410, 351, 78));
+        verticalLayout_10 = new QVBoxLayout(layoutWidget8);
         verticalLayout_10->setObjectName("verticalLayout_10");
         verticalLayout_10->setContentsMargins(0, 0, 0, 0);
-        NewUserBalanceErrorLabel = new QLabel(layoutWidget9);
+        NewUserBalanceErrorLabel = new QLabel(layoutWidget8);
         NewUserBalanceErrorLabel->setObjectName("NewUserBalanceErrorLabel");
         NewUserBalanceErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 14pt \"Segoe UI\";"));
 
         verticalLayout_10->addWidget(NewUserBalanceErrorLabel);
 
-        NewUserBalance = new QLineEdit(layoutWidget9);
+        NewUserBalance = new QLineEdit(layoutWidget8);
         NewUserBalance->setObjectName("NewUserBalance");
         NewUserBalance->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_10->addWidget(NewUserBalance);
+
+        layoutWidget9 = new QWidget(AddAccount);
+        layoutWidget9->setObjectName("layoutWidget9");
+        layoutWidget9->setGeometry(QRect(411, 221, 351, 71));
+        verticalLayout_8 = new QVBoxLayout(layoutWidget9);
+        verticalLayout_8->setObjectName("verticalLayout_8");
+        verticalLayout_8->setContentsMargins(0, 0, 0, 0);
+        NewUserEmailErrorLabel = new QLabel(layoutWidget9);
+        NewUserEmailErrorLabel->setObjectName("NewUserEmailErrorLabel");
+        NewUserEmailErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"font: 14pt \"Segoe UI\";"));
+
+        verticalLayout_8->addWidget(NewUserEmailErrorLabel);
+
+        NewUserEmail = new QLineEdit(layoutWidget9);
+        NewUserEmail->setObjectName("NewUserEmail");
+        NewUserEmail->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"font: 700 15pt \"Segoe UI\";"));
+
+        verticalLayout_8->addWidget(NewUserEmail);
 
         stackedWidget->addWidget(AddAccount);
         AdminViewTransactionHistory = new QWidget();
@@ -1037,7 +1037,7 @@ public:
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, ClientTransactionHistoryListWidget, qOverload<>(&QListWidget::clear));
         QObject::connect(pBAdminViewTransactionBack, &QPushButton::clicked, AdTransactionHistorylistWidget, qOverload<>(&QListWidget::clear));
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1079,9 +1079,9 @@ public:
         NewUserFullNameErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         NewUserUserNameErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         NewUserPassWordErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
-        NewUserEmailErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         NewUserAgeErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         NewUserBalanceErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        NewUserEmailErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">ViewTransaction</p><p align=\"center\">History</p></body></html>", nullptr));
         label_6->setText(QString());
         AdminViewHistoryAccountNumberErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));

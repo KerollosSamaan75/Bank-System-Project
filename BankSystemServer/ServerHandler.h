@@ -21,6 +21,8 @@
 #include "MakeTransferHandler.h"
 #include "UpdateAccountHandler.h"
 #include "GetBankDataBaseHandler.h"
+#include <QCryptographicHash>
+#include <QProcessEnvironment>
 #include "qaesencryption.h"
 
 // The ServerHandler class manages individual client connections in a multithreaded TCP server application.
@@ -77,6 +79,9 @@ private:
     // Returns:
     // Decrypted data as QByteArray.
     QByteArray decryptRequest(const QByteArray &encryptedData);
+    QString generateSignature(const QString& message, const QString& secretKey);
+    bool verifySignature(const QString& message, const QString& receivedSignature, const QString& secretKey);
+
 };
 
 #endif // SERVERHANDLER_H

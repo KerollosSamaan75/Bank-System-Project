@@ -42,14 +42,37 @@ void User::DisconnectFromServer()
     }
 }
 
+
+QString User::generateSignature(const QString& message, const QString& secretKey)
+{
+    QByteArray data = message.toUtf8() + secretKey.toUtf8();
+    QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
+    return QString(hash.toHex());
+}
+
 void User::SendRequest(QString Data)
 {
     if (Socket.isOpen())
     {
-        // Create a QJsonObject with the request size and data
+        // Retrieve the secret key from environment variables
+        QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
+        QString secretKey = env.value("SECRET_KEY");
+        qDebug()<<"secretKey= "<<secretKey;
+        // Ensure the secret key is retrieved successfully
+        if (secretKey.isEmpty())
+        {
+            qWarning() << "Secret key is not set in the environment variables.";
+            return;
+        }
+
+        // Generate the signature
+        QString signature = generateSignature(Data, secretKey);
+
+        // Create a QJsonObject with the request size, data, and signature
         QJsonObject requestObj;
-        requestObj["RequestSize"] =QString::number(Data.size());
+        requestObj["RequestSize"] = QString::number(Data.size());
         requestObj["RequestData"] = Data;
+        requestObj["Signature"] = signature;
 
         // Convert the QJsonObject to a QByteArray
         QJsonDocument doc(requestObj);

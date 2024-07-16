@@ -373,7 +373,6 @@ void MainWindow::on_pBCreateAccount_clicked()
         int age = ui->NewUserAge->text().toInt();
         QString email = ui->NewUserEmail->text();
         double balance = ui->NewUserBalance->text().toDouble();
-
         QString message = QString("AddAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(balance);
         SystemUser.SendRequest(message);
     }

@@ -8,6 +8,8 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QCryptographicHash>
+#include <QProcessEnvironment>
 #include "qaesencryption.h"
 
 class User : public QObject
@@ -18,6 +20,7 @@ public:
     void ConnectToServer(QString Ip,qint32 Port);
     void DisconnectFromServer();
     void SendRequest(QString Data);
+
 
 signals:
     void Connected();
@@ -39,6 +42,7 @@ private:
     qint32 Port;
     QTcpSocket Socket;
     QByteArray encryptRequest(const QByteArray &request);
+    QString generateSignature(const QString& message, const QString& secretKey);
 };
 
 #endif // USER_H

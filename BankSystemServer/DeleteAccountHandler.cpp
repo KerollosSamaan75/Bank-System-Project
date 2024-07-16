@@ -30,7 +30,7 @@ void DeleteAccountHandler::execute(const QStringList &RequestParts, QString &sta
     }
     else
     {
-        statusMessage = QString("Failed to delete client account with account number %1. The account may not exist.").arg(accountNumber);
+        statusMessage = QString("Failed to delete client account with account number %1.\nThe account may not exist.").arg(accountNumber);
         // If deletion fails, set statusMessage to indicate failure with the account number
     }
 }

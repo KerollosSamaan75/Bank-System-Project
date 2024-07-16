@@ -272,6 +272,10 @@ debug/moc_User.cpp: ../../User.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsondocument.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QCryptographicHash \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qcryptographichash.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QProcessEnvironment \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qprocess.h \
 		../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QByteArray \
 		debug/moc_predefs.h \
@@ -509,6 +513,10 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QDebug \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QMetaEnum \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qmetaobject.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QCryptographicHash \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qcryptographichash.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QProcessEnvironment \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qprocess.h \
 		../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QByteArray \
 		debug/moc_predefs.h \
@@ -785,6 +793,10 @@ debug/User.o: ../../User.cpp ../../User.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsondocument.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QCryptographicHash \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qcryptographichash.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QProcessEnvironment \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qprocess.h \
 		../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QByteArray
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\User.o ..\..\User.cpp
@@ -1020,6 +1032,10 @@ debug/main.o: ../../main.cpp ../../mainwindow.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QDebug \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QMetaEnum \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qmetaobject.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QCryptographicHash \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qcryptographichash.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QProcessEnvironment \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qprocess.h \
 		../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QByteArray \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/QApplication \
@@ -1257,6 +1273,10 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QDebug \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QMetaEnum \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qmetaobject.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QCryptographicHash \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qcryptographichash.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/QProcessEnvironment \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qprocess.h \
 		../../qaesencryption.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QByteArray \
 		ui_mainwindow.h

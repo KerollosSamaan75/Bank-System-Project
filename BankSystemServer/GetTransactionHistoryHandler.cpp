@@ -66,7 +66,7 @@ void GetTransactionHistoryHandler::execute(const QStringList &RequestParts, QStr
     {
         if (i >= 0)
         {
-            recentTransactions.append(transactionsArray[i]);
+            recentTransactions.push_front(transactionsArray[i]);
             // Append recent transactions from transactionsArray based on historyCount
         }
     }

@@ -1,13 +1,45 @@
-2024-07-16 03:31:26 - Server is up and listening to port => 1234
-2024-07-16 03:31:47 - User:892 connent to server
-2024-07-16 03:31:47 - User:892 is running on thread
-2024-07-16 03:31:47 - Main database initialized with 4 records
-2024-07-16 03:31:47 - Transaction database initialized with 3 records
-2024-07-16 03:31:56 - Server Received encrypted request From User:892 Request => 92ece147a6cfc0e2509c92ce454ad96f06ebdffcfc8c60ab19aa167f538fdb2a93c4cc94aaa1ee374a6e57b34f9f8fcffdc798f36e5802c6948d0409c48ea46e2da639dd26bd90feda98877403d23bc3850b34854cf9f50f652ab8d447ecfba74319c478b20fd72bcefbbb6648403943d0044df97f753d7bfcf099947c4650b33bcc3c82338ea88460ac4d44c260905c
-2024-07-16 03:31:56 - Server Received request From User:892 Request => 133:{"RequestData":"Login:Kero75:7579","RequestSize":"17","Signature":"978d725d6d8c857d1e46db4a43b1ccedc36d427218d1f30bc2354807477e4fc0"}
-2024-07-16 03:31:56 - Server processing request from User:892 Request => Login:Kero75:7579
-2024-07-16 03:31:56 - Main database initialized with 4 records
-2024-07-16 03:31:57 - Main database file saved successfully.
-2024-07-16 03:31:57 - Login state updated successfully for user: Kero75
-2024-07-16 03:31:57 - My server Send Response to User:892 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
-2024-07-16 03:37:55 - Server is up and listening to port => 1234
+2024-07-16 23:36:42 - Server is up and listening to port => 1234
+2024-07-17 01:48:30 - User:864 connent to server
+2024-07-17 01:48:30 - User:864 is running on thread
+2024-07-17 01:48:30 - Main database initialized with 1 records
+2024-07-17 01:48:30 - Error: Failed to parse JSON from transaction database file
+2024-07-17 01:48:52 - User:864 has disconnected
+2024-07-17 01:52:36 - User:904 connent to server
+2024-07-17 01:52:37 - User:904 is running on thread
+2024-07-17 01:52:37 - Main database initialized with 1 records
+2024-07-17 01:52:37 - Error: Failed to parse JSON from transaction database file
+2024-07-17 01:52:46 - User:904 has disconnected
+2024-07-17 01:59:46 - User:904 connent to server
+2024-07-17 01:59:46 - User:904 is running on thread
+2024-07-17 01:59:46 - Main database initialized with 1 records
+2024-07-17 01:59:46 - Error: Failed to parse JSON from transaction database file
+2024-07-17 02:00:13 - Server Received encrypted request From User:904 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-17 02:00:13 - Server Received request From User:904 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-17 02:00:13 - Checking frame size .....
+2024-07-17 02:00:13 - Checking request data size .....
+2024-07-17 02:00:13 - Checking request signature .....
+2024-07-17 02:00:13 - Server generate signature to received request
+2024-07-17 02:00:13 - Server compare between generated signature and received signature 
+2024-07-17 02:00:13 - Received signature = Generated signature
+2024-07-17 02:00:13 - Now:Server processing request from User:904 Request => Login:Kero75:kero*7579
+2024-07-17 02:00:13 - Main database initialized with 1 records
+2024-07-17 02:00:13 - Main database file saved successfully.
+2024-07-17 02:00:13 - Login state updated successfully for user: Kero75
+2024-07-17 02:00:13 - My server Send Response to User:904 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-17 02:00:22 - Server Received encrypted request From User:904 Request => da095a307165fa302bfaddd7c9ced9567106c2048ca4aa69dfc9b1fead1b71e320bbf748a03ebc878bd02e3f5a44e05f42f63ee7cbe59d4a2bc3f535eb11a265e9363c50419ed6f1c077342e0126118965272d0e9fb4778778f26205b432e771b45cb8856e4dd2eb3d12a79e25161b76b087b8f67253198ccfafe4acb8e9dc0c80851e05426b7825141eb7db6883b052
+2024-07-17 02:00:22 - Server Received request From User:904 Request => 129:{"RequestData":"Logout:Kero75","RequestSize":"13","Signature":"a587cfe9992bff8b511e7f833501e8242a6228fc8b73466983234884df8fc823"}
+2024-07-17 02:00:22 - Checking frame size .....
+2024-07-17 02:00:22 - Checking request data size .....
+2024-07-17 02:00:22 - Checking request signature .....
+2024-07-17 02:00:22 - Server generate signature to received request
+2024-07-17 02:00:22 - Server compare between generated signature and received signature 
+2024-07-17 02:00:22 - Received signature = Generated signature
+2024-07-17 02:00:22 - Now:Server processing request from User:904 Request => Logout:Kero75
+2024-07-17 02:00:22 - Main database initialized with 1 records
+2024-07-17 02:00:22 - Main database file saved successfully.
+2024-07-17 02:00:22 - Login state updated successfully for user: Kero75
+2024-07-17 02:00:22 - My server Send Response to User:904 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
+2024-07-17 02:00:25 - Main database file saved successfully.
+2024-07-17 02:00:25 - Login state updated successfully for user: Kero75
+2024-07-17 02:00:25 - User: 904 logout form bank system
+2024-07-17 02:00:25 - User:904 has disconnected

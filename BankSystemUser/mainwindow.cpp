@@ -69,8 +69,8 @@ void MainWindow::requestResponse(QString message)
     {
         ui->stackedWidget->setCurrentIndex(2);
         ui->Userlabel->setText(List[0]+":"+List[1]);
-        loggerUserName =List[1];
-        loggerAccountNumber = List[2];
+        clientUserName =List[1];
+        clientAccountNumber = List[2];
         ui->lEUserName->clear();
         ui->lEPassword->clear();
     }
@@ -78,8 +78,7 @@ void MainWindow::requestResponse(QString message)
     {
         ui->stackedWidget->setCurrentIndex(1);
         ui->Adminlabel->setText(List[0]+":"+List[1]);
-        loggerUserName =List[1];
-        loggerAccountNumber = List[2];
+        adminUserName =List[1];
         ui->lEUserName->clear();
         ui->lEPassword->clear();
 
@@ -172,12 +171,19 @@ void MainWindow::requestResponse(QString message)
 
 void MainWindow::onConnectedServer()
 {
+    ui->Console->clear();
     ui->Console->addItem("User has connected to Server");
     qDebug()<<"User has connected to Server";
-    QMessageBox::information(this, "Connection Successful", "You have successfully connected to the server\n"
-                                    "now you can Login to the Bank System.");
+    QMessageBox::information(this, "Connection Successful", "You have successfully connected to the server");
     ui->frame->setEnabled(true);
-    ui->pBConnect->setText("Try to Connent again");
+    ui->pBConnect->hide();
+    ui->pB_AdminConnectAgain->hide();
+    ui->pB_ClientConnectAgain->hide();
+    ui->pB_AddAccountConnectAgain->hide();
+    ui->pB_ViewTransactionHistoryConnectAgain->hide();
+    ui->pB_ViewBankDataBaseConnectAgain->hide();
+    ui->pB_UpdateAccountConnectAgain->hide();
+    ui->pB_ViewClientTransactionHistoryConnectAgain->hide();
 }
 
 void MainWindow::onDisconnectedServer()
@@ -185,18 +191,31 @@ void MainWindow::onDisconnectedServer()
     qDebug() << "User has disconnected from Server" << Qt::endl;
 
     // Show a QMessageBox
-    QMessageBox::information(this, "Disconnected", "You have been disconnected from the server.");
+    QMessageBox::information(this, "Disconnected", "You have been disconnected from the server.\nPlease try to connect again");
 
-    // Return to the login page
-    ui->stackedWidget->setCurrentIndex(0);
+    //the login page
     ui->frame->setEnabled(false);
+    ui->Console->clear();
+    ui->pBConnect->setVisible(true);
     ui->pBConnect->setText("Try to Connent again");
+
+    //Admin page
+    ui->pB_AdminConnectAgain->setVisible(true);
+    //Client page
+    ui->pB_ClientConnectAgain->setVisible(true);
+    //Add account page
+    ui->pB_AddAccountConnectAgain->setVisible(true);
+    ui->pB_ViewTransactionHistoryConnectAgain->setVisible(true);
+    ui->pB_ViewBankDataBaseConnectAgain->setVisible(true);
+    ui->pB_UpdateAccountConnectAgain->setVisible(true);
+    ui->pB_ViewClientTransactionHistoryConnectAgain->setVisible(true);
 }
 
 
 void MainWindow::onErrorOccurredServer(QAbstractSocket::SocketError socketError)
 {
     QMetaEnum meta = QMetaEnum::fromType<QAbstractSocket::SocketError>();
+    ui->Console->clear();
     ui->Console->addItem(meta.valueToKey(socketError));
     qDebug()<<meta.valueToKey(socketError);
     if(socketError == 0)
@@ -221,6 +240,7 @@ void MainWindow::onErrorOccurredServer(QAbstractSocket::SocketError socketError)
 void MainWindow::onStateChangedServer(QAbstractSocket::SocketState socketState)
 {
     QMetaEnum meta = QMetaEnum::fromType<QAbstractSocket::SocketState>();
+    ui->Console->clear();
     ui->Console->addItem(meta.valueToKey(socketState));
     qDebug()<<meta.valueToKey(socketState)<<Qt::endl;
 }
@@ -291,10 +311,12 @@ void MainWindow::on_pBCreateAccount_clicked()
 {
     bool valid = true;
 
-    // Check if fullname is empty
-    if (ui->NewUserFullName->text().isEmpty())
+    // Check if fullname is empty, contains non-alphabetical characters, or is less than 5 characters long
+    QRegularExpression nameRegex("^[a-zA-Z ]{5,}$"); // Regex for alphabetical characters, spaces, and minimum length of 5
+    QRegularExpressionMatch nameMatch = nameRegex.match(ui->NewUserFullName->text());
+    if (ui->NewUserFullName->text().isEmpty() || !nameMatch.hasMatch())
     {
-        ui->NewUserFullNameErrorLabel->setText("Full name is required.");
+        ui->NewUserFullNameErrorLabel->setText("Full name is required Minimum 5 characters\nMust contain only alphabetical characters");
         ui->NewUserFullNameErrorLabel->setVisible(true);
         valid = false;
     }
@@ -303,10 +325,12 @@ void MainWindow::on_pBCreateAccount_clicked()
         ui->NewUserFullNameErrorLabel->setVisible(false);
     }
 
-    // Check if username is empty
-    if (ui->NewUserUserName->text().isEmpty())
+    // Check if username is empty or does not contain both alphabetical characters and digits
+    QRegularExpression usernameRegex("^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z0-9]+$"); // Regex for at least one alphabetical character and one digit
+    QRegularExpressionMatch usernameMatch = usernameRegex.match(ui->NewUserUserName->text());
+    if (ui->NewUserUserName->text().isEmpty() || !usernameMatch.hasMatch())
     {
-        ui->NewUserUserNameErrorLabel->setText("Username is required.");
+        ui->NewUserUserNameErrorLabel->setText("Username is required without spaces\nMust contain both alphabetical characters and digits.");
         ui->NewUserUserNameErrorLabel->setVisible(true);
         valid = false;
     }
@@ -315,10 +339,12 @@ void MainWindow::on_pBCreateAccount_clicked()
         ui->NewUserUserNameErrorLabel->setVisible(false);
     }
 
-    // Check if password is empty
-    if (ui->NewUserPassWord->text().isEmpty())
+    // Check if password is empty or does not meet complexity requirements
+    QRegularExpression passwordRegex("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]+$"); // Regex for password complexity
+    QRegularExpressionMatch passwordMatch = passwordRegex.match(ui->NewUserPassWord->text());
+    if (ui->NewUserPassWord->text().isEmpty() || !passwordMatch.hasMatch())
     {
-        ui->NewUserPassWordErrorLabel->setText("Password is required.");
+        ui->NewUserPassWordErrorLabel->setText("Password is required without spaces\nMust contain alphabetical characters, digits, and symbols.");
         ui->NewUserPassWordErrorLabel->setVisible(true);
         valid = false;
     }
@@ -341,8 +367,8 @@ void MainWindow::on_pBCreateAccount_clicked()
 
     // Check if email is empty or not valid
     QRegularExpression emailRegex("^[\\w\\.]+@[\\w\\.]+\\.[a-zA-Z]{2,}$");
-    QRegularExpressionMatch match = emailRegex.match(ui->NewUserEmail->text());
-    if (ui->NewUserEmail->text().isEmpty() || !match.hasMatch())
+    QRegularExpressionMatch emailMatch = emailRegex.match(ui->NewUserEmail->text());
+    if (ui->NewUserEmail->text().isEmpty() || !emailMatch.hasMatch())
     {
         ui->NewUserEmailErrorLabel->setText("Valid email is required.");
         ui->NewUserEmailErrorLabel->setVisible(true);
@@ -377,6 +403,10 @@ void MainWindow::on_pBCreateAccount_clicked()
         SystemUser.SendRequest(message);
     }
 }
+
+
+
+
 
 
 void MainWindow::on_pBAddAccoutBack_clicked()
@@ -513,7 +543,7 @@ void MainWindow::on_pB_UpdateClientAccount_clicked()
         QMessageBox::critical(this, "Error", "Account number is required");
         return;
     }
-    loggerAccountNumber = number;
+    clientAccountNumber = number;
     ui->stackedWidget->setCurrentIndex(6);
 }
 
@@ -538,7 +568,7 @@ void MainWindow::on_pB_Update_clicked()
     QRegularExpressionMatch match = emailRegex.match(email);
     if(email.isEmpty())
     {
-        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(loggerAccountNumber);
+        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(clientAccountNumber);
         SystemUser.SendRequest(message);
     }
     else if (!match.hasMatch())
@@ -549,7 +579,7 @@ void MainWindow::on_pB_Update_clicked()
     else
     {
         ui->UpdateEmailErrorLabel->setVisible(false);
-        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(loggerAccountNumber);
+        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(clientAccountNumber);
         SystemUser.SendRequest(message);
     }
 
@@ -558,13 +588,13 @@ void MainWindow::on_pB_Update_clicked()
 
 void MainWindow::on_pB_ClientGetAccountNumber_clicked()
 {
-    QMessageBox::information(this, "Request response", "Account number: "+loggerAccountNumber);
+    QMessageBox::information(this, "Request response", "Account number: "+clientAccountNumber);
 }
 
 
 void MainWindow::on_pB_ClientViewAccountBalance_clicked()
 {
-    QString message = QString("GetAccountBalance:%1").arg(loggerAccountNumber);
+    QString message = QString("GetAccountBalance:%1").arg(clientAccountNumber);
     SystemUser.SendRequest(message);
 }
 
@@ -608,7 +638,7 @@ void MainWindow::on_pb_ViewMyHistoryView_clicked()
     if (valid)
     {
         ui->ClientTransactionHistoryListWidget->clear();
-        QString message = QString("GetTransactionHistory:%1:%2").arg(loggerAccountNumber).arg(historyCountStr);
+        QString message = QString("GetTransactionHistory:%1:%2").arg(clientAccountNumber).arg(historyCountStr);
         SystemUser.SendRequest(message);
     }
 }
@@ -637,7 +667,7 @@ void MainWindow::on_pB_MakeTransaction_clicked()
         if (validator.validate(transactionAmount, pos) == QValidator::Acceptable)
         {
             // Process the transaction amount
-            QString message = QString("MakeTransaction:%1:%2").arg(loggerAccountNumber).arg(transactionAmount);
+            QString message = QString("MakeTransaction:%1:%2").arg(clientAccountNumber).arg(transactionAmount);
             SystemUser.SendRequest(message);
         }
         else
@@ -682,7 +712,7 @@ void MainWindow::on_pB_ClientTransferMoney_clicked()
             if (isNumber && amount > 0)
             {
                 // Construct the message and send it to the server
-                QString message = QString("MakeTransfer:%1:%2:%3").arg(loggerAccountNumber).arg(targetAccountNumber).arg(amount);
+                QString message = QString("MakeTransfer:%1:%2:%3").arg(clientAccountNumber).arg(targetAccountNumber).arg(amount);
                 SystemUser.SendRequest(message);
             }
             else
@@ -737,7 +767,7 @@ void MainWindow::on_pBAdminLogout_clicked()
 {
     ui->lEUserName->clear();
     ui->lEPassword->clear();
-    QString message = QString("Logout:%1").arg(loggerUserName);
+    QString message = QString("Logout:%1").arg(adminUserName);
     SystemUser.SendRequest(message);
     ui->stackedWidget->setCurrentIndex(0);
 }
@@ -746,8 +776,50 @@ void MainWindow::on_pBClientLogout_clicked()
 {
     ui->lEUserName->clear();
     ui->lEPassword->clear();
-    QString message = QString("Logout:%1").arg(loggerUserName);
+    QString message = QString("Logout:%1").arg(clientUserName);
     SystemUser.SendRequest(message);
     ui->stackedWidget->setCurrentIndex(0);
+}
+
+
+void MainWindow::on_pB_AdminConnectAgain_clicked()
+{
+    SystemUser.ConnectToServer("192.168.1.17",1234);
+}
+
+
+void MainWindow::on_pB_AddAccountConnectAgain_clicked()
+{
+    SystemUser.ConnectToServer("192.168.1.17",1234);
+}
+
+
+void MainWindow::on_pB_ClientConnectAgain_clicked()
+{
+    SystemUser.ConnectToServer("192.168.1.17",1234);
+}
+
+
+void MainWindow::on_pB_ViewTransactionHistoryConnectAgain_clicked()
+{
+    SystemUser.ConnectToServer("192.168.1.17",1234);
+}
+
+
+void MainWindow::on_pB_ViewBankDataBaseConnectAgain_clicked()
+{
+    SystemUser.ConnectToServer("192.168.1.17",1234);
+}
+
+
+void MainWindow::on_pB_UpdateAccountConnectAgain_clicked()
+{
+    SystemUser.ConnectToServer("192.168.1.17",1234);
+}
+
+
+void MainWindow::on_pB_ViewClientTransactionHistoryConnectAgain_clicked()
+{
+    SystemUser.ConnectToServer("192.168.1.17",1234);
 }
 

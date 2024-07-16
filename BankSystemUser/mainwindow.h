@@ -63,10 +63,25 @@ private slots:
     void on_pBAdminLogout_clicked();
     void on_pBClientLogout_clicked();
 
+    void on_pB_AdminConnectAgain_clicked();
+
+    void on_pB_AddAccountConnectAgain_clicked();
+
+    void on_pB_ClientConnectAgain_clicked();
+
+    void on_pB_ViewTransactionHistoryConnectAgain_clicked();
+
+    void on_pB_ViewBankDataBaseConnectAgain_clicked();
+
+    void on_pB_UpdateAccountConnectAgain_clicked();
+
+    void on_pB_ViewClientTransactionHistoryConnectAgain_clicked();
+
 private:
     Ui::MainWindow *ui;
     User SystemUser;
-    QString loggerAccountNumber;
-    QString loggerUserName;
+    QString clientUserName;
+    QString clientAccountNumber;
+    QString adminUserName;
 };
 #endif // MAINWINDOW_H

@@ -51,10 +51,8 @@ public:
     QPushButton *pBLogin;
     QPushButton *pBClear;
     QCheckBox *showPasswordCheckBox;
-    QWidget *layoutWidget3;
-    QVBoxLayout *verticalLayout;
-    QListWidget *Console;
     QPushButton *pBConnect;
+    QListWidget *Console;
     QWidget *Admin;
     QLabel *Adminlabel;
     QPushButton *pB_AddAccount;
@@ -66,6 +64,7 @@ public:
     QPushButton *pB_AdminViewTransactionHistory;
     QPushButton *pB_ViewBankDatabase;
     QPushButton *pB_UpdateClientAccount;
+    QPushButton *pB_AdminConnectAgain;
     QWidget *Client;
     QLabel *Userlabel;
     QLabel *label_9;
@@ -75,35 +74,37 @@ public:
     QPushButton *pB_MakeTransaction;
     QPushButton *pBClientLogout;
     QPushButton *pB_ClientTransferMoney;
+    QPushButton *pB_ClientConnectAgain;
     QWidget *AddAccount;
     QLabel *AddAccountlabel;
     QPushButton *pBCreateAccount;
     QPushButton *pBAddAccoutBack;
     QLabel *label_3;
-    QWidget *layoutWidget4;
+    QWidget *layoutWidget3;
     QVBoxLayout *verticalLayout_5;
     QLabel *NewUserFullNameErrorLabel;
     QLineEdit *NewUserFullName;
-    QWidget *layoutWidget5;
+    QWidget *layoutWidget4;
     QVBoxLayout *verticalLayout_6;
     QLabel *NewUserUserNameErrorLabel;
     QLineEdit *NewUserUserName;
-    QWidget *layoutWidget6;
+    QWidget *layoutWidget5;
     QVBoxLayout *verticalLayout_7;
     QLabel *NewUserPassWordErrorLabel;
     QLineEdit *NewUserPassWord;
-    QWidget *layoutWidget7;
+    QWidget *layoutWidget6;
     QVBoxLayout *verticalLayout_9;
     QLabel *NewUserAgeErrorLabel;
     QLineEdit *NewUserAge;
-    QWidget *layoutWidget8;
+    QWidget *layoutWidget7;
     QVBoxLayout *verticalLayout_10;
     QLabel *NewUserBalanceErrorLabel;
     QLineEdit *NewUserBalance;
-    QWidget *layoutWidget9;
+    QWidget *layoutWidget8;
     QVBoxLayout *verticalLayout_8;
     QLabel *NewUserEmailErrorLabel;
     QLineEdit *NewUserEmail;
+    QPushButton *pB_AddAccountConnectAgain;
     QWidget *AdminViewTransactionHistory;
     QLabel *label_5;
     QLabel *label_6;
@@ -118,11 +119,13 @@ public:
     QPushButton *pBAdminViewTransactionView;
     QPushButton *pBAdminViewTransactionBack;
     QListWidget *AdTransactionHistorylistWidget;
+    QPushButton *pB_ViewTransactionHistoryConnectAgain;
     QWidget *ViewBankDatabase;
     QLabel *label_7;
     QLabel *label_8;
     QPushButton *pB_ViewBankDatabaseBack;
     QTableWidget *BankDataBaseTableWidget;
+    QPushButton *pB_ViewBankDataBaseConnectAgain;
     QWidget *UpdateClientAccount;
     QLabel *label_28;
     QLabel *label_29;
@@ -132,20 +135,22 @@ public:
     QLineEdit *UpdateAccountUserName;
     QLineEdit *UpdateAccountAge;
     QLineEdit *UpdateAccountFullName;
-    QWidget *layoutWidget10;
+    QWidget *layoutWidget9;
     QVBoxLayout *verticalLayout_37;
     QLabel *UpdateEmailErrorLabel;
     QLineEdit *UpdateAccountEmail;
+    QPushButton *pB_UpdateAccountConnectAgain;
     QWidget *ViewMyHistory;
     QLabel *label_10;
     QLabel *label_11;
     QPushButton *pb_ViewMyHistoryBack;
     QPushButton *pb_ViewMyHistoryView;
     QListWidget *ClientTransactionHistoryListWidget;
-    QWidget *layoutWidget11;
+    QWidget *layoutWidget10;
     QVBoxLayout *verticalLayout_13;
     QLabel *ClientViewHistoryCountErrorLabel;
     QLineEdit *lE_ClientViewHistoryCount;
+    QPushButton *pB_ViewClientTransactionHistoryConnectAgain;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -167,12 +172,12 @@ public:
         Login->setObjectName("Login");
         label = new QLabel(Login);
         label->setObjectName("label");
-        label->setGeometry(QRect(60, 50, 671, 71));
+        label->setGeometry(QRect(60, 50, 671, 101));
         label->setStyleSheet(QString::fromUtf8("font: 700 35pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);"));
         label_2 = new QLabel(Login);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(40, 120, 351, 371));
+        label_2->setGeometry(QRect(40, 120, 351, 351));
         label_2->setPixmap(QPixmap(QString::fromUtf8(":/images/logo.png")));
         label_2->setScaledContents(true);
         frame = new QFrame(Login);
@@ -228,36 +233,64 @@ public:
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
         pBLogin = new QPushButton(layoutWidget2);
         pBLogin->setObjectName("pBLogin");
-        pBLogin->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pBLogin->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
 
         verticalLayout_4->addWidget(pBLogin);
 
         pBClear = new QPushButton(layoutWidget2);
         pBClear->setObjectName("pBClear");
-        pBClear->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pBClear->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
 
         verticalLayout_4->addWidget(pBClear);
@@ -267,37 +300,45 @@ public:
         showPasswordCheckBox->setGeometry(QRect(10, 190, 111, 22));
         showPasswordCheckBox->setStyleSheet(QString::fromUtf8("font: 700 9pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);"));
-        layoutWidget3 = new QWidget(Login);
-        layoutWidget3->setObjectName("layoutWidget3");
-        layoutWidget3->setGeometry(QRect(40, 440, 351, 143));
-        verticalLayout = new QVBoxLayout(layoutWidget3);
-        verticalLayout->setObjectName("verticalLayout");
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
-        Console = new QListWidget(layoutWidget3);
-        Console->setObjectName("Console");
-        Console->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 12pt \"Segoe UI\";"));
-
-        verticalLayout->addWidget(Console);
-
-        pBConnect = new QPushButton(layoutWidget3);
+        pBConnect = new QPushButton(Login);
         pBConnect->setObjectName("pBConnect");
-        pBConnect->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pBConnect->setGeometry(QRect(41, 499, 329, 71));
+        pBConnect->setMouseTracking(true);
+        pBConnect->setTabletTracking(true);
+        pBConnect->setFocusPolicy(Qt::ClickFocus);
+        pBConnect->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
-
-        verticalLayout->addWidget(pBConnect);
-
+        Console = new QListWidget(Login);
+        Console->setObjectName("Console");
+        Console->setGeometry(QRect(41, 441, 329, 41));
+        Console->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"font: 700 14pt \"Segoe UI\";\n"
+""));
         stackedWidget->addWidget(Login);
         Admin = new QWidget();
         Admin->setObjectName("Admin");
@@ -309,34 +350,62 @@ public:
         pB_AddAccount = new QPushButton(Admin);
         pB_AddAccount->setObjectName("pB_AddAccount");
         pB_AddAccount->setGeometry(QRect(20, 190, 351, 81));
-        pB_AddAccount->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_AddAccount->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pB_AdminGetAccountNumber = new QPushButton(Admin);
         pB_AdminGetAccountNumber->setObjectName("pB_AdminGetAccountNumber");
         pB_AdminGetAccountNumber->setGeometry(QRect(410, 370, 341, 81));
-        pB_AdminGetAccountNumber->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_AdminGetAccountNumber->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         label_4 = new QLabel(Admin);
         label_4->setObjectName("label_4");
@@ -346,98 +415,212 @@ public:
         pB_DeleteAccount = new QPushButton(Admin);
         pB_DeleteAccount->setObjectName("pB_DeleteAccount");
         pB_DeleteAccount->setGeometry(QRect(20, 280, 351, 81));
-        pB_DeleteAccount->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_DeleteAccount->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pBAdminLogout = new QPushButton(Admin);
         pBAdminLogout->setObjectName("pBAdminLogout");
         pBAdminLogout->setGeometry(QRect(20, 510, 151, 71));
-        pBAdminLogout->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pBAdminLogout->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pB_AdminGetAccountBalance = new QPushButton(Admin);
         pB_AdminGetAccountBalance->setObjectName("pB_AdminGetAccountBalance");
         pB_AdminGetAccountBalance->setGeometry(QRect(410, 190, 341, 81));
-        pB_AdminGetAccountBalance->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_AdminGetAccountBalance->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pB_AdminViewTransactionHistory = new QPushButton(Admin);
         pB_AdminViewTransactionHistory->setObjectName("pB_AdminViewTransactionHistory");
         pB_AdminViewTransactionHistory->setGeometry(QRect(410, 280, 341, 81));
-        pB_AdminViewTransactionHistory->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_AdminViewTransactionHistory->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pB_ViewBankDatabase = new QPushButton(Admin);
         pB_ViewBankDatabase->setObjectName("pB_ViewBankDatabase");
         pB_ViewBankDatabase->setGeometry(QRect(20, 370, 351, 81));
-        pB_ViewBankDatabase->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_ViewBankDatabase->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pB_UpdateClientAccount = new QPushButton(Admin);
         pB_UpdateClientAccount->setObjectName("pB_UpdateClientAccount");
         pB_UpdateClientAccount->setGeometry(QRect(410, 460, 341, 81));
-        pB_UpdateClientAccount->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_UpdateClientAccount->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
+""));
+        pB_AdminConnectAgain = new QPushButton(Admin);
+        pB_AdminConnectAgain->setObjectName("pB_AdminConnectAgain");
+        pB_AdminConnectAgain->setGeometry(QRect(0, 0, 211, 71));
+        pB_AdminConnectAgain->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         stackedWidget->addWidget(Admin);
         Client = new QWidget();
@@ -455,66 +638,122 @@ public:
         pB_ClientGetAccountNumber = new QPushButton(Client);
         pB_ClientGetAccountNumber->setObjectName("pB_ClientGetAccountNumber");
         pB_ClientGetAccountNumber->setGeometry(QRect(40, 230, 331, 81));
-        pB_ClientGetAccountNumber->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_ClientGetAccountNumber->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pB_ClientViewAccountBalance = new QPushButton(Client);
         pB_ClientViewAccountBalance->setObjectName("pB_ClientViewAccountBalance");
-        pB_ClientViewAccountBalance->setGeometry(QRect(420, 410, 331, 81));
-        pB_ClientViewAccountBalance->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_ClientViewAccountBalance->setGeometry(QRect(230, 410, 331, 81));
+        pB_ClientViewAccountBalance->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pB_ViewMyHistory = new QPushButton(Client);
         pB_ViewMyHistory->setObjectName("pB_ViewMyHistory");
         pB_ViewMyHistory->setGeometry(QRect(420, 230, 331, 81));
-        pB_ViewMyHistory->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_ViewMyHistory->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pB_MakeTransaction = new QPushButton(Client);
         pB_MakeTransaction->setObjectName("pB_MakeTransaction");
         pB_MakeTransaction->setGeometry(QRect(40, 320, 331, 81));
-        pB_MakeTransaction->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_MakeTransaction->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pBClientLogout = new QPushButton(Client);
         pBClientLogout->setObjectName("pBClientLogout");
@@ -535,30 +774,62 @@ public:
         pB_ClientTransferMoney = new QPushButton(Client);
         pB_ClientTransferMoney->setObjectName("pB_ClientTransferMoney");
         pB_ClientTransferMoney->setGeometry(QRect(420, 320, 331, 81));
-        pB_ClientTransferMoney->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_ClientTransferMoney->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
-"background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
 "\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
+""));
+        pB_ClientConnectAgain = new QPushButton(Client);
+        pB_ClientConnectAgain->setObjectName("pB_ClientConnectAgain");
+        pB_ClientConnectAgain->setGeometry(QRect(0, 0, 191, 71));
+        pB_ClientConnectAgain->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         stackedWidget->addWidget(Client);
         AddAccount = new QWidget();
@@ -571,171 +842,229 @@ public:
         pBCreateAccount = new QPushButton(AddAccount);
         pBCreateAccount->setObjectName("pBCreateAccount");
         pBCreateAccount->setGeometry(QRect(470, 510, 241, 71));
-        pBCreateAccount->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pBCreateAccount->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pBAddAccoutBack = new QPushButton(AddAccount);
         pBAddAccoutBack->setObjectName("pBAddAccoutBack");
         pBAddAccoutBack->setGeometry(QRect(50, 510, 241, 71));
-        pBAddAccoutBack->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pBAddAccoutBack->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         label_3 = new QLabel(AddAccount);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(480, 10, 281, 171));
+        label_3->setGeometry(QRect(520, 10, 241, 171));
         label_3->setPixmap(QPixmap(QString::fromUtf8(":/images/logo.png")));
         label_3->setScaledContents(true);
-        layoutWidget4 = new QWidget(AddAccount);
-        layoutWidget4->setObjectName("layoutWidget4");
-        layoutWidget4->setGeometry(QRect(20, 220, 361, 78));
-        verticalLayout_5 = new QVBoxLayout(layoutWidget4);
+        layoutWidget3 = new QWidget(AddAccount);
+        layoutWidget3->setObjectName("layoutWidget3");
+        layoutWidget3->setGeometry(QRect(20, 217, 361, 81));
+        verticalLayout_5 = new QVBoxLayout(layoutWidget3);
         verticalLayout_5->setObjectName("verticalLayout_5");
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
-        NewUserFullNameErrorLabel = new QLabel(layoutWidget4);
+        NewUserFullNameErrorLabel = new QLabel(layoutWidget3);
         NewUserFullNameErrorLabel->setObjectName("NewUserFullNameErrorLabel");
         NewUserFullNameErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 14pt \"Segoe UI\";"));
+"font: 10pt \"Segoe UI\";"));
 
         verticalLayout_5->addWidget(NewUserFullNameErrorLabel);
 
-        NewUserFullName = new QLineEdit(layoutWidget4);
+        NewUserFullName = new QLineEdit(layoutWidget3);
         NewUserFullName->setObjectName("NewUserFullName");
         NewUserFullName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_5->addWidget(NewUserFullName);
 
-        layoutWidget5 = new QWidget(AddAccount);
-        layoutWidget5->setObjectName("layoutWidget5");
-        layoutWidget5->setGeometry(QRect(20, 310, 361, 78));
-        verticalLayout_6 = new QVBoxLayout(layoutWidget5);
+        layoutWidget4 = new QWidget(AddAccount);
+        layoutWidget4->setObjectName("layoutWidget4");
+        layoutWidget4->setGeometry(QRect(20, 310, 361, 78));
+        verticalLayout_6 = new QVBoxLayout(layoutWidget4);
         verticalLayout_6->setObjectName("verticalLayout_6");
         verticalLayout_6->setContentsMargins(0, 0, 0, 0);
-        NewUserUserNameErrorLabel = new QLabel(layoutWidget5);
+        NewUserUserNameErrorLabel = new QLabel(layoutWidget4);
         NewUserUserNameErrorLabel->setObjectName("NewUserUserNameErrorLabel");
         NewUserUserNameErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 14pt \"Segoe UI\";"));
+"font: 10pt \"Segoe UI\";"));
 
         verticalLayout_6->addWidget(NewUserUserNameErrorLabel);
 
-        NewUserUserName = new QLineEdit(layoutWidget5);
+        NewUserUserName = new QLineEdit(layoutWidget4);
         NewUserUserName->setObjectName("NewUserUserName");
         NewUserUserName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_6->addWidget(NewUserUserName);
 
-        layoutWidget6 = new QWidget(AddAccount);
-        layoutWidget6->setObjectName("layoutWidget6");
-        layoutWidget6->setGeometry(QRect(20, 410, 361, 78));
-        verticalLayout_7 = new QVBoxLayout(layoutWidget6);
+        layoutWidget5 = new QWidget(AddAccount);
+        layoutWidget5->setObjectName("layoutWidget5");
+        layoutWidget5->setGeometry(QRect(20, 410, 361, 78));
+        verticalLayout_7 = new QVBoxLayout(layoutWidget5);
         verticalLayout_7->setObjectName("verticalLayout_7");
         verticalLayout_7->setContentsMargins(0, 0, 0, 0);
-        NewUserPassWordErrorLabel = new QLabel(layoutWidget6);
+        NewUserPassWordErrorLabel = new QLabel(layoutWidget5);
         NewUserPassWordErrorLabel->setObjectName("NewUserPassWordErrorLabel");
         NewUserPassWordErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 14pt \"Segoe UI\";"));
+"font: 10pt \"Segoe UI\";"));
 
         verticalLayout_7->addWidget(NewUserPassWordErrorLabel);
 
-        NewUserPassWord = new QLineEdit(layoutWidget6);
+        NewUserPassWord = new QLineEdit(layoutWidget5);
         NewUserPassWord->setObjectName("NewUserPassWord");
         NewUserPassWord->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_7->addWidget(NewUserPassWord);
 
-        layoutWidget7 = new QWidget(AddAccount);
-        layoutWidget7->setObjectName("layoutWidget7");
-        layoutWidget7->setGeometry(QRect(410, 310, 351, 78));
-        verticalLayout_9 = new QVBoxLayout(layoutWidget7);
+        layoutWidget6 = new QWidget(AddAccount);
+        layoutWidget6->setObjectName("layoutWidget6");
+        layoutWidget6->setGeometry(QRect(410, 310, 351, 78));
+        verticalLayout_9 = new QVBoxLayout(layoutWidget6);
         verticalLayout_9->setObjectName("verticalLayout_9");
         verticalLayout_9->setContentsMargins(0, 0, 0, 0);
-        NewUserAgeErrorLabel = new QLabel(layoutWidget7);
+        NewUserAgeErrorLabel = new QLabel(layoutWidget6);
         NewUserAgeErrorLabel->setObjectName("NewUserAgeErrorLabel");
         NewUserAgeErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 14pt \"Segoe UI\";"));
+"font: 10pt \"Segoe UI\";"));
 
         verticalLayout_9->addWidget(NewUserAgeErrorLabel);
 
-        NewUserAge = new QLineEdit(layoutWidget7);
+        NewUserAge = new QLineEdit(layoutWidget6);
         NewUserAge->setObjectName("NewUserAge");
         NewUserAge->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_9->addWidget(NewUserAge);
 
-        layoutWidget8 = new QWidget(AddAccount);
-        layoutWidget8->setObjectName("layoutWidget8");
-        layoutWidget8->setGeometry(QRect(412, 410, 351, 78));
-        verticalLayout_10 = new QVBoxLayout(layoutWidget8);
+        layoutWidget7 = new QWidget(AddAccount);
+        layoutWidget7->setObjectName("layoutWidget7");
+        layoutWidget7->setGeometry(QRect(412, 410, 351, 78));
+        verticalLayout_10 = new QVBoxLayout(layoutWidget7);
         verticalLayout_10->setObjectName("verticalLayout_10");
         verticalLayout_10->setContentsMargins(0, 0, 0, 0);
-        NewUserBalanceErrorLabel = new QLabel(layoutWidget8);
+        NewUserBalanceErrorLabel = new QLabel(layoutWidget7);
         NewUserBalanceErrorLabel->setObjectName("NewUserBalanceErrorLabel");
         NewUserBalanceErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 14pt \"Segoe UI\";"));
+"font: 10pt \"Segoe UI\";"));
 
         verticalLayout_10->addWidget(NewUserBalanceErrorLabel);
 
-        NewUserBalance = new QLineEdit(layoutWidget8);
+        NewUserBalance = new QLineEdit(layoutWidget7);
         NewUserBalance->setObjectName("NewUserBalance");
         NewUserBalance->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_10->addWidget(NewUserBalance);
 
-        layoutWidget9 = new QWidget(AddAccount);
-        layoutWidget9->setObjectName("layoutWidget9");
-        layoutWidget9->setGeometry(QRect(411, 221, 351, 71));
-        verticalLayout_8 = new QVBoxLayout(layoutWidget9);
+        layoutWidget8 = new QWidget(AddAccount);
+        layoutWidget8->setObjectName("layoutWidget8");
+        layoutWidget8->setGeometry(QRect(411, 221, 351, 78));
+        verticalLayout_8 = new QVBoxLayout(layoutWidget8);
         verticalLayout_8->setObjectName("verticalLayout_8");
         verticalLayout_8->setContentsMargins(0, 0, 0, 0);
-        NewUserEmailErrorLabel = new QLabel(layoutWidget9);
+        NewUserEmailErrorLabel = new QLabel(layoutWidget8);
         NewUserEmailErrorLabel->setObjectName("NewUserEmailErrorLabel");
         NewUserEmailErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 14pt \"Segoe UI\";"));
+"font: 10pt \"Segoe UI\";"));
 
         verticalLayout_8->addWidget(NewUserEmailErrorLabel);
 
-        NewUserEmail = new QLineEdit(layoutWidget9);
+        NewUserEmail = new QLineEdit(layoutWidget8);
         NewUserEmail->setObjectName("NewUserEmail");
         NewUserEmail->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
-"font: 700 15pt \"Segoe UI\";"));
+"font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_8->addWidget(NewUserEmail);
 
+        pB_AddAccountConnectAgain = new QPushButton(AddAccount);
+        pB_AddAccountConnectAgain->setObjectName("pB_AddAccountConnectAgain");
+        pB_AddAccountConnectAgain->setGeometry(QRect(0, 0, 181, 71));
+        pB_AddAccountConnectAgain->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
+""));
         stackedWidget->addWidget(AddAccount);
         AdminViewTransactionHistory = new QWidget();
         AdminViewTransactionHistory->setObjectName("AdminViewTransactionHistory");
         label_5 = new QLabel(AdminViewTransactionHistory);
         label_5->setObjectName("label_5");
-        label_5->setGeometry(QRect(20, 30, 361, 141));
+        label_5->setGeometry(QRect(20, 50, 361, 141));
         label_5->setStyleSheet(QString::fromUtf8("font: 700 35pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);"));
         label_6 = new QLabel(AdminViewTransactionHistory);
         label_6->setObjectName("label_6");
-        label_6->setGeometry(QRect(430, 10, 291, 181));
+        label_6->setGeometry(QRect(510, 10, 221, 181));
         label_6->setPixmap(QPixmap(QString::fromUtf8(":/images/logo.png")));
         label_6->setScaledContents(true);
         layoutWidget_2 = new QWidget(AdminViewTransactionHistory);
@@ -781,40 +1110,98 @@ public:
         pBAdminViewTransactionView = new QPushButton(AdminViewTransactionHistory);
         pBAdminViewTransactionView->setObjectName("pBAdminViewTransactionView");
         pBAdminViewTransactionView->setGeometry(QRect(220, 500, 171, 71));
-        pBAdminViewTransactionView->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pBAdminViewTransactionView->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pBAdminViewTransactionBack = new QPushButton(AdminViewTransactionHistory);
         pBAdminViewTransactionBack->setObjectName("pBAdminViewTransactionBack");
         pBAdminViewTransactionBack->setGeometry(QRect(10, 500, 161, 71));
-        pBAdminViewTransactionBack->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pBAdminViewTransactionBack->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         AdTransactionHistorylistWidget = new QListWidget(AdminViewTransactionHistory);
         AdTransactionHistorylistWidget->setObjectName("AdTransactionHistorylistWidget");
         AdTransactionHistorylistWidget->setGeometry(QRect(430, 190, 321, 371));
         AdTransactionHistorylistWidget->setStyleSheet(QString::fromUtf8("font: 14pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);"));
+        pB_ViewTransactionHistoryConnectAgain = new QPushButton(AdminViewTransactionHistory);
+        pB_ViewTransactionHistoryConnectAgain->setObjectName("pB_ViewTransactionHistoryConnectAgain");
+        pB_ViewTransactionHistoryConnectAgain->setGeometry(QRect(10, 0, 201, 71));
+        pB_ViewTransactionHistoryConnectAgain->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
+""));
         stackedWidget->addWidget(AdminViewTransactionHistory);
         ViewBankDatabase = new QWidget();
         ViewBankDatabase->setObjectName("ViewBankDatabase");
@@ -831,18 +1218,32 @@ public:
         pB_ViewBankDatabaseBack = new QPushButton(ViewBankDatabase);
         pB_ViewBankDatabaseBack->setObjectName("pB_ViewBankDatabaseBack");
         pB_ViewBankDatabaseBack->setGeometry(QRect(30, 520, 141, 61));
-        pB_ViewBankDatabaseBack->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_ViewBankDatabaseBack->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         BankDataBaseTableWidget = new QTableWidget(ViewBankDatabase);
         BankDataBaseTableWidget->setObjectName("BankDataBaseTableWidget");
@@ -852,12 +1253,42 @@ public:
         BankDataBaseTableWidget->setAlternatingRowColors(false);
         BankDataBaseTableWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
         BankDataBaseTableWidget->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
+        pB_ViewBankDataBaseConnectAgain = new QPushButton(ViewBankDatabase);
+        pB_ViewBankDataBaseConnectAgain->setObjectName("pB_ViewBankDataBaseConnectAgain");
+        pB_ViewBankDataBaseConnectAgain->setGeometry(QRect(10, 10, 181, 71));
+        pB_ViewBankDataBaseConnectAgain->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
+""));
         stackedWidget->addWidget(ViewBankDatabase);
         UpdateClientAccount = new QWidget();
         UpdateClientAccount->setObjectName("UpdateClientAccount");
         label_28 = new QLabel(UpdateClientAccount);
         label_28->setObjectName("label_28");
-        label_28->setGeometry(QRect(30, 30, 371, 101));
+        label_28->setGeometry(QRect(30, 60, 371, 101));
         label_28->setStyleSheet(QString::fromUtf8("font: 700 35pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);"));
         label_29 = new QLabel(UpdateClientAccount);
@@ -867,82 +1298,140 @@ public:
         label_29->setScaledContents(true);
         UpdateAccountPassword = new QLineEdit(UpdateClientAccount);
         UpdateAccountPassword->setObjectName("UpdateAccountPassword");
-        UpdateAccountPassword->setGeometry(QRect(40, 440, 671, 44));
+        UpdateAccountPassword->setGeometry(QRect(40, 450, 671, 44));
         UpdateAccountPassword->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
         pB_ClientUpdateAccountBack = new QPushButton(UpdateClientAccount);
         pB_ClientUpdateAccountBack->setObjectName("pB_ClientUpdateAccountBack");
         pB_ClientUpdateAccountBack->setGeometry(QRect(50, 500, 121, 61));
-        pB_ClientUpdateAccountBack->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_ClientUpdateAccountBack->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pB_Update = new QPushButton(UpdateClientAccount);
         pB_Update->setObjectName("pB_Update");
         pB_Update->setGeometry(QRect(220, 500, 141, 61));
-        pB_Update->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pB_Update->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         UpdateAccountUserName = new QLineEdit(UpdateClientAccount);
         UpdateAccountUserName->setObjectName("UpdateAccountUserName");
-        UpdateAccountUserName->setGeometry(QRect(40, 230, 671, 44));
+        UpdateAccountUserName->setGeometry(QRect(40, 250, 671, 44));
         UpdateAccountUserName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
         UpdateAccountAge = new QLineEdit(UpdateClientAccount);
         UpdateAccountAge->setObjectName("UpdateAccountAge");
-        UpdateAccountAge->setGeometry(QRect(40, 290, 671, 44));
+        UpdateAccountAge->setGeometry(QRect(40, 310, 671, 44));
         UpdateAccountAge->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
         UpdateAccountFullName = new QLineEdit(UpdateClientAccount);
         UpdateAccountFullName->setObjectName("UpdateAccountFullName");
-        UpdateAccountFullName->setGeometry(QRect(40, 170, 671, 44));
+        UpdateAccountFullName->setGeometry(QRect(40, 190, 671, 44));
         UpdateAccountFullName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
-        layoutWidget10 = new QWidget(UpdateClientAccount);
-        layoutWidget10->setObjectName("layoutWidget10");
-        layoutWidget10->setGeometry(QRect(40, 350, 671, 78));
-        verticalLayout_37 = new QVBoxLayout(layoutWidget10);
+        layoutWidget9 = new QWidget(UpdateClientAccount);
+        layoutWidget9->setObjectName("layoutWidget9");
+        layoutWidget9->setGeometry(QRect(40, 360, 671, 78));
+        verticalLayout_37 = new QVBoxLayout(layoutWidget9);
         verticalLayout_37->setObjectName("verticalLayout_37");
         verticalLayout_37->setContentsMargins(0, 0, 0, 0);
-        UpdateEmailErrorLabel = new QLabel(layoutWidget10);
+        UpdateEmailErrorLabel = new QLabel(layoutWidget9);
         UpdateEmailErrorLabel->setObjectName("UpdateEmailErrorLabel");
         UpdateEmailErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 14pt \"Segoe UI\";"));
 
         verticalLayout_37->addWidget(UpdateEmailErrorLabel);
 
-        UpdateAccountEmail = new QLineEdit(layoutWidget10);
+        UpdateAccountEmail = new QLineEdit(layoutWidget9);
         UpdateAccountEmail->setObjectName("UpdateAccountEmail");
         UpdateAccountEmail->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_37->addWidget(UpdateAccountEmail);
 
+        pB_UpdateAccountConnectAgain = new QPushButton(UpdateClientAccount);
+        pB_UpdateAccountConnectAgain->setObjectName("pB_UpdateAccountConnectAgain");
+        pB_UpdateAccountConnectAgain->setGeometry(QRect(10, 10, 181, 71));
+        pB_UpdateAccountConnectAgain->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
+""));
         stackedWidget->addWidget(UpdateClientAccount);
         ViewMyHistory = new QWidget();
         ViewMyHistory->setObjectName("ViewMyHistory");
         label_10 = new QLabel(ViewMyHistory);
         label_10->setObjectName("label_10");
-        label_10->setGeometry(QRect(20, 20, 471, 151));
+        label_10->setGeometry(QRect(20, 60, 471, 151));
         label_10->setStyleSheet(QString::fromUtf8("font: 700 35pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);"));
         label_11 = new QLabel(ViewMyHistory);
@@ -953,60 +1442,118 @@ public:
         pb_ViewMyHistoryBack = new QPushButton(ViewMyHistory);
         pb_ViewMyHistoryBack->setObjectName("pb_ViewMyHistoryBack");
         pb_ViewMyHistoryBack->setGeometry(QRect(20, 490, 131, 71));
-        pb_ViewMyHistoryBack->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pb_ViewMyHistoryBack->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         pb_ViewMyHistoryView = new QPushButton(ViewMyHistory);
         pb_ViewMyHistoryView->setObjectName("pb_ViewMyHistoryView");
         pb_ViewMyHistoryView->setGeometry(QRect(200, 490, 141, 71));
-        pb_ViewMyHistoryView->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; \n"
-"font: 700 20pt \"Segoe UI\";\n"
-"        border: none;\n"
-"                   color: white;\n"
-"                   padding: 15px 20px;\n"
-"                   text-align: center;\n"
-"                   text-decoration: none;\n"
-"                   display: inline-block;\n"
-"                   font-size: 20px;\n"
-"                   margin: 4px 2px;\n"
-"                   border-radius: 20px; \n"
+        pb_ViewMyHistoryView->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
 "\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
 ""));
         ClientTransactionHistoryListWidget = new QListWidget(ViewMyHistory);
         ClientTransactionHistoryListWidget->setObjectName("ClientTransactionHistoryListWidget");
         ClientTransactionHistoryListWidget->setGeometry(QRect(390, 170, 381, 401));
         ClientTransactionHistoryListWidget->setStyleSheet(QString::fromUtf8("font: 14pt \"Segoe UI\";\n"
 "color: rgb(255, 255, 255);"));
-        layoutWidget11 = new QWidget(ViewMyHistory);
-        layoutWidget11->setObjectName("layoutWidget11");
-        layoutWidget11->setGeometry(QRect(10, 240, 361, 78));
-        verticalLayout_13 = new QVBoxLayout(layoutWidget11);
+        layoutWidget10 = new QWidget(ViewMyHistory);
+        layoutWidget10->setObjectName("layoutWidget10");
+        layoutWidget10->setGeometry(QRect(10, 240, 361, 78));
+        verticalLayout_13 = new QVBoxLayout(layoutWidget10);
         verticalLayout_13->setObjectName("verticalLayout_13");
         verticalLayout_13->setContentsMargins(0, 0, 0, 0);
-        ClientViewHistoryCountErrorLabel = new QLabel(layoutWidget11);
+        ClientViewHistoryCountErrorLabel = new QLabel(layoutWidget10);
         ClientViewHistoryCountErrorLabel->setObjectName("ClientViewHistoryCountErrorLabel");
         ClientViewHistoryCountErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 14pt \"Segoe UI\";"));
 
         verticalLayout_13->addWidget(ClientViewHistoryCountErrorLabel);
 
-        lE_ClientViewHistoryCount = new QLineEdit(layoutWidget11);
+        lE_ClientViewHistoryCount = new QLineEdit(layoutWidget10);
         lE_ClientViewHistoryCount->setObjectName("lE_ClientViewHistoryCount");
         lE_ClientViewHistoryCount->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_13->addWidget(lE_ClientViewHistoryCount);
 
+        pB_ViewClientTransactionHistoryConnectAgain = new QPushButton(ViewMyHistory);
+        pB_ViewClientTransactionHistoryConnectAgain->setObjectName("pB_ViewClientTransactionHistoryConnectAgain");
+        pB_ViewClientTransactionHistoryConnectAgain->setGeometry(QRect(10, 10, 201, 71));
+        pB_ViewClientTransactionHistoryConnectAgain->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+"    background-color: #4CAF50;\n"
+"    font: 700 20pt \"Segoe UI\";\n"
+"    border: 2px solid #4CAF50; /* Add a border */\n"
+"    color: white;\n"
+"    padding: 15px 20px;\n"
+"    text-align: center;\n"
+"    text-decoration: none;\n"
+"    display: inline-block;\n"
+"    font-size: 20px;\n"
+"    margin: 4px 2px;\n"
+"    border-radius: 20px;\n"
+"    outline: none; /* Remove the default focus outline */\n"
+"    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */\n"
+"}\n"
+"\n"
+"QPushButton:hover {\n"
+"    background-color: #45a049; /* Darken the background on hover */\n"
+"    border-color: #45a049; /* Darken the border on hover */\n"
+"}\n"
+"\n"
+"QPushButton:pressed {\n"
+"    background-color: #388e3c; /* Darker green color when pressed */\n"
+"    border-color: #388e3c; /* Darker border color when pressed */\n"
+"    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
+"}\n"
+""));
         stackedWidget->addWidget(ViewMyHistory);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -1037,7 +1584,7 @@ public:
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, ClientTransactionHistoryListWidget, qOverload<>(&QListWidget::clear));
         QObject::connect(pBAdminViewTransactionBack, &QPushButton::clicked, AdTransactionHistorylistWidget, qOverload<>(&QListWidget::clear));
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1064,6 +1611,7 @@ public:
         pB_AdminViewTransactionHistory->setText(QCoreApplication::translate("MainWindow", "View Client Transaction History", nullptr));
         pB_ViewBankDatabase->setText(QCoreApplication::translate("MainWindow", "View Bank Database", nullptr));
         pB_UpdateClientAccount->setText(QCoreApplication::translate("MainWindow", "Update Client Account", nullptr));
+        pB_AdminConnectAgain->setText(QCoreApplication::translate("MainWindow", "Connect again", nullptr));
         Userlabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Client</p></body></html>", nullptr));
         label_9->setText(QString());
         pB_ClientGetAccountNumber->setText(QCoreApplication::translate("MainWindow", "Get My Account Number", nullptr));
@@ -1072,6 +1620,7 @@ public:
         pB_MakeTransaction->setText(QCoreApplication::translate("MainWindow", "Make Transaction", nullptr));
         pBClientLogout->setText(QCoreApplication::translate("MainWindow", "logout", nullptr));
         pB_ClientTransferMoney->setText(QCoreApplication::translate("MainWindow", "Transfer Money", nullptr));
+        pB_ClientConnectAgain->setText(QCoreApplication::translate("MainWindow", "Connect again", nullptr));
         AddAccountlabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">ADD ACCOUNT</p></body></html>", nullptr));
         pBCreateAccount->setText(QCoreApplication::translate("MainWindow", "Create Client Accout", nullptr));
         pBAddAccoutBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
@@ -1082,25 +1631,30 @@ public:
         NewUserAgeErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         NewUserBalanceErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         NewUserEmailErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        pB_AddAccountConnectAgain->setText(QCoreApplication::translate("MainWindow", "Connect again", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">ViewTransaction</p><p align=\"center\">History</p></body></html>", nullptr));
         label_6->setText(QString());
         AdminViewHistoryAccountNumberErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         AdminViewHistoryCountErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
         pBAdminViewTransactionView->setText(QCoreApplication::translate("MainWindow", "View", nullptr));
         pBAdminViewTransactionBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        pB_ViewTransactionHistoryConnectAgain->setText(QCoreApplication::translate("MainWindow", "Connect again", nullptr));
         label_7->setText(QString());
         label_8->setText(QCoreApplication::translate("MainWindow", "View Bank Database", nullptr));
         pB_ViewBankDatabaseBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
+        pB_ViewBankDataBaseConnectAgain->setText(QCoreApplication::translate("MainWindow", "Connect again", nullptr));
         label_28->setText(QCoreApplication::translate("MainWindow", "Update Account", nullptr));
         label_29->setText(QString());
         pB_ClientUpdateAccountBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         pB_Update->setText(QCoreApplication::translate("MainWindow", "Update", nullptr));
         UpdateEmailErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        pB_UpdateAccountConnectAgain->setText(QCoreApplication::translate("MainWindow", "Connect again", nullptr));
         label_10->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">View My Transaction</p><p align=\"center\">History</p></body></html>", nullptr));
         label_11->setText(QString());
         pb_ViewMyHistoryBack->setText(QCoreApplication::translate("MainWindow", "Back", nullptr));
         pb_ViewMyHistoryView->setText(QCoreApplication::translate("MainWindow", "View", nullptr));
         ClientViewHistoryCountErrorLabel->setText(QCoreApplication::translate("MainWindow", "TextLabel", nullptr));
+        pB_ViewClientTransactionHistoryConnectAgain->setText(QCoreApplication::translate("MainWindow", "Connect again", nullptr));
     } // retranslateUi
 
 };

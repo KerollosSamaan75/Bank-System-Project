@@ -42,11 +42,14 @@ QString ServerHandler::generateSignature(const QString& message, const QString& 
 {
     QByteArray data = message.toUtf8() + secretKey.toUtf8();
     QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
+    logger.logMessage("Server generate signature to received request");
     return QString(hash.toHex());
 }
 
-bool ServerHandler::verifySignature(const QString& message, const QString& receivedSignature, const QString& secretKey) {
+bool ServerHandler::verifySignature(const QString& message, const QString& receivedSignature, const QString& secretKey)
+{
     QString generatedSignature = generateSignature(message, secretKey);
+    logger.logMessage("Server compare between generated signature and received signature ");
     return generatedSignature == receivedSignature;
 }
 
@@ -70,7 +73,7 @@ void ServerHandler::onReadyRead()
         logger.logMessage("Invalid frame: No colon found."); // Log error if no colon found
         return;
     }
-
+    logger.logMessage("Checking frame size .....");
     bool ok;
     int frameSize = QString(decryptedData.left(colonIndex)).toInt(&ok); // Get frame size
     if (!ok || frameSize <= 0)
@@ -94,7 +97,7 @@ void ServerHandler::onReadyRead()
         logger.logMessage("Invalid frame: Failed to parse JSON."); // Log error if failed to parse JSON
         return;
     }
-
+    logger.logMessage("Checking request data size .....");
     QJsonObject jsonObj = jsonDoc.object(); // Get JSON object
     QString requestsizeStr = jsonObj["RequestSize"].toString(); // Get request size from JSON
     int requestSize = requestsizeStr.toInt(&ok); // Convert request size to integer
@@ -112,8 +115,8 @@ void ServerHandler::onReadyRead()
         return;
     }
 
+    logger.logMessage("Checking request signature .....");
     QString receivedSignature = jsonObj["Signature"].toString(); // Get the signature from JSON
-
     // Retrieve the secret key from environment variables
     QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
     QString secretKey = env.value("SECRET_KEY");
@@ -131,10 +134,9 @@ void ServerHandler::onReadyRead()
         logger.logMessage("Invalid signature: Dropping the request.");
         return;
     }
-
-
+    logger.logMessage("Received signature = Generated signature");
     // Log the valid request
-    statusMessage = QString("Server processing request from User:%1 Request => %2").arg(userID).arg(requestData);
+    statusMessage = QString("Now:Server processing request from User:%1 Request => %2").arg(userID).arg(requestData);
     logger.logMessage(statusMessage); // Log processing of request
 
     // Process the operation with the valid request data

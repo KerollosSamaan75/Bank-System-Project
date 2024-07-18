@@ -35,8 +35,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->NewUserAge->setPlaceholderText("Enter your age");
     ui->NewUserEmail->setPlaceholderText("Enter your email");
     ui->NewUserBalance->setPlaceholderText("Enter your balance");
-    ui->NewUserAge->setValidator(new QIntValidator(0, 150, this)); // Age between 0 and 150
-    ui->NewUserBalance->setValidator(new QDoubleValidator(0, 1000000, 2, this)); // Balance up to 1,000,000 with 2 decimal places
+    ui->NewUserAge->setValidator(new QIntValidator(0, 99, this)); // Age between 0 and 99
+    ui->NewUserBalance->setValidator(new QIntValidator(0, 1000000, this));
 
     ui->AdminViewHistoryAccountNumberErrorLabel->setVisible(false);
     ui->AdminViewHistoryCountErrorLabel->setVisible(false);
@@ -48,13 +48,17 @@ MainWindow::MainWindow(QWidget *parent)
     ui->UpdateAccountAge->setPlaceholderText("Enter your age");
     ui->UpdateAccountEmail->setPlaceholderText("Enter your email");
     ui->UpdateAccountPassword->setPlaceholderText("Enter your password");
-    ui->UpdateAccountAge->setValidator(new QIntValidator(0, 150, this)); // Age between 0 and 150
+    ui->UpdateAccountAge->setValidator(new QIntValidator(0, 99, this)); // Age between 0 and 99
     ui->UpdateEmailErrorLabel->setVisible(false);
+    ui->UpdateFullNameErrorLabel->setVisible(false);
+    ui->UpdatePasswordErrorLabel->setVisible(false);
+    ui->UpdateUserNameErrorLabel->setVisible(false);
+    ui->UpdateAgeErrorLabel->setVisible(false);
+
 
     ui->lE_ClientViewHistoryCount->setPlaceholderText("Enter your history count");
     ui->ClientViewHistoryCountErrorLabel->setVisible(false);
 
-   // SystemUser.ConnectToServer("192.168.1.17",1234);
 }
 
 MainWindow::~MainWindow()
@@ -333,12 +337,11 @@ void MainWindow::on_pBCreateAccount_clicked()
         ui->NewUserUserNameErrorLabel->setVisible(false);
     }
 
-    // Check if password is empty or does not meet complexity requirements
-    QRegularExpression passwordRegex("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]+$"); // Regex for password complexity
+    QRegularExpression passwordRegex("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"); // Regex for password complexity
     QRegularExpressionMatch passwordMatch = passwordRegex.match(ui->NewUserPassWord->text());
     if (ui->NewUserPassWord->text().isEmpty() || !passwordMatch.hasMatch())
     {
-        ui->NewUserPassWordErrorLabel->setText("Password is required without spaces\nMust contain alphabetical characters, digits, and symbols.");
+        ui->NewUserPassWordErrorLabel->setText("Password must be at least 8 characters long\ninclude at least one letter,one number,and one special char.");
         ui->NewUserPassWordErrorLabel->setVisible(true);
         valid = false;
     }
@@ -348,9 +351,9 @@ void MainWindow::on_pBCreateAccount_clicked()
     }
 
     // Check if age is empty
-    if (ui->NewUserAge->text().isEmpty())
+    if (ui->NewUserAge->text().isEmpty() || (ui->NewUserAge->text().toInt()) < 18)
     {
-        ui->NewUserAgeErrorLabel->setText("Valid age is required.");
+        ui->NewUserAgeErrorLabel->setText("Valid age is required.must be 18 or more");
         ui->NewUserAgeErrorLabel->setVisible(true);
         valid = false;
     }
@@ -550,6 +553,7 @@ void MainWindow::on_pB_ClientUpdateAccountBack_clicked()
 
 void MainWindow::on_pB_Update_clicked()
 {
+    bool valid = true;
 
     QString fullName = ui->UpdateAccountFullName->text();
     QString userName = ui->UpdateAccountUserName->text();
@@ -557,27 +561,132 @@ void MainWindow::on_pB_Update_clicked()
     int age = ui->UpdateAccountAge->text().toInt();
     QString email = ui->UpdateAccountEmail->text();
 
-    // Check if email is not valid
-    QRegularExpression emailRegex("^[\\w\\.]+@[\\w\\.]+\\.[a-zA-Z]{2,}$");
-    QRegularExpressionMatch match = emailRegex.match(email);
-    if(email.isEmpty())
+    // Full name validation
+    QRegularExpression nameRegex("^[a-zA-Z ]{5,}$"); // Regex for alphabetical characters, spaces, and minimum length of 5
+    QRegularExpressionMatch nameMatch = nameRegex.match(fullName);
+    if (!fullName.isEmpty() && !nameMatch.hasMatch())
     {
-        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(clientAccountNumber);
-        SystemUser.SendRequest(message);
+        ui->UpdateFullNameErrorLabel->setText("Full name must contain only alphabetical characters and be at least 5 characters long.");
+        ui->UpdateFullNameErrorLabel->setVisible(true);
+        valid = false;
     }
-    else if (!match.hasMatch())
+    else
+    {
+        ui->UpdateFullNameErrorLabel->setVisible(false);
+    }
+
+    // Username validation
+    QRegularExpression usernameRegex("^(?=.*[a-zA-Z])(?=.*\\d)[a-zA-Z0-9]+$"); // Regex for at least one alphabetical character and one digit
+    QRegularExpressionMatch usernameMatch = usernameRegex.match(userName);
+    if (!userName.isEmpty() && !usernameMatch.hasMatch())
+    {
+        ui->UpdateUserNameErrorLabel->setText("Username must contain both alphabetical characters and digits, and no spaces.");
+        ui->UpdateUserNameErrorLabel->setVisible(true);
+        valid = false;
+    }
+    else
+    {
+        ui->UpdateUserNameErrorLabel->setVisible(false);
+    }
+
+    // Password validation
+    QRegularExpression passwordRegex("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,}$"); // Regex for password complexity
+    QRegularExpressionMatch passwordMatch = passwordRegex.match(passWord);
+    if (!passWord.isEmpty() && !passwordMatch.hasMatch())
+    {
+        ui->UpdatePasswordErrorLabel->setText("Password must be at least 8 characters long and include at least one letter, one number, and one special character.");
+        ui->UpdatePasswordErrorLabel->setVisible(true);
+        valid = false;
+    }
+    else
+    {
+        ui->UpdatePasswordErrorLabel->setVisible(false);
+    }
+
+    // Age validation
+    if (!ui->UpdateAccountAge->text().isEmpty() && age < 18)
+    {
+        ui->UpdateAgeErrorLabel->setText("Valid age is required.must be 18 or more");
+        ui->UpdateAgeErrorLabel->setVisible(true);
+        valid = false;
+    }
+    else
+    {
+        ui->UpdateAgeErrorLabel->setVisible(false);
+    }
+
+    // Email validation
+    QRegularExpression emailRegex("^[\\w\\.]+@[\\w\\.]+\\.[a-zA-Z]{2,}$");
+    QRegularExpressionMatch emailMatch = emailRegex.match(email);
+    if (!email.isEmpty() && !emailMatch.hasMatch())
     {
         ui->UpdateEmailErrorLabel->setText("Valid email is required.");
         ui->UpdateEmailErrorLabel->setVisible(true);
+        valid = false;
     }
     else
     {
         ui->UpdateEmailErrorLabel->setVisible(false);
-        QString message = QString("UpdateAccount:%1:%2:%3:%4:%5:%6").arg(fullName).arg(userName).arg(passWord).arg(age).arg(email).arg(clientAccountNumber);
-        SystemUser.SendRequest(message);
     }
 
+
+    if (valid)
+    {
+        QString message = "UpdateAccount";
+
+        // Add only the updated fields to the message
+        if (!fullName.isEmpty())
+        {
+            message.append(QString(":%1").arg(fullName));
+        }
+        else
+        {
+            message.append(":");
+        }
+
+        if (!userName.isEmpty())
+        {
+            message.append(QString(":%1").arg(userName));
+        }
+        else
+        {
+            message.append(":");
+        }
+
+        if (!passWord.isEmpty())
+        {
+            message.append(QString(":%1").arg(passWord));
+        }
+        else
+        {
+            message.append(":");
+        }
+
+        if (age > 0)
+        {
+            message.append(QString(":%1").arg(age));
+        }
+        else
+        {
+            message.append(":");
+        }
+
+        if (!email.isEmpty())
+        {
+            message.append(QString(":%1").arg(email));
+        }
+        else
+        {
+            message.append(":");
+        }
+
+        // Add client account number to the message
+        message.append(QString(":%1").arg(clientAccountNumber));
+
+        SystemUser.SendRequest(message);
+    }
 }
+
 
 
 void MainWindow::on_pB_ClientGetAccountNumber_clicked()

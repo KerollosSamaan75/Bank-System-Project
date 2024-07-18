@@ -119,8 +119,7 @@ compiler_rcc_clean:
 	-$(DEL_FILE) debug\qrc_resources.cpp
 debug/qrc_resources.cpp: ../../resources.qrc \
 		C:/Qt/6.7.1/mingw_64/bin/rcc.exe \
-		../../logo.png \
-		../../_838c014b-adec-486b-935b-cbcbc715eab1.jpeg
+		../../logo.png
 	C:\Qt\6.7.1\mingw_64\bin\rcc.exe -name resources --no-zstd ..\..\resources.qrc -o debug\qrc_resources.cpp
 
 compiler_moc_predefs_make_all: debug/moc_predefs.h
@@ -503,6 +502,9 @@ debug/moc_mainwindow.cpp: ../../mainwindow.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsondocument.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.7.1/mingw_64/include/QtGui/QStandardItemModel \
+		C:/Qt/6.7.1/mingw_64/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qabstractitemmodel.h \
 		../../User.h \
 		C:/Qt/6.7.1/mingw_64/include/QtNetwork/QTcpSocket \
 		C:/Qt/6.7.1/mingw_64/include/QtNetwork/qtcpsocket.h \
@@ -1022,6 +1024,9 @@ debug/main.o: ../../main.cpp ../../mainwindow.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsondocument.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.7.1/mingw_64/include/QtGui/QStandardItemModel \
+		C:/Qt/6.7.1/mingw_64/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qabstractitemmodel.h \
 		../../User.h \
 		C:/Qt/6.7.1/mingw_64/include/QtNetwork/QTcpSocket \
 		C:/Qt/6.7.1/mingw_64/include/QtNetwork/qtcpsocket.h \
@@ -1263,6 +1268,9 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsondocument.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/QJsonObject \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qjsonobject.h \
+		C:/Qt/6.7.1/mingw_64/include/QtGui/QStandardItemModel \
+		C:/Qt/6.7.1/mingw_64/include/QtGui/qstandarditemmodel.h \
+		C:/Qt/6.7.1/mingw_64/include/QtCore/qabstractitemmodel.h \
 		../../User.h \
 		C:/Qt/6.7.1/mingw_64/include/QtNetwork/QTcpSocket \
 		C:/Qt/6.7.1/mingw_64/include/QtNetwork/qtcpsocket.h \
@@ -1293,7 +1301,6 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/qheaderview.h \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/qabstractitemview.h \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/6.7.1/mingw_64/include/QtCore/qabstractitemmodel.h \
 		C:/Qt/6.7.1/mingw_64/include/QtCore/qitemselectionmodel.h \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/qstyleoption.h \
@@ -1319,8 +1326,7 @@ debug/mainwindow.o: ../../mainwindow.cpp ../../mainwindow.h \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/qstackedwidget.h \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/QStatusBar \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/qstatusbar.h \
-		C:/Qt/6.7.1/mingw_64/include/QtWidgets/QTableWidget \
-		C:/Qt/6.7.1/mingw_64/include/QtWidgets/qtablewidget.h \
+		C:/Qt/6.7.1/mingw_64/include/QtWidgets/QTableView \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/qtableview.h \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/QVBoxLayout \
 		C:/Qt/6.7.1/mingw_64/include/QtWidgets/qboxlayout.h \

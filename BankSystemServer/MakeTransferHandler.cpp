@@ -13,27 +13,18 @@ void MakeTransferHandler::execute(const QStringList &RequestParts, QString &stat
     QString targetAccountNumber = RequestParts[2]; // Extract target account number from RequestParts
     QString amountStr = RequestParts[3]; // Extract transfer amount from RequestParts
 
-    // Validate that the account numbers are digits only
-    QRegularExpression accountNumberRegex("^\\d+$");
-    if (!accountNumberRegex.match(sourceAccountNumber).hasMatch() || !accountNumberRegex.match(targetAccountNumber).hasMatch())
+    // Ensure source and target account numbers are not the same
+    if (sourceAccountNumber == targetAccountNumber)
     {
-        statusMessage = "Invalid account number format."; // Validate account number format
+        statusMessage = "Source and target account numbers cannot be the same."; // Prevent transfer between same accounts
         return;
     }
 
-    // Validate the amount
     bool isNumber;
     int amount = amountStr.toInt(&isNumber); // Convert amount to integer
     if (!isNumber || amount <= 0)
     {
         statusMessage = "Invalid transfer amount."; // Handle invalid transfer amount
-        return;
-    }
-
-    // Ensure source and target account numbers are not the same
-    if (sourceAccountNumber == targetAccountNumber)
-    {
-        statusMessage = "Source and target account numbers cannot be the same."; // Prevent transfer between same accounts
         return;
     }
 
@@ -46,7 +37,7 @@ void MakeTransferHandler::execute(const QStringList &RequestParts, QString &stat
     }
     else
     {
-        statusMessage = QString("TransferResult:Transfer failure. Insufficient balance."); // Handle transfer failure
+        statusMessage = QString("TransferResult:Transfer failure.\nInsufficient balance or Invalid target account number."); // Handle transfer failure
     }
 }
 

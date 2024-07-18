@@ -10,7 +10,7 @@ Logger::~Logger() {} // Destructor for Logger class
 
 void Logger::logMessage(const QString &message)
 {
-    QFile file("D:\\ITIDA_WorkSpace\\Qt_Sessions\\Final Project\\BankSystemServer\\Serverlog.log");  // Specify the log file path
+    QFile file("..\\..\\Serverlog.log");  // Specify the log file path
     if (file.open(QIODevice::Append | QIODevice::Text))
     {
         QTextStream out(&file); // QTextStream object for writing to the file

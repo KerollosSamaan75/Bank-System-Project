@@ -1,0 +1,24 @@
+[
+    {
+        "AccountNumber": null,
+        "Age": "26",
+        "Authority": "Admin",
+        "Balance": null,
+        "Email": "kerosamaan07@gmail.com",
+        "FullName": "Kirollos Samaan",
+        "Login": "0",
+        "Password": "kero*7579",
+        "Username": "Kero75"
+    },
+    {
+        "AccountNumber": "440198667",
+        "Age": "25",
+        "Authority": "Client",
+        "Balance": "2000",
+        "Email": "kiro.samaan.kodoos@gmail.com",
+        "FullName": "sharple samaan",
+        "Login": "0",
+        "Password": "sharple@222",
+        "Username": "sharple2011"
+    }
+]

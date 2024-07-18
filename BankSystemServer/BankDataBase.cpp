@@ -2,8 +2,8 @@
 
 BankDataBase::BankDataBase(QObject *parent)
     : QObject{parent},
-    mainDatabaseFilePath{"D:\\ITIDA_WorkSpace\\Qt_Sessions\\Final Project\\BankSystemServer\\mainDataBase.json"},
-    transactionFilePath{"D:\\ITIDA_WorkSpace\\Qt_Sessions\\Final Project\\BankSystemServer\\transactionDataBase.json"}
+    mainDatabaseFilePath{"..\\..\\mainDataBase.json"},
+    transactionFilePath{"..\\..\\transactionDataBase.json"}
 {}
 
 void BankDataBase::initializeMainDatabase()

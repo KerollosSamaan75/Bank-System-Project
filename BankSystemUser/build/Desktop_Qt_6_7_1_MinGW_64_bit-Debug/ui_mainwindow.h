@@ -23,7 +23,7 @@
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -118,14 +118,14 @@ public:
     QLineEdit *lE_AdminViewHistoryCount;
     QPushButton *pBAdminViewTransactionView;
     QPushButton *pBAdminViewTransactionBack;
-    QListWidget *AdTransactionHistorylistWidget;
     QPushButton *pB_ViewTransactionHistoryConnectAgain;
+    QTableView *AdTransactionHistoryTableView;
     QWidget *ViewBankDatabase;
     QLabel *label_7;
     QLabel *label_8;
     QPushButton *pB_ViewBankDatabaseBack;
-    QTableWidget *BankDataBaseTableWidget;
     QPushButton *pB_ViewBankDataBaseConnectAgain;
+    QTableView *BankDataBaseTableView;
     QWidget *UpdateClientAccount;
     QLabel *label_28;
     QLabel *label_29;
@@ -145,12 +145,12 @@ public:
     QLabel *label_11;
     QPushButton *pb_ViewMyHistoryBack;
     QPushButton *pb_ViewMyHistoryView;
-    QListWidget *ClientTransactionHistoryListWidget;
     QWidget *layoutWidget10;
     QVBoxLayout *verticalLayout_13;
     QLabel *ClientViewHistoryCountErrorLabel;
     QLineEdit *lE_ClientViewHistoryCount;
     QPushButton *pB_ViewClientTransactionHistoryConnectAgain;
+    QTableView *ClientTransactionHistoryTableView;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -379,7 +379,7 @@ public:
 ""));
         pB_AdminGetAccountNumber = new QPushButton(Admin);
         pB_AdminGetAccountNumber->setObjectName("pB_AdminGetAccountNumber");
-        pB_AdminGetAccountNumber->setGeometry(QRect(410, 370, 341, 81));
+        pB_AdminGetAccountNumber->setGeometry(QRect(400, 370, 351, 81));
         pB_AdminGetAccountNumber->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    font: 700 20pt \"Segoe UI\";\n"
@@ -474,7 +474,7 @@ public:
 ""));
         pB_AdminGetAccountBalance = new QPushButton(Admin);
         pB_AdminGetAccountBalance->setObjectName("pB_AdminGetAccountBalance");
-        pB_AdminGetAccountBalance->setGeometry(QRect(410, 190, 341, 81));
+        pB_AdminGetAccountBalance->setGeometry(QRect(400, 190, 351, 81));
         pB_AdminGetAccountBalance->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    font: 700 20pt \"Segoe UI\";\n"
@@ -504,7 +504,7 @@ public:
 ""));
         pB_AdminViewTransactionHistory = new QPushButton(Admin);
         pB_AdminViewTransactionHistory->setObjectName("pB_AdminViewTransactionHistory");
-        pB_AdminViewTransactionHistory->setGeometry(QRect(410, 280, 341, 81));
+        pB_AdminViewTransactionHistory->setGeometry(QRect(400, 280, 351, 81));
         pB_AdminViewTransactionHistory->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    font: 700 20pt \"Segoe UI\";\n"
@@ -564,7 +564,7 @@ public:
 ""));
         pB_UpdateClientAccount = new QPushButton(Admin);
         pB_UpdateClientAccount->setObjectName("pB_UpdateClientAccount");
-        pB_UpdateClientAccount->setGeometry(QRect(410, 460, 341, 81));
+        pB_UpdateClientAccount->setGeometry(QRect(400, 460, 351, 81));
         pB_UpdateClientAccount->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    font: 700 20pt \"Segoe UI\";\n"
@@ -1069,7 +1069,7 @@ public:
         label_6->setScaledContents(true);
         layoutWidget_2 = new QWidget(AdminViewTransactionHistory);
         layoutWidget_2->setObjectName("layoutWidget_2");
-        layoutWidget_2->setGeometry(QRect(20, 240, 361, 78));
+        layoutWidget_2->setGeometry(QRect(40, 240, 361, 78));
         verticalLayout_11 = new QVBoxLayout(layoutWidget_2);
         verticalLayout_11->setObjectName("verticalLayout_11");
         verticalLayout_11->setContentsMargins(0, 0, 0, 0);
@@ -1089,7 +1089,7 @@ public:
 
         layoutWidget_3 = new QWidget(AdminViewTransactionHistory);
         layoutWidget_3->setObjectName("layoutWidget_3");
-        layoutWidget_3->setGeometry(QRect(20, 360, 361, 78));
+        layoutWidget_3->setGeometry(QRect(40, 360, 361, 78));
         verticalLayout_12 = new QVBoxLayout(layoutWidget_3);
         verticalLayout_12->setObjectName("verticalLayout_12");
         verticalLayout_12->setContentsMargins(0, 0, 0, 0);
@@ -1139,7 +1139,7 @@ public:
 ""));
         pBAdminViewTransactionBack = new QPushButton(AdminViewTransactionHistory);
         pBAdminViewTransactionBack->setObjectName("pBAdminViewTransactionBack");
-        pBAdminViewTransactionBack->setGeometry(QRect(10, 500, 161, 71));
+        pBAdminViewTransactionBack->setGeometry(QRect(40, 500, 161, 71));
         pBAdminViewTransactionBack->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    font: 700 20pt \"Segoe UI\";\n"
@@ -1167,11 +1167,6 @@ public:
 "    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
 "}\n"
 ""));
-        AdTransactionHistorylistWidget = new QListWidget(AdminViewTransactionHistory);
-        AdTransactionHistorylistWidget->setObjectName("AdTransactionHistorylistWidget");
-        AdTransactionHistorylistWidget->setGeometry(QRect(430, 190, 321, 371));
-        AdTransactionHistorylistWidget->setStyleSheet(QString::fromUtf8("font: 14pt \"Segoe UI\";\n"
-"color: rgb(255, 255, 255);"));
         pB_ViewTransactionHistoryConnectAgain = new QPushButton(AdminViewTransactionHistory);
         pB_ViewTransactionHistoryConnectAgain->setObjectName("pB_ViewTransactionHistoryConnectAgain");
         pB_ViewTransactionHistoryConnectAgain->setGeometry(QRect(10, 0, 201, 71));
@@ -1202,6 +1197,11 @@ public:
 "    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
 "}\n"
 ""));
+        AdTransactionHistoryTableView = new QTableView(AdminViewTransactionHistory);
+        AdTransactionHistoryTableView->setObjectName("AdTransactionHistoryTableView");
+        AdTransactionHistoryTableView->setGeometry(QRect(445, 200, 311, 371));
+        AdTransactionHistoryTableView->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"font: 700 10pt \"Segoe UI\";"));
         stackedWidget->addWidget(AdminViewTransactionHistory);
         ViewBankDatabase = new QWidget();
         ViewBankDatabase->setObjectName("ViewBankDatabase");
@@ -1245,14 +1245,6 @@ public:
 "    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
 "}\n"
 ""));
-        BankDataBaseTableWidget = new QTableWidget(ViewBankDatabase);
-        BankDataBaseTableWidget->setObjectName("BankDataBaseTableWidget");
-        BankDataBaseTableWidget->setGeometry(QRect(15, 170, 751, 341));
-        BankDataBaseTableWidget->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
-"font: 700 10pt \"Segoe UI\";"));
-        BankDataBaseTableWidget->setAlternatingRowColors(false);
-        BankDataBaseTableWidget->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
-        BankDataBaseTableWidget->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
         pB_ViewBankDataBaseConnectAgain = new QPushButton(ViewBankDatabase);
         pB_ViewBankDataBaseConnectAgain->setObjectName("pB_ViewBankDataBaseConnectAgain");
         pB_ViewBankDataBaseConnectAgain->setGeometry(QRect(10, 10, 181, 71));
@@ -1283,6 +1275,13 @@ public:
 "    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
 "}\n"
 ""));
+        BankDataBaseTableView = new QTableView(ViewBankDatabase);
+        BankDataBaseTableView->setObjectName("BankDataBaseTableView");
+        BankDataBaseTableView->setGeometry(QRect(15, 170, 741, 341));
+        BankDataBaseTableView->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"font: 700 10pt \"Segoe UI\";"));
+        BankDataBaseTableView->setVerticalScrollMode(QAbstractItemView::ScrollPerPixel);
+        BankDataBaseTableView->setHorizontalScrollMode(QAbstractItemView::ScrollPerPixel);
         stackedWidget->addWidget(ViewBankDatabase);
         UpdateClientAccount = new QWidget();
         UpdateClientAccount->setObjectName("UpdateClientAccount");
@@ -1441,7 +1440,7 @@ public:
         label_11->setScaledContents(true);
         pb_ViewMyHistoryBack = new QPushButton(ViewMyHistory);
         pb_ViewMyHistoryBack->setObjectName("pb_ViewMyHistoryBack");
-        pb_ViewMyHistoryBack->setGeometry(QRect(20, 490, 131, 71));
+        pb_ViewMyHistoryBack->setGeometry(QRect(60, 490, 131, 71));
         pb_ViewMyHistoryBack->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    font: 700 20pt \"Segoe UI\";\n"
@@ -1471,7 +1470,7 @@ public:
 ""));
         pb_ViewMyHistoryView = new QPushButton(ViewMyHistory);
         pb_ViewMyHistoryView->setObjectName("pb_ViewMyHistoryView");
-        pb_ViewMyHistoryView->setGeometry(QRect(200, 490, 141, 71));
+        pb_ViewMyHistoryView->setGeometry(QRect(230, 490, 141, 71));
         pb_ViewMyHistoryView->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #4CAF50;\n"
 "    font: 700 20pt \"Segoe UI\";\n"
@@ -1499,14 +1498,9 @@ public:
 "    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
 "}\n"
 ""));
-        ClientTransactionHistoryListWidget = new QListWidget(ViewMyHistory);
-        ClientTransactionHistoryListWidget->setObjectName("ClientTransactionHistoryListWidget");
-        ClientTransactionHistoryListWidget->setGeometry(QRect(390, 170, 381, 401));
-        ClientTransactionHistoryListWidget->setStyleSheet(QString::fromUtf8("font: 14pt \"Segoe UI\";\n"
-"color: rgb(255, 255, 255);"));
         layoutWidget10 = new QWidget(ViewMyHistory);
         layoutWidget10->setObjectName("layoutWidget10");
-        layoutWidget10->setGeometry(QRect(10, 240, 361, 78));
+        layoutWidget10->setGeometry(QRect(40, 240, 361, 78));
         verticalLayout_13 = new QVBoxLayout(layoutWidget10);
         verticalLayout_13->setObjectName("verticalLayout_13");
         verticalLayout_13->setContentsMargins(0, 0, 0, 0);
@@ -1554,6 +1548,11 @@ public:
 "    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
 "}\n"
 ""));
+        ClientTransactionHistoryTableView = new QTableView(ViewMyHistory);
+        ClientTransactionHistoryTableView->setObjectName("ClientTransactionHistoryTableView");
+        ClientTransactionHistoryTableView->setGeometry(QRect(445, 190, 311, 381));
+        ClientTransactionHistoryTableView->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
+"font: 700 10pt \"Segoe UI\";"));
         stackedWidget->addWidget(ViewMyHistory);
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -1581,10 +1580,8 @@ public:
         QObject::connect(pB_ClientUpdateAccountBack, &QPushButton::clicked, UpdateAccountEmail, qOverload<>(&QLineEdit::clear));
         QObject::connect(pB_ClientUpdateAccountBack, &QPushButton::clicked, UpdateAccountPassword, qOverload<>(&QLineEdit::clear));
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, lE_ClientViewHistoryCount, qOverload<>(&QLineEdit::clear));
-        QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, ClientTransactionHistoryListWidget, qOverload<>(&QListWidget::clear));
-        QObject::connect(pBAdminViewTransactionBack, &QPushButton::clicked, AdTransactionHistorylistWidget, qOverload<>(&QListWidget::clear));
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(5);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

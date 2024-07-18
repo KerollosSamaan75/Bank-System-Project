@@ -379,9 +379,9 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pB_AdminGetAccountNumber">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>400</x>
         <y>370</y>
-        <width>341</width>
+        <width>351</width>
         <height>81</height>
        </rect>
       </property>
@@ -524,9 +524,9 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pB_AdminGetAccountBalance">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>400</x>
         <y>190</y>
-        <width>341</width>
+        <width>351</width>
         <height>81</height>
        </rect>
       </property>
@@ -566,9 +566,9 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pB_AdminViewTransactionHistory">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>400</x>
         <y>280</y>
-        <width>341</width>
+        <width>351</width>
         <height>81</height>
        </rect>
       </property>
@@ -650,9 +650,9 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pB_UpdateClientAccount">
       <property name="geometry">
        <rect>
-        <x>410</x>
+        <x>400</x>
         <y>460</y>
-        <width>341</width>
+        <width>351</width>
         <height>81</height>
        </rect>
       </property>
@@ -1440,7 +1440,7 @@ color: rgb(255, 255, 255);</string>
      <widget class="QWidget" name="layoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>40</x>
         <y>240</y>
         <width>361</width>
         <height>78</height>
@@ -1471,7 +1471,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
      <widget class="QWidget" name="layoutWidget_3">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>40</x>
         <y>360</y>
         <width>361</width>
         <height>78</height>
@@ -1544,7 +1544,7 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pBAdminViewTransactionBack">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>40</x>
         <y>500</y>
         <width>161</width>
         <height>71</height>
@@ -1581,20 +1581,6 @@ QPushButton:pressed {
       </property>
       <property name="text">
        <string>Back</string>
-      </property>
-     </widget>
-     <widget class="QListWidget" name="AdTransactionHistorylistWidget">
-      <property name="geometry">
-       <rect>
-        <x>430</x>
-        <y>190</y>
-        <width>321</width>
-        <height>371</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pB_ViewTransactionHistoryConnectAgain">
@@ -1637,6 +1623,20 @@ QPushButton:pressed {
       </property>
       <property name="text">
        <string>Connect again</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="AdTransactionHistoryTableView">
+      <property name="geometry">
+       <rect>
+        <x>445</x>
+        <y>200</y>
+        <width>311</width>
+        <height>371</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
@@ -1719,29 +1719,6 @@ QPushButton:pressed {
        <string>Back</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="BankDataBaseTableWidget">
-      <property name="geometry">
-       <rect>
-        <x>15</x>
-        <y>170</y>
-        <width>751</width>
-        <height>341</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);
-font: 700 10pt &quot;Segoe UI&quot;;</string>
-      </property>
-      <property name="alternatingRowColors">
-       <bool>false</bool>
-      </property>
-      <property name="verticalScrollMode">
-       <enum>QAbstractItemView::ScrollPerPixel</enum>
-      </property>
-      <property name="horizontalScrollMode">
-       <enum>QAbstractItemView::ScrollPerPixel</enum>
-      </property>
-     </widget>
      <widget class="QPushButton" name="pB_ViewBankDataBaseConnectAgain">
       <property name="geometry">
        <rect>
@@ -1782,6 +1759,26 @@ QPushButton:pressed {
       </property>
       <property name="text">
        <string>Connect again</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="BankDataBaseTableView">
+      <property name="geometry">
+       <rect>
+        <x>15</x>
+        <y>170</y>
+        <width>741</width>
+        <height>341</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="verticalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
+      </property>
+      <property name="horizontalScrollMode">
+       <enum>QAbstractItemView::ScrollPerPixel</enum>
       </property>
      </widget>
     </widget>
@@ -2076,7 +2073,7 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="pb_ViewMyHistoryBack">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>60</x>
         <y>490</y>
         <width>131</width>
         <height>71</height>
@@ -2118,7 +2115,7 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pb_ViewMyHistoryView">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>230</x>
         <y>490</y>
         <width>141</width>
         <height>71</height>
@@ -2157,24 +2154,10 @@ QPushButton:pressed {
        <string>View</string>
       </property>
      </widget>
-     <widget class="QListWidget" name="ClientTransactionHistoryListWidget">
-      <property name="geometry">
-       <rect>
-        <x>390</x>
-        <y>170</y>
-        <width>381</width>
-        <height>401</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 14pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>10</x>
+        <x>40</x>
         <y>240</y>
         <width>361</width>
         <height>78</height>
@@ -2242,6 +2225,20 @@ QPushButton:pressed {
       </property>
       <property name="text">
        <string>Connect again</string>
+      </property>
+     </widget>
+     <widget class="QTableView" name="ClientTransactionHistoryTableView">
+      <property name="geometry">
+       <rect>
+        <x>445</x>
+        <y>190</y>
+        <width>311</width>
+        <height>381</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
       </property>
      </widget>
     </widget>
@@ -2516,38 +2513,6 @@ QPushButton:pressed {
     <hint type="destinationlabel">
      <x>62</x>
      <y>290</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pb_ViewMyHistoryBack</sender>
-   <signal>clicked()</signal>
-   <receiver>ClientTransactionHistoryListWidget</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>122</x>
-     <y>515</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>405</x>
-     <y>379</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pBAdminViewTransactionBack</sender>
-   <signal>clicked()</signal>
-   <receiver>AdTransactionHistorylistWidget</receiver>
-   <slot>clear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>178</x>
-     <y>543</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>449</x>
-     <y>363</y>
     </hint>
    </hints>
   </connection>

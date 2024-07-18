@@ -11,6 +11,7 @@
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QStandardItemModel>
 #include"User.h"
 
 QT_BEGIN_NAMESPACE

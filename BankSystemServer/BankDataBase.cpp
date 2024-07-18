@@ -552,6 +552,7 @@ bool BankDataBase::withdrawMoney(const QString &accountNumber, const QString &am
     QJsonObject transaction;
     transaction["amount"] = "-" + QString::number(withdrawAmount);
     transaction["date"] = QDate::currentDate().toString("dd.MM.yyyy");
+    transaction["time"] = QDateTime::currentDateTime().toString("HH:mm:ss");
 
     for (auto& record : transactionDatabaseRecords)
     {
@@ -621,6 +622,7 @@ bool BankDataBase::depositMoney(const QString &accountNumber, const QString &amo
     QJsonObject transaction;
     transaction["amount"] = "+" + QString::number(depositAmount);
     transaction["date"] = QDate::currentDate().toString("dd.MM.yyyy");
+    transaction["time"] = QDateTime::currentDateTime().toString("HH:mm:ss");
 
     for (auto& record : transactionDatabaseRecords)
     {

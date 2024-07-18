@@ -38,3 +38,5 @@ RESOURCES += \
 
 # Add the flag here
 QMAKE_CXXFLAGS += -fno-inline-functions
+
+DISTFILES +=

@@ -90,41 +90,34 @@ void MainWindow::requestResponse(QString message)
         QJsonDocument doc = QJsonDocument::fromJson(jsonData.toUtf8());
         QJsonArray jsonArray = doc.array();
 
-        // Clear the table widget
-        ui->BankDataBaseTableWidget->clear();
+        // Create a model for the table view
+        QStandardItemModel *model = new QStandardItemModel(jsonArray.size(), 8, this);
+        QStringList headers = {"Account Number", "Username", "Full Name", "Age", "Email", "Balance", "Authority", "Login"};
+        model->setHorizontalHeaderLabels(headers);
 
-        // Set column headers
-        QStringList headers;
-        headers << "Account Number" << "Username" << "Full Name" << "Age" << "Email" << "Balance" << "Authority" << "Login";
-        ui->BankDataBaseTableWidget->setColumnCount(headers.size());
-        ui->BankDataBaseTableWidget->setHorizontalHeaderLabels(headers);
-
-        // Set the number of rows
-        ui->BankDataBaseTableWidget->setRowCount(jsonArray.size());
-
-        // Iterate through the JSON array and add data to the table widget
-        int row = 0;
-        for (const QJsonValue& value : jsonArray)
+        // Iterate through the JSON array and add data to the model
+        for (int row = 0; row < jsonArray.size(); ++row)
         {
-            QJsonObject obj = value.toObject();
+            QJsonObject obj = jsonArray[row].toObject();
 
-            // Populate each cell with data from the JSON object
-            ui->BankDataBaseTableWidget->setItem(row, 0, new QTableWidgetItem(obj["AccountNumber"].toString("N/A")));
-            ui->BankDataBaseTableWidget->setItem(row, 1, new QTableWidgetItem(obj["Username"].toString("N/A")));
-            ui->BankDataBaseTableWidget->setItem(row, 2, new QTableWidgetItem(obj["FullName"].toString("N/A")));
-            ui->BankDataBaseTableWidget->setItem(row, 3, new QTableWidgetItem(obj["Age"].toString("N/A")));
-            ui->BankDataBaseTableWidget->setItem(row, 4, new QTableWidgetItem(obj["Email"].toString("N/A")));
-            ui->BankDataBaseTableWidget->setItem(row, 5, new QTableWidgetItem(obj["Balance"].toString("N/A")));
-            ui->BankDataBaseTableWidget->setItem(row, 6, new QTableWidgetItem(obj["Authority"].toString("N/A")));
-            ui->BankDataBaseTableWidget->setItem(row, 7, new QTableWidgetItem(obj["Login"].toString("N/A")));
-            row++;
+            model->setItem(row, 0, new QStandardItem(obj["AccountNumber"].toString("N/A")));
+            model->setItem(row, 1, new QStandardItem(obj["Username"].toString("N/A")));
+            model->setItem(row, 2, new QStandardItem(obj["FullName"].toString("N/A")));
+            model->setItem(row, 3, new QStandardItem(obj["Age"].toString("N/A")));
+            model->setItem(row, 4, new QStandardItem(obj["Email"].toString("N/A")));
+            model->setItem(row, 5, new QStandardItem(obj["Balance"].toString("N/A")));
+            model->setItem(row, 6, new QStandardItem(obj["Authority"].toString("N/A")));
+            model->setItem(row, 7, new QStandardItem(obj["Login"].toString("N/A")));
         }
+
+        // Set the model to the table view
+        ui->BankDataBaseTableView->setModel(model);
     }
 
 
 
 
-    else if(List[0] =="TransactionHistory")
+    else if(List[0] == "TransactionHistory")
     {
         // Extract the JSON part from the response
         QString jsonString = message.mid(QString("TransactionHistory:").length());
@@ -141,24 +134,25 @@ void MainWindow::requestResponse(QString message)
         QString accountNumber = jsonObject["AccountNumber"].toString();
         QJsonArray transactions = jsonObject["RecentTransactions"].toArray();
 
-        // Clear the list widget
-        ui->AdTransactionHistorylistWidget->clear();
-        ui->ClientTransactionHistoryListWidget->clear();
+        // Create a model for the table view
+        QStandardItemModel *model = new QStandardItemModel(transactions.size(), 3, this);
+        model->setHorizontalHeaderLabels({"Date", "Time", "Amount"});
 
-        // Display account number as a header
-        ui->AdTransactionHistorylistWidget->addItem("Account Number: " + accountNumber);
-        ui->ClientTransactionHistoryListWidget->addItem("Account Number: " + accountNumber);
+        // Set account number as a header
+        ui->AdTransactionHistoryTableView->setModel(model);
+        ui->ClientTransactionHistoryTableView->setModel(model);
 
-        // Iterate through the transactions and add them to the list widget
-        for (const QJsonValue& value : transactions)
+        // Iterate through the transactions and add them to the model
+        for (int row = 0; row < transactions.size(); ++row)
         {
-            QJsonObject transaction = value.toObject();
+            QJsonObject transaction = transactions[row].toObject();
             QString amount = transaction["amount"].toString();
             QString date = transaction["date"].toString();
-            QString formattedTransaction = QString("Date: %1, Amount: %2").arg(date).arg(amount);
+            QString time = transaction["time"].toString();
 
-            ui->AdTransactionHistorylistWidget->addItem(formattedTransaction);
-            ui->ClientTransactionHistoryListWidget->addItem(formattedTransaction);
+            model->setItem(row, 0, new QStandardItem(date));
+            model->setItem(row, 1, new QStandardItem(time));
+            model->setItem(row, 2, new QStandardItem(amount));
         }
     }
     else
@@ -465,7 +459,7 @@ void MainWindow::on_pB_AdminGetAccountBalance_clicked()
 
 void MainWindow::on_pB_AdminViewTransactionHistory_clicked()
 {
-    ui->AdTransactionHistorylistWidget->clear();
+    ui->AdTransactionHistoryTableView->clearFocus();
     ui->stackedWidget->setCurrentIndex(4);
 }
 
@@ -511,7 +505,7 @@ void MainWindow::on_pBAdminViewTransactionView_clicked()
 
     if (valid)
     {
-        ui->AdTransactionHistorylistWidget->clear();
+        ui->AdTransactionHistoryTableView->clearFocus();
         QString message = QString("GetTransactionHistory:%1:%2").arg(accountNumber).arg(historyCountStr);
         SystemUser.SendRequest(message);
     }
@@ -610,7 +604,7 @@ void MainWindow::on_pb_ViewMyHistoryBack_clicked()
 
 void MainWindow::on_pB_ViewMyHistory_clicked()
 {
-    ui->ClientTransactionHistoryListWidget->clear();
+    ui->ClientTransactionHistoryTableView->clearFocus();
     ui->stackedWidget->setCurrentIndex(7);
 }
 
@@ -637,7 +631,7 @@ void MainWindow::on_pb_ViewMyHistoryView_clicked()
 
     if (valid)
     {
-        ui->ClientTransactionHistoryListWidget->clear();
+        ui->ClientTransactionHistoryTableView->clearFocus();
         QString message = QString("GetTransactionHistory:%1:%2").arg(clientAccountNumber).arg(historyCountStr);
         SystemUser.SendRequest(message);
     }

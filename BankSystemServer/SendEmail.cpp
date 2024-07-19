@@ -21,7 +21,7 @@ void SendEmail::send(const QString &to, const QString &subject, const QString &b
     arguments << to << subject << body; // Prepare arguments for the batch script (recipient email, subject, body)
 
     // Start the batch script with arguments
-    process.startDetached(batchFilePath, arguments); // Start the batch script with specified arguments
+    process.start(batchFilePath, arguments); // Start the batch script with specified arguments
     if (!process.waitForFinished())
     {
         logger.logMessage(QString("Failed to run batch script: %1").arg(process.errorString())); // Log an error if the batch script fails to execute

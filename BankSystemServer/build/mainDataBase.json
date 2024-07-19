@@ -11,14 +11,25 @@
         "Username": "Kero75"
     },
     {
-        "AccountNumber": "440198667",
+        "AccountNumber": "262983830",
         "Age": "25",
         "Authority": "Client",
-        "Balance": "2000",
+        "Balance": "0",
         "Email": "kiro.samaan.kodoos@gmail.com",
         "FullName": "sharple samaan",
         "Login": "0",
-        "Password": "sharple@222",
+        "Password": "sharple@2011",
         "Username": "sharple2011"
+    },
+    {
+        "AccountNumber": "264325824",
+        "Age": "25",
+        "Authority": "Client",
+        "Balance": "2000",
+        "Email": "kerollos.sam3an.75@gmail.com",
+        "FullName": "marina samaan",
+        "Login": "0",
+        "Password": "marina@2003",
+        "Username": "marina2003"
     }
 ]

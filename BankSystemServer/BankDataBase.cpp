@@ -121,6 +121,8 @@ QVector<QJsonObject> BankDataBase::getTransactionDatabase()
 bool BankDataBase::addClient(const QString &username, const QString &password, const QString &fullName,
                              const QString &age, const QString &email, const QString &balance )
 {
+    initializeMainDatabase();
+    initializeTransactionDatabase();
     QString AccountNumber = generateAccountNumber(); // Generate a unique account number
 
     // Create a new client object
@@ -229,6 +231,7 @@ bool BankDataBase::saveTransactionDatabaseToFile()
 bool BankDataBase::setUserLoginState(const QString& username, const QString& state)
 {
     // Find the user in the main database records
+    initializeMainDatabase();
     for (auto& record : mainDatabaseRecords)
     {
         if (record["Username"].toString() == username)
@@ -257,6 +260,7 @@ bool BankDataBase::deleteClient(const QString &accountNumber)
 {
     // Initialize the main database
     initializeMainDatabase();
+    initializeTransactionDatabase();
 
     bool mainDatabaseDeleted = false;
     bool transactionDatabaseDeleted = false;
@@ -395,6 +399,8 @@ bool BankDataBase::transferMoney(const QString &sourceAccountNumber, const QStri
                                  const QString &amountStr)
 {
     // Validate the amounts
+    initializeMainDatabase();
+    initializeTransactionDatabase();
     bool AmountValid;
     int Amount = amountStr.toInt(&AmountValid);
 
@@ -506,6 +512,8 @@ bool BankDataBase::transferMoney(const QString &sourceAccountNumber, const QStri
 bool BankDataBase::withdrawMoney(const QString &accountNumber, const QString &amount)
 {
     // Validate the amount
+    initializeMainDatabase();
+    initializeTransactionDatabase();
     bool isNumber;
     int withdrawAmount = amount.toInt(&isNumber);
     if (!isNumber || withdrawAmount <= 0)
@@ -580,6 +588,8 @@ bool BankDataBase::withdrawMoney(const QString &accountNumber, const QString &am
 
 bool BankDataBase::depositMoney(const QString &accountNumber, const QString &amount)
 {
+    initializeMainDatabase();
+    initializeTransactionDatabase();
     // Validate the amount
     bool isNumber;
     int depositAmount = amount.toInt(&isNumber);

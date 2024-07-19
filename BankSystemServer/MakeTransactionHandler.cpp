@@ -45,7 +45,7 @@ void MakeTransactionHandler::execute(const QStringList &RequestParts, QString &s
     }
     else
     {
-        statusMessage = "Transaction failed. Insufficient balance."; // Handle failed transaction due to insufficient balance
+        statusMessage = "Transaction failed. Insufficient balance.or account not found"; // Handle failed transaction due to insufficient balance
     }
 }
 

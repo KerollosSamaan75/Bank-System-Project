@@ -31,7 +31,7 @@
      <string notr="true">background-color: rgb(50, 50, 50);</string>
     </property>
     <property name="currentIndex">
-     <number>6</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QLabel" name="label">
@@ -2159,7 +2159,7 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>40</x>

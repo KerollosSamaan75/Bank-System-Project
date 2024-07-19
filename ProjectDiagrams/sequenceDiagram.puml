@@ -1,0 +1,36 @@
+@startuml
+actor User
+participant "User TCP Socket" as UserTCPSocket
+participant Server
+participant ServerHandler
+participant "Server TCP Socket" as ServerTCPSocket
+participant RequestHandler
+participant Database
+
+alt Connection Part
+    User -> UserTCPSocket: ConnectToServer(Ip, Port)
+    UserTCPSocket -> Server: connectToHost(Ip, Port)
+    Server -> Server: listen(QHostAddress::Any, Port)
+    Server -> Server: incomingConnection(handle)
+    Server -> ServerHandler: Create ServerHandler(as thread)
+    ServerHandler -> ServerTCPSocket: Create TCP Socket
+    ServerHandler -> Database: Initialize Database()
+end
+
+alt Send Request Part
+    User -> UserTCPSocket: SendRequest(QString Data)
+    UserTCPSocket -> UserTCPSocket: generateSignature(Data, secretKey)
+    UserTCPSocket -> UserTCPSocket: encryptRequest(Request+Signature)
+    UserTCPSocket -> ServerTCPSocket: write(encryptedRequest)
+    ServerTCPSocket -> ServerHandler: readAll()
+    ServerHandler -> ServerHandler: decryptRequest(encryptedRequest)
+    ServerHandler -> ServerHandler: verifySignature(requestData, signature)
+    ServerHandler -> RequestHandler: Operation(QString Request)
+    RequestHandler -> Database: execute(const QStringList &RequestParts, QString &statusMessage)
+    RequestHandler -> ServerHandler: sendResponse(statusMessage)
+    ServerHandler -> ServerTCPSocket: write(responseMessage)
+    ServerTCPSocket -> UserTCPSocket: readAll()
+    UserTCPSocket -> User: sendResponse(responseMessage)
+end
+
+@enduml

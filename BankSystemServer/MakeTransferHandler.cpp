@@ -37,7 +37,7 @@ void MakeTransferHandler::execute(const QStringList &RequestParts, QString &stat
     }
     else
     {
-        statusMessage = QString("TransferResult:Transfer failure.\nInsufficient balance or Invalid target account number."); // Handle transfer failure
+        statusMessage = QString("TransferResult:Transfer failure.\nInsufficient balance or account number not found."); // Handle transfer failure
     }
 }
 

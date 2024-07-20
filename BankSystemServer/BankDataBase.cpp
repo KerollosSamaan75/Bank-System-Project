@@ -398,9 +398,10 @@ bool BankDataBase::updateClient(const QString &accountNumber, const QString &use
 bool BankDataBase::transferMoney(const QString &sourceAccountNumber, const QString &targetAccountNumber,
                                  const QString &amountStr)
 {
-    // Validate the amounts
+    
     initializeMainDatabase();
     initializeTransactionDatabase();
+	// Validate the amounts
     bool AmountValid;
     int Amount = amountStr.toInt(&AmountValid);
 
@@ -469,6 +470,7 @@ bool BankDataBase::transferMoney(const QString &sourceAccountNumber, const QStri
     QJsonObject sourceTransaction;
     sourceTransaction["amount"] = "-" + QString::number(Amount);
     sourceTransaction["date"] = QDate::currentDate().toString("dd.MM.yyyy");
+    sourceTransaction["time"] = QDateTime::currentDateTime().toString("HH:mm:ss");
 
     for (auto& record : transactionDatabaseRecords)
     {
@@ -485,6 +487,7 @@ bool BankDataBase::transferMoney(const QString &sourceAccountNumber, const QStri
     QJsonObject targetTransaction;
     targetTransaction["amount"] = "+" + QString::number(Amount);
     targetTransaction["date"] = QDate::currentDate().toString("dd.MM.yyyy");
+	targetTransaction["time"] = QDateTime::currentDateTime().toString("HH:mm:ss");
 
     for (auto& record : transactionDatabaseRecords)
     {

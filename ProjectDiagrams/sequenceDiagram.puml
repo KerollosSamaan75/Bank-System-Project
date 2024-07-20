@@ -22,6 +22,8 @@ alt Send Request Part
     UserTCPSocket -> UserTCPSocket: generateSignature(Data, secretKey)
     UserTCPSocket -> UserTCPSocket: encryptRequest(Request+Signature)
     UserTCPSocket -> ServerTCPSocket: write(encryptedRequest)
+end
+alt Send Response Part
     ServerTCPSocket -> ServerHandler: readAll()
     ServerHandler -> ServerHandler: decryptRequest(encryptedRequest)
     ServerHandler -> ServerHandler: verifySignature(requestData, signature)

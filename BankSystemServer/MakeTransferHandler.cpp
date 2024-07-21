@@ -28,16 +28,53 @@ void MakeTransferHandler::execute(const QStringList &RequestParts, QString &stat
         return;
     }
 
-    bool success = dataBase.transferMoney(sourceAccountNumber, targetAccountNumber, amountStr); // Perform money transfer
-
-    if (success)
+    QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(); // Get the main database records
+    bool sourceFound = false;
+    bool targetFound = false;
+    for (const auto& record : databaseRecords)
     {
-        statusMessage = QString("TransferResult:Transfer successful."); // Update status message for successful transfer
-        sendEmail(sourceAccountNumber, targetAccountNumber, amountStr); // Send email notifications
+        if (record["AccountNumber"].toString() == sourceAccountNumber)
+        {
+            sourceFound = true;
+            break;
+        }
+    }
+    for (const auto& record : databaseRecords)
+    {
+        if (record["AccountNumber"].toString() == targetAccountNumber)
+        {
+            targetFound = true;
+            break;
+        }
+    }
+    if(sourceFound)
+    {
+        if(targetFound)
+        {
+            bool success = dataBase.transferMoney(sourceAccountNumber, targetAccountNumber, amountStr); // Perform money transfer
+
+            if (success)
+            {
+                statusMessage = QString("TransferResult:Transfer successful."); // Update status message for successful transfer
+                sendEmail(sourceAccountNumber, targetAccountNumber, amountStr); // Send email notifications
+            }
+            else
+            {
+                statusMessage = QString("TransferResult:Transfer failure.\nInsufficient balance"); // Handle transfer failure
+                return;
+            }
+        }
+        else
+        {
+            statusMessage = "Target account number not found";
+            return;
+        }
+
     }
     else
     {
-        statusMessage = QString("TransferResult:Transfer failure.\nInsufficient balance or account number not found."); // Handle transfer failure
+        statusMessage = "Source account number not found";
+        return;
     }
 }
 

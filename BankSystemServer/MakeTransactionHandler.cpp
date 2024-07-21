@@ -22,15 +22,43 @@ void MakeTransactionHandler::execute(const QStringList &RequestParts, QString &s
         return;
     }
 
+    QVector<QJsonObject> databaseRecords = dataBase.getMainDatabase(); // Get the main database records
+    bool accountNumberFound = false;
+    for (const auto& record : databaseRecords)
+    {
+        if (record["AccountNumber"].toString() == accountNumber)
+        {
+            accountNumberFound = true;
+            break;
+        }
+    }
+
     bool success = false;
     if (transactionAmount < 0)
     {
-        QString withdrawAmount = amount.mid(1); // Remove the negative sign for withdrawal
-        success = dataBase.withdrawMoney(accountNumber, withdrawAmount); // Withdraw money from the account
+        if(accountNumberFound == true)
+        {
+            QString withdrawAmount = amount.mid(1); // Remove the negative sign for withdrawal
+            success = dataBase.withdrawMoney(accountNumber, withdrawAmount); // Withdraw money from the account
+        }
+        else
+        {
+            statusMessage = "This account not found";
+            return;
+        }
+
     }
     else if (transactionAmount > 0)
     {
-        success = dataBase.depositMoney(accountNumber, amount); // Deposit money into the account
+        if(accountNumberFound == true)
+        {
+            success = dataBase.depositMoney(accountNumber, amount); // Deposit money into the account
+        }
+        else
+        {
+            statusMessage = "This account not found";
+            return;
+        }
     }
     else
     {
@@ -45,7 +73,7 @@ void MakeTransactionHandler::execute(const QStringList &RequestParts, QString &s
     }
     else
     {
-        statusMessage = "Transaction failed. Insufficient balance.or account not found"; // Handle failed transaction due to insufficient balance
+        statusMessage = "Transaction failed. Insufficient balance."; // Handle failed transaction due to insufficient balance
     }
 }
 

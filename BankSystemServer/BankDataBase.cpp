@@ -396,9 +396,8 @@ bool BankDataBase::updateClient(const QString &accountNumber, const QString &use
 
 // Update transaction data
 bool BankDataBase::transferMoney(const QString &sourceAccountNumber, const QString &targetAccountNumber,
-                                 const QString &amountStr)
+                                const QString &amountStr)
 {
-    
     initializeMainDatabase();
     initializeTransactionDatabase();
 	// Validate the amounts

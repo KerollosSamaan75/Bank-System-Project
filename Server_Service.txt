@@ -1,0 +1,27 @@
+How to run server project as a serves on windows 10 
+
+1-Download and Install NSSM
+	Download NSSM from nssm.cc.
+	Extract the downloaded file to a directory of your choice.
+
+2-Register Your Qt Application as a Service:
+	Open a command prompt with administrative privileges.
+  	Navigate to the directory where you extracted NSSM.
+  	Run the following command to install your application as a service: 'nssm install QtServer'
+	This will open a configuration window. Fill in the following fields:
+	Application Path: Browse to your Qt server executable 
+	Startup Directory: Set the directory where your executable is located.
+	Arguments: Add any command-line arguments your application needs.
+
+3-Start the Service:
+	After configuring, click “Install service” in NSSM.
+	You can start the service by running: 'nssm start QtServer'
+
+
+
+
+
+
+
+
+

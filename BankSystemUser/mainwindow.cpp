@@ -12,17 +12,13 @@ MainWindow::MainWindow(QWidget *parent)
     connect(&SystemUser,&User::StateChanged,this,&MainWindow::onStateChangedServer);
     connect(&SystemUser,&User::ReadyRead,this,&MainWindow::onReadyReadServer);
     connect(&SystemUser,&User::UserSendRequest,this,&MainWindow::onUserSendRequest);
-
-
     ui->stackedWidget->setCurrentIndex(0);
     ui->frame->setEnabled(false);
-
     ui->usernameErrorLabel->setVisible(false);
     ui->passwordErrorLabel->setVisible(false);
     ui->lEUserName->setPlaceholderText("Enter your username");
     ui->lEPassword->setPlaceholderText("Enter your password");
     ui->lEPassword->setEchoMode(QLineEdit::Password);
-
     ui->NewUserPassWordErrorLabel->setVisible(false);
     ui->NewUserAgeErrorLabel->setVisible(false);
     ui->NewUserBalanceErrorLabel->setVisible(false);
@@ -37,12 +33,10 @@ MainWindow::MainWindow(QWidget *parent)
     ui->NewUserBalance->setPlaceholderText("Enter your balance");
     ui->NewUserAge->setValidator(new QIntValidator(0, 99, this)); // Age between 0 and 99
     ui->NewUserBalance->setValidator(new QIntValidator(0, 1000000, this));
-
     ui->AdminViewHistoryAccountNumberErrorLabel->setVisible(false);
     ui->AdminViewHistoryCountErrorLabel->setVisible(false);
     ui->lE_AdminViewHistoryAccountNumber->setPlaceholderText("Enter account number");
     ui->lE_AdminViewHistoryCount->setPlaceholderText("Enter history count");
-
     ui->UpdateAccountFullName->setPlaceholderText("Enter your fullname");
     ui->UpdateAccountUserName->setPlaceholderText("Enter your username");
     ui->UpdateAccountAge->setPlaceholderText("Enter your age");
@@ -54,11 +48,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->UpdatePasswordErrorLabel->setVisible(false);
     ui->UpdateUserNameErrorLabel->setVisible(false);
     ui->UpdateAgeErrorLabel->setVisible(false);
-
-
     ui->lE_ClientViewHistoryCount->setPlaceholderText("Enter your history count");
     ui->ClientViewHistoryCountErrorLabel->setVisible(false);
-
 }
 
 MainWindow::~MainWindow()
@@ -117,9 +108,6 @@ void MainWindow::requestResponse(QString message)
         // Set the model to the table view
         ui->BankDataBaseTableView->setModel(model);
     }
-
-
-
 
     else if(List[0] == "TransactionHistory")
     {
@@ -400,10 +388,6 @@ void MainWindow::on_pBCreateAccount_clicked()
         SystemUser.SendRequest(message);
     }
 }
-
-
-
-
 
 
 void MainWindow::on_pBAddAccoutBack_clicked()
@@ -691,7 +675,8 @@ void MainWindow::on_pB_Update_clicked()
 
 void MainWindow::on_pB_ClientGetAccountNumber_clicked()
 {
-    QMessageBox::information(this, "Request response", "Account number: "+clientAccountNumber);
+    QString message = QString("GetAccountNumber:%1").arg(clientUserName);
+    SystemUser.SendRequest(message);
 }
 
 
@@ -700,9 +685,6 @@ void MainWindow::on_pB_ClientViewAccountBalance_clicked()
     QString message = QString("GetAccountBalance:%1").arg(clientAccountNumber);
     SystemUser.SendRequest(message);
 }
-
-
-
 
 
 void MainWindow::on_pb_ViewMyHistoryBack_clicked()
@@ -745,8 +727,6 @@ void MainWindow::on_pb_ViewMyHistoryView_clicked()
         SystemUser.SendRequest(message);
     }
 }
-
-
 
 
 void MainWindow::on_pB_MakeTransaction_clicked()
@@ -849,8 +829,6 @@ void MainWindow::on_pB_ClientTransferMoney_clicked()
                              tr("Target account number must be digits and cannot be empty."));
     }
 }
-
-
 
 
 void MainWindow::on_showPasswordCheckBox_stateChanged(int arg1)

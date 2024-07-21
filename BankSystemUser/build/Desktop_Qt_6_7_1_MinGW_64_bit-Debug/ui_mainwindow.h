@@ -149,7 +149,7 @@ public:
     QVBoxLayout *verticalLayout_15;
     QLabel *UpdateAgeErrorLabel;
     QLineEdit *UpdateAccountAge;
-    QWidget *widget;
+    QWidget *layoutWidget13;
     QVBoxLayout *verticalLayout_18;
     QLabel *UpdatePasswordErrorLabel;
     QLineEdit *UpdateAccountPassword;
@@ -158,23 +158,23 @@ public:
     QLabel *label_11;
     QPushButton *pb_ViewMyHistoryBack;
     QPushButton *pb_ViewMyHistoryView;
-    QWidget *layoutWidget13;
+    QWidget *layoutWidget14;
     QVBoxLayout *verticalLayout_13;
     QLabel *ClientViewHistoryCountErrorLabel;
     QLineEdit *lE_ClientViewHistoryCount;
     QPushButton *pB_ViewClientTransactionHistoryConnectAgain;
     QTableView *ClientTransactionHistoryTableView;
-    QWidget *layoutWidget14;
-    QHBoxLayout *horizontalLayout;
     QWidget *layoutWidget15;
-    QHBoxLayout *horizontalLayout_2;
+    QHBoxLayout *horizontalLayout;
     QWidget *layoutWidget16;
-    QVBoxLayout *verticalLayout_16;
+    QHBoxLayout *horizontalLayout_2;
     QWidget *layoutWidget17;
-    QHBoxLayout *horizontalLayout_3;
+    QVBoxLayout *verticalLayout_16;
     QWidget *layoutWidget18;
-    QVBoxLayout *verticalLayout_17;
+    QHBoxLayout *horizontalLayout_3;
     QWidget *layoutWidget19;
+    QVBoxLayout *verticalLayout_17;
+    QWidget *layoutWidget20;
     QHBoxLayout *horizontalLayout_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -1520,20 +1520,20 @@ public:
 
         verticalLayout_15->addWidget(UpdateAccountAge);
 
-        widget = new QWidget(UpdateClientAccount);
-        widget->setObjectName("widget");
-        widget->setGeometry(QRect(40, 380, 671, 60));
-        verticalLayout_18 = new QVBoxLayout(widget);
+        layoutWidget13 = new QWidget(UpdateClientAccount);
+        layoutWidget13->setObjectName("layoutWidget13");
+        layoutWidget13->setGeometry(QRect(40, 380, 671, 60));
+        verticalLayout_18 = new QVBoxLayout(layoutWidget13);
         verticalLayout_18->setObjectName("verticalLayout_18");
         verticalLayout_18->setContentsMargins(0, 0, 0, 0);
-        UpdatePasswordErrorLabel = new QLabel(widget);
+        UpdatePasswordErrorLabel = new QLabel(layoutWidget13);
         UpdatePasswordErrorLabel->setObjectName("UpdatePasswordErrorLabel");
         UpdatePasswordErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_18->addWidget(UpdatePasswordErrorLabel);
 
-        UpdateAccountPassword = new QLineEdit(widget);
+        UpdateAccountPassword = new QLineEdit(layoutWidget13);
         UpdateAccountPassword->setObjectName("UpdateAccountPassword");
         UpdateAccountPassword->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 15pt \"Segoe UI\";"));
@@ -1615,20 +1615,20 @@ public:
 "    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
 "}\n"
 ""));
-        layoutWidget13 = new QWidget(ViewMyHistory);
-        layoutWidget13->setObjectName("layoutWidget13");
-        layoutWidget13->setGeometry(QRect(40, 240, 361, 78));
-        verticalLayout_13 = new QVBoxLayout(layoutWidget13);
+        layoutWidget14 = new QWidget(ViewMyHistory);
+        layoutWidget14->setObjectName("layoutWidget14");
+        layoutWidget14->setGeometry(QRect(40, 240, 361, 78));
+        verticalLayout_13 = new QVBoxLayout(layoutWidget14);
         verticalLayout_13->setObjectName("verticalLayout_13");
         verticalLayout_13->setContentsMargins(0, 0, 0, 0);
-        ClientViewHistoryCountErrorLabel = new QLabel(layoutWidget13);
+        ClientViewHistoryCountErrorLabel = new QLabel(layoutWidget14);
         ClientViewHistoryCountErrorLabel->setObjectName("ClientViewHistoryCountErrorLabel");
         ClientViewHistoryCountErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 14pt \"Segoe UI\";"));
 
         verticalLayout_13->addWidget(ClientViewHistoryCountErrorLabel);
 
-        lE_ClientViewHistoryCount = new QLineEdit(layoutWidget13);
+        lE_ClientViewHistoryCount = new QLineEdit(layoutWidget14);
         lE_ClientViewHistoryCount->setObjectName("lE_ClientViewHistoryCount");
         lE_ClientViewHistoryCount->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
@@ -1672,40 +1672,40 @@ public:
         ClientTransactionHistoryTableView->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "font: 700 10pt \"Segoe UI\";"));
         stackedWidget->addWidget(ViewMyHistory);
-        layoutWidget14 = new QWidget(centralwidget);
-        layoutWidget14->setObjectName("layoutWidget14");
-        layoutWidget14->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout = new QHBoxLayout(layoutWidget14);
-        horizontalLayout->setObjectName("horizontalLayout");
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         layoutWidget15 = new QWidget(centralwidget);
         layoutWidget15->setObjectName("layoutWidget15");
         layoutWidget15->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget15);
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout = new QHBoxLayout(layoutWidget15);
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         layoutWidget16 = new QWidget(centralwidget);
         layoutWidget16->setObjectName("layoutWidget16");
         layoutWidget16->setGeometry(QRect(0, 0, 2, 2));
-        verticalLayout_16 = new QVBoxLayout(layoutWidget16);
-        verticalLayout_16->setObjectName("verticalLayout_16");
-        verticalLayout_16->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget16);
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         layoutWidget17 = new QWidget(centralwidget);
         layoutWidget17->setObjectName("layoutWidget17");
         layoutWidget17->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget17);
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_16 = new QVBoxLayout(layoutWidget17);
+        verticalLayout_16->setObjectName("verticalLayout_16");
+        verticalLayout_16->setContentsMargins(0, 0, 0, 0);
         layoutWidget18 = new QWidget(centralwidget);
         layoutWidget18->setObjectName("layoutWidget18");
         layoutWidget18->setGeometry(QRect(0, 0, 2, 2));
-        verticalLayout_17 = new QVBoxLayout(layoutWidget18);
-        verticalLayout_17->setObjectName("verticalLayout_17");
-        verticalLayout_17->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget18);
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
         layoutWidget19 = new QWidget(centralwidget);
         layoutWidget19->setObjectName("layoutWidget19");
         layoutWidget19->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout_4 = new QHBoxLayout(layoutWidget19);
+        verticalLayout_17 = new QVBoxLayout(layoutWidget19);
+        verticalLayout_17->setObjectName("verticalLayout_17");
+        verticalLayout_17->setContentsMargins(0, 0, 0, 0);
+        layoutWidget20 = new QWidget(centralwidget);
+        layoutWidget20->setObjectName("layoutWidget20");
+        layoutWidget20->setGeometry(QRect(0, 0, 2, 2));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget20);
         horizontalLayout_4->setObjectName("horizontalLayout_4");
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
         MainWindow->setCentralWidget(centralwidget);
@@ -1735,7 +1735,7 @@ public:
         QObject::connect(pB_ClientUpdateAccountBack, &QPushButton::clicked, UpdateAccountPassword, qOverload<>(&QLineEdit::clear));
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, lE_ClientViewHistoryCount, qOverload<>(&QLineEdit::clear));
 
-        stackedWidget->setCurrentIndex(6);
+        stackedWidget->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

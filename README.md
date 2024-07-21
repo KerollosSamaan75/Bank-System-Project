@@ -1,5 +1,4 @@
 # Banking System Project
-![Screenshot_39](https://github.com/user-attachments/assets/03bdad81-44f5-4fdc-b614-3f12d71c619e)
 
 ## Overview
 This project implements a Banking System using a client-server model. The system is designed to manage user accounts, facilitate transactions, and provide administrative functionalities. It supports two user types: standard users and admin users, each with specific permissions.
@@ -7,17 +6,21 @@ This project implements a Banking System using a client-server model. The system
 ## Features
 ### User Authentication
 - **Log In**: Users can log in using their credentials (username and password). The system verifies the credentials and allows access based on user type.
+  
+![Screenshot_39](https://github.com/user-attachments/assets/03bdad81-44f5-4fdc-b614-3f12d71c619e)
 
-![Screenshot_37](https://github.com/user-attachments/assets/b8f640ff-f2f8-4533-85d1-241af490eee4)
 ### Account Management
 - **Get Account Number**: Users can retrieve their account number using their username.
 - **View Account Balance**: Both users and admins can view the balance of any account by providing the account number.
 - **View Transaction History**: Users and admins can request the last `count` transactions for a specific account, sorted by date.
   
-![Screenshot_38](https://github.com/user-attachments/assets/cb13fabd-78e1-4761-8e2f-7a6ceeb0c198)
+![Screenshot_37](https://github.com/user-attachments/assets/b8f640ff-f2f8-4533-85d1-241af490eee4)  
+
 ### Transactions
 - **Make Transaction**: Users can modify their account balance by making transactions. Positive amounts increase the balance, while negative amounts decrease it.
 - **Transfer Amount**: Users can transfer funds between accounts, ensuring that the transfer amount is positive and does not exceed the balance of the sending account.
+  
+![Screenshot_38](https://github.com/user-attachments/assets/cb13fabd-78e1-4761-8e2f-7a6ceeb0c198)
 
 ### Database Access
 - **View Bank Database**: Admins can read the entire bank database, which includes user details and account balances.

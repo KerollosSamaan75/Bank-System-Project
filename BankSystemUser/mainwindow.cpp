@@ -246,7 +246,7 @@ void MainWindow::onUserSendRequest(QString Data)
 
 void MainWindow::on_pBConnect_clicked()
 {
-    SystemUser.ConnectToServer("192.168.1.17",1234);
+    SystemUser.ConnectToServer("192.168.68.136",1234);
 }
 
 

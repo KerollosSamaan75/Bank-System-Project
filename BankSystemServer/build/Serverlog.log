@@ -4,3 +4,28 @@
 2024-07-21 20:43:19 - Main database initialized with 1 records
 2024-07-21 20:43:19 - Error: Failed to parse JSON from transaction database file
 2024-07-21 20:45:53 - User:892 has disconnected
+2024-07-21 23:47:43 - Server is up and listening to port => 1234
+2024-07-21 23:56:18 - Server is up and listening to port => 1234
+2024-07-21 23:56:29 - User:884 connent to server
+2024-07-21 23:56:29 - User:884 is running on thread
+2024-07-21 23:56:29 - Main database initialized with 1 records
+2024-07-21 23:56:29 - Error: Failed to parse JSON from transaction database file
+2024-07-21 23:57:09 - Server Received encrypted request From User:884 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-21 23:57:09 - Server Received request From User:884 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-21 23:57:09 - Checking frame size .....
+2024-07-21 23:57:09 - Checking request data size .....
+2024-07-21 23:57:09 - Checking request signature .....
+2024-07-21 23:57:09 - Server generate signature to received request
+2024-07-21 23:57:09 - Server compare between generated signature and received signature 
+2024-07-21 23:57:09 - Received signature = Generated signature
+2024-07-21 23:57:09 - Now:Server processing request from User:884 Request => Login:Kero75:kero*7579
+2024-07-21 23:57:09 - Main database initialized with 1 records
+2024-07-21 23:57:09 - Main database initialized with 1 records
+2024-07-21 23:57:09 - Main database file saved successfully.
+2024-07-21 23:57:09 - Login state updated successfully for user: Kero75
+2024-07-21 23:57:09 - My server Send Response to User:884 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-21 23:57:09 - Main database initialized with 1 records
+2024-07-21 23:57:09 - Main database file saved successfully.
+2024-07-21 23:57:09 - Login state updated successfully for user: Kero75
+2024-07-21 23:57:09 - User: 884 logout form bank system
+2024-07-21 23:57:09 - User:884 has disconnected

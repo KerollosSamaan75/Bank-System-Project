@@ -1735,7 +1735,7 @@ public:
         QObject::connect(pB_ClientUpdateAccountBack, &QPushButton::clicked, UpdateAccountPassword, qOverload<>(&QLineEdit::clear));
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, lE_ClientViewHistoryCount, qOverload<>(&QLineEdit::clear));
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

@@ -246,7 +246,8 @@ void MainWindow::onUserSendRequest(QString Data)
 
 void MainWindow::on_pBConnect_clicked()
 {
-    SystemUser.ConnectToServer("192.168.68.136",1234);
+    QString ipAddress = ui->lE_IPAddress->text();
+    SystemUser.ConnectToServer(ipAddress,1234);
 }
 
 

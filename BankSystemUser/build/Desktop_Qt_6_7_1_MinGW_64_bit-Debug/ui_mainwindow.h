@@ -54,6 +54,10 @@ public:
     QCheckBox *showPasswordCheckBox;
     QPushButton *pBConnect;
     QListWidget *Console;
+    QWidget *layoutWidget3;
+    QHBoxLayout *horizontalLayout_5;
+    QLabel *label_12;
+    QLineEdit *lE_IPAddress;
     QWidget *Admin;
     QLabel *Adminlabel;
     QPushButton *pB_AddAccount;
@@ -81,27 +85,27 @@ public:
     QPushButton *pBCreateAccount;
     QPushButton *pBAddAccoutBack;
     QLabel *label_3;
-    QWidget *layoutWidget3;
+    QWidget *layoutWidget4;
     QVBoxLayout *verticalLayout_5;
     QLabel *NewUserFullNameErrorLabel;
     QLineEdit *NewUserFullName;
-    QWidget *layoutWidget4;
+    QWidget *layoutWidget5;
     QVBoxLayout *verticalLayout_6;
     QLabel *NewUserUserNameErrorLabel;
     QLineEdit *NewUserUserName;
-    QWidget *layoutWidget5;
+    QWidget *layoutWidget6;
     QVBoxLayout *verticalLayout_7;
     QLabel *NewUserPassWordErrorLabel;
     QLineEdit *NewUserPassWord;
-    QWidget *layoutWidget6;
+    QWidget *layoutWidget7;
     QVBoxLayout *verticalLayout_9;
     QLabel *NewUserAgeErrorLabel;
     QLineEdit *NewUserAge;
-    QWidget *layoutWidget7;
+    QWidget *layoutWidget8;
     QVBoxLayout *verticalLayout_10;
     QLabel *NewUserBalanceErrorLabel;
     QLineEdit *NewUserBalance;
-    QWidget *layoutWidget8;
+    QWidget *layoutWidget9;
     QVBoxLayout *verticalLayout_8;
     QLabel *NewUserEmailErrorLabel;
     QLineEdit *NewUserEmail;
@@ -132,24 +136,24 @@ public:
     QLabel *label_29;
     QPushButton *pB_ClientUpdateAccountBack;
     QPushButton *pB_Update;
-    QWidget *layoutWidget9;
+    QWidget *layoutWidget10;
     QVBoxLayout *verticalLayout_37;
     QLabel *UpdateEmailErrorLabel;
     QLineEdit *UpdateAccountEmail;
     QPushButton *pB_UpdateAccountConnectAgain;
-    QWidget *layoutWidget10;
+    QWidget *layoutWidget11;
     QVBoxLayout *verticalLayout;
     QLabel *UpdateFullNameErrorLabel;
     QLineEdit *UpdateAccountFullName;
-    QWidget *layoutWidget11;
+    QWidget *layoutWidget12;
     QVBoxLayout *verticalLayout_14;
     QLabel *UpdateUserNameErrorLabel;
     QLineEdit *UpdateAccountUserName;
-    QWidget *layoutWidget12;
+    QWidget *layoutWidget13;
     QVBoxLayout *verticalLayout_15;
     QLabel *UpdateAgeErrorLabel;
     QLineEdit *UpdateAccountAge;
-    QWidget *layoutWidget13;
+    QWidget *layoutWidget14;
     QVBoxLayout *verticalLayout_18;
     QLabel *UpdatePasswordErrorLabel;
     QLineEdit *UpdateAccountPassword;
@@ -158,23 +162,23 @@ public:
     QLabel *label_11;
     QPushButton *pb_ViewMyHistoryBack;
     QPushButton *pb_ViewMyHistoryView;
-    QWidget *layoutWidget14;
+    QWidget *layoutWidget15;
     QVBoxLayout *verticalLayout_13;
     QLabel *ClientViewHistoryCountErrorLabel;
     QLineEdit *lE_ClientViewHistoryCount;
     QPushButton *pB_ViewClientTransactionHistoryConnectAgain;
     QTableView *ClientTransactionHistoryTableView;
-    QWidget *layoutWidget15;
-    QHBoxLayout *horizontalLayout;
     QWidget *layoutWidget16;
-    QHBoxLayout *horizontalLayout_2;
+    QHBoxLayout *horizontalLayout;
     QWidget *layoutWidget17;
-    QVBoxLayout *verticalLayout_16;
+    QHBoxLayout *horizontalLayout_2;
     QWidget *layoutWidget18;
-    QHBoxLayout *horizontalLayout_3;
+    QVBoxLayout *verticalLayout_16;
     QWidget *layoutWidget19;
-    QVBoxLayout *verticalLayout_17;
+    QHBoxLayout *horizontalLayout_3;
     QWidget *layoutWidget20;
+    QVBoxLayout *verticalLayout_17;
+    QWidget *layoutWidget21;
     QHBoxLayout *horizontalLayout_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -202,7 +206,7 @@ public:
 "color: rgb(255, 255, 255);"));
         label_2 = new QLabel(Login);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(40, 120, 351, 351));
+        label_2->setGeometry(QRect(40, 130, 351, 351));
         label_2->setPixmap(QPixmap(QString::fromUtf8(":/images/logo.png")));
         label_2->setScaledContents(true);
         frame = new QFrame(Login);
@@ -367,6 +371,26 @@ public:
         Console->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 14pt \"Segoe UI\";\n"
 ""));
+        layoutWidget3 = new QWidget(Login);
+        layoutWidget3->setObjectName("layoutWidget3");
+        layoutWidget3->setGeometry(QRect(50, 160, 331, 46));
+        horizontalLayout_5 = new QHBoxLayout(layoutWidget3);
+        horizontalLayout_5->setObjectName("horizontalLayout_5");
+        horizontalLayout_5->setContentsMargins(0, 0, 0, 0);
+        label_12 = new QLabel(layoutWidget3);
+        label_12->setObjectName("label_12");
+        label_12->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"font: 700 20pt \"Segoe UI\";"));
+
+        horizontalLayout_5->addWidget(label_12);
+
+        lE_IPAddress = new QLineEdit(layoutWidget3);
+        lE_IPAddress->setObjectName("lE_IPAddress");
+        lE_IPAddress->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
+"font: 700 12pt \"Segoe UI\";"));
+
+        horizontalLayout_5->addWidget(lE_IPAddress);
+
         stackedWidget->addWidget(Login);
         Admin = new QWidget();
         Admin->setObjectName("Admin");
@@ -950,120 +974,120 @@ public:
         label_3->setGeometry(QRect(520, 10, 241, 171));
         label_3->setPixmap(QPixmap(QString::fromUtf8(":/images/logo.png")));
         label_3->setScaledContents(true);
-        layoutWidget3 = new QWidget(AddAccount);
-        layoutWidget3->setObjectName("layoutWidget3");
-        layoutWidget3->setGeometry(QRect(20, 217, 361, 81));
-        verticalLayout_5 = new QVBoxLayout(layoutWidget3);
+        layoutWidget4 = new QWidget(AddAccount);
+        layoutWidget4->setObjectName("layoutWidget4");
+        layoutWidget4->setGeometry(QRect(20, 217, 361, 81));
+        verticalLayout_5 = new QVBoxLayout(layoutWidget4);
         verticalLayout_5->setObjectName("verticalLayout_5");
         verticalLayout_5->setContentsMargins(0, 0, 0, 0);
-        NewUserFullNameErrorLabel = new QLabel(layoutWidget3);
+        NewUserFullNameErrorLabel = new QLabel(layoutWidget4);
         NewUserFullNameErrorLabel->setObjectName("NewUserFullNameErrorLabel");
         NewUserFullNameErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_5->addWidget(NewUserFullNameErrorLabel);
 
-        NewUserFullName = new QLineEdit(layoutWidget3);
+        NewUserFullName = new QLineEdit(layoutWidget4);
         NewUserFullName->setObjectName("NewUserFullName");
         NewUserFullName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_5->addWidget(NewUserFullName);
 
-        layoutWidget4 = new QWidget(AddAccount);
-        layoutWidget4->setObjectName("layoutWidget4");
-        layoutWidget4->setGeometry(QRect(20, 310, 361, 78));
-        verticalLayout_6 = new QVBoxLayout(layoutWidget4);
+        layoutWidget5 = new QWidget(AddAccount);
+        layoutWidget5->setObjectName("layoutWidget5");
+        layoutWidget5->setGeometry(QRect(20, 310, 361, 78));
+        verticalLayout_6 = new QVBoxLayout(layoutWidget5);
         verticalLayout_6->setObjectName("verticalLayout_6");
         verticalLayout_6->setContentsMargins(0, 0, 0, 0);
-        NewUserUserNameErrorLabel = new QLabel(layoutWidget4);
+        NewUserUserNameErrorLabel = new QLabel(layoutWidget5);
         NewUserUserNameErrorLabel->setObjectName("NewUserUserNameErrorLabel");
         NewUserUserNameErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_6->addWidget(NewUserUserNameErrorLabel);
 
-        NewUserUserName = new QLineEdit(layoutWidget4);
+        NewUserUserName = new QLineEdit(layoutWidget5);
         NewUserUserName->setObjectName("NewUserUserName");
         NewUserUserName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_6->addWidget(NewUserUserName);
 
-        layoutWidget5 = new QWidget(AddAccount);
-        layoutWidget5->setObjectName("layoutWidget5");
-        layoutWidget5->setGeometry(QRect(20, 410, 361, 78));
-        verticalLayout_7 = new QVBoxLayout(layoutWidget5);
+        layoutWidget6 = new QWidget(AddAccount);
+        layoutWidget6->setObjectName("layoutWidget6");
+        layoutWidget6->setGeometry(QRect(20, 410, 361, 78));
+        verticalLayout_7 = new QVBoxLayout(layoutWidget6);
         verticalLayout_7->setObjectName("verticalLayout_7");
         verticalLayout_7->setContentsMargins(0, 0, 0, 0);
-        NewUserPassWordErrorLabel = new QLabel(layoutWidget5);
+        NewUserPassWordErrorLabel = new QLabel(layoutWidget6);
         NewUserPassWordErrorLabel->setObjectName("NewUserPassWordErrorLabel");
         NewUserPassWordErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_7->addWidget(NewUserPassWordErrorLabel);
 
-        NewUserPassWord = new QLineEdit(layoutWidget5);
+        NewUserPassWord = new QLineEdit(layoutWidget6);
         NewUserPassWord->setObjectName("NewUserPassWord");
         NewUserPassWord->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_7->addWidget(NewUserPassWord);
 
-        layoutWidget6 = new QWidget(AddAccount);
-        layoutWidget6->setObjectName("layoutWidget6");
-        layoutWidget6->setGeometry(QRect(410, 310, 351, 78));
-        verticalLayout_9 = new QVBoxLayout(layoutWidget6);
+        layoutWidget7 = new QWidget(AddAccount);
+        layoutWidget7->setObjectName("layoutWidget7");
+        layoutWidget7->setGeometry(QRect(410, 310, 351, 78));
+        verticalLayout_9 = new QVBoxLayout(layoutWidget7);
         verticalLayout_9->setObjectName("verticalLayout_9");
         verticalLayout_9->setContentsMargins(0, 0, 0, 0);
-        NewUserAgeErrorLabel = new QLabel(layoutWidget6);
+        NewUserAgeErrorLabel = new QLabel(layoutWidget7);
         NewUserAgeErrorLabel->setObjectName("NewUserAgeErrorLabel");
         NewUserAgeErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_9->addWidget(NewUserAgeErrorLabel);
 
-        NewUserAge = new QLineEdit(layoutWidget6);
+        NewUserAge = new QLineEdit(layoutWidget7);
         NewUserAge->setObjectName("NewUserAge");
         NewUserAge->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_9->addWidget(NewUserAge);
 
-        layoutWidget7 = new QWidget(AddAccount);
-        layoutWidget7->setObjectName("layoutWidget7");
-        layoutWidget7->setGeometry(QRect(412, 410, 351, 78));
-        verticalLayout_10 = new QVBoxLayout(layoutWidget7);
+        layoutWidget8 = new QWidget(AddAccount);
+        layoutWidget8->setObjectName("layoutWidget8");
+        layoutWidget8->setGeometry(QRect(412, 410, 351, 78));
+        verticalLayout_10 = new QVBoxLayout(layoutWidget8);
         verticalLayout_10->setObjectName("verticalLayout_10");
         verticalLayout_10->setContentsMargins(0, 0, 0, 0);
-        NewUserBalanceErrorLabel = new QLabel(layoutWidget7);
+        NewUserBalanceErrorLabel = new QLabel(layoutWidget8);
         NewUserBalanceErrorLabel->setObjectName("NewUserBalanceErrorLabel");
         NewUserBalanceErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_10->addWidget(NewUserBalanceErrorLabel);
 
-        NewUserBalance = new QLineEdit(layoutWidget7);
+        NewUserBalance = new QLineEdit(layoutWidget8);
         NewUserBalance->setObjectName("NewUserBalance");
         NewUserBalance->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
 
         verticalLayout_10->addWidget(NewUserBalance);
 
-        layoutWidget8 = new QWidget(AddAccount);
-        layoutWidget8->setObjectName("layoutWidget8");
-        layoutWidget8->setGeometry(QRect(411, 221, 351, 78));
-        verticalLayout_8 = new QVBoxLayout(layoutWidget8);
+        layoutWidget9 = new QWidget(AddAccount);
+        layoutWidget9->setObjectName("layoutWidget9");
+        layoutWidget9->setGeometry(QRect(411, 221, 351, 78));
+        verticalLayout_8 = new QVBoxLayout(layoutWidget9);
         verticalLayout_8->setObjectName("verticalLayout_8");
         verticalLayout_8->setContentsMargins(0, 0, 0, 0);
-        NewUserEmailErrorLabel = new QLabel(layoutWidget8);
+        NewUserEmailErrorLabel = new QLabel(layoutWidget9);
         NewUserEmailErrorLabel->setObjectName("NewUserEmailErrorLabel");
         NewUserEmailErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_8->addWidget(NewUserEmailErrorLabel);
 
-        NewUserEmail = new QLineEdit(layoutWidget8);
+        NewUserEmail = new QLineEdit(layoutWidget9);
         NewUserEmail->setObjectName("NewUserEmail");
         NewUserEmail->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
@@ -1409,20 +1433,20 @@ public:
 "    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
 "}\n"
 ""));
-        layoutWidget9 = new QWidget(UpdateClientAccount);
-        layoutWidget9->setObjectName("layoutWidget9");
-        layoutWidget9->setGeometry(QRect(40, 450, 671, 61));
-        verticalLayout_37 = new QVBoxLayout(layoutWidget9);
+        layoutWidget10 = new QWidget(UpdateClientAccount);
+        layoutWidget10->setObjectName("layoutWidget10");
+        layoutWidget10->setGeometry(QRect(40, 450, 671, 61));
+        verticalLayout_37 = new QVBoxLayout(layoutWidget10);
         verticalLayout_37->setObjectName("verticalLayout_37");
         verticalLayout_37->setContentsMargins(0, 0, 0, 0);
-        UpdateEmailErrorLabel = new QLabel(layoutWidget9);
+        UpdateEmailErrorLabel = new QLabel(layoutWidget10);
         UpdateEmailErrorLabel->setObjectName("UpdateEmailErrorLabel");
         UpdateEmailErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_37->addWidget(UpdateEmailErrorLabel);
 
-        UpdateAccountEmail = new QLineEdit(layoutWidget9);
+        UpdateAccountEmail = new QLineEdit(layoutWidget10);
         UpdateAccountEmail->setObjectName("UpdateAccountEmail");
         UpdateAccountEmail->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 15pt \"Segoe UI\";"));
@@ -1460,80 +1484,80 @@ public:
 "    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
 "}\n"
 ""));
-        layoutWidget10 = new QWidget(UpdateClientAccount);
-        layoutWidget10->setObjectName("layoutWidget10");
-        layoutWidget10->setGeometry(QRect(40, 172, 671, 61));
-        verticalLayout = new QVBoxLayout(layoutWidget10);
+        layoutWidget11 = new QWidget(UpdateClientAccount);
+        layoutWidget11->setObjectName("layoutWidget11");
+        layoutWidget11->setGeometry(QRect(40, 172, 671, 61));
+        verticalLayout = new QVBoxLayout(layoutWidget11);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        UpdateFullNameErrorLabel = new QLabel(layoutWidget10);
+        UpdateFullNameErrorLabel = new QLabel(layoutWidget11);
         UpdateFullNameErrorLabel->setObjectName("UpdateFullNameErrorLabel");
         UpdateFullNameErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout->addWidget(UpdateFullNameErrorLabel);
 
-        UpdateAccountFullName = new QLineEdit(layoutWidget10);
+        UpdateAccountFullName = new QLineEdit(layoutWidget11);
         UpdateAccountFullName->setObjectName("UpdateAccountFullName");
         UpdateAccountFullName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 15pt \"Segoe UI\";"));
 
         verticalLayout->addWidget(UpdateAccountFullName);
 
-        layoutWidget11 = new QWidget(UpdateClientAccount);
-        layoutWidget11->setObjectName("layoutWidget11");
-        layoutWidget11->setGeometry(QRect(40, 240, 671, 61));
-        verticalLayout_14 = new QVBoxLayout(layoutWidget11);
+        layoutWidget12 = new QWidget(UpdateClientAccount);
+        layoutWidget12->setObjectName("layoutWidget12");
+        layoutWidget12->setGeometry(QRect(40, 240, 671, 61));
+        verticalLayout_14 = new QVBoxLayout(layoutWidget12);
         verticalLayout_14->setObjectName("verticalLayout_14");
         verticalLayout_14->setContentsMargins(0, 0, 0, 0);
-        UpdateUserNameErrorLabel = new QLabel(layoutWidget11);
+        UpdateUserNameErrorLabel = new QLabel(layoutWidget12);
         UpdateUserNameErrorLabel->setObjectName("UpdateUserNameErrorLabel");
         UpdateUserNameErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_14->addWidget(UpdateUserNameErrorLabel);
 
-        UpdateAccountUserName = new QLineEdit(layoutWidget11);
+        UpdateAccountUserName = new QLineEdit(layoutWidget12);
         UpdateAccountUserName->setObjectName("UpdateAccountUserName");
         UpdateAccountUserName->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 15pt \"Segoe UI\";"));
 
         verticalLayout_14->addWidget(UpdateAccountUserName);
 
-        layoutWidget12 = new QWidget(UpdateClientAccount);
-        layoutWidget12->setObjectName("layoutWidget12");
-        layoutWidget12->setGeometry(QRect(40, 310, 671, 60));
-        verticalLayout_15 = new QVBoxLayout(layoutWidget12);
+        layoutWidget13 = new QWidget(UpdateClientAccount);
+        layoutWidget13->setObjectName("layoutWidget13");
+        layoutWidget13->setGeometry(QRect(40, 310, 671, 60));
+        verticalLayout_15 = new QVBoxLayout(layoutWidget13);
         verticalLayout_15->setObjectName("verticalLayout_15");
         verticalLayout_15->setContentsMargins(0, 0, 0, 0);
-        UpdateAgeErrorLabel = new QLabel(layoutWidget12);
+        UpdateAgeErrorLabel = new QLabel(layoutWidget13);
         UpdateAgeErrorLabel->setObjectName("UpdateAgeErrorLabel");
         UpdateAgeErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_15->addWidget(UpdateAgeErrorLabel);
 
-        UpdateAccountAge = new QLineEdit(layoutWidget12);
+        UpdateAccountAge = new QLineEdit(layoutWidget13);
         UpdateAccountAge->setObjectName("UpdateAccountAge");
         UpdateAccountAge->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 15pt \"Segoe UI\";"));
 
         verticalLayout_15->addWidget(UpdateAccountAge);
 
-        layoutWidget13 = new QWidget(UpdateClientAccount);
-        layoutWidget13->setObjectName("layoutWidget13");
-        layoutWidget13->setGeometry(QRect(40, 380, 671, 60));
-        verticalLayout_18 = new QVBoxLayout(layoutWidget13);
+        layoutWidget14 = new QWidget(UpdateClientAccount);
+        layoutWidget14->setObjectName("layoutWidget14");
+        layoutWidget14->setGeometry(QRect(40, 380, 671, 60));
+        verticalLayout_18 = new QVBoxLayout(layoutWidget14);
         verticalLayout_18->setObjectName("verticalLayout_18");
         verticalLayout_18->setContentsMargins(0, 0, 0, 0);
-        UpdatePasswordErrorLabel = new QLabel(layoutWidget13);
+        UpdatePasswordErrorLabel = new QLabel(layoutWidget14);
         UpdatePasswordErrorLabel->setObjectName("UpdatePasswordErrorLabel");
         UpdatePasswordErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 10pt \"Segoe UI\";"));
 
         verticalLayout_18->addWidget(UpdatePasswordErrorLabel);
 
-        UpdateAccountPassword = new QLineEdit(layoutWidget13);
+        UpdateAccountPassword = new QLineEdit(layoutWidget14);
         UpdateAccountPassword->setObjectName("UpdateAccountPassword");
         UpdateAccountPassword->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 15pt \"Segoe UI\";"));
@@ -1615,20 +1639,20 @@ public:
 "    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */\n"
 "}\n"
 ""));
-        layoutWidget14 = new QWidget(ViewMyHistory);
-        layoutWidget14->setObjectName("layoutWidget14");
-        layoutWidget14->setGeometry(QRect(40, 240, 361, 78));
-        verticalLayout_13 = new QVBoxLayout(layoutWidget14);
+        layoutWidget15 = new QWidget(ViewMyHistory);
+        layoutWidget15->setObjectName("layoutWidget15");
+        layoutWidget15->setGeometry(QRect(40, 240, 361, 78));
+        verticalLayout_13 = new QVBoxLayout(layoutWidget15);
         verticalLayout_13->setObjectName("verticalLayout_13");
         verticalLayout_13->setContentsMargins(0, 0, 0, 0);
-        ClientViewHistoryCountErrorLabel = new QLabel(layoutWidget14);
+        ClientViewHistoryCountErrorLabel = new QLabel(layoutWidget15);
         ClientViewHistoryCountErrorLabel->setObjectName("ClientViewHistoryCountErrorLabel");
         ClientViewHistoryCountErrorLabel->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 14pt \"Segoe UI\";"));
 
         verticalLayout_13->addWidget(ClientViewHistoryCountErrorLabel);
 
-        lE_ClientViewHistoryCount = new QLineEdit(layoutWidget14);
+        lE_ClientViewHistoryCount = new QLineEdit(layoutWidget15);
         lE_ClientViewHistoryCount->setObjectName("lE_ClientViewHistoryCount");
         lE_ClientViewHistoryCount->setStyleSheet(QString::fromUtf8("color: rgb(255, 255, 255);\n"
 "font: 700 20pt \"Segoe UI\";"));
@@ -1672,40 +1696,40 @@ public:
         ClientTransactionHistoryTableView->setStyleSheet(QString::fromUtf8("background-color: rgb(255, 255, 255);\n"
 "font: 700 10pt \"Segoe UI\";"));
         stackedWidget->addWidget(ViewMyHistory);
-        layoutWidget15 = new QWidget(centralwidget);
-        layoutWidget15->setObjectName("layoutWidget15");
-        layoutWidget15->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout = new QHBoxLayout(layoutWidget15);
-        horizontalLayout->setObjectName("horizontalLayout");
-        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         layoutWidget16 = new QWidget(centralwidget);
         layoutWidget16->setObjectName("layoutWidget16");
         layoutWidget16->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout_2 = new QHBoxLayout(layoutWidget16);
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
-        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout = new QHBoxLayout(layoutWidget16);
+        horizontalLayout->setObjectName("horizontalLayout");
+        horizontalLayout->setContentsMargins(0, 0, 0, 0);
         layoutWidget17 = new QWidget(centralwidget);
         layoutWidget17->setObjectName("layoutWidget17");
         layoutWidget17->setGeometry(QRect(0, 0, 2, 2));
-        verticalLayout_16 = new QVBoxLayout(layoutWidget17);
-        verticalLayout_16->setObjectName("verticalLayout_16");
-        verticalLayout_16->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout_2 = new QHBoxLayout(layoutWidget17);
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
         layoutWidget18 = new QWidget(centralwidget);
         layoutWidget18->setObjectName("layoutWidget18");
         layoutWidget18->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout_3 = new QHBoxLayout(layoutWidget18);
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
-        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
+        verticalLayout_16 = new QVBoxLayout(layoutWidget18);
+        verticalLayout_16->setObjectName("verticalLayout_16");
+        verticalLayout_16->setContentsMargins(0, 0, 0, 0);
         layoutWidget19 = new QWidget(centralwidget);
         layoutWidget19->setObjectName("layoutWidget19");
         layoutWidget19->setGeometry(QRect(0, 0, 2, 2));
-        verticalLayout_17 = new QVBoxLayout(layoutWidget19);
-        verticalLayout_17->setObjectName("verticalLayout_17");
-        verticalLayout_17->setContentsMargins(0, 0, 0, 0);
+        horizontalLayout_3 = new QHBoxLayout(layoutWidget19);
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
         layoutWidget20 = new QWidget(centralwidget);
         layoutWidget20->setObjectName("layoutWidget20");
         layoutWidget20->setGeometry(QRect(0, 0, 2, 2));
-        horizontalLayout_4 = new QHBoxLayout(layoutWidget20);
+        verticalLayout_17 = new QVBoxLayout(layoutWidget20);
+        verticalLayout_17->setObjectName("verticalLayout_17");
+        verticalLayout_17->setContentsMargins(0, 0, 0, 0);
+        layoutWidget21 = new QWidget(centralwidget);
+        layoutWidget21->setObjectName("layoutWidget21");
+        layoutWidget21->setGeometry(QRect(0, 0, 2, 2));
+        horizontalLayout_4 = new QHBoxLayout(layoutWidget21);
         horizontalLayout_4->setObjectName("horizontalLayout_4");
         horizontalLayout_4->setContentsMargins(0, 0, 0, 0);
         MainWindow->setCentralWidget(centralwidget);
@@ -1735,7 +1759,7 @@ public:
         QObject::connect(pB_ClientUpdateAccountBack, &QPushButton::clicked, UpdateAccountPassword, qOverload<>(&QLineEdit::clear));
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, lE_ClientViewHistoryCount, qOverload<>(&QLineEdit::clear));
 
-        stackedWidget->setCurrentIndex(3);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1752,6 +1776,8 @@ public:
         pBClear->setText(QCoreApplication::translate("MainWindow", "Clear", nullptr));
         showPasswordCheckBox->setText(QCoreApplication::translate("MainWindow", "Show Password", nullptr));
         pBConnect->setText(QCoreApplication::translate("MainWindow", "Connect to Bank Server", nullptr));
+        label_12->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p><span style=\" font-size:11pt; font-weight:700;\">Enter IP address </span></p></body></html>", nullptr));
+        lE_IPAddress->setInputMask(QCoreApplication::translate("MainWindow", "000.000.000.000", nullptr));
         Adminlabel->setText(QCoreApplication::translate("MainWindow", "<html><head/><body><p>ADMIN</p></body></html>", nullptr));
         pB_AddAccount->setText(QCoreApplication::translate("MainWindow", "Create Client Account", nullptr));
         pB_AdminGetAccountNumber->setText(QCoreApplication::translate("MainWindow", "Get Client Account Number", nullptr));

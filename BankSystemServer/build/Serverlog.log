@@ -1,31 +1,68 @@
-2024-07-21 20:43:02 - Server is up and listening to port => 1234
-2024-07-21 20:43:19 - User:892 connent to server
-2024-07-21 20:43:19 - User:892 is running on thread
-2024-07-21 20:43:19 - Main database initialized with 1 records
-2024-07-21 20:43:19 - Error: Failed to parse JSON from transaction database file
-2024-07-21 20:45:53 - User:892 has disconnected
-2024-07-21 23:47:43 - Server is up and listening to port => 1234
-2024-07-21 23:56:18 - Server is up and listening to port => 1234
-2024-07-21 23:56:29 - User:884 connent to server
-2024-07-21 23:56:29 - User:884 is running on thread
-2024-07-21 23:56:29 - Main database initialized with 1 records
-2024-07-21 23:56:29 - Error: Failed to parse JSON from transaction database file
-2024-07-21 23:57:09 - Server Received encrypted request From User:884 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
-2024-07-21 23:57:09 - Server Received request From User:884 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
-2024-07-21 23:57:09 - Checking frame size .....
-2024-07-21 23:57:09 - Checking request data size .....
-2024-07-21 23:57:09 - Checking request signature .....
-2024-07-21 23:57:09 - Server generate signature to received request
-2024-07-21 23:57:09 - Server compare between generated signature and received signature 
-2024-07-21 23:57:09 - Received signature = Generated signature
-2024-07-21 23:57:09 - Now:Server processing request from User:884 Request => Login:Kero75:kero*7579
-2024-07-21 23:57:09 - Main database initialized with 1 records
-2024-07-21 23:57:09 - Main database initialized with 1 records
-2024-07-21 23:57:09 - Main database file saved successfully.
-2024-07-21 23:57:09 - Login state updated successfully for user: Kero75
-2024-07-21 23:57:09 - My server Send Response to User:884 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
-2024-07-21 23:57:09 - Main database initialized with 1 records
-2024-07-21 23:57:09 - Main database file saved successfully.
-2024-07-21 23:57:09 - Login state updated successfully for user: Kero75
-2024-07-21 23:57:09 - User: 884 logout form bank system
-2024-07-21 23:57:09 - User:884 has disconnected
+2024-07-22 15:37:37 - Server is up and listening to port => 1234
+2024-07-22 15:48:54 - User:648 connent to server
+2024-07-22 15:48:56 - User:648 is running on thread
+2024-07-22 15:48:56 - Main database initialized with 1 records
+2024-07-22 15:48:56 - Error: Failed to parse JSON from transaction database file
+2024-07-22 15:49:31 - Server Received encrypted request From User:648 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-22 15:49:31 - Server Received request From User:648 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-22 15:49:31 - Checking frame size .....
+2024-07-22 15:49:31 - Checking request data size .....
+2024-07-22 15:49:31 - Checking request signature .....
+2024-07-22 15:49:31 - Server generate signature to received request
+2024-07-22 15:49:31 - Server compare between generated signature and received signature 
+2024-07-22 15:49:31 - Received signature = Generated signature
+2024-07-22 15:49:31 - Now:Server processing request from User:648 Request => Login:Kero75:kero*7579
+2024-07-22 15:49:31 - Main database initialized with 1 records
+2024-07-22 15:49:31 - Main database initialized with 1 records
+2024-07-22 15:49:31 - Main database file saved successfully.
+2024-07-22 15:49:31 - Login state updated successfully for user: Kero75
+2024-07-22 15:49:31 - My server Send Response to User:648 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-22 15:51:33 - Server Received encrypted request From User:648 Request => 6d87a72607d85cbfcecd650e73efcac85236930f6d1deab9ca2c99036fe4b67e86c4c23fee737703de8e84050c42587fdf26f21f33ee88053249ae4b6da1f38de4d2c4b20ba98e8264c5ae920e7aabf0bb339012c69df7f03d3df8cc0ea9807806b3ec18387bc3549d7c3491602dafd6e50952024d3e8f032a7e6baacd8caac096c4700611fa972621ed3c27cd2f276921f711fb4f6dd37e813e4a63c18357103151897389e7bb839c7d4cb80dd32c0ffbd870d1b8236dc0052b2e8595100cc4881a8c34cd0e9b247a4a708921349905
+2024-07-22 15:51:33 - Server Received request From User:648 Request => 199:{"RequestData":"AddAccount:sharple samaan:sharple22:sharple@22:25:kiro.samaan.kodoos@gmail.com:1000","RequestSize":"83","Signature":"f685189b72c34e7b797adf180cb7650363ff9c34106513230bc6814dacc1fa39"}
+2024-07-22 15:51:33 - Checking frame size .....
+2024-07-22 15:51:33 - Checking request data size .....
+2024-07-22 15:51:33 - Checking request signature .....
+2024-07-22 15:51:33 - Server generate signature to received request
+2024-07-22 15:51:33 - Server compare between generated signature and received signature 
+2024-07-22 15:51:33 - Received signature = Generated signature
+2024-07-22 15:51:33 - Now:Server processing request from User:648 Request => AddAccount:sharple samaan:sharple22:sharple@22:25:kiro.samaan.kodoos@gmail.com:1000
+2024-07-22 15:51:33 - Main database initialized with 1 records
+2024-07-22 15:51:33 - Main database initialized with 1 records
+2024-07-22 15:51:33 - Error: Failed to parse JSON from transaction database file
+2024-07-22 15:51:33 - Generated account number: 526933513
+2024-07-22 15:51:33 - Main database file saved successfully.
+2024-07-22 15:51:33 - Transaction database file saved successfully.
+2024-07-22 15:51:33 - Client added successfully.
+2024-07-22 15:51:33 - My server Send Response to User:648 Response => 107:{"ResponseData":"Congratulations! New user 'sharple22' has been added. Welcome aboard","ResponseSize":"68"}
+2024-07-22 15:51:53 - Server Received encrypted request From User:648 Request => 92e492f760fbf670bb4162200882ccc631112e7bcdd3837b40b2173e3ddf3f072c59a73f0cdc544bb33e7cbe78bf7dc7ba78081fb2b73bcd9aaa04db4bfd3812367fda89ca88c4211f25befb0c14e9f38d46b41210a3da7e6aa72f34c9ddbb6f177cf9c9c3f1fd9bdb3060fdc2768db3c729599e24fb1853f5c97af50c9e8ebc7cddaa7b31aef9c396c320cdba75f390
+2024-07-22 15:51:53 - Server Received request From User:648 Request => 139:{"RequestData":"DeleteAccount:526933513","RequestSize":"23","Signature":"7cc701cf8be3b56929e83deb3942578d65c91d50c026d80ff813ecb6b3545d64"}
+2024-07-22 15:51:53 - Checking frame size .....
+2024-07-22 15:51:53 - Checking request data size .....
+2024-07-22 15:51:53 - Checking request signature .....
+2024-07-22 15:51:53 - Server generate signature to received request
+2024-07-22 15:51:53 - Server compare between generated signature and received signature 
+2024-07-22 15:51:53 - Received signature = Generated signature
+2024-07-22 15:51:53 - Now:Server processing request from User:648 Request => DeleteAccount:526933513
+2024-07-22 15:51:53 - Main database initialized with 2 records
+2024-07-22 15:51:53 - Transaction database initialized with 1 records
+2024-07-22 15:51:53 - Deleting client from main database with AccountNumber: 526933513
+2024-07-22 15:51:53 - Main database file saved successfully.
+2024-07-22 15:51:53 - Deleting client from transaction database with AccountNumber: 526933513
+2024-07-22 15:51:53 - Transaction database file saved successfully.
+2024-07-22 15:51:53 - My server Send Response to User:648 Response => 114:{"ResponseData":"Client account with account number 526933513 has been successfully deleted.","ResponseSize":"75"}
+2024-07-22 15:52:06 - Server Received encrypted request From User:648 Request => 6c2903b1596fc29b5b83260a5dbd18980d448102b0ac8cdb661911d87ad21273683490e118a9fb928e60fbcac1530a33cd78a9a27db23911617b674685d964075e932a9ccaa686af373b9064c10a45e87000d4d8d09ab6f2a1fa2fd125a48b9565978136bd95640de9f36c0b789b7abceadd6fa14b0024dbfe170d0a9b3829963f4d35128d1cfb0d1131d948412835ea
+2024-07-22 15:52:06 - Server Received request From User:648 Request => 132:{"RequestData":"GetBankDataBase:","RequestSize":"16","Signature":"69765f2e35651c686a8c108a2a595da8a0096459f1528b21c52be0a100843d28"}
+2024-07-22 15:52:06 - Checking frame size .....
+2024-07-22 15:52:06 - Checking request data size .....
+2024-07-22 15:52:06 - Checking request signature .....
+2024-07-22 15:52:06 - Server generate signature to received request
+2024-07-22 15:52:06 - Server compare between generated signature and received signature 
+2024-07-22 15:52:06 - Received signature = Generated signature
+2024-07-22 15:52:06 - Now:Server processing request from User:648 Request => GetBankDataBase:
+2024-07-22 15:52:06 - Main database initialized with 1 records
+2024-07-22 15:52:06 - My server Send Response to User:648 Response => 276:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Login\":\"1\",\"Password\":\"kero*7579\",\"Username\":\"Kero75\"}]","ResponseSize":"204"}
+2024-07-22 15:52:16 - Main database initialized with 1 records
+2024-07-22 15:52:17 - Main database file saved successfully.
+2024-07-22 15:52:17 - Login state updated successfully for user: Kero75
+2024-07-22 15:52:17 - User: 648 logout form bank system
+2024-07-22 15:52:17 - User:648 has disconnected

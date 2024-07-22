@@ -31,7 +31,7 @@
      <string notr="true">background-color: rgb(50, 50, 50);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QLabel" name="label">
@@ -55,7 +55,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>120</y>
+        <y>130</y>
         <width>351</width>
         <height>351</height>
        </rect>
@@ -323,6 +323,40 @@ QPushButton:pressed {
 font: 700 14pt &quot;Segoe UI&quot;;
 </string>
       </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>160</y>
+        <width>331</width>
+        <height>46</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 700 20pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Enter IP address &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lE_IPAddress">
+         <property name="styleSheet">
+          <string notr="true">color: rgb(255, 255, 255);
+font: 700 12pt &quot;Segoe UI&quot;;</string>
+         </property>
+         <property name="inputMask">
+          <string>000.000.000.000</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="Admin">

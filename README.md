@@ -52,7 +52,7 @@ This project implements a Banking System using a client-server model. The system
 ## Installation
 1. **Clone the Repository**:
    ```bash
-   [git clone <repository-url>](https://github.com/KerollosSamaan75/Bank-System-Project.git)
+   git clone (https://github.com/KerollosSamaan75/Bank-System-Project.git)
    ```
 2. **Build the Applications**:
    - Open the project in QT Creator.

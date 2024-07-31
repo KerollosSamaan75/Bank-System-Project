@@ -9,5 +9,27 @@
         "Login": "0",
         "Password": "kero*7579",
         "Username": "Kero75"
+    },
+    {
+        "AccountNumber": "529461960",
+        "Age": "27",
+        "Authority": "Client",
+        "Balance": "1000",
+        "Email": "kiro.samaan.kodoos@gmail.com",
+        "FullName": "mohanad",
+        "Login": "0",
+        "Password": "mohanad@11",
+        "Username": "mohamad11"
+    },
+    {
+        "AccountNumber": "224648551",
+        "Age": "25",
+        "Authority": "Client",
+        "Balance": "0",
+        "Email": "kerollos.sam3an.75@gmail.com",
+        "FullName": "sharple samaan",
+        "Login": "0",
+        "Password": "sharple@2011",
+        "Username": "sharple2011"
     }
 ]

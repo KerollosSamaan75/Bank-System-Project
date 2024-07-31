@@ -157,8 +157,8 @@ void MainWindow::requestResponse(QString message)
 
 void MainWindow::onConnectedServer()
 {
-    ui->Console->clear();
-    ui->Console->addItem("User has connected to Server");
+    //ui->Console->clear();
+    //ui->Console->addItem("User has connected to Server");
     qDebug()<<"User has connected to Server";
     QMessageBox::information(this, "Connection Successful", "You have successfully connected to the server");
     ui->frame->setEnabled(true);
@@ -170,6 +170,9 @@ void MainWindow::onConnectedServer()
     ui->pB_ViewBankDataBaseConnectAgain->hide();
     ui->pB_UpdateAccountConnectAgain->hide();
     ui->pB_ViewClientTransactionHistoryConnectAgain->hide();
+
+    ui->pBClientLogout->setVisible(true);
+    ui->pBAdminLogout->setVisible(true);
 }
 
 void MainWindow::onDisconnectedServer()
@@ -181,7 +184,7 @@ void MainWindow::onDisconnectedServer()
 
     //the login page
     ui->frame->setEnabled(false);
-    ui->Console->clear();
+    //ui->Console->clear();
     ui->pBConnect->setVisible(true);
     ui->pBConnect->setText("Try to Connent again");
 
@@ -191,18 +194,20 @@ void MainWindow::onDisconnectedServer()
     ui->pB_ClientConnectAgain->setVisible(true);
     //Add account page
     ui->pB_AddAccountConnectAgain->setVisible(true);
+
     ui->pB_ViewTransactionHistoryConnectAgain->setVisible(true);
     ui->pB_ViewBankDataBaseConnectAgain->setVisible(true);
     ui->pB_UpdateAccountConnectAgain->setVisible(true);
     ui->pB_ViewClientTransactionHistoryConnectAgain->setVisible(true);
+
+    ui->pBAdminLogout->hide();
+    ui->pBClientLogout->hide();
 }
 
 
 void MainWindow::onErrorOccurredServer(QAbstractSocket::SocketError socketError)
 {
     QMetaEnum meta = QMetaEnum::fromType<QAbstractSocket::SocketError>();
-    ui->Console->clear();
-    ui->Console->addItem(meta.valueToKey(socketError));
     qDebug()<<meta.valueToKey(socketError);
     if(socketError == 0)
     {
@@ -226,8 +231,6 @@ void MainWindow::onErrorOccurredServer(QAbstractSocket::SocketError socketError)
 void MainWindow::onStateChangedServer(QAbstractSocket::SocketState socketState)
 {
     QMetaEnum meta = QMetaEnum::fromType<QAbstractSocket::SocketState>();
-    ui->Console->clear();
-    ui->Console->addItem(meta.valueToKey(socketState));
     qDebug()<<meta.valueToKey(socketState)<<Qt::endl;
 }
 
@@ -246,8 +249,29 @@ void MainWindow::onUserSendRequest(QString Data)
 
 void MainWindow::on_pBConnect_clicked()
 {
-    QString ipAddress = ui->lE_IPAddress->text();
-    SystemUser.ConnectToServer(ipAddress,1234);
+    QList<QNetworkInterface> allInterfaces = QNetworkInterface::allInterfaces();
+    for (const QNetworkInterface& interface : allInterfaces)
+    {
+        // Check if the interface is running and has an IP address assigned
+        if (interface.flags().testFlag(QNetworkInterface::IsUp) &&
+            interface.flags().testFlag(QNetworkInterface::IsRunning) &&
+            !interface.flags().testFlag(QNetworkInterface::IsLoopBack))
+        {
+            // Iterate through all IP addresses of the interface
+            QList<QNetworkAddressEntry> allAddresses = interface.addressEntries();
+            for (const QNetworkAddressEntry& addressEntry : allAddresses)
+            {
+                QHostAddress ipAddress = addressEntry.ip();
+                if (ipAddress.protocol() == QAbstractSocket::IPv4Protocol)
+                {
+                    QString ip=ipAddress.toString();
+                    SystemUser.ConnectToServer(ip,1234);
+                    break;
+                }
+            }
+            break;
+        }
+    }
 }
 
 

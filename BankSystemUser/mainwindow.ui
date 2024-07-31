@@ -6,65 +6,65 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>801</width>
-    <height>642</height>
+    <width>798</width>
+    <height>609</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>IMT Bank System</string>
+   <string>KS Bank</string>
   </property>
   <property name="windowIcon">
    <iconset resource="resources.qrc">
-    <normaloff>:/images/logo.png</normaloff>:/images/logo.png</iconset>
+    <normaloff>:/images/K.png</normaloff>:/images/K.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>0</x>
       <y>0</y>
-      <width>781</width>
-      <height>591</height>
+      <width>801</width>
+      <height>561</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(50, 50, 50);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QLabel" name="label">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>50</y>
-        <width>671</width>
-        <height>101</height>
+        <x>0</x>
+        <y>-10</y>
+        <width>791</width>
+        <height>181</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 700 35pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+       <string notr="true">font: 700 40pt &quot;Segoe UI&quot;;
+color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>Welcome To IMT Bank System</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Welcome To K&amp;amp;S Bank System&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QLabel" name="label_2">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>130</y>
-        <width>351</width>
-        <height>351</height>
+        <x>0</x>
+        <y>110</y>
+        <width>421</width>
+        <height>441</height>
        </rect>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/images/logo.png</pixmap>
+       <pixmap resource="resources.qrc">:/images/K.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -73,10 +73,10 @@ color: rgb(255, 255, 255);</string>
      <widget class="QFrame" name="frame">
       <property name="geometry">
        <rect>
-        <x>439</x>
-        <y>200</y>
-        <width>331</width>
-        <height>381</height>
+        <x>429</x>
+        <y>180</y>
+        <width>371</width>
+        <height>431</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -98,7 +98,7 @@ color: rgb(255, 255, 255);</string>
         <item>
          <widget class="QLabel" name="usernameErrorLabel">
           <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
+           <string notr="true">color: rgb(0, 0, 0);
 font: 14pt &quot;Segoe UI&quot;;</string>
           </property>
           <property name="text">
@@ -109,7 +109,7 @@ font: 14pt &quot;Segoe UI&quot;;</string>
         <item>
          <widget class="QLineEdit" name="lEUserName">
           <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
+           <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
           </property>
          </widget>
@@ -129,7 +129,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
         <item>
          <widget class="QLabel" name="passwordErrorLabel">
           <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
+           <string notr="true">color: rgb(0, 0, 0);
 font: 14pt &quot;Segoe UI&quot;;</string>
           </property>
           <property name="text">
@@ -140,7 +140,7 @@ font: 14pt &quot;Segoe UI&quot;;</string>
         <item>
          <widget class="QLineEdit" name="lEPassword">
           <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
+           <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
           </property>
          </widget>
@@ -152,8 +152,8 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
         <rect>
          <x>10</x>
          <y>223</y>
-         <width>301</width>
-         <height>151</height>
+         <width>311</width>
+         <height>124</height>
         </rect>
        </property>
        <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -164,30 +164,29 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
           </property>
@@ -203,30 +202,29 @@ QPushButton:pressed {
           </property>
           <property name="styleSheet">
            <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
           </property>
@@ -248,7 +246,7 @@ QPushButton:pressed {
        </property>
        <property name="styleSheet">
         <string notr="true">font: 700 9pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(0, 0, 0);</string>
        </property>
        <property name="text">
         <string>Show Password</string>
@@ -258,9 +256,9 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="pBConnect">
       <property name="geometry">
        <rect>
-        <x>41</x>
-        <y>499</y>
-        <width>329</width>
+        <x>70</x>
+        <y>430</y>
+        <width>271</width>
         <height>71</height>
        </rect>
       </property>
@@ -278,30 +276,29 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -309,79 +306,30 @@ QPushButton:pressed {
        <string>Connect to Bank Server</string>
       </property>
      </widget>
-     <widget class="QListWidget" name="Console">
-      <property name="geometry">
-       <rect>
-        <x>41</x>
-        <y>441</y>
-        <width>329</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">color: rgb(255, 255, 255);
-font: 700 14pt &quot;Segoe UI&quot;;
-</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>160</y>
-        <width>331</width>
-        <height>46</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
-       <item>
-        <widget class="QLabel" name="label_12">
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-font: 700 20pt &quot;Segoe UI&quot;;</string>
-         </property>
-         <property name="text">
-          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt; font-weight:700;&quot;&gt;Enter IP address &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="lE_IPAddress">
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-font: 700 12pt &quot;Segoe UI&quot;;</string>
-         </property>
-         <property name="inputMask">
-          <string>000.000.000.000</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
     </widget>
     <widget class="QWidget" name="Admin">
      <widget class="QLabel" name="Adminlabel">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>70</y>
+        <y>30</y>
         <width>501</width>
-        <height>61</height>
+        <height>101</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 700 30pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+       <string notr="true">font: 700 35pt &quot;Segoe UI&quot;;
+color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ADMIN&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ADMIN&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pB_AddAccount">
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>190</y>
+        <y>180</y>
         <width>351</width>
         <height>81</height>
        </rect>
@@ -391,30 +339,29 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -426,7 +373,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>400</x>
-        <y>370</y>
+        <y>340</y>
         <width>351</width>
         <height>81</height>
        </rect>
@@ -436,30 +383,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -470,17 +416,17 @@ QPushButton:pressed {
      <widget class="QLabel" name="label_4">
       <property name="geometry">
        <rect>
-        <x>520</x>
-        <y>10</y>
-        <width>221</width>
-        <height>201</height>
+        <x>530</x>
+        <y>-30</y>
+        <width>251</width>
+        <height>231</height>
        </rect>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/images/logo.png</pixmap>
+       <pixmap resource="resources.qrc">:/images/K.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -490,7 +436,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>280</y>
+        <y>260</y>
         <width>351</width>
         <height>81</height>
        </rect>
@@ -500,30 +446,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -535,7 +480,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>510</y>
+        <y>480</y>
         <width>151</width>
         <height>71</height>
        </rect>
@@ -545,30 +490,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -580,7 +524,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>400</x>
-        <y>190</y>
+        <y>180</y>
         <width>351</width>
         <height>81</height>
        </rect>
@@ -590,30 +534,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -625,7 +568,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>400</x>
-        <y>280</y>
+        <y>260</y>
         <width>351</width>
         <height>81</height>
        </rect>
@@ -635,30 +578,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -670,7 +612,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>370</y>
+        <y>340</y>
         <width>351</width>
         <height>81</height>
        </rect>
@@ -680,30 +622,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -714,8 +655,8 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pB_UpdateClientAccount">
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>460</y>
+        <x>200</x>
+        <y>430</y>
         <width>351</width>
         <height>81</height>
        </rect>
@@ -725,30 +666,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -761,7 +701,7 @@ QPushButton:pressed {
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>211</width>
+        <width>231</width>
         <height>71</height>
        </rect>
       </property>
@@ -770,30 +710,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -807,14 +746,14 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>50</y>
-        <width>411</width>
-        <height>111</height>
+        <y>20</y>
+        <width>491</width>
+        <height>141</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">font: 700 35pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+       <string notr="true">font: 700 40pt &quot;Segoe UI&quot;;
+color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Client&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -824,16 +763,16 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>520</x>
-        <y>20</y>
-        <width>221</width>
-        <height>191</height>
+        <y>0</y>
+        <width>251</width>
+        <height>221</height>
        </rect>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/images/logo.png</pixmap>
+       <pixmap resource="resources.qrc">:/images/K.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -853,30 +792,29 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -898,30 +836,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -943,30 +880,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -988,30 +924,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1022,8 +957,8 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pBClientLogout">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>500</y>
+        <x>40</x>
+        <y>480</y>
         <width>121</width>
         <height>71</height>
        </rect>
@@ -1032,18 +967,31 @@ QPushButton:pressed {
        <cursorShape>PointingHandCursor</cursorShape>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: #4CAF50; 
-font: 700 20pt &quot;Segoe UI&quot;;
-        border: none;
-                   color: white;
-                   padding: 15px 20px;
-                   text-align: center;
-                   text-decoration: none;
-                   display: inline-block;
-                   font-size: 20px;
-                   margin: 4px 2px;
-                   border-radius: 20px; 
+       <string notr="true">QPushButton {
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
 
+QPushButton:hover {
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
+}
+
+QPushButton:pressed {
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
+}
 </string>
       </property>
       <property name="text">
@@ -1064,30 +1012,29 @@ font: 700 20pt &quot;Segoe UI&quot;;
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1109,30 +1056,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1146,14 +1092,14 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>20</y>
+        <y>10</y>
         <width>341</width>
         <height>141</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">font: 700 35pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ADD ACCOUNT&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1163,7 +1109,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>470</x>
-        <y>510</y>
+        <y>470</y>
         <width>241</width>
         <height>71</height>
        </rect>
@@ -1173,30 +1119,29 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1207,9 +1152,9 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pBAddAccoutBack">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>510</y>
-        <width>241</width>
+        <x>30</x>
+        <y>470</y>
+        <width>141</width>
         <height>71</height>
        </rect>
       </property>
@@ -1218,30 +1163,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1262,7 +1206,7 @@ QPushButton:pressed {
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/images/logo.png</pixmap>
+       <pixmap resource="resources.qrc">:/images/K.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1272,7 +1216,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>217</y>
+        <y>170</y>
         <width>361</width>
         <height>81</height>
        </rect>
@@ -1281,7 +1225,7 @@ QPushButton:pressed {
        <item>
         <widget class="QLabel" name="NewUserFullNameErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -1292,7 +1236,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="NewUserFullName">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -1303,7 +1247,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>310</y>
+        <y>270</y>
         <width>361</width>
         <height>78</height>
        </rect>
@@ -1312,7 +1256,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLabel" name="NewUserUserNameErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -1323,7 +1267,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="NewUserUserName">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -1334,7 +1278,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>20</x>
-        <y>410</y>
+        <y>360</y>
         <width>361</width>
         <height>78</height>
        </rect>
@@ -1343,7 +1287,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLabel" name="NewUserPassWordErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -1354,7 +1298,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="NewUserPassWord">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -1365,7 +1309,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>410</x>
-        <y>310</y>
+        <y>270</y>
         <width>351</width>
         <height>78</height>
        </rect>
@@ -1374,7 +1318,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLabel" name="NewUserAgeErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -1385,7 +1329,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="NewUserAge">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -1396,7 +1340,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>412</x>
-        <y>410</y>
+        <y>360</y>
         <width>351</width>
         <height>78</height>
        </rect>
@@ -1405,7 +1349,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLabel" name="NewUserBalanceErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -1416,7 +1360,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="NewUserBalance">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -1427,7 +1371,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>411</x>
-        <y>221</y>
+        <y>170</y>
         <width>351</width>
         <height>78</height>
        </rect>
@@ -1436,7 +1380,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLabel" name="NewUserEmailErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -1447,7 +1391,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="NewUserEmail">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -1468,30 +1412,29 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1512,7 +1455,7 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">font: 700 35pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;ViewTransaction&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;History&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -1531,7 +1474,7 @@ color: rgb(255, 255, 255);</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/images/logo.png</pixmap>
+       <pixmap resource="resources.qrc">:/images/K.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1550,7 +1493,7 @@ color: rgb(255, 255, 255);</string>
        <item>
         <widget class="QLabel" name="AdminViewHistoryAccountNumberErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 14pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -1561,7 +1504,7 @@ font: 14pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="lE_AdminViewHistoryAccountNumber">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -1572,7 +1515,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>360</y>
+        <y>320</y>
         <width>361</width>
         <height>78</height>
        </rect>
@@ -1581,7 +1524,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLabel" name="AdminViewHistoryCountErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 14pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -1592,7 +1535,7 @@ font: 14pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="lE_AdminViewHistoryCount">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -1603,7 +1546,7 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>220</x>
-        <y>500</y>
+        <y>460</y>
         <width>171</width>
         <height>71</height>
        </rect>
@@ -1613,30 +1556,29 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1648,7 +1590,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>500</y>
+        <y>460</y>
         <width>161</width>
         <height>71</height>
        </rect>
@@ -1658,30 +1600,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1703,30 +1644,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1738,7 +1678,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>445</x>
-        <y>200</y>
+        <y>160</y>
         <width>311</width>
         <height>371</height>
        </rect>
@@ -1753,8 +1693,8 @@ font: 700 10pt &quot;Segoe UI&quot;;</string>
      <widget class="QLabel" name="label_7">
       <property name="geometry">
        <rect>
-        <x>520</x>
-        <y>20</y>
+        <x>540</x>
+        <y>10</y>
         <width>221</width>
         <height>161</height>
        </rect>
@@ -1763,7 +1703,7 @@ font: 700 10pt &quot;Segoe UI&quot;;</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/images/logo.png</pixmap>
+       <pixmap resource="resources.qrc">:/images/K.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1772,15 +1712,15 @@ font: 700 10pt &quot;Segoe UI&quot;;</string>
      <widget class="QLabel" name="label_8">
       <property name="geometry">
        <rect>
-        <x>48</x>
-        <y>50</y>
+        <x>20</x>
+        <y>30</y>
         <width>451</width>
         <height>111</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">font: 700 35pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>View Bank Database</string>
@@ -1790,7 +1730,7 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>520</y>
+        <y>490</y>
         <width>141</width>
         <height>61</height>
        </rect>
@@ -1800,30 +1740,29 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1834,8 +1773,8 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pB_ViewBankDataBaseConnectAgain">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>10</y>
+        <x>0</x>
+        <y>0</y>
         <width>181</width>
         <height>71</height>
        </rect>
@@ -1845,30 +1784,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1881,8 +1819,8 @@ QPushButton:pressed {
        <rect>
         <x>15</x>
         <y>170</y>
-        <width>741</width>
-        <height>341</height>
+        <width>761</width>
+        <height>311</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -1902,14 +1840,14 @@ font: 700 10pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>60</y>
+        <y>40</y>
         <width>371</width>
         <height>101</height>
        </rect>
       </property>
       <property name="styleSheet">
        <string notr="true">font: 700 35pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>Update Account</string>
@@ -1918,8 +1856,8 @@ color: rgb(255, 255, 255);</string>
      <widget class="QLabel" name="label_29">
       <property name="geometry">
        <rect>
-        <x>530</x>
-        <y>30</y>
+        <x>540</x>
+        <y>20</y>
         <width>201</width>
         <height>131</height>
        </rect>
@@ -1928,7 +1866,7 @@ color: rgb(255, 255, 255);</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/images/logo.png</pixmap>
+       <pixmap resource="resources.qrc">:/images/K.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -1938,9 +1876,9 @@ color: rgb(255, 255, 255);</string>
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>520</y>
+        <y>480</y>
         <width>121</width>
-        <height>61</height>
+        <height>71</height>
        </rect>
       </property>
       <property name="cursor">
@@ -1948,30 +1886,29 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -1983,9 +1920,9 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>520</y>
+        <y>480</y>
         <width>141</width>
-        <height>61</height>
+        <height>71</height>
        </rect>
       </property>
       <property name="cursor">
@@ -1993,30 +1930,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -2028,7 +1964,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>450</y>
+        <y>410</y>
         <width>671</width>
         <height>61</height>
        </rect>
@@ -2037,7 +1973,7 @@ QPushButton:pressed {
        <item>
         <widget class="QLabel" name="UpdateEmailErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -2048,7 +1984,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="UpdateAccountEmail">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 15pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -2069,30 +2005,29 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -2104,16 +2039,16 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>172</y>
+        <y>160</y>
         <width>671</width>
-        <height>61</height>
+        <height>69</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QLabel" name="UpdateFullNameErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -2124,7 +2059,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="UpdateAccountFullName">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 15pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -2135,7 +2070,7 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>240</y>
+        <y>230</y>
         <width>671</width>
         <height>61</height>
        </rect>
@@ -2144,7 +2079,7 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLabel" name="UpdateUserNameErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -2155,7 +2090,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="UpdateAccountUserName">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 15pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -2166,7 +2101,7 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>310</y>
+        <y>290</y>
         <width>671</width>
         <height>60</height>
        </rect>
@@ -2175,7 +2110,7 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLabel" name="UpdateAgeErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -2186,7 +2121,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="UpdateAccountAge">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 15pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -2197,7 +2132,7 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>380</y>
+        <y>350</y>
         <width>671</width>
         <height>60</height>
        </rect>
@@ -2206,7 +2141,7 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLabel" name="UpdatePasswordErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 10pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -2217,7 +2152,7 @@ font: 10pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="UpdateAccountPassword">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 15pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -2237,7 +2172,7 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">font: 700 35pt &quot;Segoe UI&quot;;
-color: rgb(255, 255, 255);</string>
+color: rgb(0, 0, 0);</string>
       </property>
       <property name="text">
        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;View My Transaction&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;History&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -2256,7 +2191,7 @@ color: rgb(255, 255, 255);</string>
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap resource="resources.qrc">:/images/logo.png</pixmap>
+       <pixmap resource="resources.qrc">:/images/K.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -2265,8 +2200,8 @@ color: rgb(255, 255, 255);</string>
      <widget class="QPushButton" name="pb_ViewMyHistoryBack">
       <property name="geometry">
        <rect>
-        <x>60</x>
-        <y>490</y>
+        <x>40</x>
+        <y>460</y>
         <width>131</width>
         <height>71</height>
        </rect>
@@ -2276,30 +2211,29 @@ color: rgb(255, 255, 255);</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -2310,8 +2244,8 @@ QPushButton:pressed {
      <widget class="QPushButton" name="pb_ViewMyHistoryView">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>490</y>
+        <x>210</x>
+        <y>460</y>
         <width>141</width>
         <height>71</height>
        </rect>
@@ -2321,30 +2255,29 @@ QPushButton:pressed {
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -2365,7 +2298,7 @@ QPushButton:pressed {
        <item>
         <widget class="QLabel" name="ClientViewHistoryCountErrorLabel">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 14pt &quot;Segoe UI&quot;;</string>
          </property>
          <property name="text">
@@ -2376,7 +2309,7 @@ font: 14pt &quot;Segoe UI&quot;;</string>
        <item>
         <widget class="QLineEdit" name="lE_ClientViewHistoryCount">
          <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
+          <string notr="true">color: rgb(0, 0, 0);
 font: 700 20pt &quot;Segoe UI&quot;;</string>
          </property>
         </widget>
@@ -2397,30 +2330,29 @@ font: 700 20pt &quot;Segoe UI&quot;;</string>
       </property>
       <property name="styleSheet">
        <string notr="true">QPushButton {
-    background-color: #4CAF50;
-    font: 700 20pt &quot;Segoe UI&quot;;
-    border: 2px solid #4CAF50; /* Add a border */
-    color: white;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    border-radius: 20px;
-    outline: none; /* Remove the default focus outline */
-    transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transitions */
+    background-color: #008CBA; /* Blue background */
+    font: 700 14pt &quot;Segoe UI&quot;; /* Bold font, 14pt size, &quot;Segoe UI&quot; */
+    border: 2px solid #008CBA; /* Blue border */
+    color: white; /* Black text */
+    padding: 10px 15px; /* Reduced padding for smaller button size */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline block */
+    margin: 4px 2px; /* Margin for spacing */
+    border-radius: 10px; /* Rounded corners */
+    outline: none; /* Remove default focus outline */
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
 }
 
 QPushButton:hover {
-    background-color: #45a049; /* Darken the background on hover */
-    border-color: #45a049; /* Darken the border on hover */
+    background-color: #007BB5; /* Slightly darker blue on hover */
+    border-color: #007BB5; /* Slightly darker blue border on hover */
 }
 
 QPushButton:pressed {
-    background-color: #388e3c; /* Darker green color when pressed */
-    border-color: #388e3c; /* Darker border color when pressed */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect when pressed */
+    background-color: #005F73; /* Darker blue when pressed */
+    border-color: #005F73; /* Darker blue border when pressed */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Shadow effect when pressed */
 }
 </string>
       </property>
@@ -2432,9 +2364,9 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>445</x>
-        <y>190</y>
+        <y>140</y>
         <width>311</width>
-        <height>381</height>
+        <height>401</height>
        </rect>
       </property>
       <property name="styleSheet">
@@ -2516,7 +2448,7 @@ font: 700 10pt &quot;Segoe UI&quot;;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>801</width>
+     <width>798</width>
      <height>21</height>
     </rect>
    </property>

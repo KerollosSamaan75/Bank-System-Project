@@ -1,2 +1,17 @@
 [
+    {
+        "AccountNumber": "529461960",
+        "Transactions": [
+            {
+                "amount": "+1000",
+                "date": "30.07.2024",
+                "time": "18:32:03"
+            }
+        ]
+    },
+    {
+        "AccountNumber": "224648551",
+        "Transactions": [
+        ]
+    }
 ]

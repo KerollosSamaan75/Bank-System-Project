@@ -12,6 +12,8 @@
 #include <QJsonDocument> // Include QJsonDocument for JSON document handling
 #include <QJsonObject> // Include QJsonObject for JSON object handling
 #include <QStandardItemModel> // Include QStandardItemModel for item models
+#include <QNetworkInterface>
+#include <QHostAddress>
 #include "User.h" // Include the User class
 
 QT_BEGIN_NAMESPACE

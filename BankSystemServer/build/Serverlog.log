@@ -1,68 +1,774 @@
-2024-07-22 15:37:37 - Server is up and listening to port => 1234
-2024-07-22 15:48:54 - User:648 connent to server
-2024-07-22 15:48:56 - User:648 is running on thread
-2024-07-22 15:48:56 - Main database initialized with 1 records
-2024-07-22 15:48:56 - Error: Failed to parse JSON from transaction database file
-2024-07-22 15:49:31 - Server Received encrypted request From User:648 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
-2024-07-22 15:49:31 - Server Received request From User:648 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
-2024-07-22 15:49:31 - Checking frame size .....
-2024-07-22 15:49:31 - Checking request data size .....
-2024-07-22 15:49:31 - Checking request signature .....
-2024-07-22 15:49:31 - Server generate signature to received request
-2024-07-22 15:49:31 - Server compare between generated signature and received signature 
-2024-07-22 15:49:31 - Received signature = Generated signature
-2024-07-22 15:49:31 - Now:Server processing request from User:648 Request => Login:Kero75:kero*7579
-2024-07-22 15:49:31 - Main database initialized with 1 records
-2024-07-22 15:49:31 - Main database initialized with 1 records
-2024-07-22 15:49:31 - Main database file saved successfully.
-2024-07-22 15:49:31 - Login state updated successfully for user: Kero75
-2024-07-22 15:49:31 - My server Send Response to User:648 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
-2024-07-22 15:51:33 - Server Received encrypted request From User:648 Request => 6d87a72607d85cbfcecd650e73efcac85236930f6d1deab9ca2c99036fe4b67e86c4c23fee737703de8e84050c42587fdf26f21f33ee88053249ae4b6da1f38de4d2c4b20ba98e8264c5ae920e7aabf0bb339012c69df7f03d3df8cc0ea9807806b3ec18387bc3549d7c3491602dafd6e50952024d3e8f032a7e6baacd8caac096c4700611fa972621ed3c27cd2f276921f711fb4f6dd37e813e4a63c18357103151897389e7bb839c7d4cb80dd32c0ffbd870d1b8236dc0052b2e8595100cc4881a8c34cd0e9b247a4a708921349905
-2024-07-22 15:51:33 - Server Received request From User:648 Request => 199:{"RequestData":"AddAccount:sharple samaan:sharple22:sharple@22:25:kiro.samaan.kodoos@gmail.com:1000","RequestSize":"83","Signature":"f685189b72c34e7b797adf180cb7650363ff9c34106513230bc6814dacc1fa39"}
-2024-07-22 15:51:33 - Checking frame size .....
-2024-07-22 15:51:33 - Checking request data size .....
-2024-07-22 15:51:33 - Checking request signature .....
-2024-07-22 15:51:33 - Server generate signature to received request
-2024-07-22 15:51:33 - Server compare between generated signature and received signature 
-2024-07-22 15:51:33 - Received signature = Generated signature
-2024-07-22 15:51:33 - Now:Server processing request from User:648 Request => AddAccount:sharple samaan:sharple22:sharple@22:25:kiro.samaan.kodoos@gmail.com:1000
-2024-07-22 15:51:33 - Main database initialized with 1 records
-2024-07-22 15:51:33 - Main database initialized with 1 records
-2024-07-22 15:51:33 - Error: Failed to parse JSON from transaction database file
-2024-07-22 15:51:33 - Generated account number: 526933513
-2024-07-22 15:51:33 - Main database file saved successfully.
-2024-07-22 15:51:33 - Transaction database file saved successfully.
-2024-07-22 15:51:33 - Client added successfully.
-2024-07-22 15:51:33 - My server Send Response to User:648 Response => 107:{"ResponseData":"Congratulations! New user 'sharple22' has been added. Welcome aboard","ResponseSize":"68"}
-2024-07-22 15:51:53 - Server Received encrypted request From User:648 Request => 92e492f760fbf670bb4162200882ccc631112e7bcdd3837b40b2173e3ddf3f072c59a73f0cdc544bb33e7cbe78bf7dc7ba78081fb2b73bcd9aaa04db4bfd3812367fda89ca88c4211f25befb0c14e9f38d46b41210a3da7e6aa72f34c9ddbb6f177cf9c9c3f1fd9bdb3060fdc2768db3c729599e24fb1853f5c97af50c9e8ebc7cddaa7b31aef9c396c320cdba75f390
-2024-07-22 15:51:53 - Server Received request From User:648 Request => 139:{"RequestData":"DeleteAccount:526933513","RequestSize":"23","Signature":"7cc701cf8be3b56929e83deb3942578d65c91d50c026d80ff813ecb6b3545d64"}
-2024-07-22 15:51:53 - Checking frame size .....
-2024-07-22 15:51:53 - Checking request data size .....
-2024-07-22 15:51:53 - Checking request signature .....
-2024-07-22 15:51:53 - Server generate signature to received request
-2024-07-22 15:51:53 - Server compare between generated signature and received signature 
-2024-07-22 15:51:53 - Received signature = Generated signature
-2024-07-22 15:51:53 - Now:Server processing request from User:648 Request => DeleteAccount:526933513
-2024-07-22 15:51:53 - Main database initialized with 2 records
-2024-07-22 15:51:53 - Transaction database initialized with 1 records
-2024-07-22 15:51:53 - Deleting client from main database with AccountNumber: 526933513
-2024-07-22 15:51:53 - Main database file saved successfully.
-2024-07-22 15:51:53 - Deleting client from transaction database with AccountNumber: 526933513
-2024-07-22 15:51:53 - Transaction database file saved successfully.
-2024-07-22 15:51:53 - My server Send Response to User:648 Response => 114:{"ResponseData":"Client account with account number 526933513 has been successfully deleted.","ResponseSize":"75"}
-2024-07-22 15:52:06 - Server Received encrypted request From User:648 Request => 6c2903b1596fc29b5b83260a5dbd18980d448102b0ac8cdb661911d87ad21273683490e118a9fb928e60fbcac1530a33cd78a9a27db23911617b674685d964075e932a9ccaa686af373b9064c10a45e87000d4d8d09ab6f2a1fa2fd125a48b9565978136bd95640de9f36c0b789b7abceadd6fa14b0024dbfe170d0a9b3829963f4d35128d1cfb0d1131d948412835ea
-2024-07-22 15:52:06 - Server Received request From User:648 Request => 132:{"RequestData":"GetBankDataBase:","RequestSize":"16","Signature":"69765f2e35651c686a8c108a2a595da8a0096459f1528b21c52be0a100843d28"}
-2024-07-22 15:52:06 - Checking frame size .....
-2024-07-22 15:52:06 - Checking request data size .....
-2024-07-22 15:52:06 - Checking request signature .....
-2024-07-22 15:52:06 - Server generate signature to received request
-2024-07-22 15:52:06 - Server compare between generated signature and received signature 
-2024-07-22 15:52:06 - Received signature = Generated signature
-2024-07-22 15:52:06 - Now:Server processing request from User:648 Request => GetBankDataBase:
-2024-07-22 15:52:06 - Main database initialized with 1 records
-2024-07-22 15:52:06 - My server Send Response to User:648 Response => 276:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Login\":\"1\",\"Password\":\"kero*7579\",\"Username\":\"Kero75\"}]","ResponseSize":"204"}
-2024-07-22 15:52:16 - Main database initialized with 1 records
-2024-07-22 15:52:17 - Main database file saved successfully.
-2024-07-22 15:52:17 - Login state updated successfully for user: Kero75
-2024-07-22 15:52:17 - User: 648 logout form bank system
-2024-07-22 15:52:17 - User:648 has disconnected
+2024-07-31 11:23:06 - Server is up and listening to port => 1234
+2024-07-31 12:14:25 - User:616 connent to server
+2024-07-31 12:14:25 - User:616 is running on thread
+2024-07-31 12:14:25 - Main database initialized with 2 records
+2024-07-31 12:14:25 - Transaction database initialized with 1 records
+2024-07-31 12:14:45 - Server Received encrypted request From User:616 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 12:14:45 - Server Received request From User:616 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 12:14:45 - Checking frame size .....
+2024-07-31 12:14:45 - Checking request data size .....
+2024-07-31 12:14:45 - Checking request signature .....
+2024-07-31 12:14:45 - Server generate signature to received request
+2024-07-31 12:14:45 - Server compare between generated signature and received signature 
+2024-07-31 12:14:45 - Received signature = Generated signature
+2024-07-31 12:14:45 - Now:Server processing request from User:616 Request => Login:Kero75:kero*7579
+2024-07-31 12:14:45 - Main database initialized with 2 records
+2024-07-31 12:14:45 - Main database initialized with 2 records
+2024-07-31 12:14:45 - Main database file saved successfully.
+2024-07-31 12:14:45 - Login state updated successfully for user: Kero75
+2024-07-31 12:14:45 - My server Send Response to User:616 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 12:15:08 - Server Received encrypted request From User:616 Request => 6c2903b1596fc29b5b83260a5dbd18980d448102b0ac8cdb661911d87ad21273683490e118a9fb928e60fbcac1530a33cd78a9a27db23911617b674685d964075e932a9ccaa686af373b9064c10a45e87000d4d8d09ab6f2a1fa2fd125a48b9565978136bd95640de9f36c0b789b7abceadd6fa14b0024dbfe170d0a9b3829963f4d35128d1cfb0d1131d948412835ea
+2024-07-31 12:15:08 - Server Received request From User:616 Request => 132:{"RequestData":"GetBankDataBase:","RequestSize":"16","Signature":"69765f2e35651c686a8c108a2a595da8a0096459f1528b21c52be0a100843d28"}
+2024-07-31 12:15:08 - Checking frame size .....
+2024-07-31 12:15:08 - Checking request data size .....
+2024-07-31 12:15:08 - Checking request signature .....
+2024-07-31 12:15:08 - Server generate signature to received request
+2024-07-31 12:15:08 - Server compare between generated signature and received signature 
+2024-07-31 12:15:08 - Received signature = Generated signature
+2024-07-31 12:15:08 - Now:Server processing request from User:616 Request => GetBankDataBase:
+2024-07-31 12:15:08 - Main database initialized with 2 records
+2024-07-31 12:15:08 - My server Send Response to User:616 Response => 510:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Login\":\"1\",\"Password\":\"kero*7579\",\"Username\":\"Kero75\"},{\"AccountNumber\":\"529461960\",\"Age\":\"27\",\"Authority\":\"Client\",\"Balance\":\"1000\",\"Email\":\"kiro.samaan.kodoos@gmail.com\",\"FullName\":\"mohanad\",\"Login\":\"1\",\"Password\":\"mohanad@11\",\"Username\":\"mohamad11\"}]","ResponseSize":"402"}
+2024-07-31 12:15:36 - Main database initialized with 2 records
+2024-07-31 12:15:36 - Main database file saved successfully.
+2024-07-31 12:15:36 - Login state updated successfully for user: Kero75
+2024-07-31 12:15:36 - User: 616 logout form bank system
+2024-07-31 12:15:36 - User:616 has disconnected
+2024-07-31 12:32:49 - User:916 connent to server
+2024-07-31 12:32:49 - User:916 is running on thread
+2024-07-31 12:32:49 - Main database initialized with 2 records
+2024-07-31 12:32:49 - Transaction database initialized with 1 records
+2024-07-31 12:33:30 - Server Received encrypted request From User:916 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 12:33:30 - Server Received request From User:916 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 12:33:30 - Checking frame size .....
+2024-07-31 12:33:30 - Checking request data size .....
+2024-07-31 12:33:30 - Checking request signature .....
+2024-07-31 12:33:30 - Server generate signature to received request
+2024-07-31 12:33:30 - Server compare between generated signature and received signature 
+2024-07-31 12:33:30 - Received signature = Generated signature
+2024-07-31 12:33:30 - Now:Server processing request from User:916 Request => Login:Kero75:kero*7579
+2024-07-31 12:33:30 - Main database initialized with 2 records
+2024-07-31 12:33:30 - Main database initialized with 2 records
+2024-07-31 12:33:30 - Main database file saved successfully.
+2024-07-31 12:33:30 - Login state updated successfully for user: Kero75
+2024-07-31 12:33:30 - My server Send Response to User:916 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 12:34:53 - Main database initialized with 2 records
+2024-07-31 12:34:53 - Main database file saved successfully.
+2024-07-31 12:34:53 - Login state updated successfully for user: Kero75
+2024-07-31 12:34:53 - User: 916 logout form bank system
+2024-07-31 12:34:53 - User:916 has disconnected
+2024-07-31 12:36:25 - User:956 connent to server
+2024-07-31 12:36:25 - User:956 is running on thread
+2024-07-31 12:36:25 - Main database initialized with 2 records
+2024-07-31 12:36:25 - Transaction database initialized with 1 records
+2024-07-31 12:36:40 - Server Received encrypted request From User:956 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 12:36:40 - Server Received request From User:956 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 12:36:40 - Checking frame size .....
+2024-07-31 12:36:40 - Checking request data size .....
+2024-07-31 12:36:40 - Checking request signature .....
+2024-07-31 12:36:40 - Server generate signature to received request
+2024-07-31 12:36:40 - Server compare between generated signature and received signature 
+2024-07-31 12:36:40 - Received signature = Generated signature
+2024-07-31 12:36:40 - Now:Server processing request from User:956 Request => Login:Kero75:kero*7579
+2024-07-31 12:36:40 - Main database initialized with 2 records
+2024-07-31 12:36:40 - Main database initialized with 2 records
+2024-07-31 12:36:40 - Main database file saved successfully.
+2024-07-31 12:36:40 - Login state updated successfully for user: Kero75
+2024-07-31 12:36:40 - My server Send Response to User:956 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 12:37:49 - Main database initialized with 2 records
+2024-07-31 12:37:49 - Main database file saved successfully.
+2024-07-31 12:37:49 - Login state updated successfully for user: Kero75
+2024-07-31 12:37:49 - User: 956 logout form bank system
+2024-07-31 12:37:49 - User:956 has disconnected
+2024-07-31 12:39:38 - User:980 connent to server
+2024-07-31 12:39:38 - User:980 is running on thread
+2024-07-31 12:39:38 - Main database initialized with 2 records
+2024-07-31 12:39:38 - Transaction database initialized with 1 records
+2024-07-31 12:39:50 - Server Received encrypted request From User:980 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 12:39:50 - Server Received request From User:980 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 12:39:50 - Checking frame size .....
+2024-07-31 12:39:50 - Checking request data size .....
+2024-07-31 12:39:50 - Checking request signature .....
+2024-07-31 12:39:50 - Server generate signature to received request
+2024-07-31 12:39:50 - Server compare between generated signature and received signature 
+2024-07-31 12:39:50 - Received signature = Generated signature
+2024-07-31 12:39:50 - Now:Server processing request from User:980 Request => Login:Kero75:kero*7579
+2024-07-31 12:39:50 - Main database initialized with 2 records
+2024-07-31 12:39:50 - Main database initialized with 2 records
+2024-07-31 12:39:50 - Main database file saved successfully.
+2024-07-31 12:39:50 - Login state updated successfully for user: Kero75
+2024-07-31 12:39:50 - My server Send Response to User:980 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 12:40:11 - Main database initialized with 2 records
+2024-07-31 12:40:11 - Main database file saved successfully.
+2024-07-31 12:40:11 - Login state updated successfully for user: Kero75
+2024-07-31 12:40:11 - User: 980 logout form bank system
+2024-07-31 12:40:11 - User:980 has disconnected
+2024-07-31 12:40:58 - User:976 connent to server
+2024-07-31 12:40:58 - User:976 is running on thread
+2024-07-31 12:40:58 - Main database initialized with 2 records
+2024-07-31 12:40:58 - Transaction database initialized with 1 records
+2024-07-31 12:41:17 - Server Received encrypted request From User:976 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 12:41:17 - Server Received request From User:976 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 12:41:17 - Checking frame size .....
+2024-07-31 12:41:17 - Checking request data size .....
+2024-07-31 12:41:17 - Checking request signature .....
+2024-07-31 12:41:17 - Server generate signature to received request
+2024-07-31 12:41:17 - Server compare between generated signature and received signature 
+2024-07-31 12:41:17 - Received signature = Generated signature
+2024-07-31 12:41:17 - Now:Server processing request from User:976 Request => Login:Kero75:kero*7579
+2024-07-31 12:41:17 - Main database initialized with 2 records
+2024-07-31 12:41:17 - Main database initialized with 2 records
+2024-07-31 12:41:17 - Main database file saved successfully.
+2024-07-31 12:41:17 - Login state updated successfully for user: Kero75
+2024-07-31 12:41:17 - My server Send Response to User:976 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 12:43:52 - Main database initialized with 2 records
+2024-07-31 12:43:52 - Main database file saved successfully.
+2024-07-31 12:43:52 - Login state updated successfully for user: Kero75
+2024-07-31 12:43:52 - User: 976 logout form bank system
+2024-07-31 12:43:52 - User:976 has disconnected
+2024-07-31 12:44:28 - User:948 connent to server
+2024-07-31 12:44:28 - User:948 is running on thread
+2024-07-31 12:44:28 - Main database initialized with 2 records
+2024-07-31 12:44:28 - Transaction database initialized with 1 records
+2024-07-31 12:44:41 - Server Received encrypted request From User:948 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 12:44:41 - Server Received request From User:948 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 12:44:41 - Checking frame size .....
+2024-07-31 12:44:41 - Checking request data size .....
+2024-07-31 12:44:41 - Checking request signature .....
+2024-07-31 12:44:41 - Server generate signature to received request
+2024-07-31 12:44:41 - Server compare between generated signature and received signature 
+2024-07-31 12:44:41 - Received signature = Generated signature
+2024-07-31 12:44:41 - Now:Server processing request from User:948 Request => Login:Kero75:kero*7579
+2024-07-31 12:44:41 - Main database initialized with 2 records
+2024-07-31 12:44:41 - Main database initialized with 2 records
+2024-07-31 12:44:41 - Main database file saved successfully.
+2024-07-31 12:44:41 - Login state updated successfully for user: Kero75
+2024-07-31 12:44:41 - My server Send Response to User:948 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 12:44:44 - Server Received encrypted request From User:948 Request => da095a307165fa302bfaddd7c9ced9567106c2048ca4aa69dfc9b1fead1b71e320bbf748a03ebc878bd02e3f5a44e05f42f63ee7cbe59d4a2bc3f535eb11a265e9363c50419ed6f1c077342e0126118965272d0e9fb4778778f26205b432e771b45cb8856e4dd2eb3d12a79e25161b76b087b8f67253198ccfafe4acb8e9dc0c80851e05426b7825141eb7db6883b052
+2024-07-31 12:44:44 - Server Received request From User:948 Request => 129:{"RequestData":"Logout:Kero75","RequestSize":"13","Signature":"a587cfe9992bff8b511e7f833501e8242a6228fc8b73466983234884df8fc823"}
+2024-07-31 12:44:44 - Checking frame size .....
+2024-07-31 12:44:44 - Checking request data size .....
+2024-07-31 12:44:44 - Checking request signature .....
+2024-07-31 12:44:44 - Server generate signature to received request
+2024-07-31 12:44:44 - Server compare between generated signature and received signature 
+2024-07-31 12:44:44 - Received signature = Generated signature
+2024-07-31 12:44:44 - Now:Server processing request from User:948 Request => Logout:Kero75
+2024-07-31 12:44:44 - Main database initialized with 2 records
+2024-07-31 12:44:44 - Main database initialized with 2 records
+2024-07-31 12:44:44 - Main database file saved successfully.
+2024-07-31 12:44:44 - Login state updated successfully for user: Kero75
+2024-07-31 12:44:44 - My server Send Response to User:948 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
+2024-07-31 12:46:18 - Main database initialized with 2 records
+2024-07-31 12:46:18 - Main database file saved successfully.
+2024-07-31 12:46:18 - Login state updated successfully for user: Kero75
+2024-07-31 12:46:18 - User: 948 logout form bank system
+2024-07-31 12:46:18 - User:948 has disconnected
+2024-07-31 12:47:56 - User:948 connent to server
+2024-07-31 12:47:56 - User:948 is running on thread
+2024-07-31 12:47:56 - Main database initialized with 2 records
+2024-07-31 12:47:56 - Transaction database initialized with 1 records
+2024-07-31 12:48:04 - User:948 has disconnected
+2024-07-31 12:56:22 - User:948 connent to server
+2024-07-31 12:56:22 - User:948 is running on thread
+2024-07-31 12:56:23 - Main database initialized with 2 records
+2024-07-31 12:56:23 - Transaction database initialized with 1 records
+2024-07-31 12:56:28 - User:948 has disconnected
+2024-07-31 12:56:33 - User:1096 connent to server
+2024-07-31 12:56:33 - User:1096 is running on thread
+2024-07-31 12:56:33 - Main database initialized with 2 records
+2024-07-31 12:56:33 - Transaction database initialized with 1 records
+2024-07-31 12:56:36 - User:1096 has disconnected
+2024-07-31 13:01:47 - User:1096 connent to server
+2024-07-31 13:01:47 - User:1096 is running on thread
+2024-07-31 13:01:47 - Main database initialized with 2 records
+2024-07-31 13:01:47 - Transaction database initialized with 1 records
+2024-07-31 13:01:49 - User:1096 has disconnected
+2024-07-31 13:02:00 - User:1164 connent to server
+2024-07-31 13:02:00 - User:1164 is running on thread
+2024-07-31 13:02:00 - Main database initialized with 2 records
+2024-07-31 13:02:00 - Transaction database initialized with 1 records
+2024-07-31 13:02:01 - User:1164 has disconnected
+2024-07-31 13:05:59 - User:1188 connent to server
+2024-07-31 13:05:59 - User:1188 is running on thread
+2024-07-31 13:05:59 - Main database initialized with 2 records
+2024-07-31 13:05:59 - Transaction database initialized with 1 records
+2024-07-31 13:06:09 - User:1188 has disconnected
+2024-07-31 13:07:12 - User:1184 connent to server
+2024-07-31 13:07:12 - User:1184 is running on thread
+2024-07-31 13:07:12 - Main database initialized with 2 records
+2024-07-31 13:07:12 - Transaction database initialized with 1 records
+2024-07-31 13:11:14 - Server Received encrypted request From User:1184 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 13:11:14 - Server Received request From User:1184 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 13:11:14 - Checking frame size .....
+2024-07-31 13:11:14 - Checking request data size .....
+2024-07-31 13:11:14 - Checking request signature .....
+2024-07-31 13:11:14 - Server generate signature to received request
+2024-07-31 13:11:14 - Server compare between generated signature and received signature 
+2024-07-31 13:11:14 - Received signature = Generated signature
+2024-07-31 13:11:14 - Now:Server processing request from User:1184 Request => Login:Kero75:kero*7579
+2024-07-31 13:11:14 - Main database initialized with 2 records
+2024-07-31 13:11:14 - Main database initialized with 2 records
+2024-07-31 13:11:14 - Main database file saved successfully.
+2024-07-31 13:11:14 - Login state updated successfully for user: Kero75
+2024-07-31 13:11:14 - My server Send Response to User:1184 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 13:11:20 - Server Received encrypted request From User:1184 Request => da095a307165fa302bfaddd7c9ced9567106c2048ca4aa69dfc9b1fead1b71e320bbf748a03ebc878bd02e3f5a44e05f42f63ee7cbe59d4a2bc3f535eb11a265e9363c50419ed6f1c077342e0126118965272d0e9fb4778778f26205b432e771b45cb8856e4dd2eb3d12a79e25161b76b087b8f67253198ccfafe4acb8e9dc0c80851e05426b7825141eb7db6883b052
+2024-07-31 13:11:20 - Server Received request From User:1184 Request => 129:{"RequestData":"Logout:Kero75","RequestSize":"13","Signature":"a587cfe9992bff8b511e7f833501e8242a6228fc8b73466983234884df8fc823"}
+2024-07-31 13:11:20 - Checking frame size .....
+2024-07-31 13:11:20 - Checking request data size .....
+2024-07-31 13:11:20 - Checking request signature .....
+2024-07-31 13:11:20 - Server generate signature to received request
+2024-07-31 13:11:20 - Server compare between generated signature and received signature 
+2024-07-31 13:11:20 - Received signature = Generated signature
+2024-07-31 13:11:20 - Now:Server processing request from User:1184 Request => Logout:Kero75
+2024-07-31 13:11:20 - Main database initialized with 2 records
+2024-07-31 13:11:20 - Main database initialized with 2 records
+2024-07-31 13:11:20 - Main database file saved successfully.
+2024-07-31 13:11:20 - Login state updated successfully for user: Kero75
+2024-07-31 13:11:20 - My server Send Response to User:1184 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
+2024-07-31 13:12:56 - Main database initialized with 2 records
+2024-07-31 13:12:56 - Main database file saved successfully.
+2024-07-31 13:12:56 - Login state updated successfully for user: Kero75
+2024-07-31 13:12:56 - User: 1184 logout form bank system
+2024-07-31 13:12:56 - User:1184 has disconnected
+2024-07-31 13:14:06 - User:1184 connent to server
+2024-07-31 13:14:06 - User:1184 is running on thread
+2024-07-31 13:14:06 - Main database initialized with 2 records
+2024-07-31 13:14:06 - Transaction database initialized with 1 records
+2024-07-31 13:14:20 - Server Received encrypted request From User:1184 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 13:14:20 - Server Received request From User:1184 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 13:14:20 - Checking frame size .....
+2024-07-31 13:14:20 - Checking request data size .....
+2024-07-31 13:14:20 - Checking request signature .....
+2024-07-31 13:14:20 - Server generate signature to received request
+2024-07-31 13:14:20 - Server compare between generated signature and received signature 
+2024-07-31 13:14:20 - Received signature = Generated signature
+2024-07-31 13:14:20 - Now:Server processing request from User:1184 Request => Login:Kero75:kero*7579
+2024-07-31 13:14:20 - Main database initialized with 2 records
+2024-07-31 13:14:20 - Main database initialized with 2 records
+2024-07-31 13:14:20 - Main database file saved successfully.
+2024-07-31 13:14:20 - Login state updated successfully for user: Kero75
+2024-07-31 13:14:20 - My server Send Response to User:1184 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 13:14:26 - Server Received encrypted request From User:1184 Request => da095a307165fa302bfaddd7c9ced9567106c2048ca4aa69dfc9b1fead1b71e320bbf748a03ebc878bd02e3f5a44e05f42f63ee7cbe59d4a2bc3f535eb11a265e9363c50419ed6f1c077342e0126118965272d0e9fb4778778f26205b432e771b45cb8856e4dd2eb3d12a79e25161b76b087b8f67253198ccfafe4acb8e9dc0c80851e05426b7825141eb7db6883b052
+2024-07-31 13:14:26 - Server Received request From User:1184 Request => 129:{"RequestData":"Logout:Kero75","RequestSize":"13","Signature":"a587cfe9992bff8b511e7f833501e8242a6228fc8b73466983234884df8fc823"}
+2024-07-31 13:14:26 - Checking frame size .....
+2024-07-31 13:14:26 - Checking request data size .....
+2024-07-31 13:14:26 - Checking request signature .....
+2024-07-31 13:14:26 - Server generate signature to received request
+2024-07-31 13:14:26 - Server compare between generated signature and received signature 
+2024-07-31 13:14:26 - Received signature = Generated signature
+2024-07-31 13:14:26 - Now:Server processing request from User:1184 Request => Logout:Kero75
+2024-07-31 13:14:26 - Main database initialized with 2 records
+2024-07-31 13:14:26 - Main database initialized with 2 records
+2024-07-31 13:14:26 - Main database file saved successfully.
+2024-07-31 13:14:26 - Login state updated successfully for user: Kero75
+2024-07-31 13:14:26 - My server Send Response to User:1184 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
+2024-07-31 13:14:58 - Server Received encrypted request From User:1184 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 13:14:58 - Server Received request From User:1184 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 13:14:58 - Checking frame size .....
+2024-07-31 13:14:58 - Checking request data size .....
+2024-07-31 13:14:58 - Checking request signature .....
+2024-07-31 13:14:58 - Server generate signature to received request
+2024-07-31 13:14:58 - Server compare between generated signature and received signature 
+2024-07-31 13:14:58 - Received signature = Generated signature
+2024-07-31 13:14:58 - Now:Server processing request from User:1184 Request => Login:Kero75:kero*7579
+2024-07-31 13:14:58 - Main database initialized with 2 records
+2024-07-31 13:14:58 - Main database initialized with 2 records
+2024-07-31 13:14:58 - Main database file saved successfully.
+2024-07-31 13:14:58 - Login state updated successfully for user: Kero75
+2024-07-31 13:14:58 - My server Send Response to User:1184 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 13:16:27 - Server Received encrypted request From User:1184 Request => 9d116d95400ab1e750a1d5f3c4f8ad9ae051e4d8b60354c4f0f7dbd9dddd9bd48051570b2f36ab7a89cdccaa8d85c427afd90bf7f5cd588d713faa0b1b597bee701d3dd80604e71267e07711a657e0c887c434cf3c00800e541a7628bfcc32e550c408dcb28d4f5dff63dd44e5b2a68633f53cda315258fd6ce694054e39a1b003943eaa2ec54d1ed4209f2cfba3d85bf381940f7f56b18ac7d9a38dc0788a55525ecb38c0a2a151c3530a28f1213dbaec05bb802ae816482d2f929cfdc09485160a800c31c6e31299f604b9ba04df48
+2024-07-31 13:16:27 - Server Received request From User:1184 Request => 200:{"RequestData":"AddAccount:sharple samaan:sharple2011:sharple@2011:25:kiro.samaan.kodoos@gmail.com:0","RequestSize":"84","Signature":"5060fb5a3eb7890fcb38c3487aadef4ff42a807476efd4a3263c4c6326a7002b"}
+2024-07-31 13:16:27 - Checking frame size .....
+2024-07-31 13:16:27 - Checking request data size .....
+2024-07-31 13:16:27 - Checking request signature .....
+2024-07-31 13:16:27 - Server generate signature to received request
+2024-07-31 13:16:27 - Server compare between generated signature and received signature 
+2024-07-31 13:16:27 - Received signature = Generated signature
+2024-07-31 13:16:27 - Now:Server processing request from User:1184 Request => AddAccount:sharple samaan:sharple2011:sharple@2011:25:kiro.samaan.kodoos@gmail.com:0
+2024-07-31 13:16:27 - Main database initialized with 2 records
+2024-07-31 13:16:27 - Main database initialized with 2 records
+2024-07-31 13:16:27 - Transaction database initialized with 1 records
+2024-07-31 13:16:27 - Generated account number: 209873790
+2024-07-31 13:16:27 - Main database file saved successfully.
+2024-07-31 13:16:27 - Transaction database file saved successfully.
+2024-07-31 13:16:27 - Client added successfully.
+2024-07-31 13:16:27 - My server Send Response to User:1184 Response => 109:{"ResponseData":"Congratulations! New user 'sharple2011' has been added. Welcome aboard","ResponseSize":"70"}
+2024-07-31 13:17:27 - Server Received encrypted request From User:1184 Request => 6c2903b1596fc29b5b83260a5dbd18980d448102b0ac8cdb661911d87ad21273683490e118a9fb928e60fbcac1530a33cd78a9a27db23911617b674685d964075e932a9ccaa686af373b9064c10a45e87000d4d8d09ab6f2a1fa2fd125a48b9565978136bd95640de9f36c0b789b7abceadd6fa14b0024dbfe170d0a9b3829963f4d35128d1cfb0d1131d948412835ea
+2024-07-31 13:17:27 - Server Received request From User:1184 Request => 132:{"RequestData":"GetBankDataBase:","RequestSize":"16","Signature":"69765f2e35651c686a8c108a2a595da8a0096459f1528b21c52be0a100843d28"}
+2024-07-31 13:17:27 - Checking frame size .....
+2024-07-31 13:17:27 - Checking request data size .....
+2024-07-31 13:17:27 - Checking request signature .....
+2024-07-31 13:17:27 - Server generate signature to received request
+2024-07-31 13:17:27 - Server compare between generated signature and received signature 
+2024-07-31 13:17:27 - Received signature = Generated signature
+2024-07-31 13:17:27 - Now:Server processing request from User:1184 Request => GetBankDataBase:
+2024-07-31 13:17:27 - Main database initialized with 3 records
+2024-07-31 13:17:27 - My server Send Response to User:1184 Response => 752:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Login\":\"1\",\"Password\":\"kero*7579\",\"Username\":\"Kero75\"},{\"AccountNumber\":\"529461960\",\"Age\":\"27\",\"Authority\":\"Client\",\"Balance\":\"1000\",\"Email\":\"kiro.samaan.kodoos@gmail.com\",\"FullName\":\"mohanad\",\"Login\":\"1\",\"Password\":\"mohanad@11\",\"Username\":\"mohamad11\"},{\"AccountNumber\":\"209873790\",\"Age\":\"25\",\"Authority\":\"Client\",\"Balance\":\"0\",\"Email\":\"kiro.samaan.kodoos@gmail.com\",\"FullName\":\"sharple samaan\",\"Login\":\"0\",\"Password\":\"sharple@2011\",\"Username\":\"sharple2011\"}]","ResponseSize":"608"}
+2024-07-31 13:21:08 - Server Received encrypted request From User:1184 Request => 92e492f760fbf670bb4162200882ccc631112e7bcdd3837b40b2173e3ddf3f074c2b501f5f9d91a55703778b27ff0a89186d8b5ba18615c75cd934231ae48e02016559a47565931dae6b0a20299514072508927806f67d7f32cbc1fd05a832aadd160d6b0f02b0be3f329da86cf5f31b22350361bbc45969e54851948bb61420f4ec75cc056c3835f5ecc23818f321b4
+2024-07-31 13:21:08 - Server Received request From User:1184 Request => 139:{"RequestData":"DeleteAccount:209873790","RequestSize":"23","Signature":"6662ba5fecc522d424ed53277340d60401f37a4b715e16fb9a6d6b1053c9eb58"}
+2024-07-31 13:21:08 - Checking frame size .....
+2024-07-31 13:21:08 - Checking request data size .....
+2024-07-31 13:21:08 - Checking request signature .....
+2024-07-31 13:21:08 - Server generate signature to received request
+2024-07-31 13:21:08 - Server compare between generated signature and received signature 
+2024-07-31 13:21:08 - Received signature = Generated signature
+2024-07-31 13:21:08 - Now:Server processing request from User:1184 Request => DeleteAccount:209873790
+2024-07-31 13:21:08 - Main database initialized with 3 records
+2024-07-31 13:21:08 - Transaction database initialized with 2 records
+2024-07-31 13:21:08 - Deleting client from main database with AccountNumber: 209873790
+2024-07-31 13:21:08 - Main database file saved successfully.
+2024-07-31 13:21:08 - Deleting client from transaction database with AccountNumber: 209873790
+2024-07-31 13:21:08 - Transaction database file saved successfully.
+2024-07-31 13:21:08 - My server Send Response to User:1184 Response => 114:{"ResponseData":"Client account with account number 209873790 has been successfully deleted.","ResponseSize":"75"}
+2024-07-31 13:21:22 - Server Received encrypted request From User:1184 Request => 6c2903b1596fc29b5b83260a5dbd18980d448102b0ac8cdb661911d87ad21273683490e118a9fb928e60fbcac1530a33cd78a9a27db23911617b674685d964075e932a9ccaa686af373b9064c10a45e87000d4d8d09ab6f2a1fa2fd125a48b9565978136bd95640de9f36c0b789b7abceadd6fa14b0024dbfe170d0a9b3829963f4d35128d1cfb0d1131d948412835ea
+2024-07-31 13:21:22 - Server Received request From User:1184 Request => 132:{"RequestData":"GetBankDataBase:","RequestSize":"16","Signature":"69765f2e35651c686a8c108a2a595da8a0096459f1528b21c52be0a100843d28"}
+2024-07-31 13:21:22 - Checking frame size .....
+2024-07-31 13:21:22 - Checking request data size .....
+2024-07-31 13:21:22 - Checking request signature .....
+2024-07-31 13:21:22 - Server generate signature to received request
+2024-07-31 13:21:22 - Server compare between generated signature and received signature 
+2024-07-31 13:21:22 - Received signature = Generated signature
+2024-07-31 13:21:22 - Now:Server processing request from User:1184 Request => GetBankDataBase:
+2024-07-31 13:21:22 - Main database initialized with 2 records
+2024-07-31 13:21:22 - My server Send Response to User:1184 Response => 510:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Login\":\"1\",\"Password\":\"kero*7579\",\"Username\":\"Kero75\"},{\"AccountNumber\":\"529461960\",\"Age\":\"27\",\"Authority\":\"Client\",\"Balance\":\"1000\",\"Email\":\"kiro.samaan.kodoos@gmail.com\",\"FullName\":\"mohanad\",\"Login\":\"0\",\"Password\":\"mohanad@11\",\"Username\":\"mohamad11\"}]","ResponseSize":"402"}
+2024-07-31 13:21:29 - Server Received encrypted request From User:1184 Request => 088e69a90e2fcf2d43efcf9b320aba0cd433858976132104e7f9276f9ce0b4b0370ad7b64c009bc53ece232d43191857d4dd7c7d68eca3e70123801fbdd6f992dea78c22606962cde40f290370e85fb517320af7e3184e27b76aab6badecfd7a71f3ac28b813d621e32b49cf762c41f1498601a088619e4e3f9f5178d68ba8cdfe048ace521333d32ca51bf02c42f387cb5cfcb56321741292db0c6cfdb8829e
+2024-07-31 13:21:29 - Server Received request From User:1184 Request => 143:{"RequestData":"GetAccountBalance:209873790","RequestSize":"27","Signature":"d7bb54911371e53c2ad5b090eb56690d580f4704c315b0a131f509096ff6d81f"}
+2024-07-31 13:21:29 - Checking frame size .....
+2024-07-31 13:21:29 - Checking request data size .....
+2024-07-31 13:21:29 - Checking request signature .....
+2024-07-31 13:21:29 - Server generate signature to received request
+2024-07-31 13:21:29 - Server compare between generated signature and received signature 
+2024-07-31 13:21:29 - Received signature = Generated signature
+2024-07-31 13:21:29 - Now:Server processing request from User:1184 Request => GetAccountBalance:209873790
+2024-07-31 13:21:29 - Main database initialized with 2 records
+2024-07-31 13:21:29 - My server Send Response to User:1184 Response => 86:{"ResponseData":"Client with account number 209873790 not found.","ResponseSize":"47"}
+2024-07-31 13:21:38 - Server Received encrypted request From User:1184 Request => 088e69a90e2fcf2d43efcf9b320aba0cd433858976132104e7f9276f9ce0b4b00416c8f7a72916a9754cad6ec536c2631f8681d7e59178ee2a5cde5b545edf42dfc121d860eac7aba91ec68897dc0223bbb171e769743bbf454c4402d2e0da09e11e1e3710135a4355b39da660fecbd06f1e42a1883d73103cf19d838c8866a557d138cb190e5970a0000b7ed103fbd397f1f85cf700552b6c2fc066fa5fb72b
+2024-07-31 13:21:38 - Server Received request From User:1184 Request => 143:{"RequestData":"GetAccountBalance:529461960","RequestSize":"27","Signature":"802014528b91c5b27e2c12ddb8475c37f01343f89eea2c9b53ead315f92606d3"}
+2024-07-31 13:21:38 - Checking frame size .....
+2024-07-31 13:21:38 - Checking request data size .....
+2024-07-31 13:21:38 - Checking request signature .....
+2024-07-31 13:21:38 - Server generate signature to received request
+2024-07-31 13:21:38 - Server compare between generated signature and received signature 
+2024-07-31 13:21:38 - Received signature = Generated signature
+2024-07-31 13:21:38 - Now:Server processing request from User:1184 Request => GetAccountBalance:529461960
+2024-07-31 13:21:38 - Main database initialized with 2 records
+2024-07-31 13:21:38 - My server Send Response to User:1184 Response => 81:{"ResponseData":"The account balance for mohamad11 is 1000.","ResponseSize":"42"}
+2024-07-31 13:22:58 - Main database initialized with 2 records
+2024-07-31 13:22:58 - Main database file saved successfully.
+2024-07-31 13:22:58 - Login state updated successfully for user: Kero75
+2024-07-31 13:22:58 - User: 1184 logout form bank system
+2024-07-31 13:22:58 - User:1184 has disconnected
+2024-07-31 13:32:00 - User:1184 connent to server
+2024-07-31 13:32:00 - User:1184 is running on thread
+2024-07-31 13:32:00 - Main database initialized with 2 records
+2024-07-31 13:32:00 - Transaction database initialized with 1 records
+2024-07-31 13:32:23 - Server Received encrypted request From User:1184 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 13:32:23 - Server Received request From User:1184 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 13:32:23 - Checking frame size .....
+2024-07-31 13:32:23 - Checking request data size .....
+2024-07-31 13:32:23 - Checking request signature .....
+2024-07-31 13:32:23 - Server generate signature to received request
+2024-07-31 13:32:23 - Server compare between generated signature and received signature 
+2024-07-31 13:32:23 - Received signature = Generated signature
+2024-07-31 13:32:23 - Now:Server processing request from User:1184 Request => Login:Kero75:kero*7579
+2024-07-31 13:32:23 - Main database initialized with 2 records
+2024-07-31 13:32:23 - Main database initialized with 2 records
+2024-07-31 13:32:23 - Main database file saved successfully.
+2024-07-31 13:32:23 - Login state updated successfully for user: Kero75
+2024-07-31 13:32:23 - My server Send Response to User:1184 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 13:32:25 - Server Received encrypted request From User:1184 Request => 6c2903b1596fc29b5b83260a5dbd18980d448102b0ac8cdb661911d87ad21273683490e118a9fb928e60fbcac1530a33cd78a9a27db23911617b674685d964075e932a9ccaa686af373b9064c10a45e87000d4d8d09ab6f2a1fa2fd125a48b9565978136bd95640de9f36c0b789b7abceadd6fa14b0024dbfe170d0a9b3829963f4d35128d1cfb0d1131d948412835ea
+2024-07-31 13:32:25 - Server Received request From User:1184 Request => 132:{"RequestData":"GetBankDataBase:","RequestSize":"16","Signature":"69765f2e35651c686a8c108a2a595da8a0096459f1528b21c52be0a100843d28"}
+2024-07-31 13:32:25 - Checking frame size .....
+2024-07-31 13:32:25 - Checking request data size .....
+2024-07-31 13:32:25 - Checking request signature .....
+2024-07-31 13:32:25 - Server generate signature to received request
+2024-07-31 13:32:25 - Server compare between generated signature and received signature 
+2024-07-31 13:32:25 - Received signature = Generated signature
+2024-07-31 13:32:25 - Now:Server processing request from User:1184 Request => GetBankDataBase:
+2024-07-31 13:32:25 - Main database initialized with 2 records
+2024-07-31 13:32:25 - My server Send Response to User:1184 Response => 510:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Login\":\"1\",\"Password\":\"kero*7579\",\"Username\":\"Kero75\"},{\"AccountNumber\":\"529461960\",\"Age\":\"27\",\"Authority\":\"Client\",\"Balance\":\"1000\",\"Email\":\"kiro.samaan.kodoos@gmail.com\",\"FullName\":\"mohanad\",\"Login\":\"0\",\"Password\":\"mohanad@11\",\"Username\":\"mohamad11\"}]","ResponseSize":"402"}
+2024-07-31 13:35:51 - Main database initialized with 2 records
+2024-07-31 13:35:51 - Main database file saved successfully.
+2024-07-31 13:35:51 - Login state updated successfully for user: Kero75
+2024-07-31 13:35:51 - User: 1184 logout form bank system
+2024-07-31 13:35:51 - User:1184 has disconnected
+2024-07-31 13:38:33 - User:1312 connent to server
+2024-07-31 13:38:33 - User:1312 is running on thread
+2024-07-31 13:38:33 - Main database initialized with 2 records
+2024-07-31 13:38:33 - Transaction database initialized with 1 records
+2024-07-31 13:38:47 - Server Received encrypted request From User:1312 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 13:38:47 - Server Received request From User:1312 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 13:38:47 - Checking frame size .....
+2024-07-31 13:38:47 - Checking request data size .....
+2024-07-31 13:38:47 - Checking request signature .....
+2024-07-31 13:38:47 - Server generate signature to received request
+2024-07-31 13:38:47 - Server compare between generated signature and received signature 
+2024-07-31 13:38:47 - Received signature = Generated signature
+2024-07-31 13:38:47 - Now:Server processing request from User:1312 Request => Login:Kero75:kero*7579
+2024-07-31 13:38:47 - Main database initialized with 2 records
+2024-07-31 13:38:47 - Main database initialized with 2 records
+2024-07-31 13:38:47 - Main database file saved successfully.
+2024-07-31 13:38:47 - Login state updated successfully for user: Kero75
+2024-07-31 13:38:47 - My server Send Response to User:1312 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 13:39:25 - Server is up and listening to port => 1234
+2024-07-31 13:39:30 - User:876 connent to server
+2024-07-31 13:39:30 - User:876 is running on thread
+2024-07-31 13:39:30 - Main database initialized with 2 records
+2024-07-31 13:39:30 - Transaction database initialized with 1 records
+2024-07-31 13:40:06 - Server is up and listening to port => 1234
+2024-07-31 13:40:06 - User:896 connent to server
+2024-07-31 13:40:06 - User:896 is running on thread
+2024-07-31 13:40:06 - Main database initialized with 2 records
+2024-07-31 13:40:06 - Transaction database initialized with 1 records
+2024-07-31 13:40:12 - User:896 has disconnected
+2024-07-31 13:40:12 - User:920 connent to server
+2024-07-31 13:40:12 - User:920 is running on thread
+2024-07-31 13:40:12 - Main database initialized with 2 records
+2024-07-31 13:40:12 - Transaction database initialized with 1 records
+2024-07-31 13:41:04 - Server Received encrypted request From User:920 Request => 9d116d95400ab1e750a1d5f3c4f8ad9ae051e4d8b60354c4f0f7dbd9dddd9bd48051570b2f36ab7a89cdccaa8d85c427afd90bf7f5cd588d713faa0b1b597bee74f96557114a2540e4c31e3cce062526ce8892c32c1c39ca23d6bcdef9af33528d75a788d8b7f3d1e1cdd71e14849edd3a499051a4aa3f4016d36f25c504742bd936d62cd50a1be9784760d56b03827c09fa855b1ca587828719365447a36a5bb27a784d73b7a1422bcd1f49057d194f50c58acae89237e933af33138982156c6a4eb539725556b47006c1d72757d249
+2024-07-31 13:41:04 - Server Received request From User:920 Request => 200:{"RequestData":"AddAccount:sharple samaan:sharple2011:sharple@2011:25:kerollos.sam3an.75@gmail.com:0","RequestSize":"84","Signature":"99ffad1d13ea5b2212adc736d3257289c018859ef317423e9b72fc9fc5d8f5f6"}
+2024-07-31 13:41:04 - Checking frame size .....
+2024-07-31 13:41:04 - Checking request data size .....
+2024-07-31 13:41:04 - Checking request signature .....
+2024-07-31 13:41:04 - Server generate signature to received request
+2024-07-31 13:41:04 - Server compare between generated signature and received signature 
+2024-07-31 13:41:04 - Received signature = Generated signature
+2024-07-31 13:41:04 - Now:Server processing request from User:920 Request => AddAccount:sharple samaan:sharple2011:sharple@2011:25:kerollos.sam3an.75@gmail.com:0
+2024-07-31 13:41:04 - Main database initialized with 2 records
+2024-07-31 13:41:04 - Main database initialized with 2 records
+2024-07-31 13:41:04 - Transaction database initialized with 1 records
+2024-07-31 13:41:04 - Generated account number: 224648551
+2024-07-31 13:41:04 - Main database file saved successfully.
+2024-07-31 13:41:04 - Transaction database file saved successfully.
+2024-07-31 13:41:04 - Client added successfully.
+2024-07-31 13:41:04 - My server Send Response to User:920 Response => 109:{"ResponseData":"Congratulations! New user 'sharple2011' has been added. Welcome aboard","ResponseSize":"70"}
+2024-07-31 13:41:13 - Server Received encrypted request From User:920 Request => 6c2903b1596fc29b5b83260a5dbd18980d448102b0ac8cdb661911d87ad21273683490e118a9fb928e60fbcac1530a33cd78a9a27db23911617b674685d964075e932a9ccaa686af373b9064c10a45e87000d4d8d09ab6f2a1fa2fd125a48b9565978136bd95640de9f36c0b789b7abceadd6fa14b0024dbfe170d0a9b3829963f4d35128d1cfb0d1131d948412835ea
+2024-07-31 13:41:13 - Server Received request From User:920 Request => 132:{"RequestData":"GetBankDataBase:","RequestSize":"16","Signature":"69765f2e35651c686a8c108a2a595da8a0096459f1528b21c52be0a100843d28"}
+2024-07-31 13:41:13 - Checking frame size .....
+2024-07-31 13:41:13 - Checking request data size .....
+2024-07-31 13:41:13 - Checking request signature .....
+2024-07-31 13:41:13 - Server generate signature to received request
+2024-07-31 13:41:13 - Server compare between generated signature and received signature 
+2024-07-31 13:41:13 - Received signature = Generated signature
+2024-07-31 13:41:13 - Now:Server processing request from User:920 Request => GetBankDataBase:
+2024-07-31 13:41:13 - Main database initialized with 3 records
+2024-07-31 13:41:13 - My server Send Response to User:920 Response => 752:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Login\":\"1\",\"Password\":\"kero*7579\",\"Username\":\"Kero75\"},{\"AccountNumber\":\"529461960\",\"Age\":\"27\",\"Authority\":\"Client\",\"Balance\":\"1000\",\"Email\":\"kiro.samaan.kodoos@gmail.com\",\"FullName\":\"mohanad\",\"Login\":\"0\",\"Password\":\"mohanad@11\",\"Username\":\"mohamad11\"},{\"AccountNumber\":\"224648551\",\"Age\":\"25\",\"Authority\":\"Client\",\"Balance\":\"0\",\"Email\":\"kerollos.sam3an.75@gmail.com\",\"FullName\":\"sharple samaan\",\"Login\":\"0\",\"Password\":\"sharple@2011\",\"Username\":\"sharple2011\"}]","ResponseSize":"608"}
+2024-07-31 13:41:37 - Server Received encrypted request From User:920 Request => da095a307165fa302bfaddd7c9ced9567106c2048ca4aa69dfc9b1fead1b71e320bbf748a03ebc878bd02e3f5a44e05f42f63ee7cbe59d4a2bc3f535eb11a265e9363c50419ed6f1c077342e0126118965272d0e9fb4778778f26205b432e771b45cb8856e4dd2eb3d12a79e25161b76b087b8f67253198ccfafe4acb8e9dc0c80851e05426b7825141eb7db6883b052
+2024-07-31 13:41:37 - Server Received request From User:920 Request => 129:{"RequestData":"Logout:Kero75","RequestSize":"13","Signature":"a587cfe9992bff8b511e7f833501e8242a6228fc8b73466983234884df8fc823"}
+2024-07-31 13:41:37 - Checking frame size .....
+2024-07-31 13:41:37 - Checking request data size .....
+2024-07-31 13:41:37 - Checking request signature .....
+2024-07-31 13:41:37 - Server generate signature to received request
+2024-07-31 13:41:37 - Server compare between generated signature and received signature 
+2024-07-31 13:41:37 - Received signature = Generated signature
+2024-07-31 13:41:37 - Now:Server processing request from User:920 Request => Logout:Kero75
+2024-07-31 13:41:37 - Main database initialized with 3 records
+2024-07-31 13:41:37 - Main database initialized with 3 records
+2024-07-31 13:41:37 - Main database file saved successfully.
+2024-07-31 13:41:37 - Login state updated successfully for user: Kero75
+2024-07-31 13:41:37 - My server Send Response to User:920 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
+2024-07-31 13:41:47 - User:920 has disconnected
+2024-07-31 13:42:30 - User:644 connent to server
+2024-07-31 13:42:30 - User:644 is running on thread
+2024-07-31 13:42:30 - Main database initialized with 3 records
+2024-07-31 13:42:30 - Transaction database initialized with 2 records
+2024-07-31 13:42:43 - Server Received encrypted request From User:644 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 13:42:43 - Server Received request From User:644 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 13:42:43 - Checking frame size .....
+2024-07-31 13:42:43 - Checking request data size .....
+2024-07-31 13:42:43 - Checking request signature .....
+2024-07-31 13:42:43 - Server generate signature to received request
+2024-07-31 13:42:43 - Server compare between generated signature and received signature 
+2024-07-31 13:42:43 - Received signature = Generated signature
+2024-07-31 13:42:43 - Now:Server processing request from User:644 Request => Login:Kero75:kero*7579
+2024-07-31 13:42:43 - Main database initialized with 3 records
+2024-07-31 13:42:43 - Main database initialized with 3 records
+2024-07-31 13:42:43 - Main database file saved successfully.
+2024-07-31 13:42:43 - Login state updated successfully for user: Kero75
+2024-07-31 13:42:43 - My server Send Response to User:644 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 13:43:08 - Server Received encrypted request From User:644 Request => 6c2903b1596fc29b5b83260a5dbd18980d448102b0ac8cdb661911d87ad21273683490e118a9fb928e60fbcac1530a33cd78a9a27db23911617b674685d964075e932a9ccaa686af373b9064c10a45e87000d4d8d09ab6f2a1fa2fd125a48b9565978136bd95640de9f36c0b789b7abceadd6fa14b0024dbfe170d0a9b3829963f4d35128d1cfb0d1131d948412835ea
+2024-07-31 13:43:08 - Server Received request From User:644 Request => 132:{"RequestData":"GetBankDataBase:","RequestSize":"16","Signature":"69765f2e35651c686a8c108a2a595da8a0096459f1528b21c52be0a100843d28"}
+2024-07-31 13:43:08 - Checking frame size .....
+2024-07-31 13:43:08 - Checking request data size .....
+2024-07-31 13:43:08 - Checking request signature .....
+2024-07-31 13:43:08 - Server generate signature to received request
+2024-07-31 13:43:08 - Server compare between generated signature and received signature 
+2024-07-31 13:43:08 - Received signature = Generated signature
+2024-07-31 13:43:08 - Now:Server processing request from User:644 Request => GetBankDataBase:
+2024-07-31 13:43:08 - Main database initialized with 3 records
+2024-07-31 13:43:08 - My server Send Response to User:644 Response => 752:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Login\":\"1\",\"Password\":\"kero*7579\",\"Username\":\"Kero75\"},{\"AccountNumber\":\"529461960\",\"Age\":\"27\",\"Authority\":\"Client\",\"Balance\":\"1000\",\"Email\":\"kiro.samaan.kodoos@gmail.com\",\"FullName\":\"mohanad\",\"Login\":\"0\",\"Password\":\"mohanad@11\",\"Username\":\"mohamad11\"},{\"AccountNumber\":\"224648551\",\"Age\":\"25\",\"Authority\":\"Client\",\"Balance\":\"0\",\"Email\":\"kerollos.sam3an.75@gmail.com\",\"FullName\":\"sharple samaan\",\"Login\":\"0\",\"Password\":\"sharple@2011\",\"Username\":\"sharple2011\"}]","ResponseSize":"608"}
+2024-07-31 13:45:39 - Main database initialized with 3 records
+2024-07-31 13:45:39 - Main database file saved successfully.
+2024-07-31 13:45:39 - Login state updated successfully for user: Kero75
+2024-07-31 13:45:39 - User: 644 logout form bank system
+2024-07-31 13:45:39 - User:644 has disconnected
+2024-07-31 13:46:30 - User:964 connent to server
+2024-07-31 13:46:30 - User:964 is running on thread
+2024-07-31 13:46:30 - Main database initialized with 3 records
+2024-07-31 13:46:30 - Transaction database initialized with 2 records
+2024-07-31 13:46:40 - Server Received encrypted request From User:964 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 13:46:40 - Server Received request From User:964 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 13:46:40 - Checking frame size .....
+2024-07-31 13:46:40 - Checking request data size .....
+2024-07-31 13:46:40 - Checking request signature .....
+2024-07-31 13:46:40 - Server generate signature to received request
+2024-07-31 13:46:40 - Server compare between generated signature and received signature 
+2024-07-31 13:46:40 - Received signature = Generated signature
+2024-07-31 13:46:40 - Now:Server processing request from User:964 Request => Login:Kero75:kero*7579
+2024-07-31 13:46:40 - Main database initialized with 3 records
+2024-07-31 13:46:40 - Main database initialized with 3 records
+2024-07-31 13:46:40 - Main database file saved successfully.
+2024-07-31 13:46:40 - Login state updated successfully for user: Kero75
+2024-07-31 13:46:40 - My server Send Response to User:964 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 13:46:54 - Main database initialized with 3 records
+2024-07-31 13:46:54 - Main database file saved successfully.
+2024-07-31 13:46:54 - Login state updated successfully for user: Kero75
+2024-07-31 13:46:54 - User: 964 logout form bank system
+2024-07-31 13:46:54 - User:964 has disconnected
+2024-07-31 13:49:49 - User:964 connent to server
+2024-07-31 13:49:49 - User:964 is running on thread
+2024-07-31 13:49:51 - Main database initialized with 3 records
+2024-07-31 13:49:51 - Transaction database initialized with 2 records
+2024-07-31 13:50:01 - Server Received encrypted request From User:964 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 13:50:01 - Server Received request From User:964 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 13:50:01 - Checking frame size .....
+2024-07-31 13:50:01 - Checking request data size .....
+2024-07-31 13:50:01 - Checking request signature .....
+2024-07-31 13:50:01 - Server generate signature to received request
+2024-07-31 13:50:01 - Server compare between generated signature and received signature 
+2024-07-31 13:50:01 - Received signature = Generated signature
+2024-07-31 13:50:01 - Now:Server processing request from User:964 Request => Login:Kero75:kero*7579
+2024-07-31 13:50:01 - Main database initialized with 3 records
+2024-07-31 13:50:01 - Main database initialized with 3 records
+2024-07-31 13:50:01 - Main database file saved successfully.
+2024-07-31 13:50:01 - Login state updated successfully for user: Kero75
+2024-07-31 13:50:01 - My server Send Response to User:964 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 13:50:17 - Server Received encrypted request From User:964 Request => da095a307165fa302bfaddd7c9ced9567106c2048ca4aa69dfc9b1fead1b71e320bbf748a03ebc878bd02e3f5a44e05f42f63ee7cbe59d4a2bc3f535eb11a265e9363c50419ed6f1c077342e0126118965272d0e9fb4778778f26205b432e771b45cb8856e4dd2eb3d12a79e25161b76b087b8f67253198ccfafe4acb8e9dc0c80851e05426b7825141eb7db6883b052
+2024-07-31 13:50:17 - Server Received request From User:964 Request => 129:{"RequestData":"Logout:Kero75","RequestSize":"13","Signature":"a587cfe9992bff8b511e7f833501e8242a6228fc8b73466983234884df8fc823"}
+2024-07-31 13:50:17 - Checking frame size .....
+2024-07-31 13:50:17 - Checking request data size .....
+2024-07-31 13:50:17 - Checking request signature .....
+2024-07-31 13:50:17 - Server generate signature to received request
+2024-07-31 13:50:17 - Server compare between generated signature and received signature 
+2024-07-31 13:50:17 - Received signature = Generated signature
+2024-07-31 13:50:17 - Now:Server processing request from User:964 Request => Logout:Kero75
+2024-07-31 13:50:17 - Main database initialized with 3 records
+2024-07-31 13:50:17 - Main database initialized with 3 records
+2024-07-31 13:50:17 - Main database file saved successfully.
+2024-07-31 13:50:17 - Login state updated successfully for user: Kero75
+2024-07-31 13:50:17 - My server Send Response to User:964 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
+2024-07-31 13:50:57 - Server Received encrypted request From User:964 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 13:50:57 - Server Received request From User:964 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 13:50:57 - Checking frame size .....
+2024-07-31 13:50:57 - Checking request data size .....
+2024-07-31 13:50:57 - Checking request signature .....
+2024-07-31 13:50:57 - Server generate signature to received request
+2024-07-31 13:50:57 - Server compare between generated signature and received signature 
+2024-07-31 13:50:57 - Received signature = Generated signature
+2024-07-31 13:50:57 - Now:Server processing request from User:964 Request => Login:Kero75:kero*7579
+2024-07-31 13:50:57 - Main database initialized with 3 records
+2024-07-31 13:50:57 - Main database initialized with 3 records
+2024-07-31 13:50:57 - Main database file saved successfully.
+2024-07-31 13:50:57 - Login state updated successfully for user: Kero75
+2024-07-31 13:50:57 - My server Send Response to User:964 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 13:51:30 - Server Received encrypted request From User:964 Request => f768d078bbfd8e3b4e197d6a3d98d3332da8522012f0beb485a244281a35a98c087a926430a9e6d022b2533c0ac226c83691571a430968e6f2c24624d3bdde1a97b8d1c856a98c3cd1f321e9ac8353d91b4190ac46fd2e2cb4fd2eeff8c67fa638c0227d88e51caf581509506b401ff2a3d9d00b12e45795a857aced9edcf2a1f12419d6cf57d8372e5c86e208bd554a00f4e758c978c7aa1f6ce4ddca0d6f59
+2024-07-31 13:51:30 - Server Received request From User:964 Request => 149:{"RequestData":"GetTransactionHistory:529461960:1","RequestSize":"33","Signature":"9ebb040ee50fbcc4f1f132a234dac630c3a3e13f26bb8ff16286a7b7ab2a8a0d"}
+2024-07-31 13:51:30 - Checking frame size .....
+2024-07-31 13:51:30 - Checking request data size .....
+2024-07-31 13:51:30 - Checking request signature .....
+2024-07-31 13:51:30 - Server generate signature to received request
+2024-07-31 13:51:30 - Server compare between generated signature and received signature 
+2024-07-31 13:51:30 - Received signature = Generated signature
+2024-07-31 13:51:30 - Now:Server processing request from User:964 Request => GetTransactionHistory:529461960:1
+2024-07-31 13:51:30 - Transaction database initialized with 2 records
+2024-07-31 13:51:30 - My server Send Response to User:964 Response => 186:{"ResponseData":"TransactionHistory:{\"AccountNumber\":\"529461960\",\"RecentTransactions\":[{\"amount\":\"+1000\",\"date\":\"30.07.2024\",\"time\":\"18:32:03\"}]}","ResponseSize":"128"}
+2024-07-31 13:51:54 - Server Received encrypted request From User:964 Request => f768d078bbfd8e3b4e197d6a3d98d3332da8522012f0beb485a244281a35a98c087a926430a9e6d022b2533c0ac226c83691571a430968e6f2c24624d3bdde1a97b8d1c856a98c3cd1f321e9ac8353d91b4190ac46fd2e2cb4fd2eeff8c67fa638c0227d88e51caf581509506b401ff2a3d9d00b12e45795a857aced9edcf2a1f12419d6cf57d8372e5c86e208bd554a00f4e758c978c7aa1f6ce4ddca0d6f59
+2024-07-31 13:51:54 - Server Received request From User:964 Request => 149:{"RequestData":"GetTransactionHistory:529461960:1","RequestSize":"33","Signature":"9ebb040ee50fbcc4f1f132a234dac630c3a3e13f26bb8ff16286a7b7ab2a8a0d"}
+2024-07-31 13:51:54 - Checking frame size .....
+2024-07-31 13:51:54 - Checking request data size .....
+2024-07-31 13:51:54 - Checking request signature .....
+2024-07-31 13:51:54 - Server generate signature to received request
+2024-07-31 13:51:54 - Server compare between generated signature and received signature 
+2024-07-31 13:51:54 - Received signature = Generated signature
+2024-07-31 13:51:54 - Now:Server processing request from User:964 Request => GetTransactionHistory:529461960:1
+2024-07-31 13:51:54 - Transaction database initialized with 2 records
+2024-07-31 13:51:54 - My server Send Response to User:964 Response => 186:{"ResponseData":"TransactionHistory:{\"AccountNumber\":\"529461960\",\"RecentTransactions\":[{\"amount\":\"+1000\",\"date\":\"30.07.2024\",\"time\":\"18:32:03\"}]}","ResponseSize":"128"}
+2024-07-31 13:52:11 - Server Received encrypted request From User:964 Request => 7ee0469126b5aadb29cfaf40949dcdd9dd1d850e897aa42d386c301a7002be646b245d685c585c56515e3b1653c3122225c5f735ab2547af96eb8f6326aefa5056b470fdc8661d5127bc9b76183f071c7f796dfa190e22123d6e0becbc8b1f732d70d9f5e63893886200a049d308d11616274e253e9212da14131fdcf7f59d7304755dba6d9ddc900c4f677fe599c470078abe3346f0438bdab35b41e6cf86e0
+2024-07-31 13:52:11 - Server Received request From User:964 Request => 144:{"RequestData":"UpdateAccount::::::529461960","RequestSize":"28","Signature":"d88f3490ff9c4db120a37972f9572ddb9209e9407b66c28df6b3e31132cda179"}
+2024-07-31 13:52:11 - Checking frame size .....
+2024-07-31 13:52:11 - Checking request data size .....
+2024-07-31 13:52:11 - Checking request signature .....
+2024-07-31 13:52:11 - Server generate signature to received request
+2024-07-31 13:52:11 - Server compare between generated signature and received signature 
+2024-07-31 13:52:11 - Received signature = Generated signature
+2024-07-31 13:52:11 - Now:Server processing request from User:964 Request => UpdateAccount::::::529461960
+2024-07-31 13:52:11 - Main database initialized with 3 records
+2024-07-31 13:52:11 - Main database file saved successfully.
+2024-07-31 13:52:11 - Account information updated successfully for account number: 529461960
+2024-07-31 13:52:11 - My server Send Response to User:964 Response => 65:{"ResponseData":"Account update successful.","ResponseSize":"26"}
+2024-07-31 13:53:10 - Server Received encrypted request From User:964 Request => 6c2903b1596fc29b5b83260a5dbd18980d448102b0ac8cdb661911d87ad21273683490e118a9fb928e60fbcac1530a33cd78a9a27db23911617b674685d964075e932a9ccaa686af373b9064c10a45e87000d4d8d09ab6f2a1fa2fd125a48b9565978136bd95640de9f36c0b789b7abceadd6fa14b0024dbfe170d0a9b3829963f4d35128d1cfb0d1131d948412835ea
+2024-07-31 13:53:10 - Server Received request From User:964 Request => 132:{"RequestData":"GetBankDataBase:","RequestSize":"16","Signature":"69765f2e35651c686a8c108a2a595da8a0096459f1528b21c52be0a100843d28"}
+2024-07-31 13:53:10 - Checking frame size .....
+2024-07-31 13:53:10 - Checking request data size .....
+2024-07-31 13:53:10 - Checking request signature .....
+2024-07-31 13:53:10 - Server generate signature to received request
+2024-07-31 13:53:10 - Server compare between generated signature and received signature 
+2024-07-31 13:53:10 - Received signature = Generated signature
+2024-07-31 13:53:10 - Now:Server processing request from User:964 Request => GetBankDataBase:
+2024-07-31 13:53:10 - Main database initialized with 3 records
+2024-07-31 13:53:10 - My server Send Response to User:964 Response => 752:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Login\":\"1\",\"Password\":\"kero*7579\",\"Username\":\"Kero75\"},{\"AccountNumber\":\"529461960\",\"Age\":\"27\",\"Authority\":\"Client\",\"Balance\":\"1000\",\"Email\":\"kiro.samaan.kodoos@gmail.com\",\"FullName\":\"mohanad\",\"Login\":\"0\",\"Password\":\"mohanad@11\",\"Username\":\"mohamad11\"},{\"AccountNumber\":\"224648551\",\"Age\":\"25\",\"Authority\":\"Client\",\"Balance\":\"0\",\"Email\":\"kerollos.sam3an.75@gmail.com\",\"FullName\":\"sharple samaan\",\"Login\":\"0\",\"Password\":\"sharple@2011\",\"Username\":\"sharple2011\"}]","ResponseSize":"608"}
+2024-07-31 13:53:32 - Server Received encrypted request From User:964 Request => da095a307165fa302bfaddd7c9ced9567106c2048ca4aa69dfc9b1fead1b71e320bbf748a03ebc878bd02e3f5a44e05f42f63ee7cbe59d4a2bc3f535eb11a265e9363c50419ed6f1c077342e0126118965272d0e9fb4778778f26205b432e771b45cb8856e4dd2eb3d12a79e25161b76b087b8f67253198ccfafe4acb8e9dc0c80851e05426b7825141eb7db6883b052
+2024-07-31 13:53:32 - Server Received request From User:964 Request => 129:{"RequestData":"Logout:Kero75","RequestSize":"13","Signature":"a587cfe9992bff8b511e7f833501e8242a6228fc8b73466983234884df8fc823"}
+2024-07-31 13:53:32 - Checking frame size .....
+2024-07-31 13:53:32 - Checking request data size .....
+2024-07-31 13:53:32 - Checking request signature .....
+2024-07-31 13:53:32 - Server generate signature to received request
+2024-07-31 13:53:32 - Server compare between generated signature and received signature 
+2024-07-31 13:53:32 - Received signature = Generated signature
+2024-07-31 13:53:32 - Now:Server processing request from User:964 Request => Logout:Kero75
+2024-07-31 13:53:32 - Main database initialized with 3 records
+2024-07-31 13:53:32 - Main database initialized with 3 records
+2024-07-31 13:53:32 - Main database file saved successfully.
+2024-07-31 13:53:32 - Login state updated successfully for user: Kero75
+2024-07-31 13:53:32 - My server Send Response to User:964 Response => 57:{"ResponseData":"Logout successful.","ResponseSize":"18"}
+2024-07-31 13:53:52 - Server Received encrypted request From User:964 Request => c58bf70eaf8029c98702cd7cced2a6c2c55eb52b15b848dcf4a35900f689996684602dfef2e942a72575ecaecd76da4405ad2286e324a01829d04c091fbc6877dde7d6ed60ed1c67c7f330a14ede298ca5bdff804c6cbfdacf90cedbddd8081487100e43f5d39ba1eb0a006f758b1a54a7020dc7dd6262f9c5e2cc988987e155f1a4d49940baa3b369bcddd4083e089e7848cd4c99cbdae555b24927b4133f75
+2024-07-31 13:53:52 - Server Received request From User:964 Request => 141:{"RequestData":"Login:mohamad11:mohamad11","RequestSize":"25","Signature":"622c2503a3c364df43992398411f62ccae04df40d039bdf62f6c128378313741"}
+2024-07-31 13:53:52 - Checking frame size .....
+2024-07-31 13:53:52 - Checking request data size .....
+2024-07-31 13:53:52 - Checking request signature .....
+2024-07-31 13:53:52 - Server generate signature to received request
+2024-07-31 13:53:52 - Server compare between generated signature and received signature 
+2024-07-31 13:53:52 - Received signature = Generated signature
+2024-07-31 13:53:52 - Now:Server processing request from User:964 Request => Login:mohamad11:mohamad11
+2024-07-31 13:53:52 - Main database initialized with 3 records
+2024-07-31 13:53:52 - My server Send Response to User:964 Response => 84:{"ResponseData":"Login failed. Incorrect username or password.","ResponseSize":"45"}
+2024-07-31 13:54:15 - Server Received encrypted request From User:964 Request => 44bc678902abfbcf06da8c80905f65c112ef8842af0af926d1ffc650929495ec632e6c3cd0935a18285f899feb3569a528d81c21fe4f956b8d687d07f5638b5ec7f8bb26fcb530b83aa220ac97a8f230e5609cd8d5c15d1da65a590cdec37902b5b3b0ae2a8659d9913463b3e221d0b1456a82d6f4e2358a5144693f6a9dee47c6c0b66edec9d9bc8f314f5c610fa77157c7aa900f7d97a330f02c08fd345ea8
+2024-07-31 13:54:15 - Server Received request From User:964 Request => 142:{"RequestData":"Login:mohamad11:mohanad@11","RequestSize":"26","Signature":"96f437179cc44fc035c4165391c474737d38d5f64d7308a9a690d6464b717869"}
+2024-07-31 13:54:15 - Checking frame size .....
+2024-07-31 13:54:15 - Checking request data size .....
+2024-07-31 13:54:15 - Checking request signature .....
+2024-07-31 13:54:15 - Server generate signature to received request
+2024-07-31 13:54:15 - Server compare between generated signature and received signature 
+2024-07-31 13:54:15 - Received signature = Generated signature
+2024-07-31 13:54:15 - Now:Server processing request from User:964 Request => Login:mohamad11:mohanad@11
+2024-07-31 13:54:15 - Main database initialized with 3 records
+2024-07-31 13:54:15 - Main database initialized with 3 records
+2024-07-31 13:54:15 - Main database file saved successfully.
+2024-07-31 13:54:15 - Login state updated successfully for user: mohamad11
+2024-07-31 13:54:15 - My server Send Response to User:964 Response => 65:{"ResponseData":"Client:mohamad11:529461960","ResponseSize":"26"}
+2024-07-31 13:54:46 - Server Received encrypted request From User:964 Request => 44bc678902abfbcf06da8c80905f65c15cd19d34e98825eb9c1988d5e8313d888c79cce0b8a3f71f7bce395069208967c985af56d46bab50e257111464c238d3bb81d6459a39e3b069d294dd46eeed2c1b3897c7374b8181aa09e4ab1b32cdab03228e92197b2e36be9dc24a23b11a138e59e4c2f5f5d7ddfc8686cf285baa9bb837fd6e296c6eb83ec85986ad7b72875fd921eea52a209bd404c4ca369bfa8c
+2024-07-31 13:54:46 - Server Received request From User:964 Request => 142:{"RequestData":"GetAccountNumber:mohamad11","RequestSize":"26","Signature":"d8d22ad1e293b3dab17adf315cf84f922104f6e6f4fecb4ac64c5a68a0ea713f"}
+2024-07-31 13:54:46 - Checking frame size .....
+2024-07-31 13:54:46 - Checking request data size .....
+2024-07-31 13:54:46 - Checking request signature .....
+2024-07-31 13:54:46 - Server generate signature to received request
+2024-07-31 13:54:46 - Server compare between generated signature and received signature 
+2024-07-31 13:54:46 - Received signature = Generated signature
+2024-07-31 13:54:46 - Now:Server processing request from User:964 Request => GetAccountNumber:mohamad11
+2024-07-31 13:54:46 - Main database initialized with 3 records
+2024-07-31 13:54:46 - My server Send Response to User:964 Response => 81:{"ResponseData":"Account number for mohamad11 is: 529461960","ResponseSize":"42"}
+2024-07-31 13:55:49 - Server Received encrypted request From User:964 Request => 088e69a90e2fcf2d43efcf9b320aba0cd433858976132104e7f9276f9ce0b4b00416c8f7a72916a9754cad6ec536c2631f8681d7e59178ee2a5cde5b545edf42dfc121d860eac7aba91ec68897dc0223bbb171e769743bbf454c4402d2e0da09e11e1e3710135a4355b39da660fecbd06f1e42a1883d73103cf19d838c8866a557d138cb190e5970a0000b7ed103fbd397f1f85cf700552b6c2fc066fa5fb72b
+2024-07-31 13:55:49 - Server Received request From User:964 Request => 143:{"RequestData":"GetAccountBalance:529461960","RequestSize":"27","Signature":"802014528b91c5b27e2c12ddb8475c37f01343f89eea2c9b53ead315f92606d3"}
+2024-07-31 13:55:49 - Checking frame size .....
+2024-07-31 13:55:49 - Checking request data size .....
+2024-07-31 13:55:49 - Checking request signature .....
+2024-07-31 13:55:49 - Server generate signature to received request
+2024-07-31 13:55:49 - Server compare between generated signature and received signature 
+2024-07-31 13:55:49 - Received signature = Generated signature
+2024-07-31 13:55:49 - Now:Server processing request from User:964 Request => GetAccountBalance:529461960
+2024-07-31 13:55:49 - Main database initialized with 3 records
+2024-07-31 13:55:49 - My server Send Response to User:964 Response => 81:{"ResponseData":"The account balance for mohamad11 is 1000.","ResponseSize":"42"}
+2024-07-31 13:58:19 - Main database initialized with 3 records
+2024-07-31 13:58:19 - Main database file saved successfully.
+2024-07-31 13:58:19 - Login state updated successfully for user: mohamad11
+2024-07-31 13:58:19 - User: 964 logout form bank system
+2024-07-31 13:58:19 - User:964 has disconnected
+2024-07-31 13:59:57 - User:1016 connent to server
+2024-07-31 13:59:57 - User:1016 is running on thread
+2024-07-31 13:59:57 - Main database initialized with 3 records
+2024-07-31 13:59:57 - Transaction database initialized with 2 records
+2024-07-31 14:00:13 - Server Received encrypted request From User:1016 Request => 44bc678902abfbcf06da8c80905f65c112ef8842af0af926d1ffc650929495ec1afdfccf28a39aee178529f29640a65b6927a75b4f1517df3603356a3b7238a9697d8832fa042a801d24efd1b39551d56f19e410452d737b86e50647d19f0de626eebe1f49b7ea1ef3ed22945df8d38e64f4b1cf720a69d06957cc0acad19125d9b58fe38e80193dbb0a15f438a22d2e49ad0a77f56a8545b36820badeb7a1aa
+2024-07-31 14:00:13 - Server Received request From User:1016 Request => 142:{"RequestData":"Login:mohamad11:mohamad@11","RequestSize":"26","Signature":"be2b1dbbcf8eb1bcbb59d4bed8578ad5f272e22aa087344e1f0e61d708bbfe37"}
+2024-07-31 14:00:13 - Checking frame size .....
+2024-07-31 14:00:13 - Checking request data size .....
+2024-07-31 14:00:13 - Checking request signature .....
+2024-07-31 14:00:13 - Server generate signature to received request
+2024-07-31 14:00:13 - Server compare between generated signature and received signature 
+2024-07-31 14:00:13 - Received signature = Generated signature
+2024-07-31 14:00:13 - Now:Server processing request from User:1016 Request => Login:mohamad11:mohamad@11
+2024-07-31 14:00:13 - Main database initialized with 3 records
+2024-07-31 14:00:13 - My server Send Response to User:1016 Response => 84:{"ResponseData":"Login failed. Incorrect username or password.","ResponseSize":"45"}
+2024-07-31 14:00:34 - Server Received encrypted request From User:1016 Request => 44bc678902abfbcf06da8c80905f65c112ef8842af0af926d1ffc650929495ec632e6c3cd0935a18285f899feb3569a528d81c21fe4f956b8d687d07f5638b5ec7f8bb26fcb530b83aa220ac97a8f230e5609cd8d5c15d1da65a590cdec37902b5b3b0ae2a8659d9913463b3e221d0b1456a82d6f4e2358a5144693f6a9dee47c6c0b66edec9d9bc8f314f5c610fa77157c7aa900f7d97a330f02c08fd345ea8
+2024-07-31 14:00:34 - Server Received request From User:1016 Request => 142:{"RequestData":"Login:mohamad11:mohanad@11","RequestSize":"26","Signature":"96f437179cc44fc035c4165391c474737d38d5f64d7308a9a690d6464b717869"}
+2024-07-31 14:00:34 - Checking frame size .....
+2024-07-31 14:00:34 - Checking request data size .....
+2024-07-31 14:00:34 - Checking request signature .....
+2024-07-31 14:00:34 - Server generate signature to received request
+2024-07-31 14:00:34 - Server compare between generated signature and received signature 
+2024-07-31 14:00:34 - Received signature = Generated signature
+2024-07-31 14:00:34 - Now:Server processing request from User:1016 Request => Login:mohamad11:mohanad@11
+2024-07-31 14:00:34 - Main database initialized with 3 records
+2024-07-31 14:00:34 - Main database initialized with 3 records
+2024-07-31 14:00:34 - Main database file saved successfully.
+2024-07-31 14:00:34 - Login state updated successfully for user: mohamad11
+2024-07-31 14:00:34 - My server Send Response to User:1016 Response => 65:{"ResponseData":"Client:mohamad11:529461960","ResponseSize":"26"}
+2024-07-31 14:01:08 - Server Received encrypted request From User:1016 Request => f768d078bbfd8e3b4e197d6a3d98d3332da8522012f0beb485a244281a35a98c087a926430a9e6d022b2533c0ac226c83691571a430968e6f2c24624d3bdde1a97b8d1c856a98c3cd1f321e9ac8353d91b4190ac46fd2e2cb4fd2eeff8c67fa638c0227d88e51caf581509506b401ff2a3d9d00b12e45795a857aced9edcf2a1f12419d6cf57d8372e5c86e208bd554a00f4e758c978c7aa1f6ce4ddca0d6f59
+2024-07-31 14:01:08 - Server Received request From User:1016 Request => 149:{"RequestData":"GetTransactionHistory:529461960:1","RequestSize":"33","Signature":"9ebb040ee50fbcc4f1f132a234dac630c3a3e13f26bb8ff16286a7b7ab2a8a0d"}
+2024-07-31 14:01:08 - Checking frame size .....
+2024-07-31 14:01:08 - Checking request data size .....
+2024-07-31 14:01:08 - Checking request signature .....
+2024-07-31 14:01:08 - Server generate signature to received request
+2024-07-31 14:01:08 - Server compare between generated signature and received signature 
+2024-07-31 14:01:08 - Received signature = Generated signature
+2024-07-31 14:01:08 - Now:Server processing request from User:1016 Request => GetTransactionHistory:529461960:1
+2024-07-31 14:01:08 - Transaction database initialized with 2 records
+2024-07-31 14:01:08 - My server Send Response to User:1016 Response => 186:{"ResponseData":"TransactionHistory:{\"AccountNumber\":\"529461960\",\"RecentTransactions\":[{\"amount\":\"+1000\",\"date\":\"30.07.2024\",\"time\":\"18:32:03\"}]}","ResponseSize":"128"}
+2024-07-31 14:02:15 - Server Received encrypted request From User:1016 Request => 088e69a90e2fcf2d43efcf9b320aba0cd433858976132104e7f9276f9ce0b4b00416c8f7a72916a9754cad6ec536c2631f8681d7e59178ee2a5cde5b545edf42dfc121d860eac7aba91ec68897dc0223bbb171e769743bbf454c4402d2e0da09e11e1e3710135a4355b39da660fecbd06f1e42a1883d73103cf19d838c8866a557d138cb190e5970a0000b7ed103fbd397f1f85cf700552b6c2fc066fa5fb72b
+2024-07-31 14:02:15 - Server Received request From User:1016 Request => 143:{"RequestData":"GetAccountBalance:529461960","RequestSize":"27","Signature":"802014528b91c5b27e2c12ddb8475c37f01343f89eea2c9b53ead315f92606d3"}
+2024-07-31 14:02:15 - Checking frame size .....
+2024-07-31 14:02:15 - Checking request data size .....
+2024-07-31 14:02:15 - Checking request signature .....
+2024-07-31 14:02:15 - Server generate signature to received request
+2024-07-31 14:02:15 - Server compare between generated signature and received signature 
+2024-07-31 14:02:15 - Received signature = Generated signature
+2024-07-31 14:02:15 - Now:Server processing request from User:1016 Request => GetAccountBalance:529461960
+2024-07-31 14:02:15 - Main database initialized with 3 records
+2024-07-31 14:02:15 - My server Send Response to User:1016 Response => 81:{"ResponseData":"The account balance for mohamad11 is 1000.","ResponseSize":"42"}
+2024-07-31 14:02:18 - Main database initialized with 3 records
+2024-07-31 14:02:18 - Main database file saved successfully.
+2024-07-31 14:02:18 - Login state updated successfully for user: mohamad11
+2024-07-31 14:02:18 - User: 1016 logout form bank system
+2024-07-31 14:02:18 - User:1016 has disconnected
+2024-07-31 14:04:01 - User:1044 connent to server
+2024-07-31 14:04:01 - User:1044 is running on thread
+2024-07-31 14:04:01 - Main database initialized with 3 records
+2024-07-31 14:04:01 - Transaction database initialized with 2 records
+2024-07-31 14:04:11 - Server Received encrypted request From User:1044 Request => aed6fb8d339c9fa1f5b1731d174c83141845827a53578026ddebb276b823d2628f9daea9629501a48a3fcaabaa3797e33ca5215022c9b537a0b305791b7016802f4ec4f0ff0da36dae28384220357ff6f7387c71d0a02ad3092886fa498bb192f04a1d0b001d21a6ef2dfa66dfe15e99ba86b1dbc42014e69b704d703ec26eeeb32457ae0aef0e3177b14925e50c4fa0
+2024-07-31 14:04:11 - Server Received request From User:1044 Request => 138:{"RequestData":"Login:Kero75:kero*7579","RequestSize":"22","Signature":"799ffcfd89d6ac64409976597c1a2d3c20a6b92a67ef3a42cee4471e9d3fb129"}
+2024-07-31 14:04:11 - Checking frame size .....
+2024-07-31 14:04:11 - Checking request data size .....
+2024-07-31 14:04:11 - Checking request signature .....
+2024-07-31 14:04:11 - Server generate signature to received request
+2024-07-31 14:04:11 - Server compare between generated signature and received signature 
+2024-07-31 14:04:11 - Received signature = Generated signature
+2024-07-31 14:04:11 - Now:Server processing request from User:1044 Request => Login:Kero75:kero*7579
+2024-07-31 14:04:11 - Main database initialized with 3 records
+2024-07-31 14:04:11 - Main database initialized with 3 records
+2024-07-31 14:04:11 - Main database file saved successfully.
+2024-07-31 14:04:11 - Login state updated successfully for user: Kero75
+2024-07-31 14:04:11 - My server Send Response to User:1044 Response => 52:{"ResponseData":"Admin:Kero75:","ResponseSize":"13"}
+2024-07-31 14:04:26 - Server Received encrypted request From User:1044 Request => 6c2903b1596fc29b5b83260a5dbd18980d448102b0ac8cdb661911d87ad21273683490e118a9fb928e60fbcac1530a33cd78a9a27db23911617b674685d964075e932a9ccaa686af373b9064c10a45e87000d4d8d09ab6f2a1fa2fd125a48b9565978136bd95640de9f36c0b789b7abceadd6fa14b0024dbfe170d0a9b3829963f4d35128d1cfb0d1131d948412835ea
+2024-07-31 14:04:26 - Server Received request From User:1044 Request => 132:{"RequestData":"GetBankDataBase:","RequestSize":"16","Signature":"69765f2e35651c686a8c108a2a595da8a0096459f1528b21c52be0a100843d28"}
+2024-07-31 14:04:26 - Checking frame size .....
+2024-07-31 14:04:26 - Checking request data size .....
+2024-07-31 14:04:26 - Checking request signature .....
+2024-07-31 14:04:26 - Server generate signature to received request
+2024-07-31 14:04:26 - Server compare between generated signature and received signature 
+2024-07-31 14:04:26 - Received signature = Generated signature
+2024-07-31 14:04:26 - Now:Server processing request from User:1044 Request => GetBankDataBase:
+2024-07-31 14:04:26 - Main database initialized with 3 records
+2024-07-31 14:04:26 - My server Send Response to User:1044 Response => 752:{"ResponseData":"ViewBankDataBase:[{\"AccountNumber\":null,\"Age\":\"26\",\"Authority\":\"Admin\",\"Balance\":null,\"Email\":\"kerosamaan07@gmail.com\",\"FullName\":\"Kirollos Samaan\",\"Login\":\"1\",\"Password\":\"kero*7579\",\"Username\":\"Kero75\"},{\"AccountNumber\":\"529461960\",\"Age\":\"27\",\"Authority\":\"Client\",\"Balance\":\"1000\",\"Email\":\"kiro.samaan.kodoos@gmail.com\",\"FullName\":\"mohanad\",\"Login\":\"0\",\"Password\":\"mohanad@11\",\"Username\":\"mohamad11\"},{\"AccountNumber\":\"224648551\",\"Age\":\"25\",\"Authority\":\"Client\",\"Balance\":\"0\",\"Email\":\"kerollos.sam3an.75@gmail.com\",\"FullName\":\"sharple samaan\",\"Login\":\"0\",\"Password\":\"sharple@2011\",\"Username\":\"sharple2011\"}]","ResponseSize":"608"}
+2024-07-31 14:06:19 - Main database initialized with 3 records
+2024-07-31 14:06:19 - Main database file saved successfully.
+2024-07-31 14:06:19 - Login state updated successfully for user: Kero75
+2024-07-31 14:06:19 - User: 1044 logout form bank system
+2024-07-31 14:06:19 - User:1044 has disconnected

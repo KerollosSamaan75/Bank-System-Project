@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>798</width>
-    <height>609</height>
+    <width>805</width>
+    <height>613</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,7 +31,7 @@
      <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="Login">
      <widget class="QLabel" name="label">
@@ -2039,7 +2039,7 @@ QPushButton:pressed {
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>160</y>
+        <y>140</y>
         <width>671</width>
         <height>69</height>
        </rect>
@@ -2070,7 +2070,7 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>230</y>
+        <y>210</y>
         <width>671</width>
         <height>61</height>
        </rect>
@@ -2101,7 +2101,7 @@ font: 700 15pt &quot;Segoe UI&quot;;</string>
       <property name="geometry">
        <rect>
         <x>40</x>
-        <y>290</y>
+        <y>280</y>
         <width>671</width>
         <height>60</height>
        </rect>
@@ -2448,7 +2448,7 @@ font: 700 10pt &quot;Segoe UI&quot;;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>798</width>
+     <width>805</width>
      <height>21</height>
     </rect>
    </property>

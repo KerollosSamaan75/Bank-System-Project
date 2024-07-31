@@ -181,7 +181,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(798, 609);
+        MainWindow->resize(805, 613);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/images/K.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -1468,7 +1468,7 @@ public:
 ""));
         layoutWidget10 = new QWidget(UpdateClientAccount);
         layoutWidget10->setObjectName("layoutWidget10");
-        layoutWidget10->setGeometry(QRect(40, 160, 671, 69));
+        layoutWidget10->setGeometry(QRect(40, 140, 671, 69));
         verticalLayout = new QVBoxLayout(layoutWidget10);
         verticalLayout->setObjectName("verticalLayout");
         verticalLayout->setContentsMargins(0, 0, 0, 0);
@@ -1488,7 +1488,7 @@ public:
 
         layoutWidget11 = new QWidget(UpdateClientAccount);
         layoutWidget11->setObjectName("layoutWidget11");
-        layoutWidget11->setGeometry(QRect(40, 230, 671, 61));
+        layoutWidget11->setGeometry(QRect(40, 210, 671, 61));
         verticalLayout_14 = new QVBoxLayout(layoutWidget11);
         verticalLayout_14->setObjectName("verticalLayout_14");
         verticalLayout_14->setContentsMargins(0, 0, 0, 0);
@@ -1508,7 +1508,7 @@ public:
 
         layoutWidget12 = new QWidget(UpdateClientAccount);
         layoutWidget12->setObjectName("layoutWidget12");
-        layoutWidget12->setGeometry(QRect(40, 290, 671, 60));
+        layoutWidget12->setGeometry(QRect(40, 280, 671, 60));
         verticalLayout_15 = new QVBoxLayout(layoutWidget12);
         verticalLayout_15->setObjectName("verticalLayout_15");
         verticalLayout_15->setContentsMargins(0, 0, 0, 0);
@@ -1717,7 +1717,7 @@ public:
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 798, 21));
+        menubar->setGeometry(QRect(0, 0, 805, 21));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -1741,7 +1741,7 @@ public:
         QObject::connect(pB_ClientUpdateAccountBack, &QPushButton::clicked, UpdateAccountPassword, qOverload<>(&QLineEdit::clear));
         QObject::connect(pb_ViewMyHistoryBack, &QPushButton::clicked, lE_ClientViewHistoryCount, qOverload<>(&QLineEdit::clear));
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
